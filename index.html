@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МонголШувуу — Монгол орны шувуу таних</title>
+<meta name="description" content="Монгол орны 48 шувууг зураг, шинж тэмдэг, тархац нутаг, дуу хоолойгоор таних цахим хөтөч: цэн тогоруу, өвөгт тогоруу, хар өрөвтас, гангар хун, нөмрөг тас, ооч ёл, цармын бүргэд, идлэг шонхор, эгэл шар шувуу, алтайн хойлог, хар хур, тоншуур, реликт цахлай.">
+<meta name="keywords" content="Монгол шувуу, шувуу таних, Монголын шувууд, цэн тогоруу, цагаан тогоруу, өвөгт тогоруу, хар тогоруу, хархираа тогоруу, хар өрөвтас, дорнын өрөвтас, гангар хун, гунгар хун, хээрийн галуу, бор галуу, хондон ангир, алаг шунгаач, хумхин бохио, нөмрөг тас, ооч ёл, цармын бүргэд, тарважи бүргэд, хан бүргэд, идлэг шонхор, эгэл шонхор, амарын шонхор, шилийн сар, эгэл шар шувуу, хотны бүгээхэй, алтайн хойлог, хар хур, шивэр хөтүү, монгол ногтруу, монгол болжмор, шоорон эвэрт болжмор, занхгар зангалай, цасны богшоодой, өнгөлүүрт гургалдай, сондорт гургалдай, эгэл шулганаа, гялааномруут харзлай, цэнхэр цанцаахай, гималайн улаан хоолойт, өвөөлж, хондлойцагаан тоншуур, алаг тоншуур, хар тогшуурга, цээжмэгт галсүүлт, дагуур галсүүлт, улаавар бужмар, усны нөмрөг бүргэд, реликт цахлай, шувуу ажиглах, birds of Mongolia, bird identification Mongolia">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nyamjantsan589-jpg.github.io/mongol-shuvuu/">
+<meta property="og:url" content="https://nyamjantsan589-jpg.github.io/mongol-shuvuu/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="МонголШувуу — Монгол орны шувуу таних хөтөч">
+<meta property="og:description" content="Монгол орны шувуудыг зураг, шинж тэмдэг, тархац нутаг, дуу хоолойгоор таних.">
+<meta property="og:image" content="https://nyamjantsan589-jpg.github.io/mongol-shuvuu/images/demoiselle-crane.jpg">
+<meta property="og:locale" content="mn_MN">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%231f6f8b' stroke-linecap='round'%3E%3Ccircle cx='32' cy='32' r='21' stroke-width='5'/%3E%3Cpath stroke-width='4' d='M32 3.5v5.5M32 55v5.5M3.5 32h5.5M55 32h5.5M11.8 11.8l3.9 3.9M48.3 48.3l3.9 3.9M52.2 11.8l-3.9 3.9M15.7 48.3l-3.9 3.9'/%3E%3C/g%3E%3Cpath fill='%23b5651d' d='M16 31.5c5.2-3.6 10.4-3.9 16 1.6 5.6-5.5 10.8-5.2 16-1.6-4.6-.3-9.3 1.7-13.4 6.4L32 40.6l-2.6-2.7C25.3 33.2 20.6 31.2 16 31.5z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#" data-tab="home">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <g class="logo-ring" fill="none" stroke="currentColor" stroke-linecap="round">
+          <circle cx="32" cy="32" r="21" stroke-width="4"/>
+          <path stroke-width="3.2" d="M32 3.5v5.5M32 55v5.5M3.5 32h5.5M55 32h5.5M11.8 11.8l3.9 3.9M48.3 48.3l3.9 3.9M52.2 11.8l-3.9 3.9M15.7 48.3l-3.9 3.9"/>
+        </g>
+        <path class="logo-bird" d="M16 31.5c5.2-3.6 10.4-3.9 16 1.6 5.6-5.5 10.8-5.2 16-1.6-4.6-.3-9.3 1.7-13.4 6.4L32 40.6l-2.6-2.7C25.3 33.2 20.6 31.2 16 31.5z"/>
+      </svg>      <span data-en="Mongol<b>Shuvuu</b>">Монгол<b>Шувуу</b></span>
+    </a>
+    <nav class="tabs" role="tablist">
+      <button data-tab="home" class="active" data-en="All birds">Бүх шувуу</button>
+      <button data-tab="photo" data-en="By photo">Зургаар</button>
+      <button data-tab="traits" data-en="By field marks">Шинж тэмдгээр</button>
+      <button data-tab="map" data-en="By range">Тархацаар</button>
+      <button data-tab="sound" data-en="By voice">Дуу хоолойгоор</button>
+      <button data-tab="routes" data-en="Birding routes">Аяллын маршрут</button>
+      <button data-tab="lodging" data-en="Lodging">Буудал</button>
+      <button data-tab="sights" data-en="Sights">Үзвэр</button>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Хэл / Language">
+      <button type="button" data-lang="mn" lang="mn" title="Монгол">MN</button>
+      <button type="button" data-lang="en" lang="en" title="English">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- НҮҮР / БҮХ ШУВУУ -->
+  <section id="tab-home" class="tab-panel active">
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow" data-en="An online field guide to the birds of Mongolia">Монгол орны шувуу таних цахим хөтөч</p>
+        <h1 data-en="Birds of Mongolia">Монгол орны шувууд</h1>
+        <p class="lead" data-en="Identify Mongolia’s key and most sought-after birds by <b>photo</b>, <b>field marks</b>, <b>range</b> and <b>voice</b>, and read detailed profiles of each.">Монгол орны голлох болон аялал жуулчлалын онцлох шувуудыг <b>зураг</b>, <b>шинж тэмдэг</b>, <b>тархац нутаг</b>, <b>дуу хоолой</b>гоор нь таньж, дэлгэрэнгүй мэдээлэлтэй танилцаарай.</p>
+        <div class="hero-actions">
+          <button class="btn primary" data-goto="photo" data-en="📷 Identify by photo">📷 Зургаар таних</button>
+          <button class="btn" data-goto="traits" data-en="🔎 By field marks">🔎 Шинж тэмдгээр</button>
+          <button class="btn" data-goto="map" data-en="🗺️ By range">🗺️ Тархацаар</button>
+          <button class="btn" data-goto="sound" data-en="🔊 By voice">🔊 Дуугаар</button>
+          <button class="btn" data-goto="routes" data-en="🧭 Birding routes">🧭 Аяллын маршрут</button>
+          <button class="btn" data-goto="lodging" data-en="🛏 Lodging">🛏 Буудал</button>
+          <button class="btn" data-goto="sights" data-en="🏛 Sights">🏛 Үзвэр</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Нэрээр хайх (Монгол, латин, англи)…" aria-label="Хайх" data-en-ph="Search by name (English, Mongolian, Latin)…" data-en-aria="Search">
+        <div id="group-chips" class="chips"></div>
+      </div>
+      <div id="gallery" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- ЗУРГААР -->
+  <section id="tab-photo" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Identify by photo">Зургаар таних</h2>
+      <p class="muted" data-en="Upload your own photo of a bird. The site combines an AI image recogniser (MobileNet) with colour analysis to suggest the closest matches among the birds in this guide.">Өөрийн авсан шувууны зургийг оруулна уу. Систем хиймэл оюуны (MobileNet) дүрс танигч болон зургийн өнгөний шинжилгээг хослуулан, энэ хөтөчийн шувуудаас хамгийн төстэйг нь санал болгоно.</p>
+      <div class="photo-layout">
+        <div>
+          <label id="dropzone" class="dropzone">
+            <input id="photo-input" type="file" accept="image/*" hidden>
+            <div id="drop-empty">
+              <div class="drop-icon">📷</div>
+              <b data-en="Choose a photo or drop it here">Зураг сонгох эсвэл энд чирч оруулах</b>
+              <span class="muted" data-en="JPG, PNG · works best with the bird sharp and centred">JPG, PNG · шувуу зургийн голд, тод байвал сайн</span>
+            </div>
+            <img id="photo-preview" alt="Оруулсан зураг" data-en-aria="Uploaded photo" hidden>
+          </label>
+          <div id="color-bar" class="color-bar" hidden></div>
+          <p class="note" data-en="⚠️ Automatic identification is only an aid. Always confirm the result by field marks, range and voice. The recognition model needs an internet connection to load.">⚠️ Автомат таних нь зөвхөн туслах хэрэгсэл. Үр дүнг доорх шинж тэмдэг, тархац, дуу хоолойгоор заавал нягтлаарай. Дүрс танигч модель интернэт холболтоор ачаалагдана.</p>
+        </div>
+        <div>
+          <div id="photo-ai" class="photo-ai" hidden>
+            <button class="btn primary" id="photo-ai-btn" type="button" disabled data-en="✦ Identify with the AI assistant">✦ AI туслахаар таниулах</button>
+            <span class="muted" id="photo-ai-hint" data-en="After you upload a photo, Claude looks at it and identifies the bird.">Зураг оруулсны дараа Claude зургийг харж шувууг танина.</span>
+          </div>
+          <div id="photo-ai-out" class="ai-photo-out" hidden></div>
+          <div id="photo-status" class="status muted" data-en="Waiting for a photo…">Зураг хүлээж байна…</div>
+          <div id="photo-results" class="results"></div>
+        </div>
+      </div>
+
+      <h3 class="section-gap" data-en="Photo quiz: which bird is this?">Зургийн тоглоом: Энэ ямар шувуу вэ?</h3>
+      <div id="photo-quiz" class="quiz"></div>
+    </div>
+  </section>
+
+  <!-- ШИНЖ ТЭМДГЭЭР -->
+  <section id="tab-traits" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Identify by field marks">Шинж тэмдгээр таних</h2>
+      <p class="muted" data-en="Pick whatever you noticed about the bird — you don’t need to fill in everything. The matches re-rank after every choice.">Харсан шувуныхаа мэддэг шинжийг сонгоно уу — бүгдийг бөглөх шаардлагагүй. Сонголт бүрийн дараа тохирох шувууд эрэмбэлэгдэнэ.</p>
+      <div class="traits-layout">
+        <form id="trait-form" class="trait-form"></form>
+        <div>
+          <div class="results-head"><b id="trait-count">20 шувуу</b><button class="btn small" id="trait-reset" type="button" data-en="Clear">Цэвэрлэх</button></div>
+          <div id="trait-results" class="results"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ТАРХАЦААР -->
+  <section id="tab-map" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Identify by range">Тархац нутгаар таних</h2>
+      <p class="muted" data-en="Click a region or a birdwatching site on the satellite map to see which birds live there. You can also filter by season.">Хиймэл дагуулын зураг дээрх бүс нутаг эсвэл шувуу ажиглах цэг дээр дарж, тэнд ямар шувуу амьдардгийг хараарай. Мөн улирлаар шүүж болно.</p>
+      <div class="map-controls chips" id="season-chips"></div>
+      <div class="layer-row"><span class="muted" data-en="Show on map:">Газрын зураг дээр харуулах:</span><div class="chips" id="layer-chips"></div></div>
+      <div class="map-card">
+        <div id="mn-map-sat" class="sat-map" hidden></div>
+        <div class="map-scroll"><svg id="mn-map" class="mn-map" viewBox="0 0 900 450" role="img" aria-label="Монгол орны бүс нутгийн схем зураг"></svg></div>
+        <div id="map-legend" class="map-legend"></div>
+      </div>
+      <div id="map-info" class="map-info"></div>
+      <div id="map-results" class="grid compact"></div>
+    </div>
+  </section>
+
+  <!-- ДУУ ХООЛОЙГООР -->
+  <section id="tab-sound" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Identify by voice">Дуу хоолойгоор таних</h2>
+      <p class="muted" data-en="Choose the kind of call you heard. Birds with recordings can be played right here for comparison.">Сонссон дууныхаа төрлийг сонгоно уу. Бичлэгтэй шувуудын дууг шууд сонсож харьцуулж болно.</p>
+      <div id="voice-chips" class="voice-grid"></div>
+      <div class="time-row chips" id="time-chips"></div>
+      <div id="sound-results" class="results"></div>
+
+      <h3 class="section-gap" data-en="Sound quiz: listen and guess!">Дууны тоглоом: Сонсоод таа!</h3>
+      <div id="sound-quiz" class="quiz"></div>
+    </div>
+  </section>
+  <!-- АЯЛЛЫН МАРШРУТ -->
+  <section id="tab-routes" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Birdwatching routes">Шувуу ажиглах аяллын маршрут</h2>
+      <p class="muted" data-en="Five routes linking Mongolia’s best birding sites, each with a day-by-day itinerary. Pick a route to see its map, programme and the birds you can expect.">Монголын шилдэг шувуу ажиглах газруудыг холбосон 5 маршрут, өдөр бүрийн хөтөлбөртэй. Маршрутаа сонгоод газрын зураг, хөтөлбөр, харж болох шувуудтай танилцаарай.</p>
+      <div id="route-tabs" class="route-tabs" role="tablist"></div>
+      <div id="route-detail" class="route-detail"></div>
+    </div>
+  </section>
+
+  <!-- БУУДАЛ -->
+  <section id="tab-lodging" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Lodging">Буудал</h2>
+      <p class="muted" data-en="Places to stay on a birding trip: hotels, guesthouses, tourist ger camps and nomad-family homestays. Use “Show on map” to see each location on the satellite map.">Шувуу ажиглах аяллын үеэр хоноглох боломжтой газрууд: зочид буудал, guest house, жуулчны гэр бааз, малчин айл. "Газрын зураг дээр" товчоор байршлыг нь хиймэл дагуулын зураг дээр харна.</p>
+      <p class="note" data-en="Only the types of accommodation available in each place are listed. Check specific hotel or camp names, prices, phone numbers and bookings via the “Find lodging on Google Maps” link, and book ahead — especially during the Naadam festival in July.">Газар бүрт ямар төрлийн байр байдгийг л бичсэн. Тодорхой буудал, баазын нэр, үнэ, утас, захиалгын мэдээллийг "Google Maps-д буудал хайх" холбоосоор шалгаж, урьдчилан захиалаарай (ялангуяа 7-р сарын Наадмын үеэр).</p>
+      <div class="chips" id="lodging-chips"></div>
+      <div id="lodging-list" class="place-grid"></div>
+    </div>
+  </section>
+
+  <!-- ҮЗВЭР -->
+  <section id="tab-sights" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="Sights">Үзвэр</h2>
+      <p class="muted" data-en="Natural wonders and historical and cultural sites to visit along your birding route. Use “Show on map” to see each location on the satellite map.">Шувуу ажиглах замдаа үзэж болох байгалийн үзэсгэлэнт газрууд болон түүх соёлын дурсгалт газрууд. "Газрын зураг дээр" товчоор байршлыг нь хиймэл дагуулын зураг дээр харна.</p>
+      <div class="chips" id="sights-chips"></div>
+      <div id="sights-list" class="place-grid"></div>
+    </div>
+  </section>
+</main>
+
+<!-- AI ТУСЛАХ -->
+<button id="ai-fab" class="ai-fab" type="button" aria-controls="ai-panel" aria-expanded="false" hidden>
+  <span class="ai-spark" aria-hidden="true">✦</span> <span data-en="AI assistant">AI туслах</span>
+</button>
+<section id="ai-panel" class="ai-panel" aria-label="AI туслах" data-en-aria="AI assistant" hidden>
+  <header class="ai-head">
+    <div><b data-en="AI assistant">AI туслах</b><small data-en="Bird ID and trip advice · Claude">Шувуу таних, аяллын зөвлөгөө · Claude</small></div>
+    <button class="ai-x" id="ai-close" type="button" aria-label="Хаах" data-en-aria="Close">✕</button>
+  </header>
+  <div id="ai-log" class="ai-log" aria-live="polite"></div>
+  <div id="ai-suggest" class="ai-suggest"></div>
+  <form id="ai-form" class="ai-form">
+    <textarea id="ai-input" rows="2" placeholder="Жишээ: Хар биетэй, улаан хушуу хөлтэй том шувуу харсан. Юу вэ?" aria-label="Асуулт" data-en-ph="E.g. I saw a big black bird with a red bill and legs. What is it?" data-en-aria="Question"></textarea>
+    <button class="btn primary" id="ai-send" type="submit" data-en="Send">Илгээх</button>
+    <button class="btn" id="ai-stop" type="button" hidden data-en="Stop">Зогсоох</button>
+  </form>
+</section>
+
+<!-- ДЭЛГЭРЭНГҮЙ ЦОНХ -->
+<div id="modal" class="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="modal-close" data-close aria-label="Хаах" data-en-aria="Close">✕</button>
+    <div id="modal-body"></div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-en="<b>MongolShuvuu</b> — an educational bird identification guide."><b>МонголШувуу</b> — боловсролын зорилготой шувуу таних хөтөч.</p>
+    <p class="muted" data-en="Photos and sound recordings: <a href='https://commons.wikimedia.org' target='_blank' rel='noopener'>Wikimedia Commons</a>, <a href='https://www.inaturalist.org' target='_blank' rel='noopener'>iNaturalist</a>, <a href='https://xeno-canto.org' target='_blank' rel='noopener'>xeno-canto</a> (Creative Commons licences; each author is credited on the bird’s page). Conservation status: IUCN Red List. Borders on the maps are approximate.">Зураг, дууны бичлэг: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a>, <a href="https://xeno-canto.org" target="_blank" rel="noopener">xeno-canto</a> (Creative Commons лиценз; зохиогч бүрийг шувууны хуудсанд заасан). Хамгааллын статус: IUCN Улаан данс. Газрын зураг нь схем бөгөөд хил хязгаарыг ойролцоогоор үзүүлэв.</p>
+    <p class="muted" data-en="When birdwatching, keep away from nests and colonies, and don’t play recordings to lure birds.">Шувууг ажиглахдаа үүр, колони руу бүү ойрт, дуу бичлэг тоглуулж шувууг бүү үймүүл.</p>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap">
+    <h2>Монгол орны шувууд</h2>
+    <p>Цэн тогоруу (Antigone vipio), Цагаан тогоруу (Leucogeranus leucogeranus), Өвөгт тогоруу (Grus virgo (Anthropoides virgo)), Хар тогоруу (Grus monacha), Хархираа тогоруу (Grus grus), Хар өрөвтас (Ciconia nigra), Дорнын өрөвтас (Ciconia boyciana), Гангар хун (Cygnus cygnus), Гунгар хун (Cygnus columbianus bewickii), Хээрийн галуу (Anser indicus), Бор галуу (Anser anser), Хондон ангир (Tadorna ferruginea), Алаг шунгаач (Bucephala clangula), Хумхин бохио (Mergus merganser), Нөмрөг тас (Aegypius monachus), Ооч ёл (Gypaetus barbatus), Цармын бүргэд (Aquila chrysaetos), Тарважи бүргэд (Aquila nipalensis), Хан бүргэд (Aquila heliaca), Идлэг шонхор (Falco cherrug), Эгэл шонхор (Falco peregrinus), Амарын шонхор (Falco amurensis), Шилийн сар (Buteo hemilasius), Эгэл шар шувуу (Bubo bubo), Хотны бүгээхэй (Athene noctua), Алтайн хойлог (Tetraogallus altaicus), Хар хур (Lyrurus tetrix), Шивэр хөтүү (Tetrastes bonasia), Монгол ногтруу (Syrrhaptes paradoxus), Монгол болжмор (Melanocorypha mongolica), Шоорон эвэрт болжмор (Eremophila alpestris), Занхгар зангалай (Leucosticte arctoa), Цасны богшоодой (Montifringilla nivalis), Өнгөлүүрт гургалдай (Calliope calliope), Сондорт гургалдай (Luscinia svecica), Эгэл шулганаа (Saxicola maurus), Гялааномруут харзлай (Cinclus cinclus), Цэнхэр цанцаахай (Cyanopica cyanus), Гималайн улаан хоолойт (Calliope pectoralis), Өвөөлж (Upupa epops), Хондлойцагаан тоншуур (Dendrocopos leucotos), Алаг тоншуур (Dendrocopos major), Хар тогшуурга (Dryocopus martius), Цээжмэгт галсүүлт (Phoenicurus erythrogastrus), Дагуур галсүүлт (Phoenicurus auroreus), Улаавар бужмар (Carpodacus erythrinus), Усны нөмрөг бүргэд (Haliaeetus leucoryphus), Реликт цахлай (Ichthyaetus relictus).</p>
+    <p>Энэ сайтыг ашиглахын тулд хөтөч дээрээ JavaScript-г идэвхжүүлнэ үү.</p>
+  </div>
+</noscript>
+<script src="vendor/leaflet.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/birds.js"></script>
+<script src="js/birds_en.js"></script>
+<script src="js/data_en.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
