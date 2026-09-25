@@ -45,6 +45,7 @@
       <button data-tab="routes" data-en="Birding routes">Аяллын маршрут</button>
       <button data-tab="lodging" data-en="Lodging">Буудал</button>
       <button data-tab="sights" data-en="Sights">Үзвэр</button>
+      <button data-tab="iucn" data-en="Conservation">Хамгаалал</button>
     </nav>
     <div class="lang-switch" role="group" aria-label="Хэл / Language">
       <button type="button" data-lang="mn" lang="mn" title="Монгол">MN</button>
@@ -69,6 +70,7 @@
           <button class="btn" data-goto="routes" data-en="🧭 Birding routes">🧭 Аяллын маршрут</button>
           <button class="btn" data-goto="lodging" data-en="🛏 Lodging">🛏 Буудал</button>
           <button class="btn" data-goto="sights" data-en="🏛 Sights">🏛 Үзвэр</button>
+          <button class="btn" data-goto="iucn" data-en="🛡 Conservation status">🛡 Хамгааллын статус</button>
         </div>
       </div>
     </div>
@@ -189,6 +191,15 @@
       <p class="muted" data-en="Natural wonders and historical and cultural sites to visit along your birding route. Use “Show on map” to see each location on the satellite map.">Шувуу ажиглах замдаа үзэж болох байгалийн үзэсгэлэнт газрууд болон түүх соёлын дурсгалт газрууд. "Газрын зураг дээр" товчоор байршлыг нь хиймэл дагуулын зураг дээр харна.</p>
       <div class="chips" id="sights-chips"></div>
       <div id="sights-list" class="place-grid"></div>
+    </div>
+  </section>
+
+  <!-- ХАМГААЛАЛ (IUCN) -->
+  <section id="tab-iucn" class="tab-panel">
+    <div class="wrap">
+      <h2 data-en="IUCN Red List categories">IUCN-ийн Улаан дансны ангилал</h2>
+      <p class="muted lead-sm" data-en="How the world’s authority on extinction risk grades every species — and where each bird in this guide stands.">Дэлхий дахинд зүйл бүрийн устах эрсдэлийг хэрхэн үнэлдэг вэ, энэ хөтөчийн шувуу бүр аль ангилалд багтдаг вэ.</p>
+      <div id="iucn-root"></div>
     </div>
   </section>
 </main>

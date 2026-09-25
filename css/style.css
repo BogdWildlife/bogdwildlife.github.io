@@ -87,7 +87,7 @@ h3 { font-size: 1.25rem; }
 @media (prefers-reduced-motion: reduce) { .logo-bird { transition: none; } }
 .brand b { color: var(--earth); }
 .tabs { display: flex; gap: 2px; flex-wrap: wrap; }
-.tabs button { border: 0; background: transparent; color: var(--muted); font: 600 .9rem var(--sans); padding: 8px 10px; border-radius: 999px; cursor: pointer; }
+.tabs button { border: 0; background: transparent; color: var(--muted); font: 600 .88rem var(--sans); padding: 8px 8px; border-radius: 999px; cursor: pointer; }
 .tabs button:hover { color: var(--ink); background: var(--surface-2); }
 .tabs button:focus-visible, .chip:focus-visible, .btn:focus-visible, .card:focus-visible, .voice-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .tabs button.active { background: var(--accent); color: var(--accent-ink); }
@@ -145,6 +145,50 @@ h3 { font-size: 1.25rem; }
 .iucn-NT { background: #8cae4a; color: #13200a; }
 .iucn-LC { background: #2f7d4f; color: #fff; }
 .iucn-NR { background: #7d8589; color: #fff; }
+.iucn-EX { background: #111111; color: #fff; }
+.iucn-EW { background: #4a1f45; color: #fff; }
+.iucn-DD { background: #a7adb0; color: #1d2426; }
+.iucn-NE { background: #e7e9ea; color: #1d2426; box-shadow: inset 0 0 0 1px #c6cbcd; }
+
+/* IUCN таб */
+.small { font-size: .85rem; }
+.lead-sm { max-width: 70ch; }
+.badge-link { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.badge-link .badge-more { font-size: .8rem; color: var(--accent); }
+.badge-link:hover .badge-more { text-decoration: underline; }
+.iucn-intro { background: var(--surface); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); max-width: 900px; }
+.iucn-intro p { margin: 0 0 10px; }
+.iucn-summary { background: var(--earth-soft); border-radius: 10px; padding: 10px 12px; }
+.iucn-scale-wrap { overflow-x: auto; padding-bottom: 4px; }
+.iucn-scale { display: grid; grid-template-columns: repeat(9, minmax(92px, 1fr)); gap: 4px; min-width: 860px; }
+.scale-grp { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); border-bottom: 2px solid var(--line); padding: 0 4px 4px; text-align: center; }
+.scale-grp.scale-threat { color: var(--warn); border-color: var(--warn); }
+.scale-cell { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 76px; padding: 8px 6px; border-radius: 10px; text-decoration: none; text-align: center; transition: transform .12s; }
+.scale-cell:hover { transform: translateY(-2px); }
+.scale-cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scale-cell b { font-size: 1.15rem; letter-spacing: .04em; }
+.scale-cell span { font-size: .74rem; line-height: 1.25; }
+.iucn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.iucn-card { background: var(--surface); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); scroll-margin-top: 90px; }
+.iucn-card.flash { animation: flash 1.6s ease; }
+@keyframes flash { 0%, 40% { box-shadow: 0 0 0 3px var(--accent), var(--shadow); } 100% { box-shadow: var(--shadow); } }
+.iucn-card-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; }
+.iucn-card-head .badge { font-size: .9rem; padding: 4px 10px; margin-top: 2px; }
+.iucn-card-head h3 { margin: 0; font-size: 1.1rem; }
+.iucn-card p { margin: 6px 0; font-size: .93rem; }
+.iucn-birds { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 8px; font-size: .9rem; }
+.bird-chip { text-decoration: none; color: var(--ink); }
+.bird-chip:hover { background: var(--accent-soft); }
+.table-wrap { overflow-x: auto; }
+.crit-table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--surface); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); font-size: .9rem; }
+.crit-table th, .crit-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.crit-table thead th { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; background: var(--surface-2); }
+.crit-table thead th.c-CR { box-shadow: inset 0 -3px 0 #b23a2b; }
+.crit-table thead th.c-EN { box-shadow: inset 0 -3px 0 #d8672c; }
+.crit-table thead th.c-VU { box-shadow: inset 0 -3px 0 #e2b33b; }
+.crit-table td:not(:first-child) { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.crit-grp th { background: color-mix(in srgb, var(--surface-2) 55%, transparent); font-weight: 700; }
+.crit-letter { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: var(--accent); color: var(--accent-ink); margin-right: 6px; font-size: .85rem; }
 
 /* Results list */
 .results { display: flex; flex-direction: column; gap: 10px; }

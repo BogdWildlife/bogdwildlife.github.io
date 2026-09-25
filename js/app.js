@@ -12,7 +12,8 @@
 
   const IUCN = {
     CR: T("Устах аюул нэн их", "Critically Endangered"), EN: T("Устах аюултай", "Endangered"), VU: T("Эмзэг", "Vulnerable"),
-    NT: T("Ховордож болзошгүй", "Near Threatened"), LC: T("Анхаарал багатай", "Least Concern"), NR: T("Тусад нь үнэлээгүй", "Not assessed separately")
+    NT: T("Ховордож болзошгүй", "Near Threatened"), LC: T("Анхаарал багатай", "Least Concern"), NR: T("Тусад нь үнэлээгүй", "Not assessed separately"),
+    EX: T("Устаж үгүй болсон", "Extinct"), EW: T("Байгальд устаж үгүй болсон", "Extinct in the Wild"), DD: T("Мэдээлэл дутмаг", "Data Deficient"), NE: T("Үнэлээгүй", "Not Evaluated")
   };
   const SWATCH = {
     black: "#1c1c1c", white: "#f4f4f2", gray: "#8f969a", brown: "#6b4a2f",
@@ -30,6 +31,7 @@
     if (push) setHash(name === "home" ? location.pathname : "#" + name);
     if (name === "photo") { ensurePhotoQuiz(); preloadModel(); }
     if (name === "sound") ensureSoundQuiz();
+    if (name === "iucn") renderIUCN();
     window.scrollTo({ top: 0 });
     setTimeout(() => { if (name === "map") refit(mainMap, MN_BOUNDS); if (name === "routes" && routeBounds) refit(routeMap, routeBounds, [60, 60]); }, 40);
   }
@@ -328,6 +330,105 @@
     </section>`;
   }
 
+  /* ---------------- IUCN Улаан дансны ангилал ---------------- */
+  // Эх сурвалж: IUCN Red List Categories and Criteria, хувилбар 3.1 (2001; 2-р хэвлэл 2012)
+  const IUCN_CATS = [
+    { k: "EX", grp: "gone", alt: "",
+      def: T("Сүүлчийн бодгаль нь үхсэн гэдэгт үндэслэлтэй эргэлзээ байхгүй бол. Тухайн зүйлийн мэдэгдэж буй болон байж болох бүх амьдрах орчинд, зохих цаг хугацаа, улирал, өдөр шөнийн аль ч үед нарийвчилсан судалгаа хийгээд нэг ч бодгаль олдоогүй байх шаардлагатай.",
+        "There is no reasonable doubt that the last individual has died. Exhaustive surveys in known and expected habitat, at appropriate times (diurnal, seasonal, annual) throughout its historic range, have failed to record an individual."),
+      ex: T("Жишээ: Хойд Америкийн тагтаа (Passenger Pigeon, Ectopistes migratorius) — сүүлчийн бодгаль нь 1914 онд амьтны хүрээлэнд үхсэн.", "Example: Passenger Pigeon (Ectopistes migratorius) — the last one died in a zoo in 1914.") },
+    { k: "EW", grp: "gone", alt: "",
+      def: T("Зөвхөн тэжээвэр, амьтны хүрээлэнд, эсвэл уугуул тархац нутгаасаа гадна нутагшуулсан популяци хэлбэрээр л үлдсэн бол.",
+        "Known only to survive in cultivation, in captivity or as a naturalised population well outside its past range."),
+      ex: T("Монгол жишээ: Тахь (Equus ferus przewalskii) байгальд устаж, 1996 онд EW ангилалтай байсан. Хустай, Тахийн тал, Хомын талд нутагшуулсны дүнд 2008 онд CR, 2011 онд EN болж сайжирсан.",
+        "Mongolian example: Przewalski’s horse (takhi) was listed EW in 1996. After reintroduction to Hustai, Takhiin Tal and Khomyn Tal it improved to CR in 2008 and EN in 2011.") },
+    { k: "CR", grp: "threat", alt: T("Бусад эх сурвалжид: «Устаж байгаа», «Устах аюул нүүрлэсэн»", "Also: “Critically endangered”"),
+      def: T("Байгальд устах эрсдэл НЭН ӨНДӨР. Доорх A–E шалгуурын аль нэгнийх нь CR босгыг хангасан зүйл.",
+        "Faces an extremely high risk of extinction in the wild — meets the CR threshold of any one of criteria A–E below.") },
+    { k: "EN", grp: "threat", alt: T("Бусад эх сурвалжид: «Устаж болзошгүй»", ""),
+      def: T("Байгальд устах эрсдэл МАШ ӨНДӨР. A–E шалгуурын аль нэгнийх нь EN босгыг хангасан зүйл.",
+        "Faces a very high risk of extinction in the wild — meets the EN threshold of any one of criteria A–E.") },
+    { k: "VU", grp: "threat", alt: "",
+      def: T("Байгальд устах эрсдэл ӨНДӨР. A–E шалгуурын аль нэгнийх нь VU босгыг хангасан зүйл.",
+        "Faces a high risk of extinction in the wild — meets the VU threshold of any one of criteria A–E.") },
+    { k: "NT", grp: "ok", alt: "",
+      def: T("Одоогоор ховордсон ангилалд ороогүй ч шалгуурын босгод ойрхон, эсвэл ойрын ирээдүйд орох магадлалтай зүйл. Ихэнхдээ хамгааллын арга хэмжээнээс хамааралтай байдаг.",
+        "Does not qualify as threatened now, but is close to qualifying or is likely to qualify in the near future."),
+      ex: "" },
+    { k: "LC", grp: "ok", alt: T("Бусад эх сурвалжид: «Анхааралд өртөхөөргүй»", ""),
+      def: T("Шалгуурын аль нэгийг ч хангаагүй, ховордох эрсдэл бага зүйл. Ихэвчлэн өргөн тархсан, тоо толгой ихтэй. Гэхдээ \"аюулгүй\" гэсэн үг биш — орон нутагт цөөрч буй байж болно.",
+        "Evaluated and does not qualify for any threatened category or NT. Usually widespread and abundant — but not necessarily secure everywhere; it can still be declining locally.") },
+    { k: "DD", grp: "data", alt: "",
+      def: T("Устах эрсдэлийг үнэлэх хангалттай мэдээлэл (тархац, тоо толгой, чиг хандлага) байхгүй. Энэ нь аюулын ангилал биш — зарим нь үнэндээ ховордсон байж ч болно.",
+        "There is not enough information on distribution or population to assess extinction risk. Not a threat category — some DD species may in fact be threatened.") },
+    { k: "NE", grp: "data", alt: "",
+      def: T("Шалгуурын дагуу хараахан үнэлэгдээгүй зүйл.", "Not yet assessed against the criteria.") }
+  ];
+  const IUCN_GROUPS = {
+    gone: T("Устсан", "Extinct"), threat: T("Ховордсон (устах аюулд орсон)", "Threatened"), ok: T("Эрсдэл харьцангуй бага", "Lower risk"), data: T("Үнэлгээ хангалтгүй", "Insufficient assessment")
+  };
+  // A–E шалгуурын босго (CR / EN / VU)
+  const IUCN_CRIT = [
+    { c: "A", t: T("Популяцийн бууралт", "Population reduction"), n: T("Сүүлийн 10 жил эсвэл 3 үеийн (аль урт нь) хугацаанд", "Over 10 years or 3 generations, whichever is longer"),
+      rows: [[T("A1 — шалтгаан нь тодорхой, зогссон", "A1 — causes understood and ceased"), "≥ 90%", "≥ 70%", "≥ 50%"], [T("A2–A4 — шалтгаан үргэлжилж буй", "A2–A4 — causes may not have ceased"), "≥ 80%", "≥ 50%", "≥ 30%"]] },
+    { c: "B", t: T("Тархацын хүрээ жижиг", "Small geographic range"), n: T("Дээр нь нэмж: (а) хэт тасархай эсвэл цөөн байршилд, (б) тасралтгүй буурч буй, (в) эрс хэлбэлздэг — эдгээрийн дор хаяж 2 нь", "Plus at least 2 of: (a) severely fragmented or few locations, (b) continuing decline, (c) extreme fluctuations"),
+      rows: [[T("B1 — тархацын хүрээ (EOO)", "B1 — extent of occurrence (EOO)"), "< 100 км²", "< 5,000 км²", "< 20,000 км²"], [T("B2 — эзэлж буй талбай (AOO)", "B2 — area of occupancy (AOO)"), "< 10 км²", "< 500 км²", "< 2,000 км²"], [T("(а) байршлын тоо", "(a) number of locations"), "= 1", "≤ 5", "≤ 10"]] },
+    { c: "C", t: T("Цөөн бөгөөд буурч буй популяци", "Small and declining population"), n: T("Үржлийн насны бодгалийн тоо ба үргэлжилж буй бууралт", "Mature individuals plus continuing decline"),
+      rows: [[T("Үржлийн насны бодгаль", "Mature individuals"), "< 250", "< 2,500", "< 10,000"], [T("C1 — бууралт", "C1 — decline"), T("≥ 25% (3 жил / 1 үе)", "≥ 25% in 3 yrs / 1 gen"), T("≥ 20% (5 жил / 2 үе)", "≥ 20% in 5 yrs / 2 gen"), T("≥ 10% (10 жил / 3 үе)", "≥ 10% in 10 yrs / 3 gen")]] },
+    { c: "D", t: T("Маш цөөн популяци", "Very small population"), n: T("VU-д мөн D2: эзэлж буй талбай маш бага (ихэвчлэн < 20 км²) эсвэл ≤ 5 байршил бөгөөд ойрын аюул заналтай", "VU also D2: very restricted area (typically AOO < 20 km²) or ≤ 5 locations with a plausible threat"),
+      rows: [[T("Үржлийн насны бодгаль", "Mature individuals"), "< 50", "< 250", "< 1,000"]] },
+    { c: "E", t: T("Тоон шинжилгээ", "Quantitative analysis"), n: T("Популяцийн загвараар тооцсон байгальд устах магадлал", "Modelled probability of extinction in the wild"),
+      rows: [[T("Устах магадлал", "Probability of extinction"), T("≥ 50% (10 жил / 3 үе)", "≥ 50% in 10 yrs / 3 gen"), T("≥ 20% (20 жил / 5 үе)", "≥ 20% in 20 yrs / 5 gen"), T("≥ 10% (100 жил)", "≥ 10% in 100 yrs")]] }
+  ];
+  let iucnDone = false;
+  function renderIUCN() {
+    if (iucnDone) return; iucnDone = true;
+    const by = k => BIRDS.filter(b => b.iucn === k);
+    const threatened = BIRDS.filter(b => ["CR", "EN", "VU"].includes(b.iucn)).length;
+    const scale = IUCN_CATS.map(c => `<a class="scale-cell iucn-${c.k}" href="#iucn-${c.k}" data-iucn="${c.k}"><b>${c.k}</b><span>${IUCN[c.k]}</span></a>`).join("");
+    const groupsRow = [["gone", 2], ["threat", 3], ["ok", 2], ["data", 2]].map(([g, n]) => `<div class="scale-grp scale-${g}" style="grid-column: span ${n}">${IUCN_GROUPS[g]}</div>`).join("");
+    const cards = IUCN_CATS.map(c => {
+      const list = by(c.k);
+      return `<article class="iucn-card" id="iucn-${c.k}">
+        <div class="iucn-card-head"><span class="badge iucn-${c.k}">${c.k}</span><div><h3>${IUCN[c.k]}</h3><div class="muted small">${T(({ EX: "Extinct", EW: "Extinct in the Wild", CR: "Critically Endangered", EN: "Endangered", VU: "Vulnerable", NT: "Near Threatened", LC: "Least Concern", DD: "Data Deficient", NE: "Not Evaluated" })[c.k], IUCN_GROUPS[c.grp])}${c.alt ? " · " + c.alt : ""}</div></div></div>
+        <p>${c.def}</p>
+        ${c.ex ? `<p class="muted small">${c.ex}</p>` : ""}
+        <div class="iucn-birds"><b>${T("Энэ хөтөчид", "In this guide")}: ${list.length}</b>${list.length ? `<div class="tagrow">${list.map(b => `<a href="#bird-${b.id}" class="tag bird-chip" data-bird="${b.id}">${esc(b.name)}</a>`).join("")}</div>` : ""}</div>
+      </article>`;
+    }).join("");
+    const crit = `<div class="table-wrap"><table class="crit-table">
+      <thead><tr><th>${T("Шалгуур", "Criterion")}</th><th class="c-CR">CR</th><th class="c-EN">EN</th><th class="c-VU">VU</th></tr></thead>
+      <tbody>${IUCN_CRIT.map(g => `<tr class="crit-grp"><th colspan="4"><span class="crit-letter">${g.c}</span> ${g.t}<div class="muted small">${g.n}</div></th></tr>` +
+        g.rows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("")).join("")}</tbody></table></div>`.replace(/км²/g, T("км²", "km²"));
+    $("#iucn-root").innerHTML = `
+      <div class="iucn-intro">
+        <p>${T("<b>IUCN</b> (Байгаль хамгаалах олон улсын холбоо, 1948 онд байгуулагдсан) нь 1964 оноос хойш дэлхийн амьтан, ургамлын устах эрсдэлийг үнэлж <b>Улаан данс</b> (Red List) гаргадаг. Одоогийн ангилал, шалгуур нь 2001 онд батлагдсан <b>3.1 хувилбар</b>. Шувуудыг IUCN-ийн түнш <b>BirdLife International</b> үнэлж, тогтмол шинэчилдэг.",
+          "<b>IUCN</b> (International Union for Conservation of Nature, founded 1948) has published the <b>Red List</b> of threatened species since 1964. Today’s categories and criteria are <b>version 3.1</b>, adopted in 2001. Birds are assessed and regularly updated by IUCN’s partner <b>BirdLife International</b>.")}</p>
+        <p>${T("Зүйл бүрийг A–E гэсэн 5 шалгуураар үнэлдэг. Аль нэг шалгуурын босгыг хангахад л хангалттай бөгөөд хамгийн өндөр эрсдэлийн ангиллыг сонгоно.", "Each species is tested against five criteria, A–E. Meeting the threshold of any single criterion is enough, and the highest category met is assigned.")}</p>
+        <div class="iucn-summary">${T(`Энэ хөтөчийн <b>${BIRDS.length}</b> шувуунаас <b>${threatened}</b> нь ховордсон (CR, EN, VU) ангилалд багтдаг.`, `Of the <b>${BIRDS.length}</b> birds in this guide, <b>${threatened}</b> are threatened (CR, EN or VU).`)}</div>
+      </div>
+      <h3 class="section-gap">${T("Ангиллын шатлал", "The scale")}</h3>
+      <p class="muted small">${T("Зүүнээс баруун тийш устах эрсдэл буурна. Ангилал дээр дарж тайлбарыг үзнэ.", "Extinction risk falls from left to right. Click a category for details.")}</p>
+      <div class="iucn-scale-wrap"><div class="iucn-scale">${groupsRow}${scale}</div></div>
+      <h3 class="section-gap">${T("Ангилал бүрийн тайлбар", "Each category explained")}</h3>
+      <div class="iucn-grid">${cards}</div>
+      <h3 class="section-gap">${T("Ховордсон ангиллын шалгуур (A–E)", "Criteria for the threatened categories (A–E)")}</h3>
+      <p class="muted small">${T("\"Үе\" гэдэг нь үржлийн насны бодгалийн дундаж нас. \"Байршил\" гэдэг нь нэг аюул занал бүх бодгальд нэг дор нөлөөлөх газар зүйн хэсэг.", "“Generation” = average age of parents. “Location” = an area where a single threatening event can rapidly affect all individuals present.")}</p>
+      ${crit}
+      <h3 class="section-gap">${T("Үндэсний болон бүс нутгийн үнэлгээ", "National and regional assessments")}</h3>
+      <p>${T("Нэг улс, бүс нутгийн хэмжээнд ч мөн адил шалгуураар үнэлж болно. Тэр үед нэмэлт ангилал хэрэглэнэ: <b>RE</b> — бүс нутагт устсан (дэлхийд байгаа ч тухайн улсад устсан), <b>NA</b> — хамааралгүй (жишээ нь санамсаргүй тэнэмэл шувуу). Монгол Улсад «Монгол Улсын Улаан ном» (1987, 1997, 2013) болон «Монгол орны шувуудын бүсийн Улаан данс» (2011) хэвлэгдсэн. Иймээс нэг шувуу дэлхийд болон Монголд өөр ангилалтай байж болно. Энэ хөтөчийн шошго нь <b>дэлхийн (IUCN) ангилал</b>.",
+        "The same criteria can be applied to a single country or region, with two extra categories: <b>RE</b> — Regionally Extinct (gone from the country but surviving elsewhere) and <b>NA</b> — Not Applicable (e.g. vagrants). Mongolia has its national Red Book (1987, 1997, 2013) and a Regional Red List of Birds (2011), so a bird’s status in Mongolia can differ from its global status. The badges in this guide show the <b>global (IUCN)</b> category.")}</p>
+      <p class="muted small">${T("Эх сурвалж", "Sources")}: <a href="https://www.iucnredlist.org/resources/categories-and-criteria" target="_blank" rel="noopener">IUCN Red List Categories and Criteria v3.1</a> · <a href="https://datazone.birdlife.org/" target="_blank" rel="noopener">BirdLife DataZone</a>.</p>`;
+  }
+  document.addEventListener("click", e => {
+    const l = e.target.closest("[data-iucn]"); if (!l) return;
+    e.preventDefault(); e.stopPropagation();
+    if (!$("#modal").hidden) closeModal();
+    showTab("iucn", false); setHash("#iucn-" + l.dataset.iucn);
+    const card = document.getElementById("iucn-" + l.dataset.iucn);
+    if (card) { setTimeout(() => { card.scrollIntoView({ block: "start" }); card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash"); }, 60); }
+  }, true);
+
   /* ---------------- Detail modal ---------------- */
   function openBird(id, push = true) {
     const b = byId[id]; if (!b) return;
@@ -338,7 +439,7 @@
     $("#modal-body").innerHTML = `
       <div class="m-hero"><img src="${b.image.file}" alt="${esc(b.name)}" onload="if(this.naturalHeight>this.naturalWidth*0.8)this.classList.add('portrait')"><a class="credit" href="${b.image.source}" target="_blank" rel="noopener">📷 ${esc(b.image.credit)} · ${esc(b.image.via || "Wikimedia Commons")}</a></div>
       <div class="m-head">
-        ${badge(b)}
+        <a href="#iucn-${b.iucn}" class="badge-link" data-iucn="${b.iucn}" title="${T("Энэ ангиллын тайлбар", "About this category")}">${badge(b)} <span class="badge-more">${T("юу гэсэн үг вэ? →", "what does it mean? →")}</span></a>
         <h2 id="m-title">${esc(b.name)}</h2>
         <div class="sub"><i>${esc(b.latin)}</i> · ${esc(b.en)}${b.altNames ? T(" · Бусад нэр: ", " · Also: ") + esc(b.altNames) : ""}</div>
       </div>
@@ -1143,5 +1244,6 @@ ${knowledge(texts)}`;
   const h = location.hash.slice(1);
   if (h.startsWith("bird-")) openBird(h.slice(5), false);
   else if (h.startsWith("route-")) { showTab("routes", false); selectRoute(h.slice(6)); }
+  else if (h.startsWith("iucn-")) { showTab("iucn", false); const c = document.getElementById(h); if (c) setTimeout(() => c.scrollIntoView({ block: "start" }), 60); }
   else if (h) showTab(h, false);
 })();
