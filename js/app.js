@@ -205,10 +205,64 @@
   }
 
   let seasonFilter = "all", selRegion = null, selHotspot = null;
+  /* Том газрын зураг дээр сонгосон шувууны ажиглалтын тор */
+  let rangeSel = null, rangeLayer = null;
+  function initRangePick() {
+    const sel = $("#range-bird");
+    const opts = BIRDS.filter(b => HAS_RANGES && RANGES[b.id] && RANGES[b.id].n).slice().sort((a, b) => a.name.localeCompare(b.name, LANG === "en" ? "en" : "mn"));
+    sel.innerHTML = `<option value="">${T("— Шувуу сонгох —", "— Choose a bird —")}</option>` + opts.map(b => `<option value="${b.id}">${esc(b.name)} (${RANGES[b.id].n.toLocaleString()})</option>`).join("");
+    sel.addEventListener("change", () => showRange(sel.value || null));
+    $("#range-clear").addEventListener("click", () => showRange(null));
+    if (!HAS_RANGES) $(".range-pick").hidden = true;
+  }
+  function showRange(id, scroll) {
+    rangeSel = id && byId[id] ? id : null;
+    $("#range-bird").value = rangeSel || "";
+    $("#range-clear").hidden = !rangeSel;
+    const info = $("#range-info");
+    if (mainMap) {
+      if (rangeLayer) { mainMap.removeLayer(rangeLayer); rangeLayer = null; }
+      if (rangeSel) {
+        // Торыг халхлахгүйн тулд буудал, үзвэрийн тэмдэгтийг нууна (chip-ээр дахин асааж болно)
+        ["lodging", "culture", "nature"].forEach(k => { const c = $(`#layer-chips .chip[data-layer="${k}"]`); if (c && c.classList.contains("on")) c.click(); });
+        const cells = rangeCells(byId[rangeSel]);
+        rangeLayer = L.layerGroup(cells.map(([lon, lat, n]) => L.rectangle([[lat, lon], [lat + RANGE_GRID.step, lon + RANGE_GRID.step]],
+          { color: "#ffffff", weight: .6, opacity: .7, fillColor: RANGE_FILL, fillOpacity: RANGE_BINS[rangeBin(n)].op })
+          .bindTooltip(`${cellLabel(lat, lon)} · <b>${n}</b> ${T("бүртгэл", n === 1 ? "record" : "records")}`, { className: "hs-tip", sticky: true }))).addTo(mainMap);
+        if (cells.length) {
+          const la = cells.map(c => c[1]), lo = cells.map(c => c[0]);
+          const bb = [[Math.min(...la), Math.min(...lo)], [Math.max(...la) + RANGE_GRID.step, Math.max(...lo) + RANGE_GRID.step]];
+          setTimeout(() => refit(mainMap, bb, [30, 30]), 40);
+        }
+      } else setTimeout(() => refit(mainMap, MN_BOUNDS), 40);
+    } else renderMainMap();
+    if (!rangeSel) { info.hidden = true; info.innerHTML = ""; return; }
+    const b = byId[rangeSel], r = RANGES[rangeSel], cells = rangeCells(b);
+    info.hidden = false;
+    info.innerHTML = `<div class="ri-head">
+        <img src="${b.image.file}" alt="" loading="lazy">
+        <div><h3>${esc(b.name)}</h3><div class="muted small"><i>${esc(latinClean(b))}</i> · ${esc(b.en)}</div>${badge(b)}</div>
+        <button class="btn small" data-bird="${b.id}">${T("Дэлгэрэнгүй →", "Details →")}</button>
+      </div>
+      ${rangeLegend(true).replace(/<span class="rl-item"><i class="rl-(region|hs)"><\/i>[^<]*<\/span>/g, "")}
+      <p class="range-stats"><b>${r.n.toLocaleString()}</b> ${T("ажиглалтын бүртгэл", "records")} · <b>${cells.length}</b> ${T("нүдэнд", "grid cells")} · ${r.y[0]}–${r.y[1]} ${T("он", "")}</p>
+      ${monthsChart(r.m)}
+      <p class="note">${T("Өнгө нь ажиглалтын тоог илтгэнэ, шувууны тоог биш. Хоосон нүд нь \"байхгүй\" гэсэн үг биш.", "Shading shows observation effort, not bird numbers. An empty cell does not mean absence.")} ${T("Эх сурвалж", "Source")}: <a href="https://www.gbif.org/species/${r.k}" target="_blank" rel="noopener">GBIF.org</a> (${RANGE_GRID.date}).</p>`;
+    if (scroll) setTimeout(() => $(".range-pick").scrollIntoView({ block: "start", behavior: "smooth" }), 80);
+  }
+  document.addEventListener("click", e => {
+    const l = e.target.closest("[data-rangemap]"); if (!l) return;
+    e.preventDefault();
+    if (!$("#modal").hidden) closeModal();
+    showTab("map", false); setHash("#map");
+    setTimeout(() => showRange(l.dataset.rangemap, true), 80);
+  });
+
   function renderMainMap() {
     if (mainMap) return updateMainSat();
     const svg = $("#mn-map");
-    svg.innerHTML = mapSVG({ regionsOn: selRegion ? [selRegion] : [] });
+    svg.innerHTML = mapSVG({ regionsOn: selRegion ? [selRegion] : [] }) + (rangeSel ? rangeCells(byId[rangeSel]).map(([lon, lat, n]) =>
+      `<rect class="rcell" x="${px(lon)}" y="${py(lat + RANGE_GRID.step)}" width="${px(lon + RANGE_GRID.step) - px(lon)}" height="${py(lat) - py(lat + RANGE_GRID.step)}" style="fill:${RANGE_FILL};fill-opacity:${RANGE_BINS[rangeBin(n)].op}"><title>${cellLabel(lat, lon)}: ${n}</title></rect>`).join("") : "");
     $$(".hs", svg).forEach(g => {
       g.classList.toggle("on", g.dataset.hs === selHotspot);
       if (selRegion && !selHotspot) {
@@ -269,6 +323,7 @@
       else if (rg) { selHotspot = null; selRegion = selRegion === rg.dataset.region ? null : rg.dataset.region; }
       renderMainMap(); renderMapResults();
     });
+    initRangePick();
     renderMainMap(); renderMapResults();
   }
 
@@ -321,7 +376,7 @@
     return `<section class="range-sec"><h3>${T("Монгол дахь тархац", "Distribution in Mongolia")}</h3>
       <p>${esc(b.distribution)}</p>
       ${map}
-      ${rangeLegend(cells.length > 0)}
+      ${rangeLegend(cells.length > 0)}${cells.length ? `<p class="range-big"><a href="#map" class="btn small" data-rangemap="${b.id}">🗺️ ${T("Том газрын зураг дээр харах", "Open on the large map")}</a></p>` : ""}
       ${stats}
       ${r && r.n ? monthsChart(r.m) : ""}
       <div class="tagrow">${b.regions.map(k => `<span class="tag">${REGIONS[k].name}</span>`).join("")}</div>

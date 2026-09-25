@@ -140,11 +140,17 @@
       <p class="muted" data-en="Click a region or a birdwatching site on the satellite map to see which birds live there. You can also filter by season.">Хиймэл дагуулын зураг дээрх бүс нутаг эсвэл шувуу ажиглах цэг дээр дарж, тэнд ямар шувуу амьдардгийг хараарай. Мөн улирлаар шүүж болно.</p>
       <div class="map-controls chips" id="season-chips"></div>
       <div class="layer-row"><span class="muted" data-en="Show on map:">Газрын зураг дээр харуулах:</span><div class="chips" id="layer-chips"></div></div>
+      <div class="range-pick">
+        <label for="range-bird" data-en="🔎 Show a bird’s observation grid:">🔎 Шувууны ажиглалтын торыг харуулах:</label>
+        <select id="range-bird"></select>
+        <button type="button" class="btn small" id="range-clear" hidden data-en="✕ Clear">✕ Арилгах</button>
+      </div>
       <div class="map-card">
         <div id="mn-map-sat" class="sat-map" hidden></div>
         <div class="map-scroll"><svg id="mn-map" class="mn-map" viewBox="0 0 900 450" role="img" aria-label="Монгол орны бүс нутгийн схем зураг"></svg></div>
         <div id="map-legend" class="map-legend"></div>
       </div>
+      <div id="range-info" class="range-info" hidden></div>
       <div id="map-info" class="map-info"></div>
       <div id="map-results" class="grid compact"></div>
     </div>
