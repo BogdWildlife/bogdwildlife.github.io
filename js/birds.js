@@ -1262,7 +1262,7 @@ BIRDS.push(
   {
     id: "imperial-eagle",
     name: "Кавказ хатан бүргэд",
-    altNames: "Хан бүргэд, Дорнын хан бүргэд, Хэсэг бүргэд, Эзэн хааны бүргэд",
+    altNames: "Хан бүргэд, Дорнын хан бүргэд",
     latin: "Aquila heliaca",
     en: "Eastern Imperial Eagle",
     order: "Хэрцгийтнүүд (Accipitriformes)",
