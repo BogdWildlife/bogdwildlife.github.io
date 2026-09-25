@@ -270,6 +270,64 @@
     renderMainMap(); renderMapResults();
   }
 
+  /* ---------------- Нарийвчилсан тархац (GBIF ажиглалтын тор) ---------------- */
+  const HAS_RANGES = typeof RANGES !== "undefined";
+  const RANGE_FILL = "#eb6834";
+  // Ажиглалтын тоог 4 ангилалд хуваана (нэг өнгө, тод байдлаар)
+  const RANGE_BINS = [{ max: 1, op: .32, lbl: "1" }, { max: 4, op: .52, lbl: "2–4" }, { max: 19, op: .72, lbl: "5–19" }, { max: Infinity, op: .92, lbl: "20+" }];
+  const rangeBin = n => RANGE_BINS.findIndex(x => n <= x.max);
+  function rangeCells(b) {
+    const r = HAS_RANGES && RANGES[b.id]; if (!r) return [];
+    const out = [];
+    for (let i = 0; i < r.c.length; i += 3) out.push([RANGE_GRID.lon0 + r.c[i] * RANGE_GRID.step, RANGE_GRID.lat0 + r.c[i + 1] * RANGE_GRID.step, r.c[i + 2]]);
+    return out;
+  }
+  const cellLabel = (lat, lon) => `${lat.toFixed(1)}–${(lat + RANGE_GRID.step).toFixed(1)}°N, ${lon.toFixed(1)}–${(lon + RANGE_GRID.step).toFixed(1)}°E`;
+  const MONTHS = T(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]);
+  const MONTH_NAMES = T(["1-р сар", "2-р сар", "3-р сар", "4-р сар", "5-р сар", "6-р сар", "7-р сар", "8-р сар", "9-р сар", "10-р сар", "11-р сар", "12-р сар"],
+    ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]);
+  function monthsChart(m) {
+    const total = m.reduce((a, x) => a + x, 0); if (!total) return "";
+    const max = Math.max(...m), top = m.indexOf(max);
+    const desc = m.map((v, i) => `${MONTH_NAMES[i]}: ${v}`).join(", ");
+    return `<figure class="months-fig">
+      <figcaption>${T("Аль саруудад ажиглагддаг вэ", "When it is recorded")} <span class="muted">(${T("сар бүрийн бүртгэлийн тоо", "records per month")})</span></figcaption>
+      <div class="months" role="img" aria-label="${esc(desc)}">
+        ${m.map((v, i) => `<div class="mcol" tabindex="0" data-tip="${esc(MONTH_NAMES[i])}: ${v} ${T("бүртгэл", v === 1 ? "record" : "records")}">
+          <div class="mtrack"><i style="height:${v ? Math.max(3, Math.round(v / max * 100)) : 0}%">${i === top ? `<span class="mval">${v.toLocaleString()}</span>` : ""}</i></div><span class="mlbl">${MONTHS[i]}</span></div>`).join("")}
+      </div>
+      ${LANG === "en" ? "" : `<div class="mcap muted">${T("сар", "")}</div>`}
+    </figure>`;
+  }
+  function rangeLegend(hasCells) {
+    return `<div class="range-legend">
+      ${hasCells ? `<span class="rl-title">${T("Ажиглалтын тоо (≈ 40 × 55 км нүд)", "Records per cell (≈ 40 × 55 km)")}:</span>
+      ${RANGE_BINS.map(x => `<span class="rl-item"><i style="background:${RANGE_FILL};opacity:${x.op}"></i>${x.lbl}</span>`).join("")}` : ""}
+      <span class="rl-item"><i class="rl-region"></i>${T("Ерөнхий тархацын бүс", "General range region")}</span>
+      <span class="rl-item"><i class="rl-hs"></i>${T("Ажиглахад тохиромжтой газар", "Good viewing site")}</span>
+    </div>`;
+  }
+  function rangeSection(b) {
+    const r = HAS_RANGES ? RANGES[b.id] : null, cells = rangeCells(b);
+    const svgCells = cells.map(([lon, lat, n]) => `<rect class="rcell" x="${px(lon)}" y="${py(lat + RANGE_GRID.step)}" width="${px(lon + RANGE_GRID.step) - px(lon)}" height="${py(lat) - py(lat + RANGE_GRID.step)}" style="fill:${RANGE_FILL};fill-opacity:${RANGE_BINS[rangeBin(n)].op}"><title>${cellLabel(lat, lon)}: ${n}</title></rect>`).join("");
+    const map = HAS_L ? `<div id="bird-sat" class="sat-map sat-range" aria-label="${T("Тархацын газрын зураг", "Range map")}"></div>`
+      : `<svg class="mini-map" viewBox="0 0 900 450">${mapSVG({ regionsOn: b.regions, hotspotsOn: b.hotspots, labels: false, hsLabels: "all" })}${svgCells}</svg>`;
+    let stats;
+    if (!r) stats = "";
+    else if (!r.n) stats = `<p class="range-stats">${T("GBIF-д Монголоос бүртгэгдсэн ажиглалт алга — энэ зүйл Монголд тархдаггүй.", "GBIF holds no records from Mongolia — this species does not occur here.")}</p>`;
+    else stats = `<p class="range-stats"><b>${r.n.toLocaleString()}</b> ${T("ажиглалтын бүртгэл", "records")} · <b>${cells.length}</b> ${T("нүдэнд", "grid cells")} · ${r.y[0]}–${r.y[1]} ${T("он", "")}${r.u < r.n ? ` · ${T(`газрын зурагт ${r.u.toLocaleString()} бүртгэлээр`, `map uses ${r.u.toLocaleString()} of them`)}` : ""}</p>`;
+    return `<section class="range-sec"><h3>${T("Монгол дахь тархац", "Distribution in Mongolia")}</h3>
+      <p>${esc(b.distribution)}</p>
+      ${map}
+      ${rangeLegend(cells.length > 0)}
+      ${stats}
+      ${r && r.n ? monthsChart(r.m) : ""}
+      <div class="tagrow">${b.regions.map(k => `<span class="tag">${REGIONS[k].name}</span>`).join("")}</div>
+      ${r && r.n ? `<p class="note">${T("Нүднүүд нь GBIF-д бүртгэгдсэн хүний ажиглалт, музейн сорьцыг харуулна. Ажиглагч олон очдог газар (Улаанбаатар орчим, аяллын зам) илүү олон бүртгэлтэй байдаг тул өнгө нь шувууны тоо биш, ажиглалтын тоог илтгэнэ. Хоосон нүд нь \"байхгүй\" гэсэн үг биш.", "Cells show human observations and museum specimens held by GBIF. Well-visited places (around Ulaanbaatar, tour routes) have more records, so shading reflects observation effort, not bird numbers. An empty cell does not mean absence.")}
+        ${T("Эх сурвалж", "Source")}: <a href="https://www.gbif.org/species/${r.k}" target="_blank" rel="noopener">GBIF.org</a> (${RANGE_GRID.date}).</p>` : ""}
+    </section>`;
+  }
+
   /* ---------------- Detail modal ---------------- */
   function openBird(id, push = true) {
     const b = byId[id]; if (!b) return;
@@ -297,7 +355,7 @@
           ${sec(T("Таних гол шинж тэмдэг", "Key field marks"), list(b.features))}
           ${sec(T("Төстэй зүйлээс ялгах нь", "Similar species"), p(b.similar))}
           ${sec(T("Амьдрах орчин", "Habitat"), p(b.habitatText))}
-          ${sec(T("Монгол дахь тархац", "Distribution in Mongolia"), p(b.distribution))}
+          ${rangeSection(b)}
           ${sec(T("Нүүдэл ба улирал", "Migration & seasons"), p(b.migration))}
           ${sec(T("Хоол тэжээл", "Diet"), p(b.food))}
           ${sec(T("Үржил", "Breeding"), p(b.breeding))}
@@ -312,11 +370,6 @@
             <p style="margin-top:8px">${esc(b.voice)}</p>
             ${b.audio ? `<audio controls preload="none" src="${b.audio.file}"></audio><div class="xc-link muted">${T("Бичлэг", "Recording")}: <a href="${b.audio.source}" target="_blank" rel="noopener">Wikimedia Commons / xeno-canto</a></div>`
                       : `<p class="xc-link muted">${T("Энэ хөтөчид бичлэг ороогүй.", "No recording in this guide.")} <a href="${xcUrl(b)}" target="_blank" rel="noopener">${T("xeno-canto дээр сонсох ↗", "Listen on xeno-canto ↗")}</a></p>`}
-          </div>
-          <div class="side-box">
-            <h3>🗺️ ${T("Тархац", "Range")}</h3>
-            ${HAS_L ? `<div id="bird-sat" class="sat-map sat-mini"></div>` : `<svg class="mini-map" viewBox="0 0 900 450">${mapSVG({ regionsOn: b.regions, hotspotsOn: b.hotspots, labels: false, hsLabels: "all" })}</svg>`}
-            <div class="tagrow">${b.regions.map(r => `<span class="tag">${REGIONS[r].name}</span>`).join("")}</div>
           </div>
           <div class="side-box">
             <h3>📍 ${T("Хаана, хэзээ үзэх вэ", "Where & when to see")}</h3>
@@ -344,9 +397,13 @@
     if (birdMap) { birdMap.remove(); birdMap = null; }
     if (HAS_L) {
       birdMap = satMap($("#bird-sat"), { scrollWheelZoom: false });
-      b.regions.forEach(k => L.polygon(REGION_POLYS[k], regionStyle(true)).addTo(birdMap));
-      b.hotspots.forEach(k => L.circleMarker([HOTSPOTS[k].lat, HOTSPOTS[k].lon], hsStyle(true, false)).addTo(birdMap)
-        .bindTooltip(HOTSPOTS[k].name, { permanent: true, direction: "right", offset: [8, 0], className: "hs-tip" }));
+      const cells = rangeCells(b);
+      b.regions.forEach(k => L.polygon(REGION_POLYS[k], cells.length ? { color: "#8fe3ff", weight: 1.5, opacity: .8, dashArray: "4 4", fillColor: "#8fe3ff", fillOpacity: .07, interactive: false } : regionStyle(true)).addTo(birdMap));
+      cells.forEach(([lon, lat, n]) => L.rectangle([[lat, lon], [lat + RANGE_GRID.step, lon + RANGE_GRID.step]],
+        { color: "#ffffff", weight: .6, opacity: .7, fillColor: RANGE_FILL, fillOpacity: RANGE_BINS[rangeBin(n)].op })
+        .bindTooltip(`${cellLabel(lat, lon)} · <b>${n}</b> ${T("бүртгэл", n === 1 ? "record" : "records")}`, { className: "hs-tip", sticky: true }).addTo(birdMap));
+      b.hotspots.forEach(k => L.circleMarker([HOTSPOTS[k].lat, HOTSPOTS[k].lon], { ...hsStyle(true, false), radius: 7 }).addTo(birdMap)
+        .bindTooltip(HOTSPOTS[k].name, { direction: "top", offset: [0, -6], className: "hs-tip" }));
       setTimeout(() => refit(birdMap, MN_BOUNDS), 60);
     }
   }

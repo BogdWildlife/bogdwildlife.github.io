@@ -295,6 +295,32 @@ audio { width: 100%; max-width: 420px; height: 36px; }
 .sat-map { height: 540px; border-radius: 10px; background: #0b1822; isolation: isolate; z-index: 0; }
 .sat-mini { height: 280px; }
 .sat-route { height: 460px; }
+.sat-range { height: 380px; margin: 10px 0 8px; }
+
+/* Нарийвчилсан тархац */
+.range-sec .mini-map { margin: 10px 0 8px; }
+.range-sec .mini-map .rcell { stroke: var(--surface); stroke-width: .6; }
+.range-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: .82rem; color: var(--muted); }
+.rl-title { color: var(--ink); font-weight: 600; }
+.rl-item { display: inline-flex; align-items: center; gap: 5px; }
+.rl-item i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+.rl-item i.rl-region { border: 1.5px dashed #5aa9c4; background: color-mix(in srgb, #8fe3ff 20%, transparent); }
+.rl-item i.rl-hs { border-radius: 50%; background: #ff5a3c; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.range-stats { margin: 8px 0 4px !important; font-size: .9rem; }
+.months-fig { margin: 12px 0 10px; }
+.months-fig figcaption { font-weight: 600; font-size: .9rem; margin-bottom: 6px; }
+.months-fig figcaption .muted { font-weight: 400; }
+.months { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2px; height: 130px; padding-top: 18px; max-width: 520px; }
+.mcol { position: relative; display: flex; flex-direction: column; align-items: stretch; outline: none; cursor: default; }
+.mtrack { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; border-bottom: 1px solid var(--line); }
+.mtrack i { position: relative; display: block; width: 72%; max-width: 26px; background: var(--accent); border-radius: 4px 4px 0 0; }
+.mcol:hover .mtrack i, .mcol:focus-visible .mtrack i { filter: brightness(1.15); }
+.mval { position: absolute; bottom: calc(100% + 2px); left: 50%; transform: translateX(-50%); font-size: .72rem; font-weight: 700; font-style: normal; color: var(--ink); white-space: nowrap; }
+.mlbl { text-align: center; font-size: .72rem; color: var(--muted); padding-top: 3px; }
+.mcap { font-size: .72rem; max-width: 520px; text-align: center; }
+.mcol[data-tip]:hover::after, .mcol[data-tip]:focus-visible::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); white-space: nowrap; background: rgba(12,20,24,.9); color: #fff; font-size: .75rem; padding: 3px 8px; border-radius: 6px; pointer-events: none; z-index: 2; }
+.mcol:nth-child(-n+2)::after { left: 0 !important; transform: none !important; }
+.mcol:nth-last-child(-n+2)::after { left: auto !important; right: 0; transform: none !important; }
 .sat-map .leaflet-control-attribution { font-size: 10px; background: rgba(255,255,255,.75); }
 .sat-map .leaflet-bar a { color: #1f2a2e; }
 .leaflet-tooltip.hs-tip { font: 700 12px var(--sans); padding: 3px 8px; border: 0; border-radius: 6px; background: rgba(12,20,24,.82); color: #fff; box-shadow: none; }
