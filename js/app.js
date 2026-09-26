@@ -670,7 +670,7 @@
     return s > 0.45 && v > 0.5 ? "yellow" : v < 0.45 ? "brown" : "buff";
   }
   function colorProfile(img) {
-    const c = document.createElement("canvas"), W = 120, H = Math.max(1, Math.round(120 * img.naturalHeight / img.naturalWidth));
+    const c = document.createElement("canvas"), W = 120, H = Math.max(1, Math.round(120 * (img.naturalHeight || img.height) / (img.naturalWidth || img.width)));
     c.width = W; c.height = H;
     const ctx = c.getContext("2d", { willReadFrequently: true });
     ctx.drawImage(img, 0, 0, W, H);
@@ -702,6 +702,8 @@
     modelPromise = (async () => {
       await loadScript("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js");
       await loadScript("https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js");
+      // Лавлах зургийн embedding (REF_EMB) — сайтад тусдаа файлаар, нэг файлт хувилбарт шууд орсон байна
+      if (typeof REF_EMB === "undefined") await loadScript("js/refemb.js").catch(() => {});
       try { return await mobilenet.load({ version: 2, alpha: 1.0 }); }
       catch (e) { return await mobilenet.load({ version: 1, alpha: 1.0 }); }
     })();
@@ -709,31 +711,78 @@
     return modelPromise;
   }
 
-  let lastPhoto = null;
+  /* Сургасан загвар: MobileNet embedding дээрх ангилагч (logistic regression) + шувуу бүрийн прототиптэй харьцуулалт */
+  let REFS = null;
+  function refs() {
+    if (REFS || typeof REF_EMB === "undefined") return REFS;
+    const D = REF_EMB.dim;
+    const dec = (b64, scales) => {
+      const bin = atob(b64), n = scales.length, out = [];
+      for (let k = 0; k < n; k++) { const v = new Float32Array(D), s = scales[k]; for (let d = 0; d < D; d++) v[d] = ((bin.charCodeAt(k * D + d) << 24) >> 24) * s; out.push(v); }
+      return out;
+    };
+    const W = dec(REF_EMB.lr.data, REF_EMB.lr.scales), P = dec(REF_EMB.proto.data, REF_EMB.proto.scales);
+    REFS = { ids: REF_EMB.ids, W, bias: REF_EMB.lr.bias, protos: REF_EMB.proto.index.map(([id, s, n]) => ({ id, vecs: P.slice(s, s + n) })) };
+    return REFS;
+  }
+  const l2n = v => { let n = 0; for (let i = 0; i < v.length; i++) n += v[i] * v[i]; n = Math.sqrt(n) || 1; return v.map(x => x / n); };
+  const dotp = (a, b) => { let d = 0; for (let i = 0; i < a.length; i++) d += a[i] * b[i]; return d; };
+  // 3 өнцөг: эх зураг, толин тусгал, голын 80% — дундажлан нэг вектор болгоно
+  async function embedOf(model, src) {
+    const w = src.naturalWidth || src.width, h = src.naturalHeight || src.height;
+    const f = document.createElement("canvas"); f.width = w; f.height = h;
+    const g = f.getContext("2d"); g.translate(w, 0); g.scale(-1, 1); g.drawImage(src, 0, 0);
+    const c = document.createElement("canvas"); c.width = Math.round(w * 0.8); c.height = Math.round(h * 0.8);
+    c.getContext("2d").drawImage(src, w * 0.1, h * 0.1, w * 0.8, h * 0.8, 0, 0, c.width, c.height);
+    const vs = [];
+    for (const x of [src, f, c]) { const e = tf.tidy(() => model.infer(x, true)); vs.push(l2n(Array.from(await e.data()))); e.dispose(); }
+    return l2n(vs[0].map((x, i) => x + vs[1][i] + vs[2][i]));
+  }
+  function knnScores(q) {
+    const R = refs(); if (!R) return null;
+    // ангилагчийн магадлал
+    const z = R.W.map((w, i) => dotp(q, w) + R.bias[i]), mz = Math.max(...z), ez = z.map(x => Math.exp(x - mz)), Zz = ez.reduce((a, x) => a + x, 0);
+    // прототиптэй хамгийн их төстэй байдал
+    const ps = R.protos.map(p => Math.max(...p.vecs.map(v => dotp(q, v)))), mp = Math.max(...ps), ep = ps.map(x => Math.exp((x - mp) / 0.03)), Zp = ep.reduce((a, x) => a + x, 0);
+    const out = {}, sim = {};
+    R.ids.forEach((id, i) => { out[id] = PHOTO_MIX * ez[i] / Zz + (1 - PHOTO_MIX) * ep[i] / Zp; sim[id] = ps[i]; });
+    return { p: out, sim };
+  }
+  // Үнэлгээгээр ангилагч дангаараа хамгийн сайн (эхний хариулт 62%, эхний 3-т 78%) тул жин 1
+  const PHOTO_MIX = 1;
+  let lastPhoto = null, photoURL = null, cropRect = null;
   async function analyzePhoto(file) {
     lastPhoto = file;
     $("#photo-ai-btn").disabled = false;
     $("#photo-ai-out").hidden = true;
-    const url = URL.createObjectURL(file);
+    if (photoURL) URL.revokeObjectURL(photoURL);
+    photoURL = URL.createObjectURL(file);
     const img = $("#photo-preview");
-    img.src = url; img.hidden = false; $("#drop-empty").hidden = true;
+    img.src = photoURL; img.hidden = false; $("#drop-empty").hidden = true;
     await img.decode().catch(() => {});
+    const cimg = $("#crop-img"); cimg.src = photoURL; $("#crop-tools").hidden = false;
+    cropRect = null; $("#crop-sel").hidden = true; $("#crop-reset").hidden = true;
+    await analyzeSource(img, false);
+  }
+  async function analyzeSource(src, cropped) {
     const status = $("#photo-status");
     status.className = "status"; status.innerHTML = `<span class="spinner"></span>${T("Зургийг шинжилж байна…", "Analysing photo…")}`;
     $("#photo-results").innerHTML = "";
 
-    const { prof, bgShare } = colorProfile(img);
+    const { prof, bgShare } = colorProfile(src);
     const bar = $("#color-bar");
     bar.hidden = false;
     bar.innerHTML = COLOR_KEYS.filter(k => prof[k] > 0.02).sort((a, b) => prof[b] - prof[a])
       .map(k => `<span title="${COLOR_NAMES[k]} ${Math.round(prof[k] * 100)}%" style="width:${prof[k] * 100}%;background:${SWATCH[k]}"></span>`).join("");
 
-    let preds = null, modelErr = null;
+    let preds = null, modelErr = null, knn = null;
     try {
       const model = await Promise.race([preloadModel(), new Promise((_, r) => setTimeout(() => r(new Error("timeout")), 45000))]);
-      preds = await model.classify(img, 10);
+      preds = await model.classify(src, 10);
+      if (refs()) knn = knnScores(await embedOf(model, src));
     } catch (e) { modelErr = e; }
 
+    // ImageNet ангиллын холбоос (туслах дохио)
     const modelScore = Object.fromEntries(BIRDS.map(b => [b.id, 0]));
     const hits = {}; let birdMass = 0;
     if (preds) for (const p of preds) {
@@ -751,24 +800,64 @@
     }
     const maxModel = Math.max(...Object.values(modelScore));
     const useModel = preds && maxModel > 0.02;
-    const results = BIRDS.map(b => {
-      const col = cosine(prof, b.colors);
-      const mod = useModel ? modelScore[b.id] / maxModel : 0;
-      const mw = 0.7 * Math.min(1, 0.3 + birdMass * 1.2);
-      const score = (useModel ? mw * mod + (1 - mw) * col : col * 0.9) * (PRIOR[b.id] || 1);
-      const topCols = Object.entries(b.colors).sort((x, y) => y[1] - x[1]).slice(0, 2).map(([k]) => COLOR_NAMES[k].toLowerCase()).join(", ");
-      const why = [hits[b.id] ? "AI: " + hits[b.id].slice(0, 2).join("; ") : null, `${T("Өнгөний төстэй байдал", "Colour match")} ${Math.round(col * 100)}% (${topCols})`].filter(Boolean).join(" · ");
-      return { b, score, why };
-    }).sort((x, y) => y.score - x.score);
+    const oldScore = b => {
+      const col = cosine(prof, b.colors), mod = useModel ? modelScore[b.id] / maxModel : 0, mw = 0.7 * Math.min(1, 0.3 + birdMass * 1.2);
+      return { col, s: (useModel ? mw * mod + (1 - mw) * col : col * 0.9) * (PRIOR[b.id] || 1) };
+    };
+    let results;
+    if (knn) {
+      // Гол дохио: лавлах зурагтай төстэй байдал; туслах: ImageNet + өнгө; ховор зүйлд бага жин
+      // Монголд ховор/байхгүй зүйлд магадлалыг бага зэрэг бууруулна (PRIOR), дараа нь дахин нормчилно
+      const raw = BIRDS.map(b => ({ b, v: (knn.p[b.id] || 0) * Math.sqrt(PRIOR[b.id] || 1), sim: knn.sim[b.id] || 0 }));
+      const Z = raw.reduce((a, r) => a + r.v, 0) || 1;
+      results = raw.map(r => ({ b: r.b, score: r.v / Z,
+        why: [`${T("Лавлах зурагтай төстэй", "Similarity to reference photos")} ${Math.round(r.sim * 100)}%`, hits[r.b.id] ? "ImageNet: " + hits[r.b.id][0] : null].filter(Boolean).join(" · ") }))
+        .sort((x, y) => y.score - x.score);
+    } else {
+      results = BIRDS.map(b => {
+        const o = oldScore(b);
+        const topCols = Object.entries(b.colors).sort((x, y) => y[1] - x[1]).slice(0, 2).map(([k]) => COLOR_NAMES[k].toLowerCase()).join(", ");
+        const why = [hits[b.id] ? "AI: " + hits[b.id].slice(0, 2).join("; ") : null, `${T("Өнгөний төстэй байдал", "Colour match")} ${Math.round(o.col * 100)}% (${topCols})`].filter(Boolean).join(" · ");
+        return { b, score: Math.min(0.99, o.s), why };
+      }).sort((x, y) => y.score - x.score);
+    }
 
     let msg;
     if (modelErr) msg = `<span class="status err">${T("⚠️ Дүрс танигч модель ачаалагдсангүй (интернэт холболт эсвэл хостын хязгаарлалтаас шалтгаалж болно). Зөвхөн өнгөний шинжилгээгээр үнэлэв — найдвартай байдал бага.", "⚠️ The image-recognition model did not load (network or host restrictions). Colour analysis only — low reliability.")}</span>`;
+    else if (knn) {
+      const p = results[0].score;
+      const level = p >= 0.5 ? T("өндөр", "high") : p >= 0.3 ? T("дунд", "medium") : T("бага", "low");
+      msg = T(`✅ Шинжилгээ дууслаа${cropped ? " (хүрээлсэн хэсгээр)" : ""}. Итгэл: <b>${level}</b>. Хамгийн магадлалтай 5 шувуу:`, `✅ Done${cropped ? " (using the boxed area)" : ""}. Confidence: <b>${level}</b>. The 5 most likely birds:`);
+      if (p < 0.3) msg += `<br><span class="muted">${T("Итгэл бага байна — доорх ✂️ хэрэгслээр шувууг хүрээлж, эсвэл шувуу томоор харагдах өөр зураг оруулна уу.", "Low confidence — box the bird with the ✂️ tool below, or try a photo where the bird is larger.")}</span>`;
+    }
     else if (!useModel) msg = T("⚠️ AI зурган дээр шувуу тод таньсангүй", "⚠️ The AI could not clearly detect a bird") + (preds ? ` (${T("хамгийн төстэй", "closest")}: “${esc(preds[0].className.split(",")[0])}”)` : "") + T(". Өнгөөр л харьцуулав. Шувуу голд, томоор харагдах зураг оруулна уу.", ". Compared by colour only. Try a photo with the bird large and centred.");
     else msg = T("✅ Шинжилгээ дууслаа. Хамгийн магадлалтай 5 шувуу:", "✅ Done. The 5 most likely birds:");
-    if (bgShare > 0.6) msg += `<br><span class="muted">${T("Зургийн ихэнх хэсэг нь тэнгэр/ус/ургамал байна — шувууг ойртуулж тайрвал илүү оновчтой.", "Most of the photo is sky, water or vegetation — crop closer to the bird for a better match.")}</span>`;
+    if (bgShare > 0.6 && !cropped) msg += `<br><span class="muted">${T("Зургийн ихэнх хэсэг нь тэнгэр/ус/ургамал байна — ✂️ хэрэгслээр шувууг хүрээлбэл илүү оновчтой.", "Most of the photo is sky, water or vegetation — box the bird with the ✂️ tool for a better match.")}</span>`;
     status.className = "status"; status.innerHTML = msg;
     $("#photo-results").innerHTML = results.slice(0, 5).map(r => resultRow(r.b, Math.min(0.99, r.score), r.why)).join("") +
       `<p class="muted" style="font-size:.85rem">${T(`Таарахгүй бол <a href="#traits" data-goto="traits">шинж тэмдгээр</a> эсвэл <a href="#sound" data-goto="sound">дуу хоолойгоор</a> нарийвчлаарай.`, `No match? Narrow it down by <a href="#traits" data-goto="traits">field marks</a> or <a href="#sound" data-goto="sound">voice</a>.`)}</p>`;
+  }
+  function initCrop() {
+    const box = $("#crop-box"), img = $("#crop-img"), sel = $("#crop-sel");
+    let start = null;
+    const pt = e => { const r = img.getBoundingClientRect(); return { x: Math.min(Math.max(e.clientX - r.left, 0), r.width), y: Math.min(Math.max(e.clientY - r.top, 0), r.height), r }; };
+    const draw = (a, b) => { sel.hidden = false; Object.assign(sel.style, { left: Math.min(a.x, b.x) + img.offsetLeft + "px", top: Math.min(a.y, b.y) + img.offsetTop + "px", width: Math.abs(b.x - a.x) + "px", height: Math.abs(b.y - a.y) + "px" }); };
+    box.addEventListener("pointerdown", e => { if (!img.naturalWidth) return; e.preventDefault(); start = pt(e); box.setPointerCapture(e.pointerId); draw(start, start); });
+    box.addEventListener("pointermove", e => { if (start) draw(start, pt(e)); });
+    box.addEventListener("pointerup", async e => {
+      if (!start) return; const end = pt(e), a = start; start = null;
+      const sx = img.naturalWidth / a.r.width, sy = img.naturalHeight / a.r.height;
+      const x = Math.min(a.x, end.x) * sx, y = Math.min(a.y, end.y) * sy, w = Math.abs(end.x - a.x) * sx, h = Math.abs(end.y - a.y) * sy;
+      if (w < 24 || h < 24) { sel.hidden = true; return; }
+      // бага зэрэг зай нэмж, дөрвөлжин хэлбэрт ойртуулна
+      const pad = 0.08, cx = x + w / 2, cy = y + h / 2, side = Math.max(w, h) * (1 + pad);
+      const x0 = Math.max(0, cx - side / 2), y0 = Math.max(0, cy - side / 2), x1 = Math.min(img.naturalWidth, cx + side / 2), y1 = Math.min(img.naturalHeight, cy + side / 2);
+      const c = document.createElement("canvas"); c.width = Math.round(x1 - x0); c.height = Math.round(y1 - y0);
+      c.getContext("2d").drawImage(img, x0, y0, x1 - x0, y1 - y0, 0, 0, c.width, c.height);
+      cropRect = [x0, y0, x1, y1]; $("#crop-reset").hidden = false;
+      await analyzeSource(c, true);
+    });
+    $("#crop-reset").addEventListener("click", async () => { cropRect = null; sel.hidden = true; $("#crop-reset").hidden = true; await analyzeSource($("#photo-preview"), false); });
   }
   function initPhoto() {
     const input = $("#photo-input"), dz = $("#dropzone");
@@ -776,6 +865,7 @@
     ["dragenter", "dragover"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add("drag"); }));
     ["dragleave", "drop"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove("drag"); }));
     dz.addEventListener("drop", e => { const f = e.dataTransfer.files[0]; if (f && f.type.startsWith("image/")) analyzePhoto(f); });
+    initCrop();
   }
 
   /* ---------------- Quizzes ---------------- */

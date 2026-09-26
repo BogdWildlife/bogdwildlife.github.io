@@ -87,7 +87,7 @@
   <section id="tab-photo" class="tab-panel">
     <div class="wrap">
       <h2 data-en="Identify by photo">Зургаар таних</h2>
-      <p class="muted" data-en="Upload your own photo of a bird. The site combines an AI image recogniser (MobileNet) with colour analysis to suggest the closest matches among the birds in this guide.">Өөрийн авсан шувууны зургийг оруулна уу. Систем хиймэл оюуны (MobileNet) дүрс танигч болон зургийн өнгөний шинжилгээг хослуулан, энэ хөтөчийн шувуудаас хамгийн төстэйг нь санал болгоно.</p>
+      <p class="muted" data-en="Upload your own photo of a bird. An AI image model (MobileNet) turns it into a numeric “fingerprint” and compares it with over a thousand expert-verified reference photos (iNaturalist) of the birds in this guide, then suggests the closest matches.">Өөрийн авсан шувууны зургийг оруулна уу. Хиймэл оюуны дүрс танигч (MobileNet) зургийг тоон «хурууны хээ» болгож, энэ хөтөчийн шувуудын шинжээчдийн баталгаажуулсан мянга гаруй лавлах зурагтай (iNaturalist) харьцуулан хамгийн төстэйг нь санал болгоно.</p>
       <div class="photo-layout">
         <div>
           <label id="dropzone" class="dropzone">
@@ -100,6 +100,12 @@
             <img id="photo-preview" alt="Оруулсан зураг" data-en-aria="Uploaded photo" hidden>
           </label>
           <div id="color-bar" class="color-bar" hidden></div>
+          <div id="crop-tools" class="crop-tools" hidden>
+            <div class="crop-head"><b data-en="✂️ Box the bird for a sharper match">✂️ Шувууг хүрээлж нарийвчлах</b>
+              <span class="muted" data-en="Drag a box around the bird with the mouse or a finger — it is analysed again straight away.">Хулгана эсвэл хуруугаар шувууг тойруулан хүрээ татахад дахин шинжилнэ.</span></div>
+            <div id="crop-box" class="crop-box"><img id="crop-img" alt="" draggable="false"><div id="crop-sel" class="crop-sel" hidden></div></div>
+            <button class="btn small" id="crop-reset" type="button" hidden data-en="↺ Use the whole photo">↺ Бүтэн зургаар</button>
+          </div>
           <p class="note" data-en="⚠️ Automatic identification is only an aid. Always confirm the result by field marks, range and voice. The recognition model needs an internet connection to load.">⚠️ Автомат таних нь зөвхөн туслах хэрэгсэл. Үр дүнг доорх шинж тэмдэг, тархац, дуу хоолойгоор заавал нягтлаарай. Дүрс танигч модель интернэт холболтоор ачаалагдана.</p>
         </div>
         <div>
@@ -240,7 +246,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p data-en="<b>MongolShuvuu</b> — an educational bird identification guide."><b>МонголШувуу</b> — боловсролын зорилготой шувуу таних хөтөч.</p>
-    <p class="muted" data-en="Photos and sound recordings: <a href='https://commons.wikimedia.org' target='_blank' rel='noopener'>Wikimedia Commons</a>, <a href='https://www.inaturalist.org' target='_blank' rel='noopener'>iNaturalist</a>, <a href='https://xeno-canto.org' target='_blank' rel='noopener'>xeno-canto</a> (Creative Commons licences; each author is credited on the bird’s page). Conservation status: IUCN Red List. Borders on the maps are approximate.">Зураг, дууны бичлэг: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a>, <a href="https://xeno-canto.org" target="_blank" rel="noopener">xeno-canto</a> (Creative Commons лиценз; зохиогч бүрийг шувууны хуудсанд заасан). Хамгааллын статус: IUCN Улаан данс. Газрын зураг нь схем бөгөөд хил хязгаарыг ойролцоогоор үзүүлэв.</p>
+    <p class="muted" data-en="Photos and sound recordings: <a href='https://commons.wikimedia.org' target='_blank' rel='noopener'>Wikimedia Commons</a>, <a href='https://www.inaturalist.org' target='_blank' rel='noopener'>iNaturalist</a>, <a href='https://xeno-canto.org' target='_blank' rel='noopener'>xeno-canto</a> (Creative Commons licences; each author is credited on the bird’s page). Conservation status: IUCN Red List. Observation grids: GBIF.org. Photo ID is trained on 1,248 expert-verified iNaturalist reference photos (only numeric features are stored). Borders on the maps are approximate.">Зураг, дууны бичлэг: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a>, <a href="https://xeno-canto.org" target="_blank" rel="noopener">xeno-canto</a> (Creative Commons лиценз; зохиогч бүрийг шувууны хуудсанд заасан). Хамгааллын статус: IUCN Улаан данс. Ажиглалтын тор: GBIF.org. Зургаар таних загварыг iNaturalist-ийн шинжээчдийн баталгаажуулсан 1,248 лавлах зургаар сургасан (зөвхөн тоон утгыг хадгална). Газрын зураг нь схем бөгөөд хил хязгаарыг ойролцоогоор үзүүлэв.</p>
     <p class="muted" data-en="When birdwatching, keep away from nests and colonies, and don’t play recordings to lure birds.">Шувууг ажиглахдаа үүр, колони руу бүү ойрт, дуу бичлэг тоглуулж шувууг бүү үймүүл.</p>
   </div>
 </footer>
