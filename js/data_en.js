@@ -1,6 +1,6 @@
 /* English content — applied over the Mongolian data when LANG === "en" */
 (function () {
-  if (typeof LANG === "undefined" || LANG !== "en") return;
+  if (typeof LANG === "undefined" || (LANG !== "en" && LANG !== "fr")) return; // франц горимд англи өгөгдөл суурь болно
 
   const REGIONS_EN = {
     west:    { name: "Western Mongolia", desc: "Mongolian Altai and the Great Lakes Depression (Uvs, Khar Us and Achit lakes)" },

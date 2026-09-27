@@ -66,7 +66,7 @@
   function renderGallery() {
     const q = $("#search").value.trim().toLowerCase();
     const list = BIRDS.filter(b => (!groupFilter || b.group === groupFilter) &&
-      (!q || [b.name, b.altNames, b.latin, b.en].join(" ").toLowerCase().includes(q)));
+      (!q || [b.name, b.altNames, b.latin, b.en, b.nameEn || ""].join(" ").toLowerCase().includes(q)));
     $("#gallery").innerHTML = list.length ? list.map(card).join("") : `<p class="muted">${T("Илэрц олдсонгүй.", "No matches.")}</p>`;
   }
   $("#search").addEventListener("input", renderGallery);
@@ -209,7 +209,7 @@
   let rangeSel = null, rangeLayer = null;
   function initRangePick() {
     const sel = $("#range-bird");
-    const opts = BIRDS.filter(b => HAS_RANGES && RANGES[b.id] && RANGES[b.id].n).slice().sort((a, b) => a.name.localeCompare(b.name, LANG === "en" ? "en" : "mn"));
+    const opts = BIRDS.filter(b => HAS_RANGES && RANGES[b.id] && RANGES[b.id].n).slice().sort((a, b) => a.name.localeCompare(b.name, LANG));
     sel.innerHTML = `<option value="">${T("— Шувуу сонгох —", "— Choose a bird —")}</option>` + opts.map(b => `<option value="${b.id}">${esc(b.name)} (${RANGES[b.id].n.toLocaleString()})</option>`).join("");
     sel.addEventListener("change", () => showRange(sel.value || null));
     $("#range-clear").addEventListener("click", () => showRange(null));
@@ -285,12 +285,12 @@
     if (selHotspot) {
       const h = HOTSPOTS[selHotspot];
       list = list.filter(b => b.hotspots.includes(selHotspot));
-      head = `<h3>📍 ${esc(h.name)}</h3><p class="muted">${T(`Энэ газар ажиглахад тохиромжтой ${list.length} шувуу.`, `${list.length} birds to look for here.`)}</p>`;
+      head = `<h3>📍 ${esc(h.name)}</h3><p class="muted">${T(`Энэ газар ажиглахад тохиромжтой ${list.length} шувуу.`, `${list.length} birds to look for here.`, `${list.length} oiseaux à chercher ici.`)}</p>`;
     } else if (selRegion) {
       list = list.filter(b => b.regions.includes(selRegion));
-      head = `<h3>${REGIONS[selRegion].name}</h3><p class="muted">${REGIONS[selRegion].desc}. ${T(`Энэ бүсэд ${list.length} шувуу тохиолдоно.`, `${list.length} birds occur in this region.`)}</p>`;
+      head = `<h3>${REGIONS[selRegion].name}</h3><p class="muted">${REGIONS[selRegion].desc}. ${T(`Энэ бүсэд ${list.length} шувуу тохиолдоно.`, `${list.length} birds occur in this region.`, `${list.length} oiseaux présents dans cette région.`)}</p>`;
     } else {
-      head = `<p class="muted">${T(`Газрын зураг дээр бүс эсвэл 📍 цэг сонгоно уу. Одоогоор ${list.length} шувуу харагдаж байна.`, `Pick a region or a 📍 site on the map. Showing ${list.length} birds.`)}</p>`;
+      head = `<p class="muted">${T(`Газрын зураг дээр бүс эсвэл 📍 цэг сонгоно уу. Одоогоор ${list.length} шувуу харагдаж байна.`, `Pick a region or a 📍 site on the map. Showing ${list.length} birds.`, `Choisissez une région ou un site 📍 sur la carte. ${list.length} oiseaux affichés.`)}</p>`;
     }
     $("#map-info").innerHTML = head;
     $("#map-results").innerHTML = list.map(card).join("") || `<p class="muted">${T("Тохирох шувуу алга.", "No matching birds.")}</p>`;
@@ -340,9 +340,9 @@
     return out;
   }
   const cellLabel = (lat, lon) => `${lat.toFixed(1)}–${(lat + RANGE_GRID.step).toFixed(1)}°N, ${lon.toFixed(1)}–${(lon + RANGE_GRID.step).toFixed(1)}°E`;
-  const MONTHS = T(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]);
+  const MONTHS = T(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]);
   const MONTH_NAMES = T(["1-р сар", "2-р сар", "3-р сар", "4-р сар", "5-р сар", "6-р сар", "7-р сар", "8-р сар", "9-р сар", "10-р сар", "11-р сар", "12-р сар"],
-    ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]);
+    ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]);
   function monthsChart(m) {
     const total = m.reduce((a, x) => a + x, 0); if (!total) return "";
     const max = Math.max(...m), top = m.indexOf(max);
@@ -353,7 +353,7 @@
         ${m.map((v, i) => `<div class="mcol" tabindex="0" data-tip="${esc(MONTH_NAMES[i])}: ${v} ${T("бүртгэл", v === 1 ? "record" : "records")}">
           <div class="mtrack"><i style="height:${v ? Math.max(3, Math.round(v / max * 100)) : 0}%">${i === top ? `<span class="mval">${v.toLocaleString()}</span>` : ""}</i></div><span class="mlbl">${MONTHS[i]}</span></div>`).join("")}
       </div>
-      ${LANG === "en" ? "" : `<div class="mcap muted">${T("сар", "")}</div>`}
+      ${LANG === "mn" ? `<div class="mcap muted">сар</div>` : ""}
     </figure>`;
   }
   function rangeLegend(hasCells) {
@@ -372,7 +372,7 @@
     let stats;
     if (!r) stats = "";
     else if (!r.n) stats = `<p class="range-stats">${T("GBIF-д Монголоос бүртгэгдсэн ажиглалт алга — энэ зүйл Монголд тархдаггүй.", "GBIF holds no records from Mongolia — this species does not occur here.")}</p>`;
-    else stats = `<p class="range-stats"><b>${r.n.toLocaleString()}</b> ${T("ажиглалтын бүртгэл", "records")} · <b>${cells.length}</b> ${T("нүдэнд", "grid cells")} · ${r.y[0]}–${r.y[1]} ${T("он", "")}${r.u < r.n ? ` · ${T(`газрын зурагт ${r.u.toLocaleString()} бүртгэлээр`, `map uses ${r.u.toLocaleString()} of them`)}` : ""}</p>`;
+    else stats = `<p class="range-stats"><b>${r.n.toLocaleString()}</b> ${T("ажиглалтын бүртгэл", "records")} · <b>${cells.length}</b> ${T("нүдэнд", "grid cells")} · ${r.y[0]}–${r.y[1]} ${T("он", "")}${r.u < r.n ? ` · ${T(`газрын зурагт ${r.u.toLocaleString()} бүртгэлээр`, `map uses ${r.u.toLocaleString()} of them`, `la carte en utilise ${r.u.toLocaleString()}`)}` : ""}</p>`;
     return `<section class="range-sec"><h3>${T("Монгол дахь тархац", "Distribution in Mongolia")}</h3>
       <p>${esc(b.distribution)}</p>
       ${map}
@@ -460,7 +460,7 @@
         <p>${T("<b>IUCN</b> (Байгаль хамгаалах олон улсын холбоо, 1948 онд байгуулагдсан) нь 1964 оноос хойш дэлхийн амьтан, ургамлын устах эрсдэлийг үнэлж <b>Улаан данс</b> (Red List) гаргадаг. Одоогийн ангилал, шалгуур нь 2001 онд батлагдсан <b>3.1 хувилбар</b>. Шувуудыг IUCN-ийн түнш <b>BirdLife International</b> үнэлж, тогтмол шинэчилдэг.",
           "<b>IUCN</b> (International Union for Conservation of Nature, founded 1948) has published the <b>Red List</b> of threatened species since 1964. Today’s categories and criteria are <b>version 3.1</b>, adopted in 2001. Birds are assessed and regularly updated by IUCN’s partner <b>BirdLife International</b>.")}</p>
         <p>${T("Зүйл бүрийг A–E гэсэн 5 шалгуураар үнэлдэг. Аль нэг шалгуурын босгыг хангахад л хангалттай бөгөөд хамгийн өндөр эрсдэлийн ангиллыг сонгоно.", "Each species is tested against five criteria, A–E. Meeting the threshold of any single criterion is enough, and the highest category met is assigned.")}</p>
-        <div class="iucn-summary">${T(`Энэ хөтөчийн <b>${BIRDS.length}</b> шувуунаас <b>${threatened}</b> нь ховордсон (CR, EN, VU) ангилалд багтдаг.`, `Of the <b>${BIRDS.length}</b> birds in this guide, <b>${threatened}</b> are threatened (CR, EN or VU).`)}</div>
+        <div class="iucn-summary">${T(`Энэ хөтөчийн <b>${BIRDS.length}</b> шувуунаас <b>${threatened}</b> нь ховордсон (CR, EN, VU) ангилалд багтдаг.`, `Of the <b>${BIRDS.length}</b> birds in this guide, <b>${threatened}</b> are threatened (CR, EN or VU).`, `Sur les <b>${BIRDS.length}</b> oiseaux de ce guide, <b>${threatened}</b> sont menacés (CR, EN ou VU).`)}</div>
       </div>
       <h3 class="section-gap">${T("Ангиллын шатлал", "The scale")}</h3>
       <p class="muted small">${T("Зүүнээс баруун тийш устах эрсдэл буурна. Ангилал дээр дарж тайлбарыг үзнэ.", "Extinction risk falls from left to right. Click a category for details.")}</p>
@@ -640,7 +640,7 @@
     const scored = BIRDS.map(b => ({ b, ...traitScore(b, sel) })).sort((x, y) => y.score - x.score);
     const any = scored[0].any;
     const good = scored.filter(r => r.score >= 0.75).length;
-    $("#trait-count").textContent = any ? T(`${good} шувуу сайн тохирч байна`, `${good} birds match well`) : T("Шинж тэмдгээ сонгоно уу", "Choose some field marks");
+    $("#trait-count").textContent = any ? T(`${good} шувуу сайн тохирч байна`, `${good} birds match well`, `${good} oiseaux correspondent bien`) : T("Шинж тэмдгээ сонгоно уу", "Choose some field marks");
     $("#trait-results").innerHTML = scored.map(r => resultRow(r.b, any ? r.score : null,
       any ? (r.why.length ? T("Тохирсон: ", "Matched: ") + r.why.join(", ") : T("Тохирох шинж бага", "Few matching traits")) : r.b.summary, any && r.score < 0.5)).join("");
   }
@@ -827,7 +827,7 @@
     else if (knn) {
       const p = results[0].score;
       const level = p >= 0.5 ? T("өндөр", "high") : p >= 0.3 ? T("дунд", "medium") : T("бага", "low");
-      msg = T(`✅ Шинжилгээ дууслаа${cropped ? " (хүрээлсэн хэсгээр)" : ""}. Итгэл: <b>${level}</b>. Хамгийн магадлалтай 5 шувуу:`, `✅ Done${cropped ? " (using the boxed area)" : ""}. Confidence: <b>${level}</b>. The 5 most likely birds:`);
+      msg = T(`✅ Шинжилгээ дууслаа${cropped ? " (хүрээлсэн хэсгээр)" : ""}. Итгэл: <b>${level}</b>. Хамгийн магадлалтай 5 шувуу:`, `✅ Done${cropped ? " (using the boxed area)" : ""}. Confidence: <b>${level}</b>. The 5 most likely birds:`, `✅ Terminé${cropped ? " (zone encadrée)" : ""}. Confiance : <b>${level}</b>. Les 5 oiseaux les plus probables :`);
       if (p < 0.3) msg += `<br><span class="muted">${T("Итгэл бага байна — доорх ✂️ хэрэгслээр шувууг хүрээлж, эсвэл шувуу томоор харагдах өөр зураг оруулна уу.", "Low confidence — box the bird with the ✂️ tool below, or try a photo where the bird is larger.")}</span>`;
     }
     else if (!useModel) msg = T("⚠️ AI зурган дээр шувуу тод таньсангүй", "⚠️ The AI could not clearly detect a bird") + (preds ? ` (${T("хамгийн төстэй", "closest")}: “${esc(preds[0].className.split(",")[0])}”)` : "") + T(". Өнгөөр л харьцуулав. Шувуу голд, томоор харагдах зураг оруулна уу.", ". Compared by colour only. Try a photo with the bird large and centred.");
@@ -918,7 +918,7 @@
         const n = i + 1, locked = n > st.unlocked, best = st.best[n];
         return `<button class="lvl${n === level ? " on" : ""}" data-lvl="${n}"${locked ? " disabled" : ""} title="${esc(l.name)}">${locked ? "🔒" : n}<span>${esc(l.name)}</span>${best ? `<small>${"★".repeat(best >= ROUND ? 3 : best >= PASS ? 2 : 1)}</small>` : ""}</button>`;
       }).join("")}</div>
-      <p class="quiz-desc muted"><b>${T("Түвшин", "Level")} ${level} · ${esc(lv.name)}</b> — ${levelDesc(kind, lv)}. ${level < QUIZ_LEVELS.length ? T(`${ROUND} асуултаас ${PASS}-ийг зөв хариулбал дараагийн түвшин нээгдэнэ.`, `Get ${PASS} of ${ROUND} right to unlock the next level.`) : T("Хамгийн хэцүү түвшин.", "The hardest level.")}</p>`;
+      <p class="quiz-desc muted"><b>${T("Түвшин", "Level")} ${level} · ${esc(lv.name)}</b> — ${levelDesc(kind, lv)}. ${level < QUIZ_LEVELS.length ? T(`${ROUND} асуултаас ${PASS}-ийг зөв хариулбал дараагийн түвшин нээгдэнэ.`, `Get ${PASS} of ${ROUND} right to unlock the next level.`, `Obtenez ${PASS} bonnes réponses sur ${ROUND} pour débloquer le niveau suivant.`) : T("Хамгийн хэцүү түвшин.", "The hardest level.")}</p>`;
     }
     function bindLevels() {
       $$(".quiz-levels button", box).forEach(b => b.onclick = () => { level = +b.dataset.lvl; start(); });
@@ -986,8 +986,8 @@
       box.innerHTML = `${head()}
         <div class="quiz-result">
           <div class="stars" aria-label="${stars} / 3">${"★".repeat(stars)}<span>${"★".repeat(3 - stars)}</span></div>
-          <h4>${pass ? (level === QUIZ_LEVELS.length ? T("🏆 Та Мастер түвшинг давлаа!", "🏆 You beat the Master level!") : T(`Түвшин ${level} давлаа!`, `Level ${level} cleared!`)) : T("Дахин оролдоорой", "Try again")}</h4>
-          <p>${T(`${ROUND} асуултаас ${got} зөв`, `${got} of ${ROUND} correct`)} · ${esc(lv.name)}${opened ? ` · ${T("🔓 Шинэ түвшин нээгдлээ", "🔓 New level unlocked")}: <b>${esc(QUIZ_LEVELS[level].name)}</b>` : ""}</p>
+          <h4>${pass ? (level === QUIZ_LEVELS.length ? T("🏆 Та Мастер түвшинг давлаа!", "🏆 You beat the Master level!") : T(`Түвшин ${level} давлаа!`, `Level ${level} cleared!`, `Niveau ${level} réussi !`)) : T("Дахин оролдоорой", "Try again")}</h4>
+          <p>${T(`${ROUND} асуултаас ${got} зөв`, `${got} of ${ROUND} correct`, `${got} bonnes réponses sur ${ROUND}`)} · ${esc(lv.name)}${opened ? ` · ${T("🔓 Шинэ түвшин нээгдлээ", "🔓 New level unlocked")}: <b>${esc(QUIZ_LEVELS[level].name)}</b>` : ""}</p>
           <div class="quiz-actions">
             ${pass && level < QUIZ_LEVELS.length ? `<button class="btn primary" data-go="${level + 1}">${T("Дараагийн түвшин →", "Next level →")}</button>` : ""}
             <button class="btn${pass && level < QUIZ_LEVELS.length ? "" : " primary"}" data-go="${level}">${T("Дахин тоглох ↻", "Play again ↻")}</button>
@@ -1035,7 +1035,7 @@
     });
     if (sel.length || timeFilter !== "any") list = list.filter(r => r.s > 0);
     list.sort((x, y) => y.s - x.s || (!!y.b.audio - !!x.b.audio));
-    $("#sound-results").innerHTML = (sel.length ? `<p class="muted">${T(`${list.length} шувуу тохирч байна.`, `${list.length} birds match.`)}</p>` : `<p class="muted">${T("Бүх шувууны дуу хоолойн тайлбар (🔊 бичлэгтэй нь эхэнд):", "Voice descriptions of all birds (those with 🔊 recordings first):")}</p>`) +
+    $("#sound-results").innerHTML = (sel.length ? `<p class="muted">${T(`${list.length} шувуу тохирч байна.`, `${list.length} birds match.`, `${list.length} oiseaux correspondent.`)}</p>` : `<p class="muted">${T("Бүх шувууны дуу хоолойн тайлбар (🔊 бичлэгтэй нь эхэнд):", "Voice descriptions of all birds (those with 🔊 recordings first):")}</p>`) +
       list.map(({ b }) => `<div class="sound-row">
         <img src="${b.image.file}" alt="" data-bird="${b.id}" loading="lazy">
         <div><h4 data-bird="${b.id}">${esc(b.name)} <span class="muted" style="font-weight:400;font-size:.85rem">· ${b.voiceTypes.map(v => VOICE_TYPES[v].name).join(", ")}</span></h4>
@@ -1253,7 +1253,8 @@ Rules:
 - For lodging, only say what type of accommodation exists in a place. Never invent hotel or camp names, prices or phone numbers; advise checking the Google Maps links in the "Lodging" section and booking ahead.
 - Keep answers under about 150 words; use "- " for lists and **...** for emphasis.
 - The data below may mix English and Mongolian labels; always answer in English.`;
-  const RULES = (texts = []) => LANG === "en" ? `${EN_RULES}\n\n${knowledge(texts)}` : `Чи бол "МонголШувуу" цахим хөтчийн AI туслах. Монгол орны шувууг таних, шувуу ажиглах аяллын талаар МОНГОЛ ХЭЛЭЭР, товч тодорхой, найрсаг хариулна.
+  const RULES = (texts = []) => LANG === "en" ? `${EN_RULES}\n\n${knowledge(texts)}` :
+    LANG === "fr" ? `${EN_RULES.replace("IN ENGLISH", "IN FRENCH (en français)").replace("always answer in English", "always answer in French")}\n\n${knowledge(texts)}` : `Чи бол "МонголШувуу" цахим хөтчийн AI туслах. Монгол орны шувууг таних, шувуу ажиглах аяллын талаар МОНГОЛ ХЭЛЭЭР, товч тодорхой, найрсаг хариулна.
 
 Дүрэм:
 - Хэрэглэгчийн дүрсэлсэн шинж (өнгө, хэмжээ, хушуу, орчин, улирал, дуу) дээр үндэслэн доорх ${BIRDS.length} шувуунаас хамгийн тохирохыг санал болго, яагаад гэдгийг шинжээр нь тайлбарла. Эргэлзээтэй бол 2–3 хувилбар өгч, ялгах шинжийг хэл, нэмэлт асуулт асуу.
@@ -1296,7 +1297,9 @@ ${knowledge(texts)}`;
     const bubble = (role, html) => { const d = document.createElement("div"); d.className = "ai-msg " + role; d.innerHTML = html; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; };
     bubble("assistant", `<p>${T("Сайн байна уу! Би шувуу таних, аялал төлөвлөхөд тусална. Харсан шувууныхаа өнгө, хэмжээ, хаана, хэзээ харснаа бичээрэй.", "Hello! I can help you identify birds and plan trips. Tell me the colour and size of the bird you saw, and where and when you saw it.")}</p><p class="ai-note">${T("Хариулт бүр таны Claude-ийн хэрэглээнээс тооцогдоно. Эхний асуултын үед зөвшөөрөл асууна.", "Each answer uses your own Claude usage. You'll be asked for permission on the first question.")}</p>`);
 
-    const SUGGEST = LANG === "en"
+    const SUGGEST = LANG === "fr"
+      ? ["J’ai vu un grand oiseau noir au bec et aux pattes rouges près d’une rivière. Qu’est-ce que c’est ?", "Où aller pour un voyage ornithologique de 3 jours en mai ?", "Comment distinguer la Grue à cou blanc de la Grue demoiselle ?", "Quel oiseau crie « ou-hou » la nuit ?"]
+      : LANG === "en"
       ? ["I saw a big black bird with a red bill and legs by a river. What is it?", "Where should I go for a 3-day birding trip in May?", "How do I tell White-naped Crane from Demoiselle Crane?", "Which bird calls \"oo-hoo\" at night?"]
       : ["Хар биетэй, улаан хушуу хөлтэй том шувуу гол дээр харсан. Юу вэ?", "5-р сард 3 хоногийн аялалд хаашаа явбал олон шувуу үзэх вэ?", "Цэн тогоруу, өвөгт тогоруу хоёрыг яаж ялгах вэ?", "Шөнө \"ухуу\" гэж дуугарах шувуу юу вэ?"];
     $("#ai-suggest").innerHTML = SUGGEST.map(s => `<button type="button" class="chip">${esc(s)}</button>`).join("");
@@ -1374,11 +1377,12 @@ ${knowledge(texts)}`;
   }
 
   /* ---------------- Init ---------------- */
-  if (LANG === "en") {
-    $$("[data-en]").forEach(el => { el.innerHTML = el.dataset.en; });
-    $$("[data-en-ph]").forEach(el => { el.placeholder = el.dataset.enPh; });
-    $$("[data-en-aria]").forEach(el => { el.setAttribute("aria-label", el.dataset.enAria); });
-    document.title = "MongolShuvuu — Birds of Mongolia field guide";
+  if (LANG !== "mn") {
+    // англи: data-en; франц: data-en текстийг түлхүүр болгож FR_UI-аас (T функцээр)
+    $$("[data-en]").forEach(el => { el.innerHTML = T("", el.dataset.en); });
+    $$("[data-en-ph]").forEach(el => { el.placeholder = T("", el.dataset.enPh); });
+    $$("[data-en-aria]").forEach(el => { el.setAttribute("aria-label", T("", el.dataset.enAria)); });
+    document.title = T("", "MongolShuvuu — Birds of Mongolia field guide", "MongolShuvuu — guide des oiseaux de Mongolie");
   }
   $$("[data-lang]").forEach(b => {
     const on = b.dataset.lang === LANG;
