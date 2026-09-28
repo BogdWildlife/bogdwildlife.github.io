@@ -17,7 +17,7 @@
     ikhnart: "Ikh Nart Nature Reserve", boontsagaan: "Boon Tsagaan Lake", orog: "Orog Lake", taatsin: "Taatsiin Tsagaan Lake",
     ganga: "Ganga Lake (Dariganga)", buir: "Lake Buir", daguur: "Mongol Daguur (Ulz River)", khurkh: "Khurkh-Khuiten Valley", onon: "Onon-Balj"
   };
-  const GROUPS_EN = { raptor: "Raptors", owl: "Owls", crane: "Cranes", stork: "Storks", waterfowl: "Swans & geese", duck: "Ducks", gull: "Gulls", gamebird: "Gamebirds & sandgrouse", woodpecker: "Woodpeckers", small: "Small birds" };
+  const GROUPS_EN = { raptor: "Raptors", owl: "Owls", crane: "Cranes", stork: "Storks", heron: "Herons & ibises", waterfowl: "Swans & geese", duck: "Ducks", waterbird: "Grebes, pelicans & other waterbirds", gull: "Gulls & terns", wader: "Waders", gamebird: "Gamebirds & sandgrouse", nearpass: "Pigeons, cuckoos & allies", woodpecker: "Woodpeckers", lark: "Larks, pipits & wagtails", crow: "Crows, swallows & shrikes", thrush: "Thrushes, chats & flycatchers", warbler: "Warblers & tits", finch: "Finches, buntings & sparrows", small: "Small birds" };
   const COLOR_EN = { black: "Black", white: "White", gray: "Grey", brown: "Brown", buff: "Buff", rufous: "Rufous / orange", yellow: "Yellow", red: "Red" };
   const SIZE_EN = {
     small: "Small (sparrow to pigeon size, up to 35 cm)",

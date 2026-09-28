@@ -14,6 +14,8 @@ const FR_UI = {
 
   // Général
   "All": "Tous",
+  "Featured": "À la une",
+  "No photo yet": "Pas encore de photo",
   "No matches.": "Aucun résultat.",
   "Satellite imagery: NASA Blue Marble (GIBS)": "Imagerie satellite : NASA Blue Marble (GIBS)",
   "Imagery © Esri, Maxar, Earthstar Geographics": "Imagerie © Esri, Maxar, Earthstar Geographics",

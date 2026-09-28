@@ -48,7 +48,7 @@
   function renderChips() {
     const box = $("#group-chips");
     const groups = Object.entries(GROUPS).filter(([k]) => BIRDS.some(b => b.group === k));
-    box.innerHTML = `<button class="chip on" data-g="">${T("Бүгд", "All")} (${BIRDS.length})</button>` +
+    box.innerHTML = `<button class="chip on" data-g="">${T("Бүгд", "All")} (${BIRDS.length})</button>` + (BIRDS.some(b => b.extra) ? `<button class="chip" data-g="_feat">⭐ ${T("Онцлох", "Featured")} (${BIRDS.filter(b => !b.extra).length})</button>` : "") +
       groups.map(([k, v]) => `<button class="chip" data-g="${k}">${v} (${BIRDS.filter(b => b.group === k).length})</button>`).join("");
     box.addEventListener("click", e => {
       const c = e.target.closest(".chip"); if (!c) return;
@@ -65,7 +65,7 @@
   }
   function renderGallery() {
     const q = $("#search").value.trim().toLowerCase();
-    const list = BIRDS.filter(b => (!groupFilter || b.group === groupFilter) &&
+    const list = BIRDS.filter(b => (!groupFilter || (groupFilter === "_feat" ? !b.extra : b.group === groupFilter)) &&
       (!q || [b.name, b.altNames, b.latin, b.en, b.nameEn || ""].join(" ").toLowerCase().includes(q)));
     $("#gallery").innerHTML = list.length ? list.map(card).join("") : `<p class="muted">${T("Илэрц олдсонгүй.", "No matches.")}</p>`;
   }
@@ -492,7 +492,7 @@
     const p = t => `<p>${esc(t)}</p>`;
     const voiceTags = b.voiceTypes.map(v => `<span class="tag">${VOICE_TYPES[v].name}</span>`).join("");
     $("#modal-body").innerHTML = `
-      <div class="m-hero"><img src="${b.image.file}" alt="${esc(b.name)}" onload="if(this.naturalHeight>this.naturalWidth*0.8)this.classList.add('portrait')"><a class="credit" href="${b.image.source}" target="_blank" rel="noopener">📷 ${esc(b.image.credit)} · ${esc(b.image.via || "Wikimedia Commons")}</a></div>
+      <div class="m-hero"><img src="${b.image.file}" alt="${esc(b.name)}" onload="if(this.naturalHeight>this.naturalWidth*0.8)this.classList.add('portrait')">${b.image.none ? `<span class="credit">${T("Зураг одоогоор байхгүй", "No photo yet")}</span>` : `<a class="credit" href="${b.image.source}" target="_blank" rel="noopener">📷 ${esc(b.image.credit)} · ${esc(b.image.via || "Wikimedia Commons")}</a>`}</div>
       <div class="m-head">
         <a href="#iucn-${b.iucn}" class="badge-link" data-iucn="${b.iucn}" title="${T("Энэ ангиллын тайлбар", "About this category")}">${badge(b)} <span class="badge-more">${T("юу гэсэн үг вэ? →", "what does it mean? →")}</span></a>
         <h2 id="m-title">${esc(b.name)}</h2>
@@ -1001,7 +1001,7 @@
   let photoQuizOn = false, soundQuizOn = false;
   function ensurePhotoQuiz() {
     if (photoQuizOn) return; photoQuizOn = true;
-    makeQuiz($("#photo-quiz"), "photo", BIRDS, (b, lv) => {
+    makeQuiz($("#photo-quiz"), "photo", BIRDS.filter(b => !b.image.none && (!b.extra || (typeof RANGES !== "undefined" && RANGES[b.id] && RANGES[b.id].n >= 100))), (b, lv) => {
       const ox = 30 + Math.round(Math.random() * 40), oy = 30 + Math.round(Math.random() * 40);
       return `<div class="quiz-frame"><img class="quiz-img${lv.zoom ? " zoom" : ""}${lv.gray ? " gray" : ""}" style="transform-origin:${ox}% ${oy}%" src="${b.image.file}" alt="${T("Таах шувуу", "Mystery bird")}"></div>`;
     });

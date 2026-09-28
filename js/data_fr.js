@@ -17,7 +17,7 @@
     ikhnart: "Réserve naturelle d’Ikh Nart", boontsagaan: "Lac Böön Tsagaan", orog: "Lac Orog", taatsin: "Lac Taatsiin Tsagaan",
     ganga: "Lac Ganga (Dariganga)", buir: "Lac Buir", daguur: "Mongol Daguur (rivière Ulz)", khurkh: "Vallée de Khurkh-Khüiten", onon: "Onon-Balj"
   };
-  const GROUPS_FR = { raptor: "Rapaces", owl: "Rapaces nocturnes", crane: "Grues", stork: "Cigognes", waterfowl: "Cygnes et oies", duck: "Canards", gull: "Mouettes et goélands", gamebird: "Gallinacés et gangas", woodpecker: "Pics", small: "Petits oiseaux" };
+  const GROUPS_FR = { raptor: "Rapaces", owl: "Rapaces nocturnes", crane: "Grues", stork: "Cigognes", heron: "Hérons et ibis", waterfowl: "Cygnes et oies", duck: "Canards", waterbird: "Grèbes, pélicans et autres oiseaux d’eau", gull: "Mouettes, goélands et sternes", wader: "Limicoles", gamebird: "Gallinacés et gangas", nearpass: "Pigeons, coucous et apparentés", woodpecker: "Pics", lark: "Alouettes, pipits et bergeronnettes", crow: "Corvidés, hirondelles et pies-grièches", thrush: "Grives, traquets et gobemouches", warbler: "Fauvettes, pouillots et mésanges", finch: "Fringilles, bruants et moineaux", small: "Petits oiseaux" };
   const COLOR_FR = { black: "Noir", white: "Blanc", gray: "Gris", brown: "Brun", buff: "Chamois", rufous: "Roux / orangé", yellow: "Jaune", red: "Rouge" };
   const SIZE_FR = {
     small: "Petit (du moineau au pigeon, jusqu’à 35 cm)",
