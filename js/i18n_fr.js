@@ -323,7 +323,7 @@ const FR_UI = {
   "Pick whatever you noticed about the bird — you don’t need to fill in everything. The matches re-rank after every choice.": "Indiquez ce que vous avez remarqué — inutile de tout remplir. Le classement se met à jour après chaque choix.",
   "Clear": "Effacer",
   "Identify by range": "Identifier par répartition",
-  "Click a region or a birdwatching site on the satellite map, or pick a habitat, to see which birds live there. You can also filter by season.": "Cliquez sur une région ou un site d’observation sur la carte satellite, ou choisissez un milieu, pour voir quels oiseaux y vivent. Vous pouvez aussi filtrer par saison.",
+  "Click a province (aimag) or a birdwatching site on the satellite map, or pick a habitat, to see which birds live there. You can also filter by season.": "Cliquez sur une province (aïmag) ou un site d’observation sur la carte satellite, ou choisissez un milieu, pour voir quels oiseaux y vivent. Vous pouvez aussi filtrer par saison.",
   "All habitats": "Tous les milieux",
   "Show on map:": "Afficher sur la carte :",
   "🔎 Show a bird’s observation grid:": "🔎 Afficher la grille d’observations d’un oiseau :",

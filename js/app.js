@@ -148,6 +148,44 @@
   const REGION_POLYS = Object.fromEntries(Object.entries(REGION_RECTS).map(([k, rs]) =>
     [k, rs.map(r => clipPoly(BORDER, r).map(LL)).filter(p => p.length > 2)]));
   const regionStyle = on => ({ color: on ? "#8fe3ff" : "#ffffff", weight: on ? 2.5 : 1, opacity: on ? 1 : .45, fillColor: on ? "#8fe3ff" : "#ffffff", fillOpacity: on ? .25 : .03 });
+  /* Аймгууд: шувуу бүрийн аймгийг GBIF нүдний төв цэг + ажиглах цэгүүдээс тооцно */
+  const HAS_AIMAGS = typeof AIMAGS !== "undefined";
+  const AIMAG_SMALL = ["ulaanbaatar", "orkhon", "darkhan-uul", "govisumber"];   // шошгогүй, зөвхөн tooltip
+  const ringPts = r => { const o = []; for (let i = 0; i < r.length; i += 2) o.push([r[i], r[i + 1]]); return o; };
+  const aimagName = k => T(AIMAGS[k].name, AIMAGS[k].en);
+  function inRing(lon, lat, r) {
+    let ins = false;
+    for (let i = 0, j = r.length - 2; i < r.length; j = i, i += 2) {
+      const xi = r[i], yi = r[i + 1], xj = r[j], yj = r[j + 1];
+      if ((yi > lat) !== (yj > lat) && lon < (xj - xi) * (lat - yi) / (yj - yi) + xi) ins = !ins;
+    }
+    return ins;
+  }
+  function aimagOf(lon, lat) {
+    // Жижиг аймгуудыг (хот) эхэлж шалгана — хялбарчилсан хил давхцаж болно
+    const keys = HAS_AIMAGS ? AIMAG_SMALL.concat(Object.keys(AIMAGS).filter(k => !AIMAG_SMALL.includes(k))) : [];
+    return keys.find(k => AIMAGS[k].p.some(r => inRing(lon, lat, r))) || null;
+  }
+  const HS_AIMAG = Object.fromEntries(Object.entries(HOTSPOTS).map(([k, h]) => [k, aimagOf(h.lon, h.lat)]));
+  // GBIF нүдгүй шувуунд: хуучин том бүсээс аймаг руу
+  const REGION_AIMAGS = {
+    west: ["uvs", "khovd", "bayan-ulgii", "zavkhan"], khangai: ["arkhangai", "khuvsgul", "bulgan", "uvurkhangai", "zavkhan", "orkhon", "bayankhongor"],
+    north: ["selenge", "darkhan-uul", "khentii", "tuv", "bulgan"], central: ["tuv", "ulaanbaatar", "dundgovi", "govisumber"],
+    east: ["dornod", "sukhbaatar", "khentii"], gobi: ["govi-altai", "bayankhongor", "omnogovi", "dornogovi", "dundgovi"]
+  };
+  const cellAimag = {}, birdAimagCache = {};
+  function birdAimags(b) {   // { аймаг: бүртгэлийн тоо }
+    if (birdAimagCache[b.id]) return birdAimagCache[b.id];
+    const out = {}, cells = rangeCells(b);
+    for (const [lon, lat, n] of cells) {
+      const key = lon + "," + lat;
+      if (!(key in cellAimag)) cellAimag[key] = aimagOf(lon + RANGE_GRID.step / 2, lat + RANGE_GRID.step / 2);
+      const a = cellAimag[key]; if (a) out[a] = (out[a] || 0) + n;
+    }
+    if (!cells.length) b.regions.forEach(r => (REGION_AIMAGS[r] || []).forEach(a => { out[a] = out[a] || 0; }));
+    b.hotspots.forEach(h => { const a = HS_AIMAG[h]; if (a) out[a] = out[a] || 0; });
+    return (birdAimagCache[b.id] = out);
+  }
   const hsStyle = (on, dim) => ({ radius: on ? 10 : 7, color: "#ffffff", weight: 2, fillColor: on ? "#ff5a3c" : "#ffb347", fillOpacity: dim ? .35 : 1, opacity: dim ? .45 : 1 });
 
   function satMap(el, opts = {}) {
@@ -194,11 +232,17 @@
     $("#mn-map").closest(".map-scroll").hidden = true;
     $("#mn-map-sat").hidden = false;
     mainMap = satMap($("#mn-map-sat"));
-    for (const [k, polys] of Object.entries(REGION_POLYS)) {
-      regionLayers[k] = L.polygon(polys, regionStyle(false)).addTo(mainMap)
-        .bindTooltip(REGIONS[k].name, { sticky: true })
-        .on("click", () => { selHotspot = null; selRegion = selRegion === k ? null : k; renderMainMap(); renderMapResults(); });
-      L.marker(LL(REGION_LABEL[k]), { interactive: false, icon: L.divIcon({ className: "rlabel-sat", html: `<span>${REGIONS[k].name}</span>`, iconSize: null }) }).addTo(mainMap);
+    if (HAS_AIMAGS) {
+      mainMap.attributionControl.addAttribution(T("Аймгийн хил", "Province borders", "Limites des provinces") + ": © OpenStreetMap (ODbL), geoBoundaries");
+      const labels = L.layerGroup();
+      for (const [k, a] of Object.entries(AIMAGS)) {
+        regionLayers[k] = L.polygon(a.p.map(r => ringPts(r).map(LL)), regionStyle(false)).addTo(mainMap)
+          .bindTooltip(aimagName(k), { sticky: true })
+          .on("click", () => { selHotspot = null; selAimag = selAimag === k ? null : k; renderMainMap(); renderMapResults(); });
+        if (!AIMAG_SMALL.includes(k)) L.marker(LL(a.c), { interactive: false, icon: L.divIcon({ className: "rlabel-sat alabel", html: `<span>${aimagName(k)}</span>`, iconSize: null }) }).addTo(labels);
+      }
+      const syncLabels = () => { if (mainMap.getZoom() >= 5) labels.addTo(mainMap); else labels.remove(); };
+      mainMap.on("zoomend", syncLabels); syncLabels();
     }
     layerGroups.birds = L.layerGroup().addTo(mainMap);
     for (const kind of Object.keys(PLACE_KINDS)) layerGroups[kind] = L.layerGroup().addTo(mainMap);
@@ -210,15 +254,15 @@
     }
   }
   function updateMainSat() {
-    for (const [k, l] of Object.entries(regionLayers)) l.setStyle(regionStyle(k === selRegion));
+    for (const [k, l] of Object.entries(regionLayers)) l.setStyle(regionStyle(k === selAimag));
     for (const [k, l] of Object.entries(hsLayers)) {
-      const dim = !!selRegion && !selHotspot && !birdsFiltered().some(b => b.regions.includes(selRegion) && b.hotspots.includes(k));
+      const dim = !!selAimag && !selHotspot && HS_AIMAG[k] !== selAimag;
       l.setStyle(hsStyle(k === selHotspot, dim));
       if (k === selHotspot) { l.bringToFront(); l.openTooltip(); }
     }
   }
 
-  let seasonFilter = "all", selRegion = null, selHotspot = null, mapHab = "";
+  let seasonFilter = "all", selRegion = null, selHotspot = null, mapHab = "", selAimag = null;
   /* Том газрын зураг дээр сонгосон шувууны ажиглалтын тор */
   let rangeSel = null, rangeLayer = null;
   function initRangePick() {
@@ -301,17 +345,21 @@
       const h = HOTSPOTS[selHotspot];
       list = list.filter(b => b.hotspots.includes(selHotspot));
       head = `<h3>📍 ${esc(h.name)}</h3><p class="muted">${T(`Энэ газар ажиглахад тохиромжтой ${list.length} шувуу.`, `${list.length} birds to look for here.`, `${list.length} oiseaux à chercher ici.`)}</p>`;
+    } else if (selAimag) {
+      const recs = b => birdAimags(b)[selAimag];
+      list = list.filter(b => recs(b) !== undefined).sort((a, b) => recs(b) - recs(a));
+      head = `<h3>${esc(aimagName(selAimag))}</h3><p class="muted">${T(`Энэ аймагт ${list.length} шувуу бүртгэгдсэн. Эхэнд нь хамгийн олон ажиглагдсан шувууд.`, `${list.length} birds recorded in this province, most often observed first.`, `${list.length} oiseaux signalés dans cette province, les plus observés en premier.`)} <span class="small">${T("Эх сурвалж: GBIF ажиглалт, шувуу ажиглах цэгүүд.", "Source: GBIF records and birdwatching sites.", "Source : observations GBIF et sites d’observation.")}</span></p>`;
     } else if (selRegion) {
       list = list.filter(b => b.regions.includes(selRegion));
       head = `<h3>${REGIONS[selRegion].name}</h3><p class="muted">${REGIONS[selRegion].desc}. ${T(`Энэ бүсэд ${list.length} шувуу тохиолдоно.`, `${list.length} birds occur in this region.`, `${list.length} oiseaux présents dans cette région.`)}</p>`;
     } else if (mapHab) {
-      head = `<h3>${habTxt.slice(3)}</h3><p class="muted">${T(`Энэ орчинд ${list.length} шувуу амьдардаг. Газрын зураг дээр бүс эсвэл 📍 цэг сонгож нарийвчилна уу.`, `${list.length} birds live in this habitat. Pick a region or a 📍 site on the map to narrow it down.`, `${list.length} oiseaux vivent dans ce milieu. Choisissez une région ou un site 📍 sur la carte pour affiner.`)}</p>`;
+      head = `<h3>${habTxt.slice(3)}</h3><p class="muted">${T(`Энэ орчинд ${list.length} шувуу амьдардаг. Газрын зураг дээр бүс эсвэл 📍 цэг сонгож нарийвчилна уу.`, `${list.length} birds live in this habitat. Pick a province or a 📍 site on the map to narrow it down.`, `${list.length} oiseaux vivent dans ce milieu. Choisissez une province ou un site 📍 sur la carte pour affiner.`)}</p>`;
     } else {
-      $("#map-info").innerHTML = `<p class="muted">${T("Газрын зураг дээр бүс, 📍 цэг эсвэл дээрх амьдрах орчноос сонгоно уу.", "Pick a region or a 📍 site on the map, or a habitat above.", "Choisissez une région ou un site 📍 sur la carte, ou un milieu ci-dessus.")}</p>`;
+      $("#map-info").innerHTML = `<p class="muted">${T("Газрын зураг дээр аймаг, 📍 цэг эсвэл дээрх амьдрах орчноос сонгоно уу.", "Pick a province or a 📍 site on the map, or a habitat above.", "Choisissez une province ou un site 📍 sur la carte, ou un milieu ci-dessus.")}</p>`;
       $("#map-results").innerHTML = "";
       return;
     }
-    if (mapHab && (selHotspot || selRegion)) head = head.replace("</h3>", `${habTxt}</h3>`);
+    if (mapHab && (selHotspot || selAimag || selRegion)) head = head.replace("</h3>", `${habTxt}</h3>`);
     $("#map-info").innerHTML = head;
     $("#map-results").innerHTML = list.map(card).join("") || `<p class="muted">${T("Тохирох шувуу алга.", "No matching birds.")}</p>`;
   }
@@ -333,7 +381,7 @@
       renderMapResults();
     });
     $("#map-legend").innerHTML = HAS_L
-      ? `<span><i style="background:#8fe3ff"></i>${T("Сонгосон бүс", "Selected region")}</span><span><i style="background:#ffb347"></i>${T("Шувуу ажиглах газар", "Birdwatching site")}</span><span>${T("Хулганы дугуй, +/− товч эсвэл хоёр хуруугаар томруулж, чирж хөдөлгөнө. Шар тасархай шугам нь улсын хил.", "Zoom with the mouse wheel, the +/− buttons or two fingers; drag to pan. The dashed yellow line is the national border.")}</span>`
+      ? `<span><i style="background:#8fe3ff"></i>${T("Сонгосон аймаг", "Selected province", "Province sélectionnée")}</span><span><i style="background:#ffb347"></i>${T("Шувуу ажиглах газар", "Birdwatching site")}</span><span>${T("Хулганы дугуй, +/− товч эсвэл хоёр хуруугаар томруулж, чирж хөдөлгөнө. Шар тасархай шугам нь улсын хил.", "Zoom with the mouse wheel, the +/− buttons or two fingers; drag to pan. The dashed yellow line is the national border.")}</span>`
       : `<span><i style="background:var(--region-hi)"></i>${T("Сонгосон бүс", "Selected region")}</span><span><i style="background:var(--earth)"></i>${T("Шувуу ажиглах газар", "Birdwatching site")}</span><span>${T("Схем зураг — хил ойролцоо", "Schematic map — border approximate")}</span>`;
     if (HAS_L) {
       initMainSat();

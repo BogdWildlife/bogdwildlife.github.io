@@ -417,6 +417,7 @@ audio { width: 100%; max-width: 420px; height: 36px; }
 .leaflet-tooltip.hs-tip { font: 700 12px var(--sans); padding: 3px 8px; border: 0; border-radius: 6px; background: rgba(12,20,24,.82); color: #fff; box-shadow: none; }
 .leaflet-tooltip.hs-tip::before { display: none; }
 .rlabel-sat span { display: inline-block; transform: translate(-50%, -50%); white-space: nowrap; font: 800 13px var(--sans); letter-spacing: .04em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.9); }
+.alabel span { font-size: 10.5px; font-weight: 700; letter-spacing: .03em; opacity: .9; }
 .rnum-sat { display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--accent-ink); border: 2px solid #fff; font: 800 13px var(--sans); box-shadow: 0 1px 4px rgba(0,0,0,.5); }
 @media (max-width: 600px) {
   .sat-map { height: 380px; }
