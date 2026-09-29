@@ -642,7 +642,7 @@
           <div class="side-box">
             <h3>📍 ${T("Хаана, хэзээ үзэх вэ", "Where & when to see")}</h3>
             <p>${esc(b.watching)}</p>
-            ${(() => { const rs = ROUTES.filter(r => r.birds.includes(b.id)); return rs.length ? `<p style="margin-top:8px"><b>${T("Аяллын маршрут", "Birding routes")}:</b></p><div class="tagrow">${rs.map(r => `<a href="#route-${r.id}" class="tag route-link" data-goroute="${r.id}">🧭 ${esc(r.name)}</a>`).join("")}</div>` : ""; })()}
+            ${(() => { const rs = ROUTES.filter(r => routeBirds(r).includes(b.id)); return rs.length ? `<p style="margin-top:8px"><b>${T("Аяллын маршрут", "Birding routes")}:</b></p><div class="tagrow">${rs.map(r => `<a href="#route-${r.id}" class="tag route-link" data-goroute="${r.id}">🧭 ${esc(r.name)}</a>`).join("")}</div>` : ""; })()}
           </div>
           <div class="side-box status-box">
             <h3>${T("Хамгааллын статус", "Conservation status")}</h3>
@@ -1162,6 +1162,24 @@
   document.addEventListener("play", e => { $$("audio").forEach(a => { if (a !== e.target) a.pause(); }); }, true);
 
   /* ---------------- Routes ---------------- */
+  // Маршрутын шувууд: гараар сонгосон онцлох шувууд + зогсоолуудад бүртгэгдсэн бүх шувуу (зөвхөн өвлийн шувуугүй).
+  // Эрэмбэ: онцлох → хэдэн зогсоолд тааралддаг → зогсоолын орчмын (±1 нүд) GBIF бүртгэл
+  const routeBirdCache = {};
+  function routeBirds(r) {
+    if (routeBirdCache[r.id]) return routeBirdCache[r.id];
+    const stops = r.stops.map(s => s.hs).filter(h => r.stops.length <= 3 || h !== "ulaanbaatar");   // УБ зөвхөн эхлэл/төгсгөл бол тооцохгүй
+    const near = b => rangeCells(b).reduce((s, [lon, lat, n]) => s + (stops.some(h => Math.abs(HOTSPOTS[h].lon - (lon + .25)) <= .75 && Math.abs(HOTSPOTS[h].lat - (lat + .25)) <= .75) ? n : 0), 0);
+    const scored = BIRDS.filter(b => !(b.season.length === 1 && b.season[0] === "winter"))
+      .map(b => ({ id: b.id, hi: r.birds.includes(b.id), st: b.hotspots.filter(h => stops.includes(h)).length }))
+      .filter(x => x.hi || x.st)
+      .map(x => ({ ...x, g: near(byId[x.id]) }));
+    scored.sort((a, b) => (b.hi - a.hi) || (b.st - a.st) || (b.g - a.g));
+    return (routeBirdCache[r.id] = scored.map(x => x.id));
+  }
+  document.addEventListener("click", e => {
+    const t = e.target.closest(".rb-toggle"); if (!t) return;
+    $$(".rb-more").forEach(x => { x.hidden = false; }); t.remove();
+  });
   let selRoute = ROUTES[0].id;
   function routeMapSVG(r) {
     const pts = r.stops.map(s => [px(HOTSPOTS[s.hs].lon), py(HOTSPOTS[s.hs].lat)]);
@@ -1213,8 +1231,14 @@
           <div class="slots">${slot(T("Өглөө", "Morning"), d.am)}${slot(T("Өдөр", "Afternoon"), d.pm)}${slot(T("Орой", "Evening"), d.ev)}</div>
         </article>`).join("")}
       </div>
-      <h3 class="section-gap">${T("Энэ маршрутаар харж болох шувууд", "Birds you can see on this route")} (${r.birds.length})</h3>
-      <div class="route-birds">${r.birds.map(id => byId[id]).map(b => `<button class="rbird" data-bird="${b.id}"><img src="${b.image.file}" alt="" loading="lazy"><span>${esc(b.name)}</span></button>`).join("")}</div>
+      ${(() => {
+        const rb = routeBirds(r).map(id => byId[id]), SHOW = 24;
+        const btn = (b, i) => `<button class="rbird${i >= SHOW ? " rb-more" : ""}" data-bird="${b.id}"${i >= SHOW ? " hidden" : ""}><img src="${b.image.file}" alt="" loading="lazy"><span>${esc(b.name)}</span></button>`;
+        return `<h3 class="section-gap">${T("Энэ маршрутаар харж болох шувууд", "Birds you can see on this route")} (${rb.length})</h3>
+          <p class="muted small">${T("Маршрутын зогсоолуудад бүртгэгдсэн шувууд; эхэнд нь онцлох, олон зогсоолд тааралддаг, их ажиглагдсан шувууд. Зөвхөн өвөл ирдэг шувууг оруулаагүй.", "Birds recorded at the route’s stops; highlights and the most widespread, most often seen species come first. Winter-only visitors are left out.", "Oiseaux signalés aux étapes de l’itinéraire ; les incontournables et les espèces les plus répandues et observées en premier. Les hivernants stricts sont exclus.")}</p>
+          <div class="route-birds">${rb.map(btn).join("")}</div>
+          ${rb.length > SHOW ? `<button type="button" class="btn small rb-toggle">${T(`Бүгдийг харах (${rb.length})`, `Show all (${rb.length})`, `Tout afficher (${rb.length})`)}</button>` : ""}`;
+      })()}
       ${(() => {
         const np = nearbyPlaces(r);
         const row = ({ pl, i, d }) => `<div class="rplace">

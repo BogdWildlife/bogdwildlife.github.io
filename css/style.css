@@ -492,6 +492,8 @@ a.btn { text-decoration: none; display: inline-block; }
 .slot p { margin: 2px 0 0; font-size: .9rem; }
 .route-birds { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
 .rbird { border: 0; padding: 0; background: var(--surface); border-radius: 10px; overflow: hidden; cursor: pointer; color: var(--ink); font: 600 .9rem var(--sans); box-shadow: var(--shadow); text-align: left; }
+.rbird[hidden] { display: none; }
+.rb-toggle { margin-top: 10px; }
 .rbird img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .rbird span { display: block; padding: 6px 8px; }
 .rbird:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
