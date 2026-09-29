@@ -305,6 +305,7 @@ const FR_UI = {
   "🏛 Sights": "🏛 À visiter",
   "🛡 Conservation status": "🛡 Statut de conservation",
   "Search by name (English, Mongolian, Latin)…": "Rechercher par nom (français, anglais, mongol, latin)…",
+  "Search by name or voice description…": "Rechercher par nom ou description du chant…",
   "Search": "Rechercher",
   "Identify by photo": "Identifier par photo",
   "Upload your own photo of a bird. An AI image model (MobileNet) turns it into a numeric “fingerprint” and compares it with over a thousand expert-verified reference photos (iNaturalist) of the birds in this guide, then suggests the closest matches.": "Importez votre propre photo d’oiseau. Un modèle d’IA (MobileNet) la transforme en « empreinte » numérique et la compare à plus d’un millier de photos de référence validées par des experts (iNaturalist), puis propose les correspondances les plus proches.",

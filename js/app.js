@@ -1118,10 +1118,12 @@
       const c = e.target.closest(".chip"); if (!c) return;
       timeFilter = c.dataset.t; $$("#time-chips .chip").forEach(x => x.classList.toggle("on", x === c)); renderSound();
     });
+    $("#sound-search").addEventListener("input", renderSound);
     renderSound();
   }
   function renderSound() {
     const sel = $$(".voice-opt.on").map(x => x.dataset.v);
+    const q = $("#sound-search").value.trim().toLowerCase();
     let list = BIRDS.map(b => {
       let s = sel.length ? sel.filter(v => b.voiceTypes.includes(v)).length / sel.length : 0.5;
       if (timeFilter === "night") s *= b.active === "night" ? 1.5 : 0.4;
@@ -1129,8 +1131,9 @@
       return { b, s };
     });
     if (sel.length || timeFilter !== "any") list = list.filter(r => r.s > 0);
+    if (q) list = list.filter(({ b }) => [b.name, b.altNames, b.latin, b.en, b.nameEn || "", b.voice].join(" ").toLowerCase().includes(q));
     list.sort((x, y) => y.s - x.s || (!!y.b.audio - !!x.b.audio));
-    $("#sound-results").innerHTML = (sel.length ? `<p class="muted">${T(`${list.length} шувуу тохирч байна.`, `${list.length} birds match.`, `${list.length} oiseaux correspondent.`)}</p>` : `<p class="muted">${T("Бүх шувууны дуу хоолойн тайлбар (🔊 бичлэгтэй нь эхэнд):", "Voice descriptions of all birds (those with 🔊 recordings first):")}</p>`) +
+    $("#sound-results").innerHTML = (sel.length || q ? `<p class="muted">${T(`${list.length} шувуу тохирч байна.`, `${list.length} birds match.`, `${list.length} oiseaux correspondent.`)}</p>` : `<p class="muted">${T("Бүх шувууны дуу хоолойн тайлбар (🔊 бичлэгтэй нь эхэнд):", "Voice descriptions of all birds (those with 🔊 recordings first):")}</p>`) +
       list.map(({ b }) => `<div class="sound-row">
         <img src="${b.image.file}" alt="" data-bird="${b.id}" loading="lazy">
         <div><h4 data-bird="${b.id}">${esc(b.name)} <span class="muted" style="font-weight:400;font-size:.85rem">· ${b.voiceTypes.map(v => VOICE_TYPES[v].name).join(", ")}</span></h4>
