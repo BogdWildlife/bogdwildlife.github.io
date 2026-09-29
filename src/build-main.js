@@ -108,7 +108,7 @@ for (var i = 0; i < master.length; i++) {
   var orderMN = ORDER_MN[fam[0]] ? ORDER_MN[fam[0]] + " (" + fam[0] + ")" : fam[0] + " баг";
   var ecode = "(" + code + ")";
   var b = {
-    id: id, name: mnName, altNames: alts.join(", "), latin: s.accepted, en: enName,
+    id: id, name: mnName, altNames: alts.join(", "), latin: te.latin || s.accepted, en: enName,
     order: orderMN, family: (famMN[s.fam] || famL) + " (" + famL + ")", iucn: code,
     statusText: tm.st || ("Олон улсад \"" + IUCN_T.mn[code] + "\" " + ecode + "."),
     length: szMN[0], wingspan: szMN[1], weight: szMN[2], sizeClass: sizeClass(sz[0]), group: grp,
