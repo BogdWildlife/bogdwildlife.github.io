@@ -45,19 +45,29 @@
   });
 
   /* ---------------- Gallery ---------------- */
-  let groupFilter = null;
+  // Эхлээд амьдрах орчноор (шувуу хэд хэдэн орчинд орж болно), дараа нь тэр дотроо бүлгээр шүүнэ
+  const HAB_ORDER = [["forest", "🌲"], ["steppe", "🌾"], ["desert", "🏜️"], ["mountain", "⛰️"], ["water", "💧"], ["settlement", "🏘️"]];
+  let habFilter = "", groupFilter = "";
+  const inHab = b => !habFilter || (habFilter === "_feat" ? !b.extra : b.habitats.includes(habFilter));
   function renderChips() {
     const box = $("#group-chips");
-    const groups = Object.entries(GROUPS).filter(([k]) => BIRDS.some(b => b.group === k));
-    box.innerHTML = `<button class="chip on" data-g="">${T("Бүгд", "All")} (${BIRDS.length})</button>` + (BIRDS.some(b => b.extra) ? `<button class="chip" data-g="_feat">⭐ ${T("Онцлох", "Featured")} (${BIRDS.filter(b => !b.extra).length})</button>` : "") +
-      groups.map(([k, v]) => `<button class="chip" data-g="${k}">${v} (${BIRDS.filter(b => b.group === k).length})</button>`).join("");
-    box.addEventListener("click", e => {
-      const c = e.target.closest(".chip"); if (!c) return;
-      groupFilter = c.dataset.g || null;
-      $$(".chip", box).forEach(x => x.classList.toggle("on", x === c));
-      renderGallery();
-    });
+    const habs = [["", "", T("Бүгд", "All"), BIRDS.length]]
+      .concat(BIRDS.some(b => b.extra) ? [["_feat", "⭐", T("Онцлох", "Featured"), BIRDS.filter(b => !b.extra).length]] : [])
+      .concat(HAB_ORDER.map(([k, ic]) => [k, ic, HABITAT_NAMES[k], BIRDS.filter(b => b.habitats.includes(k)).length]).filter(h => h[3]));
+    const inH = BIRDS.filter(inHab);
+    const groups = Object.entries(GROUPS).map(([k, v]) => [k, v, inH.filter(b => b.group === k).length]).filter(g => g[2]);
+    if (groupFilter && !groups.some(g => g[0] === groupFilter)) groupFilter = "";
+    box.innerHTML = `<div class="chips chip-row" role="group" aria-label="${T("Амьдрах орчин", "Habitat")}">` +
+      habs.map(([k, ic, v, n]) => `<button class="chip${k === habFilter ? " on" : ""}" data-h="${k}">${ic ? ic + " " : ""}${v} (${n})</button>`).join("") + `</div>` +
+      `<div class="chips chip-row chip-sub" role="group" aria-label="${T("Бүлэг", "Group")}">` +
+      `<button class="chip${!groupFilter ? " on" : ""}" data-g="">${T("Бүх бүлэг", "All groups")} (${inH.length})</button>` +
+      groups.map(([k, v, n]) => `<button class="chip${k === groupFilter ? " on" : ""}" data-g="${k}">${v} (${n})</button>`).join("") + `</div>`;
   }
+  $("#group-chips").addEventListener("click", e => {
+    const c = e.target.closest(".chip"); if (!c) return;
+    if (c.dataset.h !== undefined) { habFilter = c.dataset.h; groupFilter = ""; } else groupFilter = c.dataset.g;
+    renderChips(); renderGallery();
+  });
   function card(b) {
     return `<button class="card" data-bird="${b.id}">
       <div class="thumb"><img loading="lazy" src="${b.image.file}" alt="${esc(b.name)}">${badge(b)}${b.audio ? '<span class="snd">🔊</span>' : ""}</div>
@@ -66,7 +76,7 @@
   }
   function renderGallery() {
     const q = $("#search").value.trim().toLowerCase();
-    const list = BIRDS.filter(b => (!groupFilter || (groupFilter === "_feat" ? !b.extra : b.group === groupFilter)) &&
+    const list = BIRDS.filter(b => inHab(b) && (!groupFilter || b.group === groupFilter) &&
       (!q || [b.name, b.altNames, b.latin, b.en, b.nameEn || ""].join(" ").toLowerCase().includes(q)));
     $("#gallery").innerHTML = list.length ? list.map(card).join("") : `<p class="muted">${T("Илэрц олдсонгүй.", "No matches.")}</p>`;
   }

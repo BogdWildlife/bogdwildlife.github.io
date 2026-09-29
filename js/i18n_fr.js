@@ -15,6 +15,8 @@ const FR_UI = {
   // Général
   "All": "Tous",
   "Featured": "À la une",
+  "All groups": "Tous les groupes",
+  "Group": "Groupe",
   "No photo yet": "Pas encore de photo",
   "No matches.": "Aucun résultat.",
   "Satellite imagery: NASA Blue Marble (GIBS)": "Imagerie satellite : NASA Blue Marble (GIBS)",
