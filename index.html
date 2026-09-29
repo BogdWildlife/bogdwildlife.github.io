@@ -38,7 +38,7 @@
     </a>
     <nav aria-label="Хөтчийн цэс">
       <details class="hero-menu nav-menu">
-        <summary class="btn primary" data-en="☰ Explore the guide">☰ Хөтчийн цэс</summary>
+        <summary class="btn primary" data-en='☰ <span class="menu-word">Explore the guide</span>'>☰ <span class="menu-word">Хөтчийн цэс</span></summary>
         <div class="hero-menu-list">
           <button data-goto="home" class="active" data-en="🐦 All birds">🐦 Бүх шувуу</button>
           <button data-goto="photo" data-en="📷 Identify by photo">📷 Зургаар таних</button>
@@ -52,11 +52,14 @@
         </div>
       </details>
     </nav>
-    <div class="lang-switch" role="group" aria-label="Хэл / Language / Langue">
-      <button type="button" data-lang="mn" lang="mn" title="Монгол">MN</button>
-      <button type="button" data-lang="en" lang="en" title="English">EN</button>
-      <button type="button" data-lang="fr" lang="fr" title="Français">FR</button>
-    </div>
+    <details class="lang-menu">
+      <summary aria-label="Хэл / Language / Langue">🌐 <span class="lang-cur">MN</span></summary>
+      <div class="lang-list">
+        <button type="button" data-lang="mn" lang="mn">Монгол</button>
+        <button type="button" data-lang="en" lang="en">English</button>
+        <button type="button" data-lang="fr" lang="fr">Français</button>
+      </div>
+    </details>
   </div>
 </header>
 

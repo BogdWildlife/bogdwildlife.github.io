@@ -38,7 +38,7 @@
   document.addEventListener("click", e => {
     const t = e.target.closest("[data-tab],[data-goto]");
     if (t) { e.preventDefault(); showTab(t.dataset.tab || t.dataset.goto); }
-    $$(".hero-menu[open]").forEach(m => { if (t || !m.contains(e.target)) m.open = false; });
+    $$(".hero-menu[open], .lang-menu[open]").forEach(m => { if (t || !m.contains(e.target)) m.open = false; });
     const c = e.target.closest("[data-bird]");
     const a = e.target.closest("a");
     if (c && !e.target.closest("audio") && (!a || a === c)) { e.preventDefault(); openBird(c.dataset.bird); }
@@ -1398,6 +1398,7 @@ ${knowledge(texts)}`;
     $$("[data-en-aria]").forEach(el => { el.setAttribute("aria-label", T("", el.dataset.enAria)); });
     document.title = T("", "MongolShuvuu — Birds of Mongolia field guide", "MongolShuvuu — guide des oiseaux de Mongolie");
   }
+  $(".lang-cur").textContent = LANG.toUpperCase();
   $$("[data-lang]").forEach(b => {
     const on = b.dataset.lang === LANG;
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on));

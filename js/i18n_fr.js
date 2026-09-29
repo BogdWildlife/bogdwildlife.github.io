@@ -294,7 +294,7 @@ const FR_UI = {
   "An online field guide to the birds of Mongolia": "Un guide d’identification en ligne des oiseaux de Mongolie",
   "Birds of Mongolia": "Oiseaux de Mongolie",
   "Identify Mongolia’s key and most sought-after birds by <b>photo</b>, <b>field marks</b>, <b>range</b> and <b>voice</b>, and read detailed profiles of each.": "Identifiez les oiseaux emblématiques et les plus recherchés de Mongolie par <b>photo</b>, par <b>critères</b>, par <b>répartition</b> et par <b>la voix</b>, et consultez une fiche détaillée pour chacun.",
-  "☰ Explore the guide": "☰ Explorer le guide",
+  "☰ <span class=\"menu-word\">Explore the guide</span>": "☰ <span class=\"menu-word\">Explorer le guide</span>",
   "🐦 All birds": "🐦 Tous les oiseaux",
   "📷 Identify by photo": "📷 Identifier par photo",
   "🔎 By field marks": "🔎 Par critères",
