@@ -305,6 +305,8 @@ const FR_UI = {
   "🏛 Sights": "🏛 À visiter",
   "🛡 Conservation status": "🛡 Statut de conservation",
   "Search by name (English, Mongolian, Latin)…": "Rechercher par nom (français, anglais, mongol, latin)…",
+  "Search by name…": "Rechercher par nom…",
+  "Search birds": "Rechercher un oiseau",
   "Search by name or voice description…": "Rechercher par nom ou description du chant…",
   "Search": "Rechercher",
   "Identify by photo": "Identifier par photo",

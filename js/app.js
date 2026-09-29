@@ -278,7 +278,24 @@
   function initRangePick() {
     const sel = $("#range-bird");
     const opts = BIRDS.filter(b => HAS_RANGES && RANGES[b.id] && RANGES[b.id].n).slice().sort((a, b) => a.name.localeCompare(b.name, LANG));
-    sel.innerHTML = `<option value="">${T("— Шувуу сонгох —", "— Choose a bird —")}</option>` + opts.map(b => `<option value="${b.id}">${esc(b.name)} (${RANGES[b.id].n.toLocaleString()})</option>`).join("");
+    const match = q => q ? opts.filter(b => [b.name, b.altNames, b.latin, b.en, b.nameEn || ""].join(" ").toLowerCase().includes(q)) : opts;
+    const fill = q => {
+      const m = match(q).slice();
+      if (rangeSel && !m.some(b => b.id === rangeSel)) m.unshift(byId[rangeSel]);   // сонгосныг алдахгүй
+      sel.innerHTML = `<option value="">${q ? T(`— ${m.length} шувуу олдлоо —`, `— ${m.length} birds found —`, `— ${m.length} oiseaux trouvés —`) : T("— Шувуу сонгох —", "— Choose a bird —")}</option>` +
+        m.map(b => `<option value="${b.id}">${esc(b.name)} (${RANGES[b.id].n.toLocaleString()})</option>`).join("");
+      sel.value = rangeSel || "";
+    };
+    fill("");
+    const search = $("#range-search");
+    search.addEventListener("input", () => fill(search.value.trim().toLowerCase()));
+    // Enter: эхний олдсон шувууг харуулна
+    search.addEventListener("keydown", e => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      const m = match(search.value.trim().toLowerCase());
+      if (m.length) showRange(m[0].id);
+    });
     sel.addEventListener("change", () => showRange(sel.value || null));
     $("#range-clear").addEventListener("click", () => showRange(null));
     if (!HAS_RANGES) $(".range-pick").hidden = true;
