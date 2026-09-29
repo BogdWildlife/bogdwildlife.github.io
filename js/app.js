@@ -38,6 +38,7 @@
   document.addEventListener("click", e => {
     const t = e.target.closest("[data-tab],[data-goto]");
     if (t) { e.preventDefault(); showTab(t.dataset.tab || t.dataset.goto); }
+    $$(".hero-menu[open]").forEach(m => { if (t || !m.contains(e.target)) m.open = false; });
     const c = e.target.closest("[data-bird]");
     const a = e.target.closest("a");
     if (c && !e.target.closest("audio") && (!a || a === c)) { e.preventDefault(); openBird(c.dataset.bird); }
