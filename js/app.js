@@ -27,7 +27,7 @@
   function showTab(name, push = true) {
     if (!document.getElementById("tab-" + name)) name = "home";
     $$(".tab-panel").forEach(p => p.classList.toggle("active", p.id === "tab-" + name));
-    $$(".tabs button").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
+    $$(".nav-menu [data-goto]").forEach(b => b.classList.toggle("active", b.dataset.goto === name));
     if (push) setHash(name === "home" ? location.pathname : "#" + name);
     if (name === "photo") { ensurePhotoQuiz(); preloadModel(); }
     if (name === "sound") ensureSoundQuiz();
