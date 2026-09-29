@@ -48,11 +48,14 @@
   // Эхлээд амьдрах орчноор (шувуу хэд хэдэн орчинд орж болно), дараа нь тэр дотроо бүлгээр шүүнэ
   const HAB_ORDER = [["forest", "🌲"], ["steppe", "🌾"], ["desert", "🏜️"], ["mountain", "⛰️"], ["water", "💧"], ["settlement", "🏘️"]];
   let habFilter = "", groupFilter = "";
-  const inHab = b => !habFilter || (habFilter === "_feat" ? !b.extra : b.habitats.includes(habFilter));
+  // Онцлох = дэлхийн хэмжээнд ховордсон (IUCN CR/EN/VU) + Монгол, Төв Азийн ойрын эндемик зүйл
+  const NEAR_ENDEMIC = new Set(["mongolian-accentor", "mongolian-ground-jay", "hodgsons-bush-chat", "altai-snowcock", "mongolian-lark", "saxaul-sparrow", "p-re-davids-snowfinch", "pallas-sandgrouse", "mongolian-finch", "jankowskis-bunting", "relict-gull"]);
+  const isSpecial = b => /^(CR|EN|VU)$/.test(b.iucn) || NEAR_ENDEMIC.has(b.id);
+  const inHab = b => !habFilter || (habFilter === "_feat" ? isSpecial(b) : b.habitats.includes(habFilter));
   function renderChips() {
     const box = $("#group-chips");
     const habs = [["", "", T("Бүгд", "All"), BIRDS.length]]
-      .concat(BIRDS.some(b => b.extra) ? [["_feat", "⭐", T("Онцлох", "Featured"), BIRDS.filter(b => !b.extra).length]] : [])
+      .concat([["_feat", "⭐", T("Ховор ба эндемик", "Rare & endemic"), BIRDS.filter(isSpecial).length]])
       .concat(HAB_ORDER.map(([k, ic]) => [k, ic, HABITAT_NAMES[k], BIRDS.filter(b => b.habitats.includes(k)).length]).filter(h => h[3]));
     const inH = BIRDS.filter(inHab);
     const groups = Object.entries(GROUPS).map(([k, v]) => [k, v, inH.filter(b => b.group === k).length]).filter(g => g[2]);

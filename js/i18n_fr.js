@@ -16,6 +16,7 @@ const FR_UI = {
   "All": "Tous",
   "Featured": "À la une",
   "All groups": "Tous les groupes",
+  "Rare & endemic": "Rares et endémiques",
   "Group": "Groupe",
   "No photo yet": "Pas encore de photo",
   "No matches.": "Aucun résultat.",
