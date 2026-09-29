@@ -218,7 +218,7 @@
     }
   }
 
-  let seasonFilter = "all", selRegion = null, selHotspot = null;
+  let seasonFilter = "all", selRegion = null, selHotspot = null, mapHab = "";
   /* Том газрын зураг дээр сонгосон шувууны ажиглалтын тор */
   let rangeSel = null, rangeLayer = null;
   function initRangePick() {
@@ -295,7 +295,8 @@
     return BIRDS.filter(b => seasonFilter === "all" || b.season.includes(seasonFilter) || ((seasonFilter === "summer" || seasonFilter === "winter") && b.season.includes("resident")));
   }
   function renderMapResults() {
-    let list = birdsFiltered(), head;
+    let list = birdsFiltered().filter(b => !mapHab || b.habitats.includes(mapHab)), head;
+    const habTxt = mapHab ? ` · ${HAB_ORDER.find(h => h[0] === mapHab)[1]} ${HABITAT_NAMES[mapHab]}` : "";
     if (selHotspot) {
       const h = HOTSPOTS[selHotspot];
       list = list.filter(b => b.hotspots.includes(selHotspot));
@@ -303,9 +304,14 @@
     } else if (selRegion) {
       list = list.filter(b => b.regions.includes(selRegion));
       head = `<h3>${REGIONS[selRegion].name}</h3><p class="muted">${REGIONS[selRegion].desc}. ${T(`Энэ бүсэд ${list.length} шувуу тохиолдоно.`, `${list.length} birds occur in this region.`, `${list.length} oiseaux présents dans cette région.`)}</p>`;
+    } else if (mapHab) {
+      head = `<h3>${habTxt.slice(3)}</h3><p class="muted">${T(`Энэ орчинд ${list.length} шувуу амьдардаг. Газрын зураг дээр бүс эсвэл 📍 цэг сонгож нарийвчилна уу.`, `${list.length} birds live in this habitat. Pick a region or a 📍 site on the map to narrow it down.`, `${list.length} oiseaux vivent dans ce milieu. Choisissez une région ou un site 📍 sur la carte pour affiner.`)}</p>`;
     } else {
-      head = `<p class="muted">${T(`Газрын зураг дээр бүс эсвэл 📍 цэг сонгоно уу. Одоогоор ${list.length} шувуу харагдаж байна.`, `Pick a region or a 📍 site on the map. Showing ${list.length} birds.`, `Choisissez une région ou un site 📍 sur la carte. ${list.length} oiseaux affichés.`)}</p>`;
+      $("#map-info").innerHTML = `<p class="muted">${T("Газрын зураг дээр бүс, 📍 цэг эсвэл дээрх амьдрах орчноос сонгоно уу.", "Pick a region or a 📍 site on the map, or a habitat above.", "Choisissez une région ou un site 📍 sur la carte, ou un milieu ci-dessus.")}</p>`;
+      $("#map-results").innerHTML = "";
+      return;
     }
+    if (mapHab && (selHotspot || selRegion)) head = head.replace("</h3>", `${habTxt}</h3>`);
     $("#map-info").innerHTML = head;
     $("#map-results").innerHTML = list.map(card).join("") || `<p class="muted">${T("Тохирох шувуу алга.", "No matching birds.")}</p>`;
   }
@@ -317,6 +323,14 @@
       seasonFilter = c.dataset.s;
       $$("#season-chips .chip").forEach(x => x.classList.toggle("on", x === c));
       renderMainMap(); renderMapResults();
+    });
+    $("#maphab-chips").innerHTML = `<button class="chip on" data-mh="">${T("Бүх орчин", "All habitats")}</button>` +
+      HAB_ORDER.map(([k, ic]) => `<button class="chip" data-mh="${k}">${ic} ${HABITAT_NAMES[k]}</button>`).join("");
+    $("#maphab-chips").addEventListener("click", e => {
+      const c = e.target.closest(".chip"); if (!c) return;
+      mapHab = c.dataset.mh;
+      $$("#maphab-chips .chip").forEach(x => x.classList.toggle("on", x === c));
+      renderMapResults();
     });
     $("#map-legend").innerHTML = HAS_L
       ? `<span><i style="background:#8fe3ff"></i>${T("Сонгосон бүс", "Selected region")}</span><span><i style="background:#ffb347"></i>${T("Шувуу ажиглах газар", "Birdwatching site")}</span><span>${T("Хулганы дугуй, +/− товч эсвэл хоёр хуруугаар томруулж, чирж хөдөлгөнө. Шар тасархай шугам нь улсын хил.", "Zoom with the mouse wheel, the +/− buttons or two fingers; drag to pan. The dashed yellow line is the national border.")}</span>`
