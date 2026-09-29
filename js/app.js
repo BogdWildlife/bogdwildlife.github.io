@@ -292,7 +292,7 @@
     });
   }
   function birdsFiltered() {
-    return BIRDS.filter(b => seasonFilter === "all" || b.season.includes(seasonFilter) || (seasonFilter === "summer" && b.season.includes("resident")));
+    return BIRDS.filter(b => seasonFilter === "all" || b.season.includes(seasonFilter) || ((seasonFilter === "summer" || seasonFilter === "winter") && b.season.includes("resident")));
   }
   function renderMapResults() {
     let list = birdsFiltered(), head;
@@ -310,7 +310,7 @@
     $("#map-results").innerHTML = list.map(card).join("") || `<p class="muted">${T("Тохирох шувуу алга.", "No matching birds.")}</p>`;
   }
   function initMap() {
-    const seasons = { all: T("Бүх улирал", "All seasons"), summer: T("Зун", "Summer"), resident: T("Жилийн турш", "Year-round"), passage: T("Нүүдлийн үе", "Migration"), winter: T("Өвөл", "Winter") };
+    const seasons = { all: T("Бүх улирал", "All seasons"), summer: T("Зун", "Summer"), passage: T("Нүүдлийн үе", "Migration"), winter: T("Өвөл", "Winter") };
     $("#season-chips").innerHTML = Object.entries(seasons).map(([k, v]) => `<button class="chip${k === "all" ? " on" : ""}" data-s="${k}">${v}</button>`).join("");
     $("#season-chips").addEventListener("click", e => {
       const c = e.target.closest(".chip"); if (!c) return;
