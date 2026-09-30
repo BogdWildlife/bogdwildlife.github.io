@@ -8,6 +8,7 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const latinClean = b => b.latin.replace(/\s*\(.*\)/, "");
+  const absUrl = f => new URL(f, document.baseURI).href;   // CSS хувьсагч доторх url() нь css/ хавтаснаас хамаарч тооцогддог тул бүтэн хаяг
   const xcUrl = b => "https://xeno-canto.org/explore?query=" + encodeURIComponent(latinClean(b));
 
   const IUCN = {
@@ -97,7 +98,7 @@
   });
   function card(b) {
     return `<button class="card" data-bird="${b.id}">
-      <div class="thumb"><img loading="lazy" src="${b.image.file}" alt="${esc(b.name)}">${badge(b)}${b.audio ? '<span class="snd">🔊</span>' : ""}</div>
+      <div class="thumb photo-fit" style="--bg:url('${absUrl(b.image.file)}')"><img loading="lazy" src="${b.image.file}" alt="${esc(b.name)}">${badge(b)}${b.audio ? '<span class="snd">🔊</span>' : ""}</div>
       <div class="body"><h3>${esc(b.name)}</h3><div class="latin">${esc(b.latin)} · ${esc(b.en)}</div><p class="sum">${esc(b.summary)}</p></div>
     </button>`;
   }
@@ -633,7 +634,7 @@
     const p = t => `<p>${esc(t)}</p>`;
     const voiceTags = b.voiceTypes.map(v => `<span class="tag">${VOICE_TYPES[v].name}</span>`).join("");
     $("#modal-body").innerHTML = `
-      <div class="m-hero"><img src="${b.image.file}" alt="${esc(b.name)}" onload="if(this.naturalHeight>this.naturalWidth*0.8)this.classList.add('portrait')">${b.image.none ? `<span class="credit">${T("Зураг одоогоор байхгүй", "No photo yet")}</span>` : `<a class="credit" href="${b.image.source}" target="_blank" rel="noopener">📷 ${esc(b.image.credit)} · ${esc(b.image.via || "Wikimedia Commons")}</a>`}</div>
+      <div class="m-hero photo-fit" style="--bg:url('${absUrl(b.image.file)}')"><img src="${b.image.file}" alt="${esc(b.name)}" onload="if(this.naturalHeight>this.naturalWidth*0.8)this.classList.add('portrait')">${b.image.none ? `<span class="credit">${T("Зураг одоогоор байхгүй", "No photo yet")}</span>` : `<a class="credit" href="${b.image.source}" target="_blank" rel="noopener">📷 ${esc(b.image.credit)} · ${esc(b.image.via || "Wikimedia Commons")}</a>`}</div>
       <div class="m-head">
         <a href="#iucn-${b.iucn}" class="badge-link" data-iucn="${b.iucn}" title="${T("Энэ ангиллын тайлбар", "About this category")}">${badge(b)} <span class="badge-more">${T("юу гэсэн үг вэ? →", "what does it mean? →")}</span></a>
         <h2 id="m-title">${esc(b.name)}</h2>
@@ -1144,7 +1145,7 @@
     if (photoQuizOn) return; photoQuizOn = true;
     makeQuiz($("#photo-quiz"), "photo", BIRDS.filter(b => !b.image.none && (!b.extra || (typeof RANGES !== "undefined" && RANGES[b.id] && RANGES[b.id].n >= 100))), (b, lv) => {
       const ox = 30 + Math.round(Math.random() * 40), oy = 30 + Math.round(Math.random() * 40);
-      return `<div class="quiz-frame"><img class="quiz-img${lv.zoom ? " zoom" : ""}${lv.gray ? " gray" : ""}" style="transform-origin:${ox}% ${oy}%" src="${b.image.file}" alt="${T("Таах шувуу", "Mystery bird")}"></div>`;
+      return `<div class="quiz-frame photo-fit" style="--bg:url('${absUrl(b.image.file)}')"><img class="quiz-img${lv.zoom ? " zoom" : ""}${lv.gray ? " gray" : ""}" style="transform-origin:${ox}% ${oy}%" src="${b.image.file}" alt="${T("Таах шувуу", "Mystery bird")}"></div>`;
     });
   }
   function ensureSoundQuiz() {
@@ -1232,14 +1233,14 @@
     $("#fc-stage").scrollIntoView({ block: "nearest", behavior: "smooth" });
   }
   function fcFace(b, side) {
-    const img = `<img src="${b.image.file}" alt="" draggable="false">`;
+    const img = `<img src="${b.image.file}" alt="" draggable="false">`, bg = `style="--bg:url('${absUrl(b.image.file)}')"`;
     const names = `<div class="fc-names"><b class="fc-mn">${esc(nmMN(b))}</b><span class="fc-en">${esc(nmEN(b))}</span>${LANG === "fr" ? `<span class="fc-en">${esc(b.name)}</span>` : ""}<i class="fc-lat">${esc(latinClean(b))}</i></div>`;
     if (side === "front") {
-      if (fc.mode === "photo") return `<div class="fc-img">${img}</div><p class="fc-q">${T("Энэ ямар шувуу вэ?", "Which bird is this?", "Quel est cet oiseau ?")}</p>`;
+      if (fc.mode === "photo") return `<div class="fc-img photo-fit" ${bg}>${img}</div><p class="fc-q">${T("Энэ ямар шувуу вэ?", "Which bird is this?", "Quel est cet oiseau ?")}</p>`;
       const nm = fc.mode === "mn" ? nmMN(b) : nmEN(b);
       return `<div class="fc-word"><small>${fc.mode === "mn" ? T("Монгол нэр", "Mongolian name", "Nom mongol") : T("Англи нэр", "English name", "Nom anglais")}</small><b>${esc(nm)}</b></div><p class="fc-q">${T("Англи/монгол нэр, төрхийг нь санаарай", "Recall its other name and what it looks like", "Rappelez-vous son autre nom et son apparence")}</p>`;
     }
-    return `<div class="fc-img small">${img}</div>${names}`;
+    return `<div class="fc-img small photo-fit" ${bg}>${img}</div>${names}`;
   }
   function fcRender() {
     const st = $("#fc-stage");
@@ -1376,7 +1377,7 @@
       </div>
       ${(() => {
         const rb = routeBirds(r).map(id => byId[id]), SHOW = 24;
-        const btn = (b, i) => `<button class="rbird${i >= SHOW ? " rb-more" : ""}" data-bird="${b.id}"${i >= SHOW ? " hidden" : ""}><img src="${b.image.file}" alt="" loading="lazy"><span>${esc(b.name)}</span></button>`;
+        const btn = (b, i) => `<button class="rbird${i >= SHOW ? " rb-more" : ""}" data-bird="${b.id}"${i >= SHOW ? " hidden" : ""}><span class="rb-img photo-fit" style="--bg:url('${absUrl(b.image.file)}')"><img src="${b.image.file}" alt="" loading="lazy"></span><span>${esc(b.name)}</span></button>`;
         return `<h3 class="section-gap">${T("Энэ маршрутаар харж болох шувууд", "Birds you can see on this route")} (${rb.length})</h3>
           <p class="muted small">${T("Маршрутын зогсоолуудад бүртгэгдсэн шувууд; эхэнд нь онцлох, олон зогсоолд тааралддаг, их ажиглагдсан шувууд. Зөвхөн өвөл ирдэг шувууг оруулаагүй.", "Birds recorded at the route’s stops; highlights and the most widespread, most often seen species come first. Winter-only visitors are left out.", "Oiseaux signalés aux étapes de l’itinéraire ; les incontournables et les espèces les plus répandues et observées en premier. Les hivernants stricts sont exclus.")}</p>
           <div class="route-birds">${rb.map(btn).join("")}</div>
