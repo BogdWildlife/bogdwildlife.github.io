@@ -41,7 +41,7 @@ BIRDS.push(
     watching: "Монголд тогтмол тааралддаггүй — нүүдлийн үед гоорбисуудыг анхааралтай ажигла.",
     bestTime: "5-р сар, 9-р сар",
     facts: ["Соногийн авгалдай иддэг.", "Нүүр нь хайрс шиг хатуу өдтэй.", "Африкт өвөлждөг."],
-    image: { file: "images/european-honey-buzzard.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Wespenbussard_European_honey_buzzard_Pernis_apivorus,_crop.jpg" },
+    image: { file: "images/european-honey-buzzard.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Wespenbussard_European_honey_buzzard_Pernis_apivorus,_crop.jpg" },
     audio: null,
     extra: true
   },
@@ -85,7 +85,7 @@ BIRDS.push(
     watching: "5, 9-р сард Говь, ой хээрийн тэнгэрийг ажигла.",
     bestTime: "5-р сар, 9-р сар",
     facts: ["Ховилтой хэлээрээ соногийн авгалдай сугалдаг.", "Толгойн өд нь хатгуулахаас хамгаална.", "Зарим залуу нь согсоот бүргэдийг дуурайдаг."],
-    image: { file: "images/east-asian-honey-buzzard.jpg", credit: "Timothy A. Gonsalves", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_honey_buzzard_Mudumalai_Mar21_DSC01405.jpg" },
+    image: { file: "images/east-asian-honey-buzzard.jpg", credit: "Timothy A. Gonsalves", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_honey_buzzard_Mudumalai_Mar21_DSC01405.jpg" },
     audio: null,
     extra: true
   },
@@ -129,7 +129,7 @@ BIRDS.push(
     watching: "Монголд тааралдахгүй гэж үзнэ.",
     bestTime: "—",
     facts: ["Чулууг багаж болгон хэрэглэдэг.", "Дэлхийд устах аюултай.", "Насанд хүрэхэд нүүр нь тод шар болдог."],
-    image: { file: "images/egyptian-vulture.jpg", credit: "Rod Waddington", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Egyptian_Vulture,_Socotra.jpg" },
+    image: { file: "images/egyptian-vulture.jpg", credit: "Rod Waddington", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Egyptian_Vulture,_Socotra.jpg" },
     audio: null,
     extra: true
   },
@@ -173,7 +173,7 @@ BIRDS.push(
     watching: "Хаврын сүүлээр Говийн уулсын бэлээр.",
     bestTime: "5–9-р сар",
     facts: ["Бараг зөвхөн могой иддэг.", "Могойг толгойгоор нь эхлэн залгина.", "Ганцхан өндөг гаргадаг."],
-    image: { file: "images/short-toed-eagle.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Short-toed_Snake-Eagle_in_Bhigwan_August_2025_by_Tisha_Mukherjee_01.jpg" },
+    image: { file: "images/short-toed-eagle.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Short-toed_Snake-Eagle_in_Bhigwan_August_2025_by_Tisha_Mukherjee_01.jpg" },
     audio: null,
     extra: true
   },
@@ -217,7 +217,7 @@ BIRDS.push(
     watching: "6–8-р сард Говь Гурван Сайхан, Их Нарт, Хангайд.",
     bestTime: "6–8-р сар",
     facts: ["Дэлхийн хамгийн том махчин шувуудын нэг.", "Залуу нь зун Монголд ирдэг.", "6000 м-ээс дээш дүүлж чадна."],
-    image: { file: "images/himalayan-griffon.jpg", credit: "Sahana M", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Himalayan_Griffon_(Gyps_himalayensis).jpg" },
+    image: { file: "images/himalayan-griffon.jpg", credit: "Sahana M", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Himalayan_Griffon_(Gyps_himalayensis).jpg" },
     audio: null,
     extra: true
   },
@@ -261,7 +261,7 @@ BIRDS.push(
     watching: "Ховор — Говьд бусад тасын дундаас хай.",
     bestTime: "6–8-р сар",
     facts: ["Колони болж үүрлэдэг.", "Цагаан хүзүүвчтэй.", "Сэгийг хэдэн километрийн цаанаас олдог."],
-    image: { file: "images/griffon-vulture.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Gyps_fulvus_in_flight_-_Spain.jpg" },
+    image: { file: "images/griffon-vulture.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Gyps_fulvus_in_flight_-_Spain.jpg" },
     audio: null,
     extra: true
   },
@@ -354,7 +354,7 @@ BIRDS.push(
     watching: "Зун Хэнтийн голын хөндийд (Онон, Хурх).",
     bestTime: "5–8-р сар",
     facts: ["Залуу нь цагаан толбоор бүрхэгдсэн.", "Дэлхийд эмзэг зүйл.", "Намагтай холбоотой амьдардаг."],
-    image: { file: "images/greater-spotted-eagle.jpg", credit: "Вых Пыхманн", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Greater_spotted_eagle.jpg" },
+    image: { file: "images/greater-spotted-eagle.jpg", credit: "Вых Пыхманн", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Greater_spotted_eagle.jpg" },
     audio: null,
     extra: true
   },
@@ -398,7 +398,7 @@ BIRDS.push(
     watching: "Монголд тааралдахгүй гэж үзнэ.",
     bestTime: "—",
     facts: ["Хос нь баг болж агнадаг.", "Италийн байгаль судлаачийн нэрээр нэрлэгдсэн.", "Европт цөөрч байгаа."],
-    image: { file: "images/bonellis-eagle.jpg", credit: "Seshadri.K.S", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Bonelli%27s_Eagle.jpg" },
+    image: { file: "images/bonellis-eagle.jpg", credit: "Seshadri.K.S", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Bonelli%27s_Eagle.jpg" },
     audio: null,
     extra: true
   },
@@ -442,7 +442,7 @@ BIRDS.push(
     watching: "5–9-р сард Тэрэлж, Улаанбаатарын ойт толгод, Хар ус нуур, Алтайн хөндий.",
     bestTime: "5–9-р сар",
     facts: ["Жинхэнэ бүргэдийн хамгийн жижиг нь.", "Хоёр өөр өнгөний хэлбэртэй.", "Хөл нь хуруу хүртэл өдтэй."],
-    image: { file: "images/booted-eagle.jpg", credit: "Derek Keats from Johannesburg, South Africa", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Booted_eagle,_Hieraaetus_pennatus,_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg" },
+    image: { file: "images/booted-eagle.jpg", credit: "Derek Keats from Johannesburg, South Africa", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Booted_eagle,_Hieraaetus_pennatus,_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg" },
     audio: null,
     extra: true
   },
@@ -486,7 +486,7 @@ BIRDS.push(
     watching: "Зундаа Хар ус нуурын шагшуургыг ажигла.",
     bestTime: "5–9-р сар",
     facts: ["Монголд Дорнын хулдтай таарч эрлийзждэг.", "Олзоо агаарт дамжуулдаг.", "Европын хамгийн том хулд."],
-    image: { file: "images/western-marsh-harrier.jpg", credit: "Stephan Sprinz", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg" },
+    image: { file: "images/western-marsh-harrier.jpg", credit: "Stephan Sprinz", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg" },
     audio: null,
     extra: true
   },
@@ -530,7 +530,7 @@ BIRDS.push(
     watching: "5–8-р сард Хурх–Хүйтний хөндий, Өгий нуур, Буйр нуур.",
     bestTime: "5–8-р сар",
     facts: ["Монголын зүүн нутгийн намагт элбэг.", "Өмнө нь Намгийн хулдтай нэг зүйлд тооцогддог байв.", "Эр, эм нь огт өөр харагдана."],
-    image: { file: "images/eastern-marsh-harrier.jpg", credit: "(c) Анна Васильченко, some rights reserved (CC BY)", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eastern_Marsh_Harrier_imported_from_iNaturalist_photo_170842420_on_16_June_2024.jpg" },
+    image: { file: "images/eastern-marsh-harrier.jpg", credit: "(c) Анна Васильченко, some rights reserved (CC BY)", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eastern_Marsh_Harrier_imported_from_iNaturalist_photo_170842420_on_16_June_2024.jpg" },
     audio: null,
     extra: true
   },
@@ -574,7 +574,7 @@ BIRDS.push(
     watching: "9-р сард Хэнтий, Дорнодын тал хээрт.",
     bestTime: "9-р сар",
     facts: ["Эм нь «цагаан ууцтай» гэж танигдана.", "Сонсголоороо ан хайхад зориулсан нүүрний хүрээтэй.", "Эр нь эмээсээ хамаагүй цайвар."],
-    image: { file: "images/hen-harrier.jpg", credit: "Александр Чегодаев", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Circus_cyaneus_265961899.jpg" },
+    image: { file: "images/hen-harrier.jpg", credit: "Александр Чегодаев", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Circus_cyaneus_265961899.jpg" },
     audio: null,
     extra: true
   },
@@ -618,7 +618,7 @@ BIRDS.push(
     watching: "Намар баруун нутагт хулд бүрийг анхааралтай ажигла.",
     bestTime: "9-р сар",
     facts: ["Дэлхийд ховордож болзошгүй зүйл.", "Сүүлийн жилүүдэд баруун Европт үржиж эхэлсэн.", "Нисэхэд эр нь бараг цагаан харагдана."],
-    image: { file: "images/pallid-harrier.jpg", credit: "Shiv's fotografia", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Pallid_harrier.jpg" },
+    image: { file: "images/pallid-harrier.jpg", credit: "Shiv's fotografia", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Pallid_harrier.jpg" },
     audio: null,
     extra: true
   },
@@ -662,7 +662,7 @@ BIRDS.push(
     watching: "6–8-р сард Хурх–Хүйтний хөндий.",
     bestTime: "6–8-р сар",
     facts: ["Эр нь хар цагаан өнгөтэй.", "Зөвхөн Зүүн Азид үрждэг.", "Модон дээр ховор суудаг."],
-    image: { file: "images/pied-harrier.jpg", credit: "Rivugayen", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pied_Harrier_by_Saptarshi_Gayen_(cropped).jpg" },
+    image: { file: "images/pied-harrier.jpg", credit: "Rivugayen", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pied_Harrier_by_Saptarshi_Gayen_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -706,7 +706,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага — баруун нутагт хулдыг анхааралтай ажигла.",
     bestTime: "—",
     facts: ["Англи нэр нь Жорж Монтагугийн нэрээс гаралтай.", "Европт ихэвчлэн үр тарианы талбайд үүрлэдэг.", "Монголд маш ховор."],
-    image: { file: "images/montagus-harrier.jpg", credit: "Hari K Patibanda", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Montagu%27s_harrier_male.jpg" },
+    image: { file: "images/montagus-harrier.jpg", credit: "Hari K Patibanda", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Montagu%27s_harrier_male.jpg" },
     audio: null,
     extra: true
   },
@@ -750,7 +750,7 @@ BIRDS.push(
     watching: "Монголд тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Доронго шувуу түүний дууг дууриадаг.", "Саяхан Tachyspiza төрөлд шилжүүлсэн.", "Энэтхэгт маш элбэг."],
-    image: { file: "images/shikra.jpg", credit: "Ravi Vaidyanathan", via: "Wikimedia Commons Â· CC BY 2.5", source: "https://commons.wikimedia.org/wiki/File:Shikra1.jpg" },
+    image: { file: "images/shikra.jpg", credit: "Ravi Vaidyanathan", via: "Wikimedia Commons · CC BY 2.5", source: "https://commons.wikimedia.org/wiki/File:Shikra1.jpg" },
     audio: null,
     extra: true
   },
@@ -794,7 +794,7 @@ BIRDS.push(
     watching: "5-р сард зүүн Монголд жижиг харцагыг ажигла.",
     bestTime: "5-р сар",
     facts: ["Азийн хамгийн жижиг харцагын нэг.", "Сүргээрээ нүүдэллэдэг.", "Хоолойдоо зураастай."],
-    image: { file: "images/japanese-sparrowhawk.jpg", credit: "たー坊", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:20100710_tumi_nagoya_03.jpg" },
+    image: { file: "images/japanese-sparrowhawk.jpg", credit: "たー坊", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:20100710_tumi_nagoya_03.jpg" },
     audio: null,
     extra: true
   },
@@ -838,7 +838,7 @@ BIRDS.push(
     watching: "Нүүдлийн үеэр Улаанбаатарын цэцэрлэгт хүрээлэн, Тэрэлж, говийн баянбүрд.",
     bestTime: "4–5, 9-р сар",
     facts: ["Эм нь эрээсээ хамаагүй том.", "Хотод шувуу агнадаг.", "ДДТ-г хориглосны дараа тоо нь сэргэсэн."],
-    image: { file: "images/eurasian-sparrowhawk.jpg", credit: "Dion Art", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%AF%D1%81%D1%82%D1%80%D0%B5%D0%B1-%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B5%D0%BB%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_(Accipiter_nisus,_m),_%D0%98%D0%B7%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg" },
+    image: { file: "images/eurasian-sparrowhawk.jpg", credit: "Dion Art", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%AF%D1%81%D1%82%D1%80%D0%B5%D0%B1-%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B5%D0%BB%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_(Accipiter_nisus,_m),_%D0%98%D0%B7%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg" },
     audio: null,
     extra: true
   },
@@ -882,7 +882,7 @@ BIRDS.push(
     watching: "Хаврын эхээр хос нь үзүүлбэр нислэг хийх үед Тэрэлж, Хэнтий, Хөвсгөлийн нам гүм ойн жим.",
     bestTime: "3–5-р сар",
     facts: ["Эм нь эрээсээ хамаагүй том.", "Туулай хэртэй олз барьж чадна.", "Хойд хэсгийн шувуу бараг цагаан байж болно."],
-    image: { file: "images/northern-goshawk.jpg", credit: "Norbert Kenntner, Berlin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_ad_M2.jpg" },
+    image: { file: "images/northern-goshawk.jpg", credit: "Norbert Kenntner, Berlin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_ad_M2.jpg" },
     audio: null,
     extra: true
   },
@@ -926,7 +926,7 @@ BIRDS.push(
     watching: "Зундаа Өгий нуур, Хар ус нуур, Хурхын хөндий.",
     bestTime: "5–9-р сар",
     facts: ["Далавчны дэлгэц 2.45 м хүрнэ.", "Нэг үүрээ хэдэн арван жил ашигладаг.", "Пестицидийг хориглосны дараа Европт сэргэсэн."],
-    image: { file: "images/white-tailed-sea-eagle.jpg", credit: "Bengt Nyman from Vaxholm, Sweden", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:NZ7_5265_(52812350718).jpg" },
+    image: { file: "images/white-tailed-sea-eagle.jpg", credit: "Bengt Nyman from Vaxholm, Sweden", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:NZ7_5265_(52812350718).jpg" },
     audio: null,
     extra: true
   },
@@ -970,7 +970,7 @@ BIRDS.push(
     watching: "Зундаа хаана ч — ялангуяа Улаанбаатар, жуулчны баазын дээгүүр.",
     bestTime: "5–8-р сар",
     facts: ["Дэлхийн хамгийн олон тоотой махчин байж магадгүй.", "Үүрээ хог хаягдлаар чимдэг.", "Сүүлээ жолоо мэт эргүүлдэг."],
-    image: { file: "images/black-kite.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Schwarzmilan.jpg" },
+    image: { file: "images/black-kite.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Schwarzmilan.jpg" },
     audio: null,
     extra: true
   },
@@ -1014,7 +1014,7 @@ BIRDS.push(
     watching: "Монголд тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Мянга мянгаараа нүүдэллэдэг.", "Жинхэнэ Buteo төрлийн сар биш.", "Саарал нүүрээрээ нэрлэгдсэн."],
-    image: { file: "images/grey-faced-buzzard.jpg", credit: "M.Nishimura", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Butastur_indicus.jpg" },
+    image: { file: "images/grey-faced-buzzard.jpg", credit: "M.Nishimura", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Butastur_indicus.jpg" },
     audio: null,
     extra: true
   },
@@ -1058,7 +1058,7 @@ BIRDS.push(
     watching: "Өвөл Улаанбаатарын орчим, зүүн нутгийн тал хээрт.",
     bestTime: "11–3-р сар",
     facts: ["Хөл нь цагаан ахуунааных шиг өдтэй.", "Агаарт зогсож хийсдэг цөөн махчны нэг.", "Хойд туйлд үрждэг."],
-    image: { file: "images/rough-legged-buzzard.jpg", credit: "Marton Berntsen", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Fjellv%C3%A5k_(Buteo_lagopus)_(Rough-legged_Buzzard)_(Fj%C3%A4llvr%C3%A5k).jpg" },
+    image: { file: "images/rough-legged-buzzard.jpg", credit: "Marton Berntsen", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Fjellv%C3%A5k_(Buteo_lagopus)_(Rough-legged_Buzzard)_(Fj%C3%A4llvr%C3%A5k).jpg" },
     audio: null,
     extra: true
   },
@@ -1102,7 +1102,7 @@ BIRDS.push(
     watching: "Зундаа Алтай, Хангайн хөндий; 9-р сард нүүдэл.",
     bestTime: "5–9-р сар",
     facts: ["Европын хамгийн элбэг махчин.", "Зүүн хэсгийн шувуу Африк хүртэл нүүдэллэдэг.", "Өнгө нь асар олон янз."],
-    image: { file: "images/eurasian-buzzard.jpg", credit: "caroline legg", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Common_Buzzard_by_caroline_legg_(cropped).jpg" },
+    image: { file: "images/eurasian-buzzard.jpg", credit: "caroline legg", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Common_Buzzard_by_caroline_legg_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -1146,7 +1146,7 @@ BIRDS.push(
     watching: "Зундаа Ёлын ам, говийн нуурууд.",
     bestTime: "5–8-р сар",
     facts: ["Сүүл нь судалгүй улбар шар.", "Халуун, хуурай нутагт амьдардаг.", "Шилийн сараас ялгахад хэцүү."],
-    image: { file: "images/long-legged-buzzard.jpg", credit: "Ramazancirakoglu", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Long-legged_Buzzard,_Sultansazl%C4%B1%C4%9F%C4%B1_Mill%C3%AE_Park%C4%B1,_Kayseri,_Turkey.jpg" },
+    image: { file: "images/long-legged-buzzard.jpg", credit: "Ramazancirakoglu", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Long-legged_Buzzard,_Sultansazl%C4%B1%C4%9F%C4%B1_Mill%C3%AE_Park%C4%B1,_Kayseri,_Turkey.jpg" },
     audio: null,
     extra: true
   },
@@ -1190,7 +1190,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Хушуу бүдүүн.", "Хөмсөггүй.", "Том, энгийн бялзуухай."],
-    image: { file: "images/thick-billed-warbler.jpg", credit: "Vivekpuliyeri", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Thick-billed_Warbler_1_@_Kakkadampoil_2-2-14.jpg" },
+    image: { file: "images/thick-billed-warbler.jpg", credit: "Vivekpuliyeri", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Thick-billed_Warbler_1_@_Kakkadampoil_2-2-14.jpg" },
     audio: null,
     extra: true
   },
@@ -1234,7 +1234,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Цайвар.", "Цөлийн бутанд.", "Тусгаарлагдсан зүйл."],
-    image: { file: "images/sykess-warbler.jpg", credit: "J.M.Garg", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Syke%27s_Warbler_(Hippolais_rama)_on_Vilaiti_Siris_(Samanea_saman)_in_Kolkata_W_IMG_4659.jpg" },
+    image: { file: "images/sykess-warbler.jpg", credit: "J.M.Garg", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Syke%27s_Warbler_(Hippolais_rama)_on_Vilaiti_Siris_(Samanea_saman)_in_Kolkata_W_IMG_4659.jpg" },
     audio: null,
     extra: true
   },
@@ -1278,7 +1278,7 @@ BIRDS.push(
     watching: "7-р сард Буйр нуурын зэгс.",
     bestTime: "6–7-р сар",
     facts: ["Хар хөмсөгтэй.", "Зүүн нутгийн намагт.", "Жижиг охилбялзуухай."],
-    image: { file: "images/black-browed-reed-warbler.jpg", credit: "Tokumi", via: "Wikimedia Commons Â· Copyrighted free use", source: "https://commons.wikimedia.org/wiki/File:Wiki-koyosikiri-saro.jpg" },
+    image: { file: "images/black-browed-reed-warbler.jpg", credit: "Tokumi", via: "Wikimedia Commons · Copyrighted free use", source: "https://commons.wikimedia.org/wiki/File:Wiki-koyosikiri-saro.jpg" },
     audio: null,
     extra: true
   },
@@ -1322,7 +1322,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуур.",
     bestTime: "6–7-р сар",
     facts: ["Гайхалтай дууриагч.", "Энгийн бор.", "Европт баруун тийш тархаж байна."],
-    image: { file: "images/blyths-reed-warbler.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Blyth%27s_Reed_Warbler_in_Baruipur_December_2024_by_Tisha_Mukherjee_02.jpg" },
+    image: { file: "images/blyths-reed-warbler.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Blyth%27s_Reed_Warbler_in_Baruipur_December_2024_by_Tisha_Mukherjee_02.jpg" },
     audio: null,
     extra: true
   },
@@ -1366,7 +1366,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын зэгс.",
     bestTime: "6-р сар",
     facts: ["Цагаан хөмсөгтэй.", "Сүүлээ өргөдөг.", "Баруун нууруудад."],
-    image: { file: "images/paddyfield-warbler.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Paddyfield_Warbler_Acrocephalus_agricola_by_Dr._Raju_Kasambe_DSCN8336_(11).jpg" },
+    image: { file: "images/paddyfield-warbler.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Paddyfield_Warbler_Acrocephalus_agricola_by_Dr._Raju_Kasambe_DSCN8336_(11).jpg" },
     audio: null,
     extra: true
   },
@@ -1410,7 +1410,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуур.",
     bestTime: "6-р сар",
     facts: ["Хамгийн том охилбялзуухай.", "Хоржигносон дуутай.", "Зөвхөн хэт баруунд."],
-    image: { file: "images/great-reed-warbler.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Drosselrohrs%C3%A4nger_Great_reed_warbler.jpg" },
+    image: { file: "images/great-reed-warbler.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Drosselrohrs%C3%A4nger_Great_reed_warbler.jpg" },
     audio: null,
     extra: true
   },
@@ -1454,7 +1454,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуурын зэгс.",
     bestTime: "6-р сар",
     facts: ["Цээж судалтай.", "Чанга дуутай.", "Их охилбялзуухайн дорнын төрөл."],
-    image: { file: "images/east-asian-reed-warbler.jpg", credit: "J.M.Garg", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_Reed_Warbler_I_IMG_0246.jpg" },
+    image: { file: "images/east-asian-reed-warbler.jpg", credit: "J.M.Garg", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_Reed_Warbler_I_IMG_0246.jpg" },
     audio: null,
     extra: true
   },
@@ -1498,7 +1498,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хушуу урт.", "Өмнөд нутгийн зүйл.", "Чанга дуутай."],
-    image: { file: "images/clamorous-reed-warbler.jpg", credit: "Ravi Vaidyanthan", via: "Wikimedia Commons Â· CC BY 2.5", source: "https://commons.wikimedia.org/wiki/File:Clamorous_reed_warbler.jpg" },
+    image: { file: "images/clamorous-reed-warbler.jpg", credit: "Ravi Vaidyanthan", via: "Wikimedia Commons · CC BY 2.5", source: "https://commons.wikimedia.org/wiki/File:Clamorous_reed_warbler.jpg" },
     audio: null,
     extra: true
   },
@@ -1542,7 +1542,7 @@ BIRDS.push(
     watching: "Өвөл Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "10–3-р сар",
     facts: ["Толгой цагаан.", "Өдөөр доторласан үүртэй.", "Дулаацахын тулд бөөгнөрдөг."],
-    image: { file: "images/long-tailed-tit.jpg", credit: "Ігор Червоненко", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%94%D0%BE%D0%B2%D0%B3%D0%BE%D1%85%D0%B2%D0%BE%D1%81%D1%82%D0%B0_2.jpg" },
+    image: { file: "images/long-tailed-tit.jpg", credit: "Ігор Червоненко", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%94%D0%BE%D0%B2%D0%B3%D0%BE%D1%85%D0%B2%D0%BE%D1%81%D1%82%D0%B0_2.jpg" },
     audio: null,
     extra: true
   },
@@ -1586,7 +1586,7 @@ BIRDS.push(
     watching: "5-р сард Бөөн цагааны эрэг.",
     bestTime: "5–7-р сар",
     facts: ["Цээж судалтай.", "Нисэж дуулдаг.", "Говьд элбэг."],
-    image: { file: "images/asian-short-toed-lark.jpg", credit: "Vladimir Yu. Arkhipov, Arkhivov", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Calandrella_cheleensis.JPG" },
+    image: { file: "images/asian-short-toed-lark.jpg", credit: "Vladimir Yu. Arkhipov, Arkhivov", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Calandrella_cheleensis.JPG" },
     audio: null,
     extra: true
   },
@@ -1630,7 +1630,7 @@ BIRDS.push(
     watching: "5-р сард говийн нуурууд.",
     bestTime: "5–6-р сар",
     facts: ["Бусад шувууг дууриадаг.", "Цөлийн болжмор.", "Ялгахад хэцүү."],
-    image: { file: "images/lesser-short-toed-lark.jpg", credit: "Tony Hisgett", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg" },
+    image: { file: "images/lesser-short-toed-lark.jpg", credit: "Tony Hisgett", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg" },
     audio: null,
     extra: true
   },
@@ -1723,7 +1723,7 @@ BIRDS.push(
     watching: "6-р сард Хустайн хээр.",
     bestTime: "5–7-р сар",
     facts: ["Цээж судалгүй.", "Хүзүүндээ бараан толботой.", "Африкт өвөлждөг."],
-    image: { file: "images/greater-short-toed-lark.jpg", credit: "Juan Lacruz", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Alondra.jpg" },
+    image: { file: "images/greater-short-toed-lark.jpg", credit: "Juan Lacruz", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Alondra.jpg" },
     audio: null,
     extra: true
   },
@@ -1767,7 +1767,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Далавчиндаа цагаан хэсэгтэй.", "Орой хүрэн.", "Талын зүйл."],
-    image: { file: "images/white-winged-lark.jpg", credit: "Алина Урусова", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Alauda_leucoptera_57392188.jpg" },
+    image: { file: "images/white-winged-lark.jpg", credit: "Алина Урусова", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Alauda_leucoptera_57392188.jpg" },
     audio: null,
     extra: true
   },
@@ -1811,7 +1811,7 @@ BIRDS.push(
     watching: "5-р сард Хурхын хөндий.",
     bestTime: "4–7-р сар",
     facts: ["Агаарт хэдэн минут дуулдаг.", "Жижиг согсоотой.", "Яруу найрагт магтагдсан."],
-    image: { file: "images/eurasian-sky-lark.jpg", credit: "User:Diliff", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Skylark_2,_Lake_District,_England_-_June_2009.jpg" },
+    image: { file: "images/eurasian-sky-lark.jpg", credit: "User:Diliff", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Skylark_2,_Lake_District,_England_-_June_2009.jpg" },
     audio: null,
     extra: true
   },
@@ -1855,7 +1855,7 @@ BIRDS.push(
     watching: "Ёлын амны зогсоол, тосгон.",
     bestTime: "Жилийн турш",
     facts: ["Шовх согсоотой.", "Тосгоны ойролцоо амьдардаг.", "Говьд суурин."],
-    image: { file: "images/crested-lark.jpg", credit: "El Golli Mohamed", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Cochevis_hupp%C3%A9_Gbollat.jpg" },
+    image: { file: "images/crested-lark.jpg", credit: "El Golli Mohamed", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Cochevis_hupp%C3%A9_Gbollat.jpg" },
     audio: null,
     extra: true
   },
@@ -1899,7 +1899,7 @@ BIRDS.push(
     watching: "Зундаа Онон гол.",
     bestTime: "5–9-р сар",
     facts: ["Хурдан галт тэрэгний санаа болсон.", "Нүхэнд үүрлэдэг.", "Шумбаж загас барьдаг."],
-    image: { file: "images/common-kingfisher.jpg", credit: "Tony Wood", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Alcedo_atthis_-England-8_(cropped).jpg" },
+    image: { file: "images/common-kingfisher.jpg", credit: "Tony Wood", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Alcedo_atthis_-England-8_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -1943,7 +1943,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Том улаан хушуутай.", "Эмзэг зүйл.", "Монголд ховор."],
-    image: { file: "images/black-capped-kingfisher.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Halcyon_pileata_-_Phra_Non.jpg" },
+    image: { file: "images/black-capped-kingfisher.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Halcyon_pileata_-_Phra_Non.jpg" },
     audio: null,
     extra: true
   },
@@ -1987,7 +1987,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Нисэхдээ исгэрдэг.", "Модон дээр суудаг.", "Халуун орны нугас."],
-    image: { file: "images/lesser-whistling-duck.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Dendrocygna_javanica_-_Chiang_Mai.jpg" },
+    image: { file: "images/lesser-whistling-duck.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Dendrocygna_javanica_-_Chiang_Mai.jpg" },
     audio: null,
     extra: true
   },
@@ -2031,7 +2031,7 @@ BIRDS.push(
     watching: "Зундаа Хар ус нуурын эргээс.",
     bestTime: "5–9-р сар",
     facts: ["Дэлхийд устах аюулд орсон.", "Биеийн хэмжээндээ харьцуулахад хамгийн том өндөгтэй нугас.", "Монголд гол нутаг нь Хар ус нуур."],
-    image: { file: "images/white-headed-duck.jpg", credit: "Bouke ten Cate", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Witkopeend_-_white-headed_duck_-_Oxyura_leucocephala_3.tif" },
+    image: { file: "images/white-headed-duck.jpg", credit: "aissadjamelfilali", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Male_white-headed_duck_(Oxyura_leucocephala)_in_Algeria.jpg" },
     audio: null,
     extra: true
   },
@@ -2075,7 +2075,7 @@ BIRDS.push(
     watching: "Зундаа Буйр нуур, Өгий нуур.",
     bestTime: "5–9-р сар",
     facts: ["Нисэхэд далавч нь чанга дуугардаг.", "Ихэвчлэн чимээгүй.", "Монголчуудын ариун шувуу."],
-    image: { file: "images/mute-swan.jpg", credit: "Sanchezn", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:CygneVaires.jpg" },
+    image: { file: "images/mute-swan.jpg", credit: "Sanchezn", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:CygneVaires.jpg" },
     audio: null,
     extra: true
   },
@@ -2119,7 +2119,7 @@ BIRDS.push(
     watching: "5–6-р сард Өгий нуур, Хурхын хөндий, холоос.",
     bestTime: "5–9-р сар",
     facts: ["Хятадын гэрийн галууны өвөг.", "Дэлхийд устах аюулд орсон.", "Монгол бол түүний гол үржлийн орон."],
-    image: { file: "images/swan-goose.jpg", credit: "grihahasanov", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Anser_cygnoides,_Ozero_Stepnoye,_Ivolginskiy,_Buryatia_Republic,_Russia_1_(cropped).jpg" },
+    image: { file: "images/swan-goose.jpg", credit: "grihahasanov", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Anser_cygnoides,_Ozero_Stepnoye,_Ivolginskiy,_Buryatia_Republic,_Russia_1_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -2163,7 +2163,7 @@ BIRDS.push(
     watching: "4-р сарын сүүл, 9-р сард Хурхын хөндий.",
     bestTime: "4, 9-р сар",
     facts: ["Буурцагны талбайн нэрээр англиар нэрлэгдсэн.", "Тайгын ба тундрын хэлбэртэй.", "«V» хэлбэрийн сүргээр нисдэг."],
-    image: { file: "images/bean-goose.jpg", credit: "Andrey Gulivanov", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Taiga_bean_goose_(54312538416).jpg" },
+    image: { file: "images/bean-goose.jpg", credit: "Andrey Gulivanov", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Taiga_bean_goose_(54312538416).jpg" },
     audio: null,
     extra: true
   },
@@ -2207,7 +2207,7 @@ BIRDS.push(
     watching: "4–5-р сард Хурхын хөндий.",
     bestTime: "4–5-р сар",
     facts: ["Нүүр нь цагаан.", "Хэвлий нь хар судалтай.", "Инээх мэт дуугардаг."],
-    image: { file: "images/greater-white-fronted-goose.jpg", credit: "Frank Schulenburg", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Greater_white-fronted_goose_in_flight-1045.jpg" },
+    image: { file: "images/greater-white-fronted-goose.jpg", credit: "Frank Schulenburg", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Greater_white-fronted_goose_in_flight-1045.jpg" },
     audio: null,
     extra: true
   },
@@ -2251,7 +2251,7 @@ BIRDS.push(
     watching: "Намар Өгий нуурын галууны сүргийг шалга.",
     bestTime: "9–10-р сар",
     facts: ["Дэлхийд эмзэг зүйл.", "Нүдэндээ шар цагирагтай.", "Ихэнх нь Хятадын нэг нууранд өвөлждөг."],
-    image: { file: "images/lesser-white-fronted-goose.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Anser_erythropus.jpg" },
+    image: { file: "images/lesser-white-fronted-goose.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Anser_erythropus.jpg" },
     audio: null,
     extra: true
   },
@@ -2295,7 +2295,7 @@ BIRDS.push(
     watching: "5-р сард зүүн хойд нутгийн нууруудыг шалга.",
     bestTime: "5-р сар",
     facts: ["60 м гүн шумбадаг.", "Зүү мэт урт сүүлтэй.", "Дэлхийд эмзэг зүйл."],
-    image: { file: "images/long-tailed-duck.jpg", credit: "Wolfgang Wander", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Long-tailed-duck.jpg" },
+    image: { file: "images/long-tailed-duck.jpg", credit: "Wolfgang Wander", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Long-tailed-duck.jpg" },
     audio: null,
     extra: true
   },
@@ -2339,7 +2339,7 @@ BIRDS.push(
     watching: "5-р сард том нууруудыг шалга.",
     bestTime: "5-р сар",
     facts: ["Нисэхэд далавчны цагаан толбо харагдана.", "Дэлхийд эмзэг зүйл.", "Далайд өвөлждөг."],
-    image: { file: "images/velvet-scoter.jpg", credit: "Vince", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Velvet_Scoter,_Eyebrook_Reservoir,_Leics.jpg" },
+    image: { file: "images/velvet-scoter.jpg", credit: "Vince", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Velvet_Scoter,_Eyebrook_Reservoir,_Leics.jpg" },
     audio: null,
     extra: true
   },
@@ -2383,7 +2383,7 @@ BIRDS.push(
     watching: "4-р сард Улаанбаатарын Туул голын цөөрөм.",
     bestTime: "4–5-р сар",
     facts: ["Тоншуулын хөндийд үүрлэдэг.", "Эр нь хагарсан мөс шиг.", "Хамгийн жижиг бохио."],
-    image: { file: "images/smew.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Zwergsaeger_maenchen_weibchen.jpg" },
+    image: { file: "images/smew.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Zwergsaeger_maenchen_weibchen.jpg" },
     audio: null,
     extra: true
   },
@@ -2427,7 +2427,7 @@ BIRDS.push(
     watching: "5-р сард Тэрхийн цагаан нуур.",
     bestTime: "5-р сар",
     facts: ["Загас барих хөрөө мэт хушуутай.", "Маш хурдан нисдэг.", "Сэгсгэр отготой."],
-    image: { file: "images/red-breasted-merganser.jpg", credit: "Needsmoreritalin", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-breasted_Merganser_male_(Mergus_serrator),_Barnegat_Inlet,_New_Jersey,_USA.jpg" },
+    image: { file: "images/red-breasted-merganser.jpg", credit: "Needsmoreritalin", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-breasted_Merganser_male_(Mergus_serrator),_Barnegat_Inlet,_New_Jersey,_USA.jpg" },
     audio: null,
     extra: true
   },
@@ -2471,7 +2471,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Ширүүн урсгалд хооллодог.", "Инээдмийн дүрийн нэрээр нэрлэгдсэн.", "Ширүүн усанд амьдардаг тул яс нь ихэвчлэн хугарч эдгэсэн байдаг."],
-    image: { file: "images/harlequin-duck.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Drake_Harlequin_duck_(Histrionicus_histrionicus)_perched_on_a_rock_in_the_Barnegat_Inlet,_New_Jersey,_USA_(cropped).jpg" },
+    image: { file: "images/harlequin-duck.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Drake_Harlequin_duck_(Histrionicus_histrionicus)_perched_on_a_rock_in_the_Barnegat_Inlet,_New_Jersey,_USA_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -2515,7 +2515,7 @@ BIRDS.push(
     watching: "5–6-р сард Өгий нуур, Бөөн цагаан.",
     bestTime: "5–8-р сар",
     facts: ["Тарваганы нүхэнд үүрлэдэг.", "Дэгдээхэйнүүд нь нэг дор бөөгнөрдөг.", "Жижиг галуу шиг харагдана."],
-    image: { file: "images/common-shelduck.jpg", credit: "Bernard DUPONT from FRANCE", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Common_Shelduck_(Tadorna_tadorna)_(26499348215).jpg" },
+    image: { file: "images/common-shelduck.jpg", credit: "Bernard DUPONT from FRANCE", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Common_Shelduck_(Tadorna_tadorna)_(26499348215).jpg" },
     audio: null,
     extra: true
   },
@@ -2559,7 +2559,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуур, Өгий нуур.",
     bestTime: "5–8-р сар",
     facts: ["Эр нь хосолтдоо эмээ хооллодог.", "Тод улаан хушуутай.", "Шумбаж ч, гадаргаас ч хооллодог."],
-    image: { file: "images/red-crested-pochard.jpg", credit: "Diliff", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Netta_rufina_(Red-crested_Pochard)_Male,_London_Wetland_Centre_-_Diliff.jpg" },
+    image: { file: "images/red-crested-pochard.jpg", credit: "Diliff", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Netta_rufina_(Red-crested_Pochard)_Male,_London_Wetland_Centre_-_Diliff.jpg" },
     audio: null,
     extra: true
   },
@@ -2603,7 +2603,7 @@ BIRDS.push(
     watching: "Зундаа Өгий нуур.",
     bestTime: "5–9-р сар",
     facts: ["Дэлхийд эмзэг зүйл.", "Эр нь улаан нүдтэй.", "Монголд одоо ч элбэг."],
-    image: { file: "images/common-pochard.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_Pochard_2025_11_15_04.jpg" },
+    image: { file: "images/common-pochard.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_Pochard_2025_11_15_04.jpg" },
     audio: null,
     extra: true
   },
@@ -2647,7 +2647,7 @@ BIRDS.push(
     watching: "5-р сард Бөөн цагааныг шалга; бүртгэлээ мэдээлээрэй.",
     bestTime: "5-р сар",
     facts: ["1000 хүрэхгүй үлдсэн.", "Устаж болзошгүй зүйл.", "Цагаан нүдтэй."],
-    image: { file: "images/baers-pochard.jpg", credit: "Sun Jiao (Interaccoonale)", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Aythya_baeri_cropped.jpg" },
+    image: { file: "images/baers-pochard.jpg", credit: "Sun Jiao (Interaccoonale)", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Aythya_baeri_cropped.jpg" },
     audio: null,
     extra: true
   },
@@ -2691,7 +2691,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагаан, Хар ус нуур.",
     bestTime: "5–8-р сар",
     facts: ["Зэв шиг өнгөтэй.", "Сүүлний доод өд цагаан.", "Ховордож болзошгүй."],
-    image: { file: "images/ferruginous-duck.jpg", credit: "Francis Franklin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Aythya_nyroca_at_Martin_Mere_1.jpg" },
+    image: { file: "images/ferruginous-duck.jpg", credit: "Francis Franklin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Aythya_nyroca_at_Martin_Mere_1.jpg" },
     audio: null,
     extra: true
   },
@@ -2735,7 +2735,7 @@ BIRDS.push(
     watching: "Зундаа аль ч нуурт.",
     bestTime: "5–9-р сар",
     facts: ["Толгойдоо гэзэгтэй.", "Алтлаг нүдтэй.", "Цахлайн дунд үүрлэдэг."],
-    image: { file: "images/tufted-duck.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Tufted_Duck_09_05_2025_02.jpg" },
+    image: { file: "images/tufted-duck.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Tufted_Duck_09_05_2025_02.jpg" },
     audio: null,
     extra: true
   },
@@ -2779,7 +2779,7 @@ BIRDS.push(
     watching: "Өгий нуурт Гэзэгт шумбуурын сүргийг ажигла.",
     bestTime: "7-р сар",
     facts: ["Нуруу нь хар биш, саарал.", "Далайд өвөлждөг.", "Хясаагаар хооллодог."],
-    image: { file: "images/greater-scaup.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Drake_Greater_scaup_(Aythya_marila)_Barnegat_Inlet,_New_Jersey,_USA.jpg" },
+    image: { file: "images/greater-scaup.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Drake_Greater_scaup_(Aythya_marila)_Barnegat_Inlet,_New_Jersey,_USA.jpg" },
     audio: null,
     extra: true
   },
@@ -2823,7 +2823,7 @@ BIRDS.push(
     watching: "5–6-р сард Хурхын хөндий, Өгий нуур.",
     bestTime: "5–6-р сар",
     facts: ["Африкт өвөлждөг.", "Эр нь сам шиг тачигнадаг.", "Цагаан хөмсөгтэй."],
-    image: { file: "images/garganey.jpg", credit: "YedidyaPopper", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Garganey,_Israel.jpg" },
+    image: { file: "images/garganey.jpg", credit: "YedidyaPopper", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Garganey,_Israel.jpg" },
     audio: null,
     extra: true
   },
@@ -2867,7 +2867,7 @@ BIRDS.push(
     watching: "5–8-р сард аль ч гүехэн нуурт.",
     bestTime: "5–8-р сар",
     facts: ["Сам мэт хушуугаараа хоол шүүдэг.", "Тойрон эргэлдэж хооллодог.", "Хушуу нь толгойноосоо өргөн."],
-    image: { file: "images/northern-shoveller.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Northern_shoveler_(Spatula_clypeata)_male_Marken.jpg" },
+    image: { file: "images/northern-shoveller.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Northern_shoveler_(Spatula_clypeata)_male_Marken.jpg" },
     audio: null,
     extra: true
   },
@@ -2911,7 +2911,7 @@ BIRDS.push(
     watching: "9-р сард Хурхын хөндий.",
     bestTime: "5, 9-р сар",
     facts: ["Өвлийн сүрэг нь сая гаруй шувуутай.", "Байгаль нуурын нэрээр нэрлэгдсэн.", "Их агнуурын дараа сэргэсэн."],
-    image: { file: "images/baikal-teal.jpg", credit: "Sun Jiao (Interaccoonale)", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Sibirionetta_formosa_01.jpg" },
+    image: { file: "images/baikal-teal.jpg", credit: "Sun Jiao (Interaccoonale)", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Sibirionetta_formosa_01.jpg" },
     audio: null,
     extra: true
   },
@@ -2955,7 +2955,7 @@ BIRDS.push(
     watching: "5-р сард Хурхын хөндий.",
     bestTime: "5–6-р сар",
     facts: ["Хадуур хэлбэрийн далавчны өдтэй.", "Толгойдоо дэлтэй.", "Зүүн Азийн зүйл."],
-    image: { file: "images/falcated-duck.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Falcated_duck_1.jpg" },
+    image: { file: "images/falcated-duck.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Falcated_duck_1.jpg" },
     audio: null,
     extra: true
   },
@@ -2999,7 +2999,7 @@ BIRDS.push(
     watching: "Зундаа аль ч нуурт.",
     bestTime: "5–9-р сар",
     facts: ["Цагаан тольтой.", "Түнжүүнээс хоол булаадаг.", "Монголын хамгийн элбэг нугасны нэг."],
-    image: { file: "images/gadwall.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Gadwall-Anas-strepera.jpg" },
+    image: { file: "images/gadwall.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Gadwall-Anas-strepera.jpg" },
     audio: null,
     extra: true
   },
@@ -3043,7 +3043,7 @@ BIRDS.push(
     watching: "5, 9-р сард Өгий нуур.",
     bestTime: "5, 9-р сар",
     facts: ["Галуу шиг бэлчдэг.", "Эр нь исгэрдэг.", "Дух нь цөцгий өнгөтэй."],
-    image: { file: "images/eurasian-wigeon.jpg", credit: "Laitche", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_wigeon_in_Sakai,_Osaka,_February_2016.jpg" },
+    image: { file: "images/eurasian-wigeon.jpg", credit: "Laitche", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_wigeon_in_Sakai,_Osaka,_February_2016.jpg" },
     audio: null,
     extra: true
   },
@@ -3087,7 +3087,7 @@ BIRDS.push(
     watching: "Зундаа Улаанбаатарын Туул гол, Хурхын хөндий.",
     bestTime: "5–8-р сар",
     facts: ["Хушууны үзүүр шар.", "Эр, эм нь адилхан.", "Хойд зүг тархаж байна."],
-    image: { file: "images/chinese-spot-billed-duck.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Indian_Spot-billed_Duck_Anas_poecilorhyncha_by_Dr._Raju_Kasambe_DSCN3821_(11).jpg" },
+    image: { file: "images/chinese-spot-billed-duck.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Indian_Spot-billed_Duck_Anas_poecilorhyncha_by_Dr._Raju_Kasambe_DSCN3821_(11).jpg" },
     audio: null,
     extra: true
   },
@@ -3131,7 +3131,7 @@ BIRDS.push(
     watching: "Устай хаана ч.",
     bestTime: "4–10-р сар",
     facts: ["Гэрийн нугасны өвөг.", "Зөвхөн эм нь чанга гангална.", "Зарим нь Улаанбаатарт өвөлждөг."],
-    image: { file: "images/mallard.jpg", credit: "This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 ", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_male_female_quadrat.jpg" },
+    image: { file: "images/mallard.jpg", credit: "This picture was realized by Richard Bartz by using a Canon EF 70-300mm f/4-5.6 ", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_male_female_quadrat.jpg" },
     audio: null,
     extra: true
   },
@@ -3175,7 +3175,7 @@ BIRDS.push(
     watching: "4, 9-р сард Өгий нуур.",
     bestTime: "4–5, 9-р сар",
     facts: ["Зүү хэлбэрийн сүүлтэй.", "Уснаас хол үүрлэдэг.", "Маш өргөн тархсан."],
-    image: { file: "images/northern-pintail.jpg", credit: "J.M.Garg", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Northern_Pintails_(Male_%26_Female)_I_IMG_0911.jpg" },
+    image: { file: "images/northern-pintail.jpg", credit: "J.M.Garg", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Northern_Pintails_(Male_%26_Female)_I_IMG_0911.jpg" },
     audio: null,
     extra: true
   },
@@ -3219,7 +3219,7 @@ BIRDS.push(
     watching: "Хавар, намар аль ч намагт.",
     bestTime: "4–5, 9-р сар",
     facts: ["Хамгийн жижиг гадаргын нугас.", "Бараг босоо хөөрдөг.", "Сүүлний доор шар гурвалжинтай."],
-    image: { file: "images/common-teal.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_teal_(Anas_crecca_crecca)_male_Qingshui.jpg" },
+    image: { file: "images/common-teal.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_teal_(Anas_crecca_crecca)_male_Qingshui.jpg" },
     audio: null,
     extra: true
   },
@@ -3263,7 +3263,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатарын Туул гол.",
     bestTime: "5-р сар",
     facts: ["Модны хөндийд үүрлэдэг.", "Дэгдээхэй нь үүрнээсээ үсэрдэг.", "Үнэнч хайрын бэлгэдэл."],
-    image: { file: "images/mandarin-duck.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Pair_of_mandarin_ducks.jpg" },
+    image: { file: "images/mandarin-duck.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Pair_of_mandarin_ducks.jpg" },
     audio: null,
     extra: true
   },
@@ -3307,7 +3307,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Хамгийн хурдан шувуудын нэг.", "Сүүлний үзүүр нь өргөстэй.", "Хөндий модонд үүрлэдэг."],
-    image: { file: "images/white-throated-needletail.jpg", credit: "JJ Harrison", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:White-throated_Needletail_0A2A6919.jpg" },
+    image: { file: "images/white-throated-needletail.jpg", credit: "JJ Harrison", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:White-throated_Needletail_0A2A6919.jpg" },
     audio: null,
     extra: true
   },
@@ -3351,7 +3351,7 @@ BIRDS.push(
     watching: "6-р сарын орой Улаанбаатарын дээгүүр.",
     bestTime: "6–7-р сар",
     facts: ["Ууц цагаан.", "Сүүл сэрээтэй.", "Австралид өвөлждөг."],
-    image: { file: "images/fork-tailed-swift.jpg", credit: "Robert Pudwill", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:ApusPacificus.jpg" },
+    image: { file: "images/fork-tailed-swift.jpg", credit: "Robert Pudwill", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:ApusPacificus.jpg" },
     audio: null,
     extra: true
   },
@@ -3395,7 +3395,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуур, Улаанбаатар.",
     bestTime: "6–7-р сар",
     facts: ["Нисэж явахдаа унтдаг.", "Хэзээ ч суудаггүй.", "Африк руу нүүдэллэдэг."],
-    image: { file: "images/common-swift.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_02_(cropped).jpg" },
+    image: { file: "images/common-swift.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_02_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -3439,7 +3439,7 @@ BIRDS.push(
     watching: "5-р сард үүр цайхад Хурхын хөндийн шагшуургад чагна.",
     bestTime: "5–6-р сар",
     facts: ["Дуу нь 5 км хүртэл сонсогдоно.", "Нуугдахын тулд зэгстэй хамт найгана.", "Монголоор «усны бух» гэж нэрлэгдсэн."],
-    image: { file: "images/eurasian-bittern.jpg", credit: "MPF", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:2015-10-19_Botaurus_stellaris,_Gosforth_Park_5.jpg" },
+    image: { file: "images/eurasian-bittern.jpg", credit: "MPF", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:2015-10-19_Botaurus_stellaris,_Gosforth_Park_5.jpg" },
     audio: null,
     extra: true
   },
@@ -3483,7 +3483,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хамгийн жижиг дэглийн нэг.", "Зэгсэнд авирдаг.", "Африкт өвөлждөг."],
-    image: { file: "images/little-bittern.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Zwergdommel.jpg" },
+    image: { file: "images/little-bittern.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Zwergdommel.jpg" },
     audio: null,
     extra: true
   },
@@ -3527,7 +3527,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Ховордож болзошгүй зүйл.", "Амар мөрнийг судалсан аялагчийн нэрээр нэрлэгдсэн.", "Эр нь хүрэн өнгөтэй."],
-    image: { file: "images/shrencks-bittern.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Ixobrychus_eurhythmus_by_OpenCage.jpg" },
+    image: { file: "images/shrencks-bittern.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Ixobrychus_eurhythmus_by_OpenCage.jpg" },
     audio: null,
     extra: true
   },
@@ -3571,7 +3571,7 @@ BIRDS.push(
     watching: "6-р сард бүрий болоход Бөөн цагаан нуур.",
     bestTime: "5–6-р сар",
     facts: ["Нэр нь «шөнийн хэрээ» гэсэн утгатай.", "Таван тивд тархсан.", "Ихэвчлэн шөнө хооллодог."],
-    image: { file: "images/black-crowned-night-heron.jpg", credit: "Calibas", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Young_night_heron.jpg" },
+    image: { file: "images/black-crowned-night-heron.jpg", credit: "Calibas", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Young_night_heron.jpg" },
     audio: null,
     extra: true
   },
@@ -3615,7 +3615,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын амны горхийг шалга.",
     bestTime: "6-р сар",
     facts: ["Өгөөш ашиглан загас барьдаг.", "Таван тивд тархсан.", "Маш хөдөлгөөнгүй тонгойн суудаг."],
-    image: { file: "images/striated-heron.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Striated_heron_(Butorides_striata_striata).JPG" },
+    image: { file: "images/striated-heron.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Striated_heron_(Butorides_striata_striata).JPG" },
     audio: null,
     extra: true
   },
@@ -3659,7 +3659,7 @@ BIRDS.push(
     watching: "5-р сарын сүүлээр Ёлын ам.",
     bestTime: "5–6-р сар",
     facts: ["Зогсоход бор, нисэхэд цагаан.", "Хойд зүг тархаж байна.", "Монголд нэмэгдэж байна."],
-    image: { file: "images/chinese-pond-heron.jpg", credit: "Charles Lam", via: "Wikimedia Commons Â· CC SA 1.0", source: "https://commons.wikimedia.org/wiki/File:Chinese_Pond_Heron_in_Summer.jpg" },
+    image: { file: "images/chinese-pond-heron.jpg", credit: "Charles Lam", via: "Wikimedia Commons · CC SA 1.0", source: "https://commons.wikimedia.org/wiki/File:Chinese_Pond_Heron_in_Summer.jpg" },
     audio: null,
     extra: true
   },
@@ -3703,7 +3703,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага — мал сүргийн орчмыг шалга.",
     bestTime: "—",
     facts: ["Малын араас дагадаг.", "Америкт өөрөө тархсан.", "Хуурай газар хооллодог."],
-    image: { file: "images/cattle-egret.jpg", credit: "Kora27", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Kuhreiher_am_Strand_in_%C3%84gypten_9528BE.jpg" },
+    image: { file: "images/cattle-egret.jpg", credit: "Kora27", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Kuhreiher_am_Strand_in_%C3%84gypten_9528BE.jpg" },
     audio: null,
     extra: true
   },
@@ -3747,7 +3747,7 @@ BIRDS.push(
     watching: "Зундаа аль ч нуур, голд.",
     bestTime: "5–9-р сар",
     facts: ["Хэдэн цагаар хөдөлгөөнгүй зогсож чадна.", "Хүзүүгээ хумиж нисдэг.", "Колони болж үүрлэдэг."],
-    image: { file: "images/grey-heron.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Grey_heron_2022_03_18_01.jpg" },
+    image: { file: "images/grey-heron.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Grey_heron_2022_03_18_01.jpg" },
     audio: null,
     extra: true
   },
@@ -3791,7 +3791,7 @@ BIRDS.push(
     watching: "Хар ус нуурын шагшуургыг ажигла.",
     bestTime: "5, 8-р сар",
     facts: ["Могой шиг хүзүүтэй.", "Шагшуурганд нуугддаг.", "Монголд ховор."],
-    image: { file: "images/purple-heron.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Ardpur2_(cropped).jpg" },
+    image: { file: "images/purple-heron.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Ardpur2_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -3835,7 +3835,7 @@ BIRDS.push(
     watching: "Зундаа Хар ус нуур.",
     bestTime: "5–9-р сар",
     facts: ["Өдийнх нь төлөө бараг устгагдсан.", "АНУ-ын Одюбоны нийгэмлэгийн бэлгэ тэмдэг.", "Хойд зүг тархаж байна."],
-    image: { file: "images/great-egret.jpg", credit: "Chuck Homler (FocusOnWildlife.Me)", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Great_Egret_(Ardea_alba)_in_Breeding_Plumage,_Cape_May_County,_New_Jersey,_USA_(cropped).png" },
+    image: { file: "images/great-egret.jpg", credit: "Chuck Homler (FocusOnWildlife.Me)", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Great_Egret_(Ardea_alba)_in_Breeding_Plumage,_Cape_May_County,_New_Jersey,_USA_(cropped).png" },
     audio: null,
     extra: true
   },
@@ -3879,7 +3879,7 @@ BIRDS.push(
     watching: "5-р сард говийн баянбүрд.",
     bestTime: "5–6-р сар",
     facts: ["Сарвуу нь шар.", "Хуруугаараа олзоо хөдөлгөдөг.", "Өд нь эрт үед алтнаас үнэтэй байв."],
-    image: { file: "images/little-egret.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_Photograph_by_Shantanu_Kuveskar.jpg" },
+    image: { file: "images/little-egret.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_Photograph_by_Shantanu_Kuveskar.jpg" },
     audio: null,
     extra: true
   },
@@ -3923,7 +3923,7 @@ BIRDS.push(
     watching: "Өвөл Улаанбаатарын голт бор модод.",
     bestTime: "11–3-р сар",
     facts: ["Далавчиндаа улаан лав үзүүртэй.", "Отготой.", "Жимс иддэг."],
-    image: { file: "images/bohemian-waxwing.jpg", credit: "Tatiana Bulyonkova from Novosibirsk, Russia", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Bombycilla_garrulus,_Novosibirsk_1.jpg" },
+    image: { file: "images/bohemian-waxwing.jpg", credit: "Tatiana Bulyonkova from Novosibirsk, Russia", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Bombycilla_garrulus,_Novosibirsk_1.jpg" },
     audio: null,
     extra: true
   },
@@ -3967,7 +3967,7 @@ BIRDS.push(
     watching: "Улаанбаатар дахь энхэтбялзуухайн сүргийг шалга.",
     bestTime: "Өвөл",
     facts: ["Сүүлний үзүүр улаан.", "Ховордож болзошгүй.", "Монголд ховор."],
-    image: { file: "images/japanese-waxwing.jpg", credit: "sunjiao", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Bombycilla_japonica,_Huairou_District,_Beijing_01.jpg" },
+    image: { file: "images/japanese-waxwing.jpg", credit: "sunjiao", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Bombycilla_japonica,_Huairou_District,_Beijing_01.jpg" },
     audio: null,
     extra: true
   },
@@ -4011,7 +4011,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Шөнө харах том нүдтэй.", "Шагай нь бүдүүн.", "Өдөр өнгөлөн далдалдаг."],
-    image: { file: "images/eurasian-thick-knee.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Burhinus_oedicnemus_insularum_Lanzarote_1.jpg" },
+    image: { file: "images/eurasian-thick-knee.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Burhinus_oedicnemus_insularum_Lanzarote_1.jpg" },
     audio: null,
     extra: true
   },
@@ -4055,7 +4055,7 @@ BIRDS.push(
     watching: "Бүрий болоход Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Холтос шиг өнгөлөн далдалдаг.", "Шөнө ан хийдэг.", "Ам нь асар том."],
-    image: { file: "images/grey-nightjar.jpg", credit: "Divya Mudappa", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jungle_nightjar_DM_0309_(cropped).jpg" },
+    image: { file: "images/grey-nightjar.jpg", credit: "Divya Mudappa", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jungle_nightjar_DM_0309_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -4099,7 +4099,7 @@ BIRDS.push(
     watching: "6-р сард бүрий болоход Хар ус нуурын бут.",
     bestTime: "6–7-р сар",
     facts: ["Хэдэн минут хүржигнэдэг.", "«Ямаа хөхөгч» гэж нэрлэгддэг.", "Африкт өвөлждөг."],
-    image: { file: "images/european-nightjar.jpg", credit: "Dûrzan cîrano", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:%C5%9Eivanxap%C3%AEnok.jpg" },
+    image: { file: "images/european-nightjar.jpg", credit: "Dûrzan cîrano", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:%C5%9Eivanxap%C3%AEnok.jpg" },
     audio: null,
     extra: true
   },
@@ -4143,7 +4143,7 @@ BIRDS.push(
     watching: "Богд хан уулын ой.",
     bestTime: "Жилийн турш",
     facts: ["Эргэлдэн авирдаг.", "Сүүл хатуу.", "Хулгана шиг."],
-    image: { file: "images/eurasian-treecreeper.jpg", credit: "caroline legg", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_-_Certhia_familiaris_(54192274817).jpg" },
+    image: { file: "images/eurasian-treecreeper.jpg", credit: "caroline legg", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Treecreeper_-_Certhia_familiaris_(54192274817).jpg" },
     audio: null,
     extra: true
   },
@@ -4187,7 +4187,7 @@ BIRDS.push(
     watching: "5, 8-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["«Суга» нь хар.", "Нуруу мөнгөлөг толботой.", "Дэлхийд эмзэг зүйл."],
-    image: { file: "images/grey-plover.jpg", credit: "Chuck Homler, Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Breeding_plumage_Black-bellied_plover_(Pluvialis_squatarola)_Great_Bay_Wildlife_Management_Area,_New_Jersey,_USA.png" },
+    image: { file: "images/grey-plover.jpg", credit: "Chuck Homler, Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Breeding_plumage_Black-bellied_plover_(Pluvialis_squatarola)_Great_Bay_Wildlife_Management_Area,_New_Jersey,_USA.png" },
     audio: null,
     extra: true
   },
@@ -4231,7 +4231,7 @@ BIRDS.push(
     watching: "5-р сард Монгол Дагуур.",
     bestTime: "5-р сар",
     facts: ["Нуруу нь алтлаг толботой.", "Дорнодод хавар асар том сүрэгтэй.", "Номхон далайг зогсолтгүй гатладаг."],
-    image: { file: "images/pacific-golden-plover.jpg", credit: "Bering Land Bridge National Preserve", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pluvialis_fulva_-Bering_Land_Bridge_National_Preserve,_Alaska,_USA-8.jpg" },
+    image: { file: "images/pacific-golden-plover.jpg", credit: "Bering Land Bridge National Preserve", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pluvialis_fulva_-Bering_Land_Bridge_National_Preserve,_Alaska,_USA-8.jpg" },
     audio: null,
     extra: true
   },
@@ -4275,7 +4275,7 @@ BIRDS.push(
     watching: "6-р сард Алтайн өндөрлөг.",
     bestTime: "6–7-р сар",
     facts: ["Эр нь өндөг дардаг.", "Маш номхон.", "Уулын оройд үрждэг."],
-    image: { file: "images/eurasian-dotterel.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Charadrius_morinellus_male.jpg" },
+    image: { file: "images/eurasian-dotterel.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Charadrius_morinellus_male.jpg" },
     audio: null,
     extra: true
   },
@@ -4319,7 +4319,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуурын эрэг.",
     bestTime: "5, 7-р сар",
     facts: ["Далавчаа хугарсан мэт дүр үзүүлдэг.", "Хөл улбар шар.", "Далавчинд цагаан зурвастай."],
-    image: { file: "images/common-ringed-plover.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_ringed_plover_(Charadrius_hiaticula)_Oppdal.jpg" },
+    image: { file: "images/common-ringed-plover.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_ringed_plover_(Charadrius_hiaticula)_Oppdal.jpg" },
     audio: null,
     extra: true
   },
@@ -4363,7 +4363,7 @@ BIRDS.push(
     watching: "6-р сард хайрган эрэг.",
     bestTime: "5–7-р сар",
     facts: ["Нүдний шар цагирагтай.", "Хайрган дээр үүрлэдэг.", "Далавчинд зурвасгүй."],
-    image: { file: "images/little-ringed-plover.jpg", credit: "Zeynel Cebeci", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Charadrius_dubius_-_Little_ringed_plover_05.jpg" },
+    image: { file: "images/little-ringed-plover.jpg", credit: "Zeynel Cebeci", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Charadrius_dubius_-_Little_ringed_plover_05.jpg" },
     audio: null,
     extra: true
   },
@@ -4407,7 +4407,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагаан.",
     bestTime: "5–8-р сар",
     facts: ["Цээжний зурвас тасархай.", "Давстай нууранд амьдардаг.", "Кентийн нэрээр нэрлэгдсэн."],
-    image: { file: "images/kentish-plover.jpg", credit: "Original: Davidvraju, edit: MPF", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Kentish_Plover_Charadrius_alexandrinus,_India.jpg" },
+    image: { file: "images/kentish-plover.jpg", credit: "Original: Davidvraju, edit: MPF", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Kentish_Plover_Charadrius_alexandrinus,_India.jpg" },
     audio: null,
     extra: true
   },
@@ -4451,7 +4451,7 @@ BIRDS.push(
     watching: "Зундаа Алтайн өндөрлөг.",
     bestTime: "6–7-р сар",
     facts: ["Монголын нэрээр нэрлэгдсэн.", "Цээжиндээ хүрэн зурвастай.", "Устах аюулд орсон."],
-    image: { file: "images/lesser-sand-plover.jpg", credit: "Vedant Raju Kasambe", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_Sand_Plover_Charadrius_mongolus_in_breeding_plumage_best_by_Vedant_Kasambe_DSC_5787.jpg" },
+    image: { file: "images/lesser-sand-plover.jpg", credit: "Vedant Raju Kasambe", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_Sand_Plover_Charadrius_mongolus_in_breeding_plumage_best_by_Vedant_Kasambe_DSC_5787.jpg" },
     audio: null,
     extra: true
   },
@@ -4495,7 +4495,7 @@ BIRDS.push(
     watching: "5–6-р сард говийн нуурын эрэг.",
     bestTime: "5–6-р сар",
     facts: ["Цөлд үрждэг.", "Хөл урт.", "Далайн эрэгт өвөлждөг."],
-    image: { file: "images/greater-sand-plover.jpg", credit: "MPF", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2024-07-26_Anarhynchus_leschenaultii_leschenaultii,_Newbiggin,_Northumberland_1.jpg" },
+    image: { file: "images/greater-sand-plover.jpg", credit: "MPF", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2024-07-26_Anarhynchus_leschenaultii_leschenaultii,_Newbiggin,_Northumberland_1.jpg" },
     audio: null,
     extra: true
   },
@@ -4588,7 +4588,7 @@ BIRDS.push(
     watching: "5-р сард Хурхын хөндий.",
     bestTime: "4–7-р сар",
     facts: ["Урт отготой.", "Эргэлдэн үзүүлбэр хийдэг.", "Ховордож болзошгүй."],
-    image: { file: "images/northern-lapwing.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg" },
+    image: { file: "images/northern-lapwing.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg" },
     audio: null,
     extra: true
   },
@@ -4632,7 +4632,7 @@ BIRDS.push(
     watching: "5-р сард Буйр нуур.",
     bestTime: "5–6-р сар",
     facts: ["Толгой саарал.", "Хөл шар.", "Тархац нь тэлж байна."],
-    image: { file: "images/grey-headed-lapwing.jpg", credit: "Alpsdake", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Vanellus_cinereus.JPG" },
+    image: { file: "images/grey-headed-lapwing.jpg", credit: "Alpsdake", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Vanellus_cinereus.JPG" },
     audio: null,
     extra: true
   },
@@ -4676,7 +4676,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Устаж болзошгүй.", "Талын зүйл.", "Хиймэл дагуулаар хянагдсан."],
-    image: { file: "images/sociable-lapwing.jpg", credit: "Cks3976", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:SociablePlover.jpg" },
+    image: { file: "images/sociable-lapwing.jpg", credit: "Cks3976", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:SociablePlover.jpg" },
     audio: null,
     extra: true
   },
@@ -4720,7 +4720,7 @@ BIRDS.push(
     watching: "Ёлын амны хад; аль ч хотод.",
     bestTime: "Жилийн турш",
     facts: ["Хотын тагтааны өвөг.", "Захидал зөөдөг байсан.", "Зулзагаа «тагтааны сүү»-гээр хооллодог."],
-    image: { file: "images/rock-dove.jpg", credit: "william_stephens", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Columba_livia_(Rock_Dove,_wild),_Duncansby_Head,_Caithness,_Scotland_1.jpg" },
+    image: { file: "images/rock-dove.jpg", credit: "william_stephens", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Columba_livia_(Rock_Dove,_wild),_Duncansby_Head,_Caithness,_Scotland_1.jpg" },
     audio: null,
     extra: true
   },
@@ -4764,7 +4764,7 @@ BIRDS.push(
     watching: "Тэрэлжийн хад, тосгоны дээвэр.",
     bestTime: "Жилийн турш",
     facts: ["Сүүлэндээ цагаан зурвастай.", "Хад, байшинд үүрлэдэг.", "Монгол даяар элбэг."],
-    image: { file: "images/hill-pigeon.jpg", credit: "gilgit2", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Hill_Pigeon_(Columba_rupestris)_-_48728993017.jpg" },
+    image: { file: "images/hill-pigeon.jpg", credit: "gilgit2", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Hill_Pigeon_(Columba_rupestris)_-_48728993017.jpg" },
     audio: null,
     extra: true
   },
@@ -4808,7 +4808,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Модны хөндийд үүрлэдэг.", "Нүд бараан.", "Монголд ховор."],
-    image: { file: "images/stock-dove.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pigeon_colombin_(Colulmba_oenas),_Parc_de_Woluwe,_Bruxelles_(51921513878).jpg" },
+    image: { file: "images/stock-dove.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pigeon_colombin_(Colulmba_oenas),_Parc_de_Woluwe,_Bruxelles_(51921513878).jpg" },
     audio: null,
     extra: true
   },
@@ -4852,7 +4852,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Нүд нь шар.", "Эмзэг зүйл.", "Төв Азийн зүйл."],
-    image: { file: "images/pale-backed-pigeon.jpg", credit: "Shreeram M V", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-eyed_Pigeon.jpg" },
+    image: { file: "images/pale-backed-pigeon.jpg", credit: "Shreeram M V", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-eyed_Pigeon.jpg" },
     audio: null,
     extra: true
   },
@@ -4896,7 +4896,7 @@ BIRDS.push(
     watching: "Намар баруун Монгол.",
     bestTime: "10–11-р сар",
     facts: ["Хүзүүндээ цагаан толботой.", "Далавчаа ташдаг.", "Том тагтаа."],
-    image: { file: "images/wood-pigeon.jpg", credit: "Bengt Nyman from Vaxholm, Sweden", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Columba_palumbus_EM1B1397_(27445478998).jpg" },
+    image: { file: "images/wood-pigeon.jpg", credit: "Bengt Nyman from Vaxholm, Sweden", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Columba_palumbus_EM1B1397_(27445478998).jpg" },
     audio: null,
     extra: true
   },
@@ -4940,7 +4940,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Мурр хийсэн дуутай.", "Эмзэг зүйл.", "Африкт өвөлждөг."],
-    image: { file: "images/european-turtle-dove.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Turtle_dove_(Streptopelia_turtur_turtur)_Hungary.jpg" },
+    image: { file: "images/european-turtle-dove.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Turtle_dove_(Streptopelia_turtur_turtur)_Hungary.jpg" },
     audio: null,
     extra: true
   },
@@ -4984,7 +4984,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "5–9-р сар",
     facts: ["Нуруу хайрс шиг.", "Хүзүүндээ судалтай толботой.", "Хотод элбэг."],
-    image: { file: "images/east-asian-turtle-dove.jpg", credit: "J. Patrick Fischer", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2026-08-27_Streptopelia_orientalis_in_Chitose.jpg" },
+    image: { file: "images/east-asian-turtle-dove.jpg", credit: "J. Patrick Fischer", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2026-08-27_Streptopelia_orientalis_in_Chitose.jpg" },
     audio: null,
     extra: true
   },
@@ -5028,7 +5028,7 @@ BIRDS.push(
     watching: "Даланзадгад, Ёлын ам.",
     bestTime: "Жилийн турш",
     facts: ["Хурдан тархаж байна.", "Хар хагас хүзүүвчтэй.", "Хүний ойролцоо амьдардаг."],
-    image: { file: "images/eurasian-collared-dove.jpg", credit: "stevem4560", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:2022-04-06_Streptopelia_decaocto,_Plovdiv,_Bulgaria_1.jpg" },
+    image: { file: "images/eurasian-collared-dove.jpg", credit: "stevem4560", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:2022-04-06_Streptopelia_decaocto,_Plovdiv,_Bulgaria_1.jpg" },
     audio: null,
     extra: true
   },
@@ -5072,7 +5072,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Инээх мэт дуутай.", "Цээж толботой.", "Тархаж байна."],
-    image: { file: "images/laughing-dove.jpg", credit: "Giles Laurent", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:140_Laughing_dove_in_Twyfelfontein_Photo_by_Giles_Laurent.jpg" },
+    image: { file: "images/laughing-dove.jpg", credit: "Giles Laurent", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:140_Laughing_dove_in_Twyfelfontein_Photo_by_Giles_Laurent.jpg" },
     audio: null,
     extra: true
   },
@@ -5116,7 +5116,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Далавчиндаа зоос толботой.", "Хушуу улаан.", "Нисэж явахдаа шавж барьдаг."],
-    image: { file: "images/dollarbird.jpg", credit: "anukma", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurystomus_orientalis_199552724.jpg" },
+    image: { file: "images/dollarbird.jpg", credit: "anukma", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurystomus_orientalis_199552724.jpg" },
     audio: null,
     extra: true
   },
@@ -5160,7 +5160,7 @@ BIRDS.push(
     watching: "Улаанбаатарын зах, Тэрэлж.",
     bestTime: "Жилийн турш",
     facts: ["Махийсан улаан хушуутай.", "Монголд маш элбэг.", "Нисэхдээ эргэлдэн тоглодог."],
-    image: { file: "images/red-billed-chough.jpg", credit: "Alun Williams333", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bran_goesgoch_Pyrrhocorax_pyrrhocorax.jpg" },
+    image: { file: "images/red-billed-chough.jpg", credit: "Alun Williams333", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bran_goesgoch_Pyrrhocorax_pyrrhocorax.jpg" },
     audio: null,
     extra: true
   },
@@ -5204,7 +5204,7 @@ BIRDS.push(
     watching: "Богд хан уулын ойн жим.",
     bestTime: "Жилийн турш",
     facts: ["Өвөлд хоол нөөцөлдөг.", "Маш номхон.", "Латин нэр нь «азгүй» гэсэн утгатай."],
-    image: { file: "images/siberian-jay.jpg", credit: "Estormiz", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Perisoreus_infaustus_Kittil%C3%A4_20180418_01.jpg" },
+    image: { file: "images/siberian-jay.jpg", credit: "Estormiz", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Perisoreus_infaustus_Kittil%C3%A4_20180418_01.jpg" },
     audio: null,
     extra: true
   },
@@ -5248,7 +5248,7 @@ BIRDS.push(
     watching: "Намар Богд хан уул.",
     bestTime: "Жилийн турш",
     facts: ["Ой тарьдаг.", "Далавчиндаа хөх толботой.", "Маш сайн дууриагч."],
-    image: { file: "images/eurasian-jay.jpg", credit: "Luc Viatour", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg" },
+    image: { file: "images/eurasian-jay.jpg", credit: "Luc Viatour", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg" },
     audio: null,
     extra: true
   },
@@ -5292,7 +5292,7 @@ BIRDS.push(
     watching: "Ёлын амны ойролцоох хайрган тал.",
     bestTime: "Жилийн турш",
     facts: ["Нисэхийн оронд гүйдэг.", "Зөвхөн Төв Азийн цөлд амьдардаг.", "Далавчиндаа том цагаан толботой."],
-    image: { file: "images/mongolian-ground-jay.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Mongolian_Ground_Jay_(Podoces_hendersoni)_-_%D0%A5%D1%83%D0%BB%D0%B0%D0%BD_%D0%B6%D0%BE%D1%80%D0%BE%D0%BE_(16566349299).jpg" },
+    image: { file: "images/mongolian-ground-jay.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Mongolian_Ground_Jay_(Podoces_hendersoni)_-_%D0%A5%D1%83%D0%BB%D0%B0%D0%BD_%D0%B6%D0%BE%D1%80%D0%BE%D0%BE_(16566349299).jpg" },
     audio: null,
     extra: true
   },
@@ -5336,7 +5336,7 @@ BIRDS.push(
     watching: "Улаанбаатарт хаана ч.",
     bestTime: "Жилийн турш",
     facts: ["Толинд өөрийгөө таньдаг.", "Ардын ёсоор зочин зарладаг.", "Бөмбөгөр үүртэй."],
-    image: { file: "images/eurasian-magpie.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2024_03_03_02.jpg" },
+    image: { file: "images/eurasian-magpie.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2024_03_03_02.jpg" },
     audio: null,
     extra: true
   },
@@ -5380,7 +5380,7 @@ BIRDS.push(
     watching: "9-р сард Богд хан уул.",
     bestTime: "9–10-р сар",
     facts: ["Мянга мянган нөөцөө санадаг.", "Самар зөөх хоолойн ууттай.", "Хушин ой тарьдаг."],
-    image: { file: "images/eurasian-nutcracker.jpg", credit: "kuhnmi", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Nucifraga_caryocatactes_Davos_1.jpg" },
+    image: { file: "images/eurasian-nutcracker.jpg", credit: "kuhnmi", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Nucifraga_caryocatactes_Davos_1.jpg" },
     audio: null,
     extra: true
   },
@@ -5424,7 +5424,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатар.",
     bestTime: "4–9-р сар",
     facts: ["Насанд хүрсэн нь алаг.", "Хөндийд үүрлэдэг.", "Турлиах хэрээтэй сүрэглэдэг."],
-    image: { file: "images/daurian-jackdaw.jpg", credit: "christoph_moning", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Coloeus_dauuricus,_adult,_Izumi,_Kagoshima,_Japan_3.jpg" },
+    image: { file: "images/daurian-jackdaw.jpg", credit: "christoph_moning", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Coloeus_dauuricus,_adult,_Izumi,_Kagoshima,_Japan_3.jpg" },
     audio: null,
     extra: true
   },
@@ -5468,7 +5468,7 @@ BIRDS.push(
     watching: "Өлгий хот.",
     bestTime: "Жилийн турш",
     facts: ["Нүд цайвар.", "Дагз саарал.", "Конрад Лоренц судалсан."],
-    image: { file: "images/eurasian-jackdaw.jpg", credit: "hedera.baltica from Wrocław, Poland", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Nordic_jackdaw_(52563242448).jpg" },
+    image: { file: "images/eurasian-jackdaw.jpg", credit: "hedera.baltica from Wrocław, Poland", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Nordic_jackdaw_(52563242448).jpg" },
     audio: null,
     extra: true
   },
@@ -5512,7 +5512,7 @@ BIRDS.push(
     watching: "Улаанбаатарын Туул голын дагуух колони.",
     bestTime: "4–8-р сар",
     facts: ["Нүүр нь нүцгэн.", "Колони болж үүрлэдэг.", "Багаж ашигладаг."],
-    image: { file: "images/rook.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rook_(Corvus_frugilegus)_Heligan.jpg" },
+    image: { file: "images/rook.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rook_(Corvus_frugilegus)_Heligan.jpg" },
     audio: null,
     extra: true
   },
@@ -5556,7 +5556,7 @@ BIRDS.push(
     watching: "Хаана ч.",
     bestTime: "Жилийн турш",
     facts: ["Хамгийн том жиргээч шувуу.", "Маш ухаалаг.", "Агаарт тоглодог."],
-    image: { file: "images/common-raven.jpg", credit: "Frank Schulenburg", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Corvus_corax_clarionensis,_Point_Reyes_National_Seashore.jpg" },
+    image: { file: "images/common-raven.jpg", credit: "Frank Schulenburg", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Corvus_corax_clarionensis,_Point_Reyes_National_Seashore.jpg" },
     audio: null,
     extra: true
   },
@@ -5600,7 +5600,7 @@ BIRDS.push(
     watching: "Улаанбаатарт хаана ч.",
     bestTime: "Жилийн турш",
     facts: ["Улаанбаатарт маш элбэг.", "Сэг түүгч.", "Сүүл шулуун."],
-    image: { file: "images/carrion-crow.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Carrion_crow_2022_04_05_05_02.jpg" },
+    image: { file: "images/carrion-crow.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Carrion_crow_2022_04_05_05_02.jpg" },
     audio: null,
     extra: true
   },
@@ -5644,7 +5644,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Дөрвөн үет дуутай.", "Бусдын үүрэнд өндөглөдөг.", "Үстэй хүр иддэг."],
-    image: { file: "images/indian-cuckoo.jpg", credit: "Creepanta", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Indian_cuckoo_(Cuculus_micropterus)_46_(cropped).jpg" },
+    image: { file: "images/indian-cuckoo.jpg", credit: "Creepanta", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Indian_cuckoo_(Cuculus_micropterus)_46_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -5688,7 +5688,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжид үүрээр чагна.",
     bestTime: "5–6-р сар",
     facts: ["Бусдын үүрэнд өндөглөдөг.", "Үстэй хүр иддэг.", "Африк руу нүүдэллэдэг."],
-    image: { file: "images/common-cuckoo.jpg", credit: "Andy  Morffew from Itchen Abbas, Hampshire, UK", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Cuckoo_(51169010335).jpg" },
+    image: { file: "images/common-cuckoo.jpg", credit: "Andy  Morffew from Itchen Abbas, Hampshire, UK", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Cuckoo_(51169010335).jpg" },
     audio: null,
     extra: true
   },
@@ -5781,7 +5781,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хамгийн жижиг саарал хөхөө.", "Шөнө дуугардаг.", "Африкт өвөлждөг."],
-    image: { file: "images/lesser-cuckoo.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_Cuckoo_by_Tisha_Mukherjee_16.jpg" },
+    image: { file: "images/lesser-cuckoo.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_Cuckoo_by_Tisha_Mukherjee_16.jpg" },
     audio: null,
     extra: true
   },
@@ -5825,7 +5825,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5-р сар",
     facts: ["Сэрээтэй сүүлтэй.", "Маш зоригтой.", "Харцагыг дууриадаг."],
-    image: { file: "images/black-drongo.jpg", credit: "Swardeepak", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bdrongo-Sandeep1.jpg" },
+    image: { file: "images/black-drongo.jpg", credit: "Swardeepak", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bdrongo-Sandeep1.jpg" },
     audio: null,
     extra: true
   },
@@ -5869,7 +5869,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Толгой хүрэн.", "Хэвлий шар.", "Ховор зочин."],
-    image: { file: "images/red-headed-bunting.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-headed_bunting_(Emberiza_bruniceps)_male_non-breeding_plumage.jpg" },
+    image: { file: "images/red-headed-bunting.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-headed_bunting_(Emberiza_bruniceps)_male_non-breeding_plumage.jpg" },
     audio: null,
     extra: true
   },
@@ -5913,7 +5913,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Толгой хар.", "Хэвлий шар.", "Онцгой ховор."],
-    image: { file: "images/black-headed-bunting.jpg", credit: "Mark S Jobling", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:28-090504-black-headed-bunting-at-first-layby.jpg" },
+    image: { file: "images/black-headed-bunting.jpg", credit: "Mark S Jobling", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:28-090504-black-headed-bunting-at-first-layby.jpg" },
     audio: null,
     extra: true
   },
@@ -5957,7 +5957,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Чих хүрэн.", "Цээжний туузтай.", "Хурхын онцлог шувуу."],
-    image: { file: "images/chestnut-eared-bunting.jpg", credit: "(c) Griha Hasanov, some rights reserved (CC BY)", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Chestnut-eared_Bunting_imported_from_iNaturalist_photo_135699996_on_26_June_2024.jpg" },
+    image: { file: "images/chestnut-eared-bunting.jpg", credit: "(c) Griha Hasanov, some rights reserved (CC BY)", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Chestnut-eared_Bunting_imported_from_iNaturalist_photo_135699996_on_26_June_2024.jpg" },
     audio: null,
     extra: true
   },
@@ -6050,7 +6050,7 @@ BIRDS.push(
     watching: "5-р сард Хустайн энгэр.",
     bestTime: "5–6-р сар",
     facts: ["Нүүр судалтай.", "Зэвэрсэн өнгөтэй.", "Улаанбаатарын ойролцоо элбэг."],
-    image: { file: "images/meadow-bunting.jpg", credit: "Alpsdake", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_cioides_male.JPG" },
+    image: { file: "images/meadow-bunting.jpg", credit: "Alpsdake", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_cioides_male.JPG" },
     audio: null,
     extra: true
   },
@@ -6094,7 +6094,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын амны хавцал.",
     bestTime: "5–6-р сар",
     facts: ["Толгой саарал.", "Хүрэн судалтай.", "Хадат хавцалд."],
-    image: { file: "images/godlewskis-bunting.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Godlewski%27s_Bunting_(Emberiza_godlewskii)_(16804118611).jpg" },
+    image: { file: "images/godlewskis-bunting.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Godlewski%27s_Bunting_(Emberiza_godlewskii)_(16804118611).jpg" },
     audio: null,
     extra: true
   },
@@ -6138,7 +6138,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Толгойн судал хар.", "Хэвлий зэвэрсэн.", "Ховор."],
-    image: { file: "images/rock-bunting.jpg", credit: "Hobbyfotowiki", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Rock_Bunting_(Cochem).jpg" },
+    image: { file: "images/rock-bunting.jpg", credit: "Hobbyfotowiki", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Rock_Bunting_(Cochem).jpg" },
     audio: null,
     extra: true
   },
@@ -6182,7 +6182,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын энгэр.",
     bestTime: "6-р сар",
     facts: ["Толгой саарал.", "Нүдний цагирагтай.", "Хадат энгэрт."],
-    image: { file: "images/grey-necked-bunting.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Grey-necked_Bunting_(Emberiza_buchanani)_(31793472228).jpg" },
+    image: { file: "images/grey-necked-bunting.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Grey-necked_Bunting_(Emberiza_buchanani)_(31793472228).jpg" },
     audio: null,
     extra: true
   },
@@ -6226,7 +6226,7 @@ BIRDS.push(
     watching: "6-р сард Тэрхийн цагаан нуур.",
     bestTime: "6-р сар",
     facts: ["Хоолой шар.", "Хушуу ягаан.", "Нэгэн цагт тансаг хоол байсан."],
-    image: { file: "images/ortolan-bunting.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Ortolan_bunting_in_Sierra_de_Guara,_Aragon,_Spain.jpg" },
+    image: { file: "images/ortolan-bunting.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Ortolan_bunting_in_Sierra_de_Guara,_Aragon,_Spain.jpg" },
     audio: null,
     extra: true
   },
@@ -6270,7 +6270,7 @@ BIRDS.push(
     watching: "Өвөл холимог хөмрөгийн сүрэг.",
     bestTime: "10–11-р сар",
     facts: ["Тод шар.", "Цагааншанаатай эрлийзждэг.", "Бетховены домогтой."],
-    image: { file: "images/yellowhammer.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Goldammer_Emberiza_citrinella.jpg" },
+    image: { file: "images/yellowhammer.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Goldammer_Emberiza_citrinella.jpg" },
     audio: null,
     extra: true
   },
@@ -6314,7 +6314,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлж.",
     bestTime: "5–6-р сар",
     facts: ["Орой цагаан.", "Хоолой хүрэн.", "Маш элбэг."],
-    image: { file: "images/pine-bunting.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pine_Bunting_(Emberiza_leucocephalos)_-_%D0%A6%D0%B0%D0%B3%D0%B0%D0%B0%D0%BD%D1%88%D0%B0%D0%BD%D0%B0%D0%B0%D1%82_%D1%85%D3%A9%D0%BC%D1%80%D3%A9%D0%B3_(15617685422).jpg" },
+    image: { file: "images/pine-bunting.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pine_Bunting_(Emberiza_leucocephalos)_-_%D0%A6%D0%B0%D0%B3%D0%B0%D0%B0%D0%BD%D1%88%D0%B0%D0%BD%D0%B0%D0%B0%D1%82_%D1%85%D3%A9%D0%BC%D1%80%D3%A9%D0%B3_(15617685422).jpg" },
     audio: null,
     extra: true
   },
@@ -6358,7 +6358,7 @@ BIRDS.push(
     watching: "10-р сард зүүн нутгийн баянбүрд.",
     bestTime: "10-р сар",
     facts: ["Сорволтой.", "Хоолой шар.", "Цөөн нүүдэллэнэ."],
-    image: { file: "images/yellow-throated-bunting.jpg", credit: "Alpsdake", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_elegans_male_and_female.JPG" },
+    image: { file: "images/yellow-throated-bunting.jpg", credit: "Alpsdake", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_elegans_male_and_female.JPG" },
     audio: null,
     extra: true
   },
@@ -6402,7 +6402,7 @@ BIRDS.push(
     watching: "5-р сард Буйр нуурын намаг.",
     bestTime: "5–7-р сар",
     facts: ["Ууц шаргал.", "Толгой хар.", "Ховордож болзошгүй."],
-    image: { file: "images/japanese-reed-bunting.jpg", credit: "Kisswaynow", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:A_Japanese_reed_bunting.jpg" },
+    image: { file: "images/japanese-reed-bunting.jpg", credit: "Kisswaynow", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:A_Japanese_reed_bunting.jpg" },
     audio: null,
     extra: true
   },
@@ -6446,7 +6446,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуур.",
     bestTime: "5-р сар",
     facts: ["Толгой хар.", "Цагаан хүзүүвчтэй.", "Маш элбэг."],
-    image: { file: "images/pallass-reed-bunting.jpg", credit: "Didier Descouens", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_pallasi_MHNT.ZOO.2011.11.219_Mongolie.jpg" },
+    image: { file: "images/pallass-reed-bunting.jpg", credit: "Rémi Bigonneau", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_pallasi_(10).jpg" },
     audio: null,
     extra: true
   },
@@ -6490,7 +6490,7 @@ BIRDS.push(
     watching: "5-р сард Хар ус нуурын зэгс.",
     bestTime: "5–6-р сар",
     facts: ["Толгой хар.", "Сахал цагаан.", "Зэгсний шувуу."],
-    image: { file: "images/eurasian-reed-bunting.jpg", credit: "caroline legg", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Reed_Bunting_-_Emberiza_schoeniclus_(52015951301).jpg" },
+    image: { file: "images/eurasian-reed-bunting.jpg", credit: "caroline legg", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Reed_Bunting_-_Emberiza_schoeniclus_(52015951301).jpg" },
     audio: null,
     extra: true
   },
@@ -6534,7 +6534,7 @@ BIRDS.push(
     watching: "5-р сард Хурх.",
     bestTime: "5–6-р сар",
     facts: ["Нүүр хар.", "Толгой саарал ногоон.", "Маш элбэг."],
-    image: { file: "images/black-faced-bunting.jpg", credit: "大家好64", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Black-faced_bunting_(Emberiza_spodocephala),_Hangzhou,_China.jpg" },
+    image: { file: "images/black-faced-bunting.jpg", credit: "大家好64", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Black-faced_bunting_(Emberiza_spodocephala),_Hangzhou,_China.jpg" },
     audio: null,
     extra: true
   },
@@ -6578,7 +6578,7 @@ BIRDS.push(
     watching: "10-р сард Улаанбаатар.",
     bestTime: "10-р сар",
     facts: ["Сорволтой.", "Цээжний тууз зэвэрсэн.", "Ховордож болзошгүй."],
-    image: { file: "images/rustic-bunting.jpg", credit: "Gin tonic", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Kashiradaka-01.jpg" },
+    image: { file: "images/rustic-bunting.jpg", credit: "Gin tonic", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Kashiradaka-01.jpg" },
     audio: null,
     extra: true
   },
@@ -6622,7 +6622,7 @@ BIRDS.push(
     watching: "8-р сард Хурхын хөндий.",
     bestTime: "8-р сар",
     facts: ["Хүрэн өнгөтэй.", "Хэвлий шар.", "Хурхаар нүүдэллэдэг."],
-    image: { file: "images/chestnut-bunting.jpg", credit: "林孫鋒", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_rutila_190226429_(cropped).jpg" },
+    image: { file: "images/chestnut-bunting.jpg", credit: "林孫鋒", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Emberiza_rutila_190226429_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -6666,7 +6666,7 @@ BIRDS.push(
     watching: "5-р сард Хурх.",
     bestTime: "5, 9-р сар",
     facts: ["Нүүр зэвэрсэн.", "Жижиг.", "Маш олон нүүдэллэдэг."],
-    image: { file: "images/little-bunting.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Zwergammer.jpg" },
+    image: { file: "images/little-bunting.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Zwergammer.jpg" },
     audio: null,
     extra: true
   },
@@ -6710,7 +6710,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий (үүрийг бүү үймүүл).",
     bestTime: "6-р сар",
     facts: ["Устаж болзошгүй.", "Далавчинд цагаан толботой.", "Монголд үрждэг хэвээр."],
-    image: { file: "images/yellow-breasted-bunting.jpg", credit: "Manshanta Ghimire", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-breasted_bunting_in_Nepal_02_-Cropped.jpg" },
+    image: { file: "images/yellow-breasted-bunting.jpg", credit: "Manshanta Ghimire", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-breasted_bunting_in_Nepal_02_-Cropped.jpg" },
     audio: null,
     extra: true
   },
@@ -6852,7 +6852,7 @@ BIRDS.push(
     watching: "5–8-р сард Хустай, Их Нарт, Ёлын ам.",
     bestTime: "5–8-р сар",
     facts: ["Колони болж үүрлэдэг.", "Голчлон шавжаар хооллодог.", "Өмнөд Африкт өвөлждөг."],
-    image: { file: "images/lesser-kestrel.jpg", credit: "Sumeet Moghe", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_Kestrel_(Male).jpg" },
+    image: { file: "images/lesser-kestrel.jpg", credit: "Sumeet Moghe", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_Kestrel_(Male).jpg" },
     audio: null,
     extra: true
   },
@@ -6896,7 +6896,7 @@ BIRDS.push(
     watching: "Хөдөө хаана ч; замын хажууд хийсэж буй жижиг шонхрыг ажигла.",
     bestTime: "4–9-р сар",
     facts: ["Хэт ягаан туяаг харж, оготны шээсний мөрийг олдог.", "Өөрөө үүр засдаггүй.", "Монголын хамгийн элбэг шонхор."],
-    image: { file: "images/common-kestrel.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common_kestrel_falco_tinnunculus.jpg" },
+    image: { file: "images/common-kestrel.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common_kestrel_falco_tinnunculus.jpg" },
     audio: null,
     extra: true
   },
@@ -6940,7 +6940,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага; Амарын шонхор бүрийг шалга.",
     bestTime: "—",
     facts: ["Дэлхийд эмзэг зүйл.", "Турлиах хэрээний хуучин үүрэнд үүрлэдэг.", "Амарын шонхортой ойр төрөл."],
-    image: { file: "images/red-footed-falcon.jpg", credit: "Andy Morffew from Itchen Abbas, Hampshire, UK", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Female_red-footed_falcon_preening_(18868326815).jpg" },
+    image: { file: "images/red-footed-falcon.jpg", credit: "Andy Morffew from Itchen Abbas, Hampshire, UK", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Female_red-footed_falcon_preening_(18868326815).jpg" },
     audio: null,
     extra: true
   },
@@ -6984,7 +6984,7 @@ BIRDS.push(
     watching: "9–10-р сард болон өвөл ил задгай тал хээрт.",
     bestTime: "9–10-р сар",
     facts: ["Хамгийн жижиг шонхрын нэг.", "Шувууг удаан хөөж барина.", "Эрт үед хатагтай нар ангалдаг байв."],
-    image: { file: "images/merlin.jpg", credit: "Rhododendrites", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Merlin_in_Prospect_Park_(63386).jpg" },
+    image: { file: "images/merlin.jpg", credit: "Rhododendrites", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Merlin_in_Prospect_Park_(63386).jpg" },
     audio: null,
     extra: true
   },
@@ -7028,7 +7028,7 @@ BIRDS.push(
     watching: "6–8-р сард соно ихтэй намаг дээгүүр Хурхын хөндий, Тэрэлжид.",
     bestTime: "6–8-р сар",
     facts: ["Ураацайг агаарт барьж чадна.", "Соногоо нисэж явахдаа иддэг.", "Хэрээний хуучин үүрэнд үүрлэдэг."],
-    image: { file: "images/eurasian-hobby.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_hobby_(Falco_subbuteo)_by_Shantanu_Kuveskar.jpg" },
+    image: { file: "images/eurasian-hobby.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_hobby_(Falco_subbuteo)_by_Shantanu_Kuveskar.jpg" },
     audio: null,
     extra: true
   },
@@ -7121,7 +7121,7 @@ BIRDS.push(
     watching: "10-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "9–10-р сар",
     facts: ["Хоёр цагаан зураастай.", "«Ганц бие» бужирга.", "Өвлийн зочин."],
-    image: { file: "images/common-chaffinch.jpg", credit: "caroline legg", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Male_Chaffinch_-_Fringilla_coelebs.jpg" },
+    image: { file: "images/common-chaffinch.jpg", credit: "caroline legg", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Male_Chaffinch_-_Fringilla_coelebs.jpg" },
     audio: null,
     extra: true
   },
@@ -7165,7 +7165,7 @@ BIRDS.push(
     watching: "9-р сарын сүүлээр Улаанбаатар.",
     bestTime: "9–10-р сар",
     facts: ["Цээж улбар шар.", "Ууц цагаан.", "Асар том сүрэгтэй."],
-    image: { file: "images/brambling.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Pinson_du_nord.jpg" },
+    image: { file: "images/brambling.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Pinson_du_nord.jpg" },
     audio: null,
     extra: true
   },
@@ -7209,7 +7209,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "5-р сар",
     facts: ["Хушуу асар том.", "Интоорын яс хагалдаг.", "5-р сард элбэг."],
-    image: { file: "images/hawfinch.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Hawfinch_(Coccothraustes_coccothraustes)_male_Drenthe.jpg" },
+    image: { file: "images/hawfinch.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Hawfinch_(Coccothraustes_coccothraustes)_male_Drenthe.jpg" },
     audio: null,
     extra: true
   },
@@ -7253,7 +7253,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5-р сар",
     facts: ["Хушуу шар.", "Толгой хар.", "Хавар ховор нүүдэллэнэ."],
-    image: { file: "images/yellow-billed-grosbeak.jpg", credit: "Zinogre", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-billed_Grosbeak_(Eophona_migratoria)_in_China.jpg" },
+    image: { file: "images/yellow-billed-grosbeak.jpg", credit: "Zinogre", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-billed_Grosbeak_(Eophona_migratoria)_in_China.jpg" },
     audio: null,
     extra: true
   },
@@ -7297,7 +7297,7 @@ BIRDS.push(
     watching: "6-р сард Алтайн өндөрлөг.",
     bestTime: "6-р сар",
     facts: ["Цагаан цэгтэй час улаан.", "Хамгийн том бужмар.", "Өндөр уулсад."],
-    image: { file: "images/great-rosefinch.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Great_Rosefinch_(Carpodacus_rubicilla)_(28311028287).jpg" },
+    image: { file: "images/great-rosefinch.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Great_Rosefinch_(Carpodacus_rubicilla)_(28311028287).jpg" },
     audio: null,
     extra: true
   },
@@ -7341,7 +7341,7 @@ BIRDS.push(
     watching: "Өвөл Улаанбаатарын Туул гол.",
     bestTime: "Жилийн турш",
     facts: ["Сүүл урт.", "Ягаан.", "Улаанбаатарт элбэг."],
-    image: { file: "images/long-tailed-rosefinch.jpg", credit: "M.Nishimura", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Uragus_sibiricus.jpg" },
+    image: { file: "images/long-tailed-rosefinch.jpg", credit: "M.Nishimura", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Uragus_sibiricus.jpg" },
     audio: null,
     extra: true
   },
@@ -7385,7 +7385,7 @@ BIRDS.push(
     watching: "3-р сард Богд хан уулын энгэр.",
     bestTime: "11–3-р сар",
     facts: ["Бөөрөлзгөнө ягаан.", "Орой цантсан мэт.", "Өвлийн зочин."],
-    image: { file: "images/pallass-rosefinch.jpg", credit: "M.Nishimura", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Carpodacus_roseus.jpg" },
+    image: { file: "images/pallass-rosefinch.jpg", credit: "M.Nishimura", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Carpodacus_roseus.jpg" },
     audio: null,
     extra: true
   },
@@ -7429,7 +7429,7 @@ BIRDS.push(
     watching: "10-р сард Хар ус нуур.",
     bestTime: "9–10-р сар",
     facts: ["Хөмсөг ягаан.", "Арцанд дуртай.", "Хэт баруунд."],
-    image: { file: "images/red-mantled-rosefinch.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Red-mantled_Rosefinch_-_Almaty_-_Kazakistan_S4E4053_(23051167291).jpg" },
+    image: { file: "images/red-mantled-rosefinch.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Red-mantled_Rosefinch_-_Almaty_-_Kazakistan_S4E4053_(23051167291).jpg" },
     audio: null,
     extra: true
   },
@@ -7473,7 +7473,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "6-р сар",
     facts: ["Хөмсөг ягаан.", "Говийн хавцалд.", "Ёлын амны онцлог шувуу."],
-    image: { file: "images/p-re-davids-rosefinch.jpg", credit: "Wang.QG", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Carpodacus_davidianus_-_Wang.QG_-_514074298.jpeg" },
+    image: { file: "images/p-re-davids-rosefinch.jpg", credit: "Wang.QG", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Carpodacus_davidianus_-_Wang.QG_-_514074298.jpeg" },
     audio: null,
     extra: true
   },
@@ -7517,7 +7517,7 @@ BIRDS.push(
     watching: "Өвөл Тэрэлжийн жимсний мод.",
     bestTime: "12–2-р сар",
     facts: ["Маш номхон.", "Жимс иддэг.", "Өвлийн зочин."],
-    image: { file: "images/pine-grosbeak.jpg", credit: "Ron Knight from Seaford, East Sussex, United Kingdom", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pine_Grosbeak_(Pinicola_enucleator)_(13667564073).jpg" },
+    image: { file: "images/pine-grosbeak.jpg", credit: "Ron Knight from Seaford, East Sussex, United Kingdom", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Pine_Grosbeak_(Pinicola_enucleator)_(13667564073).jpg" },
     audio: null,
     extra: true
   },
@@ -7561,7 +7561,7 @@ BIRDS.push(
     watching: "11-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "11–2-р сар",
     facts: ["Орой хар.", "Лимбэ мэт дуутай.", "Өвлийн зочин."],
-    image: { file: "images/eurasian-bullfinch.jpg", credit: "Francis Franklin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Bullfinch_male.jpg" },
+    image: { file: "images/eurasian-bullfinch.jpg", credit: "Francis Franklin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Bullfinch_male.jpg" },
     audio: null,
     extra: true
   },
@@ -7605,7 +7605,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын амны булаг.",
     bestTime: "6–7-р сар",
     facts: ["Далавч ягаан.", "Цөлийн шувуу.", "Монголын нэрээр нэрлэгдсэн."],
-    image: { file: "images/mongolian-finch.jpg", credit: "Pkspks", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bucanetes_mongolicus.JPG" },
+    image: { file: "images/mongolian-finch.jpg", credit: "Pkspks", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Bucanetes_mongolicus.JPG" },
     audio: null,
     extra: true
   },
@@ -7649,7 +7649,7 @@ BIRDS.push(
     watching: "7-р сард Таван богд.",
     bestTime: "7-р сар",
     facts: ["Боршувуу шиг.", "Алтайн өндөрлөгт.", "Нуруу судалтай."],
-    image: { file: "images/plain-mountain-finch.jpg", credit: "Dibyendu Ash", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Plain_Mountain_Finch_East_Sikkim_India_13.06.2014.jpg" },
+    image: { file: "images/plain-mountain-finch.jpg", credit: "Dibyendu Ash", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Plain_Mountain_Finch_East_Sikkim_India_13.06.2014.jpg" },
     audio: null,
     extra: true
   },
@@ -7693,7 +7693,7 @@ BIRDS.push(
     watching: "7-р сард Таван богд.",
     bestTime: "6–7-р сар",
     facts: ["Толгой бараан.", "Маш өндөрт амьдардаг.", "Ууц ягаан."],
-    image: { file: "images/brandts-mountain-finch.jpg", credit: "Sheila Castelino", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Brandt%27s_Mountain_finch_or_Black-headed_Mountain-finch_(Leucosticte_brandti)-1904.jpg" },
+    image: { file: "images/brandts-mountain-finch.jpg", credit: "Sheila Castelino", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Brandt%27s_Mountain_finch_or_Black-headed_Mountain-finch_(Leucosticte_brandti)-1904.jpg" },
     audio: null,
     extra: true
   },
@@ -7737,7 +7737,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "6-р сар",
     facts: ["Далавч хар ягаан.", "Хушуу хар.", "Говийн баянбүрдэд."],
-    image: { file: "images/desert-finch.jpg", credit: "Abolfazl Fallahzadeh", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Rhodospiza_obsoleta_in_Iran.jpg" },
+    image: { file: "images/desert-finch.jpg", credit: "Abolfazl Fallahzadeh", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Rhodospiza_obsoleta_in_Iran.jpg" },
     audio: null,
     extra: true
   },
@@ -7781,7 +7781,7 @@ BIRDS.push(
     watching: "5-р сард Хар ус нуур.",
     bestTime: "5-р сар",
     facts: ["Далавч шар.", "Шуугисан дуутай.", "Хэт баруунд."],
-    image: { file: "images/european-greenfinch.jpg", credit: "Martin Kunz", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Chloris_chloris_(profile).jpg" },
+    image: { file: "images/european-greenfinch.jpg", credit: "Martin Kunz", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Chloris_chloris_(profile).jpg" },
     audio: null,
     extra: true
   },
@@ -7825,7 +7825,7 @@ BIRDS.push(
     watching: "5-р сард Хурх.",
     bestTime: "5-р сар",
     facts: ["Толгой саарал.", "Далавч шар.", "Зүүн нутгийн шувуу."],
-    image: { file: "images/grey-capped-greenfinch.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_Greenfinch_-_Honshu_-_Japan_S4E2635_(23026479292).jpg" },
+    image: { file: "images/grey-capped-greenfinch.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_Greenfinch_-_Honshu_-_Japan_S4E2635_(23026479292).jpg" },
     audio: null,
     extra: true
   },
@@ -7869,7 +7869,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "5–7-р сар",
     facts: ["Дуугаараа нэрлэгдсэн.", "Судалтай.", "Уулын шувуу."],
-    image: { file: "images/twite.jpg", credit: "peterichman", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Twite_(Linaria_flavirostris),_Zinc_Road,_Teesside_(53540824279).jpg" },
+    image: { file: "images/twite.jpg", credit: "peterichman", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Twite_(Linaria_flavirostris),_Zinc_Road,_Teesside_(53540824279).jpg" },
     audio: null,
     extra: true
   },
@@ -7913,7 +7913,7 @@ BIRDS.push(
     watching: "7-р сард Хар ус нуур.",
     bestTime: "7-р сар",
     facts: ["Цээж улаан.", "Маалинга иддэг.", "Хэт баруунд."],
-    image: { file: "images/common-linnet.jpg", credit: "Joe Pell", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Carduelis_cannabina_-England_-male-8.jpg" },
+    image: { file: "images/common-linnet.jpg", credit: "Joe Pell", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Carduelis_cannabina_-England_-male-8.jpg" },
     audio: null,
     extra: true
   },
@@ -7957,7 +7957,7 @@ BIRDS.push(
     watching: "1-р сард Улаанбаатарын хус.",
     bestTime: "12–2-р сар",
     facts: ["Дух улаан.", "Өвлийн сүрэг.", "−50 °C-ийг даадаг."],
-    image: { file: "images/common-redpoll.jpg", credit: "Cephas", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Carduelis_flammea_CT6.jpg" },
+    image: { file: "images/common-redpoll.jpg", credit: "Cephas", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Carduelis_flammea_CT6.jpg" },
     audio: null,
     extra: true
   },
@@ -8001,7 +8001,7 @@ BIRDS.push(
     watching: "Өвөл цэгцүүхэйн сүргийг анхааралтай ажигла.",
     bestTime: "—",
     facts: ["Цантсан цагаан.", "Ууц цагаан.", "Ихэвчлэн нэгтгэдэг."],
-    image: { file: "images/arctic-redpoll.jpg", credit: "Cephas", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Carduelis_flammea_CT6.jpg" },
+    image: { file: "images/arctic-redpoll.jpg", credit: "Cephas", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Carduelis_flammea_CT6.jpg" },
     audio: null,
     extra: true
   },
@@ -8045,7 +8045,7 @@ BIRDS.push(
     watching: "Богд хан уулын шинэсэн ой.",
     bestTime: "Жилийн турш",
     facts: ["Хушуу солбисон.", "Өвөл ч үрждэг.", "Тоть шиг авирдаг."],
-    image: { file: "images/red-crossbill.jpg", credit: "Elaine R. Wilson, www.naturespicsonline.com", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Red_Crossbills_(Male).jpg" },
+    image: { file: "images/red-crossbill.jpg", credit: "Elaine R. Wilson, www.naturespicsonline.com", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Red_Crossbills_(Male).jpg" },
     audio: null,
     extra: true
   },
@@ -8138,7 +8138,7 @@ BIRDS.push(
     watching: "8-р сард Увс нуур.",
     bestTime: "8-р сар",
     facts: ["Нүүр улаан.", "Алтлаг зураастай.", "Өргөст ургамлын үр иддэг."],
-    image: { file: "images/european-goldfinch.jpg", credit: "Giles Laurent", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:072_Wild_European_goldfinch_at_the_Parc_Jura_vaudois_Photo_by_Giles_Laurent.jpg" },
+    image: { file: "images/european-goldfinch.jpg", credit: "Giles Laurent", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:072_Wild_European_goldfinch_at_the_Parc_Jura_vaudois_Photo_by_Giles_Laurent.jpg" },
     audio: null,
     extra: true
   },
@@ -8182,7 +8182,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатар.",
     bestTime: "5, 10-р сар",
     facts: ["Орой хар.", "Уран авхаалжтай.", "Нүүдлийн сүрэг."],
-    image: { file: "images/eurasian-siskin.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_siskin_(Spinus_spinus)_male_Biebrzanski.jpg" },
+    image: { file: "images/eurasian-siskin.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_siskin_(Spinus_spinus)_male_Biebrzanski.jpg" },
     audio: null,
     extra: true
   },
@@ -8226,7 +8226,7 @@ BIRDS.push(
     watching: "5-р сард зүүн нутгийн нууруудыг шалга.",
     bestTime: "5-р сар",
     facts: ["Хамгийн жижиг гахуун.", "Газраас хөөрч чаддаг.", "«Борооны галуу» гэж хочлогддог."],
-    image: { file: "images/red-throated-diver.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-throated_diver_(Gavia_stellata)_breeding_Rif.jpg" },
+    image: { file: "images/red-throated-diver.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-throated_diver_(Gavia_stellata)_breeding_Rif.jpg" },
     audio: null,
     extra: true
   },
@@ -8270,7 +8270,7 @@ BIRDS.push(
     watching: "6-р сард Тэрхийн цагаан нуур, Өгий нуур.",
     bestTime: "6–7-р сар",
     facts: ["Хоёр минут усан дор байж чадна.", "Газар дээр бараг алхаж чаддаггүй.", "Дуу нь сэтгэл хөдөлгөм."],
-    image: { file: "images/black-throated-diver.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Black-throated_Diver,_Oulu,_Finland_02_(15195370798).jpg" },
+    image: { file: "images/black-throated-diver.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Black-throated_Diver,_Oulu,_Finland_02_(15195370798).jpg" },
     audio: null,
     extra: true
   },
@@ -8314,7 +8314,7 @@ BIRDS.push(
     watching: "6-р сард Буйр нуур.",
     bestTime: "6-р сар",
     facts: ["Хараацай шиг шавж барина.", "Сүүл сэрээтэй.", "Австралид өвөлждөг."],
-    image: { file: "images/east-asian-pratincole.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Glareola_maldivarum_-_Beung_Borapet.jpg" },
+    image: { file: "images/east-asian-pratincole.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Glareola_maldivarum_-_Beung_Borapet.jpg" },
     audio: null,
     extra: true
   },
@@ -8358,7 +8358,7 @@ BIRDS.push(
     watching: "Зөвхөн хэт зүүн хязгаарт; үүрлэх газарт нь бүү ойрт.",
     bestTime: "6–9-р сар",
     facts: ["Хамгийн хүнд тогоруудын нэг.", "Байгальд 3000 орчим л үлдсэн.", "Зүүн Азид урт наслалтын бэлгэдэл."],
-    image: { file: "images/red-crowned-crane.jpg", credit: "Alastair Rae from London, United Kingdom", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Grus_japonensis_-Hokkaido,_Japan_-several-8_(1).jpg" },
+    image: { file: "images/red-crowned-crane.jpg", credit: "Alastair Rae from London, United Kingdom", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Grus_japonensis_-Hokkaido,_Japan_-several-8_(1).jpg" },
     audio: null,
     extra: true
   },
@@ -8402,7 +8402,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын амны хад.",
     bestTime: "6–8-р сар",
     facts: ["Ууц цагаан.", "Шавраар битүү үүр засдаг.", "Хөл нь өдтэй."],
-    image: { file: "images/northern-house-martin.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Mehlschwalbe_Delichon_urbicum.jpg" },
+    image: { file: "images/northern-house-martin.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Mehlschwalbe_Delichon_urbicum.jpg" },
     audio: null,
     extra: true
   },
@@ -8446,7 +8446,7 @@ BIRDS.push(
     watching: "Баруун нутгийн уулын хавцал.",
     bestTime: "6–7-р сар",
     facts: ["Доод тал саарал.", "Уулын зүйл.", "Шавран үүртэй."],
-    image: { file: "images/asian-house-martin.jpg", credit: "Delichon_dasypus_-Taiwan-8.jpg: Sin Syue Li\nderivative work: Snowmanradio (talk)", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Delichon_dasypus_-Taiwan-8-4c.jpg" },
+    image: { file: "images/asian-house-martin.jpg", credit: "Delichon_dasypus_-Taiwan-8.jpg: Sin Syue Li\nderivative work: Snowmanradio (talk)", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Delichon_dasypus_-Taiwan-8-4c.jpg" },
     audio: null,
     extra: true
   },
@@ -8490,7 +8490,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн хад.",
     bestTime: "6-р сар",
     facts: ["Лонх хэлбэрийн үүртэй.", "Ууц зэвэрсэн өнгөтэй.", "Их гулсаж нисдэг."],
-    image: { file: "images/red-rumped-swallow.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-rumped_Swallow_(Cecropis_daurica)_Photograph_by_Shantanu_Kuveskar.jpg" },
+    image: { file: "images/red-rumped-swallow.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-rumped_Swallow_(Cecropis_daurica)_Photograph_by_Shantanu_Kuveskar.jpg" },
     audio: null,
     extra: true
   },
@@ -8534,7 +8534,7 @@ BIRDS.push(
     watching: "Зундаа аль ч тосгонд.",
     bestTime: "5–8-р сар",
     facts: ["Хамгийн өргөн тархсан хараацай.", "Урт сүүлний утастай.", "Барилгад үүрлэдэг."],
-    image: { file: "images/barn-swallow.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg" },
+    image: { file: "images/barn-swallow.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg" },
     audio: null,
     extra: true
   },
@@ -8578,7 +8578,7 @@ BIRDS.push(
     watching: "Ёлын амны хавцал.",
     bestTime: "5–8-р сар",
     facts: ["Сүүлэндээ цагаан толботой.", "Хадан дээр амьдардаг.", "Маш тэсвэртэй."],
-    image: { file: "images/eurasian-crag-martin.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Crag-Martin_-_Estremadurai_1779_(16772419967).jpg" },
+    image: { file: "images/eurasian-crag-martin.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Crag-Martin_-_Estremadurai_1779_(16772419967).jpg" },
     audio: null,
     extra: true
   },
@@ -8622,7 +8622,7 @@ BIRDS.push(
     watching: "6-р сард Буйр нуурын элсэн эрэг.",
     bestTime: "6–7-р сар",
     facts: ["Үүрний нүх ухдаг.", "Цээжиндээ бор зурвастай.", "Колони болж амьдардаг."],
-    image: { file: "images/sand-martin.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Sand_martin_(Riparia_riparia),_Guidel-Plage,_Brittany,_France_(19765483180).jpg" },
+    image: { file: "images/sand-martin.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Sand_martin_(Riparia_riparia),_Guidel-Plage,_Brittany,_France_(19765483180).jpg" },
     audio: null,
     extra: true
   },
@@ -8666,7 +8666,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын эрэг.",
     bestTime: "6–7-р сар",
     facts: ["Цайвар өнгөтэй.", "Элсэг эргийнхараацайнаас салсан.", "Хуурай нутгийн хараацай."],
-    image: { file: "images/pale-martin.jpg", credit: "Vladimir Yu. Arkhipov, Arkhivov", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Riparia_diluta.JPG" },
+    image: { file: "images/pale-martin.jpg", credit: "Vladimir Yu. Arkhipov, Arkhivov", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Riparia_diluta.JPG" },
     audio: null,
     extra: true
   },
@@ -8710,7 +8710,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Өргөсөнд агуулах хийдэг.", "Толгой том.", "Зүүн Азийн зүйл."],
-    image: { file: "images/bull-headed-shrike.jpg", credit: "Alpsdake", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lanius_bucephalus.JPG" },
+    image: { file: "images/bull-headed-shrike.jpg", credit: "Alpsdake", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lanius_bucephalus.JPG" },
     audio: null,
     extra: true
   },
@@ -8754,7 +8754,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндийн бут.",
     bestTime: "5–8-р сар",
     facts: ["«Махчин бор шувуу».", "Хар багтай.", "Хойд нутагт элбэг."],
-    image: { file: "images/brown-shrike.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lanius_cristatus_-_Surin.jpg" },
+    image: { file: "images/brown-shrike.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lanius_cristatus_-_Surin.jpg" },
     audio: null,
     extra: true
   },
@@ -8798,7 +8798,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "5–8-р сар",
     facts: ["Сүүл хүрэн.", "Цөлийн дунхай.", "Өнгөний нэрээр нэрлэгдсэн."],
-    image: { file: "images/isabelline-shrike.jpg", credit: "Koshy Koshy from Faridabad, Haryana, India", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Isabelline_Shrike_(15214160368).jpg" },
+    image: { file: "images/isabelline-shrike.jpg", credit: "Koshy Koshy from Faridabad, Haryana, India", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Isabelline_Shrike_(15214160368).jpg" },
     audio: null,
     extra: true
   },
@@ -8842,7 +8842,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Урт сүүлтэй.", "Бусад шувууг дууриадаг.", "Монголд маш ховор."],
-    image: { file: "images/long-tailed-shrike.jpg", credit: "JJ Harrison", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Long-tailed_Shrilke_0A2A3080.jpg" },
+    image: { file: "images/long-tailed-shrike.jpg", credit: "JJ Harrison", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Long-tailed_Shrilke_0A2A3080.jpg" },
     audio: null,
     extra: true
   },
@@ -8886,7 +8886,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Дух хар.", "Цээж ягаан.", "Холын нүүдэлч."],
-    image: { file: "images/lesser-grey-shrike.jpg", credit: "Derek Keats", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_grey_shrike_(Lanius_minor),_Kruger_National_Park,_South_Africa._-_52804244906.jpg" },
+    image: { file: "images/lesser-grey-shrike.jpg", credit: "Derek Keats", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Lesser_grey_shrike_(Lanius_minor),_Kruger_National_Park,_South_Africa._-_52804244906.jpg" },
     audio: null,
     extra: true
   },
@@ -8930,7 +8930,7 @@ BIRDS.push(
     watching: "Буйр нуурын хээр.",
     bestTime: "Жилийн турш",
     facts: ["Дэлхийн хамгийн том дунхай.", "Далавчиндаа том цагаан толботой.", "Зүүн нутгийн талын шувуу."],
-    image: { file: "images/chinese-grey-shrike.jpg", credit: "Alastair Rae from London, United Kingdom", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Chinese_Grey_Shrike_(15690680610).jpg" },
+    image: { file: "images/chinese-grey-shrike.jpg", credit: "Alastair Rae from London, United Kingdom", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Chinese_Grey_Shrike_(15690680610).jpg" },
     audio: null,
     extra: true
   },
@@ -8974,7 +8974,7 @@ BIRDS.push(
     watching: "Орог нуурын орчмын заг.",
     bestTime: "Жилийн турш",
     facts: ["Нэр нь «харуул» гэсэн утгатай.", "Өргөсөнд олзоо нөөцөлдөг.", "Цөлийн хэлбэр."],
-    image: { file: "images/great-grey-shrike.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Great_Grey_Shrike_in_Bhigwan_August_2025_by_Tisha_Mukherjee_02.jpg" },
+    image: { file: "images/great-grey-shrike.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Great_Grey_Shrike_in_Bhigwan_August_2025_by_Tisha_Mukherjee_02.jpg" },
     audio: null,
     extra: true
   },
@@ -9018,7 +9018,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Дуугаараа нэрлэгдсэн.", "Өвлийг далайд өнгөрөөдөг.", "Дэлхийд эмзэг зүйл."],
-    image: { file: "images/black-legged-kittiwake.jpg", credit: "Yathin S Krishnappa", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Rissa_tridactyla_(Vard%C3%B8,_2012).jpg" },
+    image: { file: "images/black-legged-kittiwake.jpg", credit: "Yathin S Krishnappa", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Rissa_tridactyla_(Vard%C3%B8,_2012).jpg" },
     audio: null,
     extra: true
   },
@@ -9062,7 +9062,7 @@ BIRDS.push(
     watching: "Өгий нуурын цахлайн сүргийг шалга.",
     bestTime: "5–7-р сар",
     facts: ["Хэзээ ч бараан толгойгүй.", "Хавар ягаавтар туяатай.", "Давстай нууранд амьдардаг."],
-    image: { file: "images/slender-billed-gull.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Slender-billed_gull_(Chroicocephalus_genei)_Bahrain.jpg" },
+    image: { file: "images/slender-billed-gull.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Slender-billed_gull_(Chroicocephalus_genei)_Bahrain.jpg" },
     audio: null,
     extra: true
   },
@@ -9106,7 +9106,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагаан нуур.",
     bestTime: "5–7-р сар",
     facts: ["Төвдөд 4500 м өндөрт үрждэг.", "Нүд нь цайвар.", "Энэтхэгт өвөлждөг."],
-    image: { file: "images/brown-headed-gull.jpg", credit: "Mvshreeram", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Brown-headed_Gull._in_breeding_plumage.jpg" },
+    image: { file: "images/brown-headed-gull.jpg", credit: "Mvshreeram", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Brown-headed_Gull._in_breeding_plumage.jpg" },
     audio: null,
     extra: true
   },
@@ -9150,7 +9150,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуурын колони.",
     bestTime: "5–8-р сар",
     facts: ["«Хар» толгой нь үнэндээ бор.", "Өвөл толгойн өнгөө алддаг.", "Монголын хамгийн элбэг цахлай."],
-    image: { file: "images/black-headed-gull.jpg", credit: "Hans Hillewaert", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Chroicocephalus_ridibundus_(summer).jpg" },
+    image: { file: "images/black-headed-gull.jpg", credit: "Hans Hillewaert", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Chroicocephalus_ridibundus_(summer).jpg" },
     audio: null,
     extra: true
   },
@@ -9194,7 +9194,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Дэлхийн хамгийн жижиг цахлай.", "Далавчны доод тал бараан.", "Хараалай шиг нисдэг."],
-    image: { file: "images/little-gull.jpg", credit: "Andrej Chudý from Slovakia", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:%C4%8Cajka_mal%C3%A1_(Larus_minutus)_a_(4834254958).jpg" },
+    image: { file: "images/little-gull.jpg", credit: "Andrej Chudý from Slovakia", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:%C4%8Cajka_mal%C3%A1_(Larus_minutus)_a_(4834254958).jpg" },
     audio: null,
     extra: true
   },
@@ -9238,7 +9238,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Бие нь ягаан.", "Туйл судлаачийн нэрээр нэрлэгдсэн.", "Мөсний захад өвөлждөг."],
-    image: { file: "images/rosss-gull.jpg", credit: "Hiraku Senzaki", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Rhodostethia_rosea,_Shiretoko,_Japan.jpg" },
+    image: { file: "images/rosss-gull.jpg", credit: "Hiraku Senzaki", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Rhodostethia_rosea,_Shiretoko,_Japan.jpg" },
     audio: null,
     extra: true
   },
@@ -9282,7 +9282,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагаан, Хар ус нуур.",
     bestTime: "5–8-р сар",
     facts: ["Хар толгойтой цорын ганц том цахлай.", "Палласын нэрээр нэрлэгдсэн.", "Нуурын арал дээр үүрлэдэг."],
-    image: { file: "images/pallass-gull.jpg", credit: "Dmitry Mikhirev", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Larus_ichtyaetus_1.png" },
+    image: { file: "images/pallass-gull.jpg", credit: "Dmitry Mikhirev", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Larus_ichtyaetus_1.png" },
     audio: null,
     extra: true
   },
@@ -9326,7 +9326,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Японоор «далайн муур».", "Сүүлэндээ хар зурвастай.", "Далайн эргийн зүйл."],
-    image: { file: "images/black-tailed-gull.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Laridae_in_Beijing_Zoo.JPG" },
+    image: { file: "images/black-tailed-gull.jpg", credit: "Wikimedia Commons", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Laridae_in_Beijing_Zoo.JPG" },
     audio: null,
     extra: true
   },
@@ -9370,7 +9370,7 @@ BIRDS.push(
     watching: "Зундаа Буйр нуур.",
     bestTime: "5–9-р сар",
     facts: ["Зөөлөн төрхтэй.", "Талбай дээр хорхой иддэг.", "Муур шиг мяулдаг."],
-    image: { file: "images/mew-gull.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Larus_canus_Common_Gull_in_Norway.jpg" },
+    image: { file: "images/mew-gull.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Larus_canus_Common_Gull_in_Norway.jpg" },
     audio: null,
     extra: true
   },
@@ -9414,7 +9414,7 @@ BIRDS.push(
     watching: "Намар том цахлайнуудыг анхааралтай ажигла.",
     bestTime: "5, 9-р сар",
     facts: ["Ихэнх цахлайнаас бараан нуруутай.", "Сибирийн хэлбэр Монголоор нүүдэллэдэг.", "Хөл шар."],
-    image: { file: "images/lesser-black-backed-gull.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Larus-fuscus-taxbox.jpg" },
+    image: { file: "images/lesser-black-backed-gull.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Larus-fuscus-taxbox.jpg" },
     audio: null,
     extra: true
   },
@@ -9458,7 +9458,7 @@ BIRDS.push(
     watching: "Зундаа Тэрхийн цагаан нуур, Хөвсгөл.",
     bestTime: "5–9-р сар",
     facts: ["Монголын элбэг том цахлай.", "Мөнгөлөг цахлайн цогцод хамаарна.", "Хушуундаа улаан толботой."],
-    image: { file: "images/american-herring-gull.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Herring_Gull_Very_Close.jpg" },
+    image: { file: "images/american-herring-gull.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Herring_Gull_Very_Close.jpg" },
     audio: null,
     extra: true
   },
@@ -9502,7 +9502,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Далавчиндаа хар өнгөгүй.", "Хамгийн том цахлайн нэг.", "Хойд туйлын махчин."],
-    image: { file: "images/glaucous-gull.jpg", credit: "Alastair Rae from London, UK", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Glacous_Gull_on_ice.jpg" },
+    image: { file: "images/glaucous-gull.jpg", credit: "Alastair Rae from London, UK", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Glacous_Gull_on_ice.jpg" },
     audio: null,
     extra: true
   },
@@ -9546,7 +9546,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагааны эрэг; үүрэнд бүү ойрт.",
     bestTime: "6–7-р сар",
     facts: ["Монголын хамгийн жижиг хараалай.", "Дух нь цагаан.", "Нүцгэн хайрган дээр үүрлэдэг."],
-    image: { file: "images/little-tern.jpg", credit: "PetroKaterynych", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg" },
+    image: { file: "images/little-tern.jpg", credit: "PetroKaterynych", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg" },
     audio: null,
     extra: true
   },
@@ -9590,7 +9590,7 @@ BIRDS.push(
     watching: "6-р сард Орог нуур, Буйр нуур.",
     bestTime: "5–7-р сар",
     facts: ["Хуурай газар дээгүүр шавж агнадаг.", "Бүдүүн хар хушуутай.", "Зургаан тивд тархсан."],
-    image: { file: "images/gull-billed-tern.jpg", credit: "Eric Kershner/USFWS", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Gelochelidon_nilotica_vanrossemi.jpg" },
+    image: { file: "images/gull-billed-tern.jpg", credit: "Eric Kershner/USFWS", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Gelochelidon_nilotica_vanrossemi.jpg" },
     audio: null,
     extra: true
   },
@@ -9634,7 +9634,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагаан нуур.",
     bestTime: "5–8-р сар",
     facts: ["Дэлхийн хамгийн том хараалай.", "Тод улаан хушуутай.", "Нуурын арал дээр үүрлэдэг."],
-    image: { file: "images/caspian-tern.jpg", credit: "Mdf", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Sterna-caspia-010.jpg" },
+    image: { file: "images/caspian-tern.jpg", credit: "Mdf", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Sterna-caspia-010.jpg" },
     audio: null,
     extra: true
   },
@@ -9678,7 +9678,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуур.",
     bestTime: "6–7-р сар",
     facts: ["Хөвөгч үүр засдаг.", "Цагаан хацар нь сахал шиг.", "Намгийн хараалзай."],
-    image: { file: "images/whiskered-tern.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Whiskered_tern_(Chlidonias_hybrida_delalandii).jpg" },
+    image: { file: "images/whiskered-tern.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Whiskered_tern_(Chlidonias_hybrida_delalandii).jpg" },
     audio: null,
     extra: true
   },
@@ -9722,7 +9722,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий, Өгий нуур.",
     bestTime: "6–7-р сар",
     facts: ["Бие хар, далавч цагаан.", "Монголд маш элбэг.", "Нисэж явахдаа шавж иддэг."],
-    image: { file: "images/white-winged-tern.jpg", credit: "Nrg800", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Chlidonias_leucopterus_2023-04-08.jpg" },
+    image: { file: "images/white-winged-tern.jpg", credit: "Nrg800", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Chlidonias_leucopterus_2023-04-08.jpg" },
     audio: null,
     extra: true
   },
@@ -9766,7 +9766,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуур.",
     bestTime: "6-р сар",
     facts: ["Далавч нь саарал.", "Хөвөгч ургамал дээр үүрлэдэг.", "Буурал хараалзайтай хамт байдаг."],
-    image: { file: "images/black-tern.jpg", credit: "Andrej Chudý from Slovakia", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:%C4%8Cor%C3%ADk_%C4%8Dierny_(Chlidonias_niger)_a_(4644831482).jpg" },
+    image: { file: "images/black-tern.jpg", credit: "Andrej Chudý from Slovakia", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:%C4%8Cor%C3%ADk_%C4%8Dierny_(Chlidonias_niger)_a_(4644831482).jpg" },
     audio: null,
     extra: true
   },
@@ -9810,7 +9810,7 @@ BIRDS.push(
     watching: "Зундаа Улаанбаатарын Туул гол.",
     bestTime: "6–8-р сар",
     facts: ["Монголын хамгийн элбэг хараалай.", "Шумбаж загас барьдаг.", "Үүрээ ширүүн хамгаалдаг."],
-    image: { file: "images/common-tern.jpg", credit: "MPF", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_04.jpg" },
+    image: { file: "images/common-tern.jpg", credit: "MPF", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2014-05-18_Sterna_hirundo,_Killingworth_Lake,_Northumberland_04.jpg" },
     audio: null,
     extra: true
   },
@@ -9854,7 +9854,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Цээж саарал.", "Маш их нуугддаг.", "Маш ховор."],
-    image: { file: "images/grays-warbler.jpg", credit: "Юлия (wrrite)", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Helopsaltes_amnicola_from_iNaturalist_photo_147015186.jpg" },
+    image: { file: "images/grays-warbler.jpg", credit: "Юлия (wrrite)", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Helopsaltes_amnicola_from_iNaturalist_photo_147015186.jpg" },
     audio: null,
     extra: true
   },
@@ -9947,7 +9947,7 @@ BIRDS.push(
     watching: "6-р сард Хурх.",
     bestTime: "6-р сар",
     facts: ["Ууц зэвэрсэн.", "Сүүлний үзүүр цагаан.", "Хулгана шиг гүйдэг."],
-    image: { file: "images/rusty-rumped-warbler.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pallas%27s_Grasshopper_Warbler_by_Tisha_Mukherjee_14.jpg" },
+    image: { file: "images/rusty-rumped-warbler.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pallas%27s_Grasshopper_Warbler_by_Tisha_Mukherjee_14.jpg" },
     audio: null,
     extra: true
   },
@@ -9991,7 +9991,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Энгийн бор.", "Зүүн хойд Азийн зүйл.", "Нуугдмал."],
-    image: { file: "images/middendorffs-warbler.jpg", credit: "Tokumi Ohsaka", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Wiki-simasennyu.jpg" },
+    image: { file: "images/middendorffs-warbler.jpg", credit: "Tokumi Ohsaka", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Wiki-simasennyu.jpg" },
     audio: null,
     extra: true
   },
@@ -10035,7 +10035,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Цээж судалтай.", "Шавж шиг дуутай.", "Хулгана шиг."],
-    image: { file: "images/lanceolated-warbler.jpg", credit: "Александр Чегодаев", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Locustella_lanceolata_295726934.jpg" },
+    image: { file: "images/lanceolated-warbler.jpg", credit: "Александр Чегодаев", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Locustella_lanceolata_295726934.jpg" },
     audio: null,
     extra: true
   },
@@ -10079,7 +10079,7 @@ BIRDS.push(
     watching: "6-р сарын үдэш Хар ус нуур.",
     bestTime: "6-р сар",
     facts: ["Дүнгэнэсэн дуутай.", "Энгийн бор.", "Баруун нутгийн зэгсэнд."],
-    image: { file: "images/savis-warbler.jpg", credit: "Sgbeer", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rohrschwirl_Chiemgau.jpg" },
+    image: { file: "images/savis-warbler.jpg", credit: "Sgbeer", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rohrschwirl_Chiemgau.jpg" },
     audio: null,
     extra: true
   },
@@ -10123,7 +10123,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн нуга.",
     bestTime: "6-р сар",
     facts: ["Энгийн бор.", "Шавж шиг дуутай.", "Хэнтийн нугад."],
-    image: { file: "images/chinese-bush-warbler.jpg", credit: "Анна Васильченко", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Locustella_tacsanowskia_-_February_2020.jpg" },
+    image: { file: "images/chinese-bush-warbler.jpg", credit: "Анна Васильченко", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Locustella_tacsanowskia_-_February_2020.jpg" },
     audio: null,
     extra: true
   },
@@ -10216,7 +10216,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хоолой толботой.", "Гималайн зүйл.", "Нуугдмал."],
-    image: { file: "images/spotted-bush-warbler.jpg", credit: "steve b", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Locustella_thoracica_-_steve_b_-_521762185.jpeg" },
+    image: { file: "images/spotted-bush-warbler.jpg", credit: "steve b", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Locustella_thoracica_-_steve_b_-_521762185.jpeg" },
     audio: null,
     extra: true
   },
@@ -10260,7 +10260,7 @@ BIRDS.push(
     watching: "6-р сард Баян-Өлгийн голын эрэг.",
     bestTime: "6–8-р сар",
     facts: ["Зөгийн хатгуурыг арилгадаг.", "Нүхэнд үүрлэдэг.", "Солонго мэт өнгөтэй."],
-    image: { file: "images/european-bee-eater.jpg", credit: "Andy Morffew from Itchen Abbas, Hampshire, UK", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Bee-eater_(19270331108).jpg" },
+    image: { file: "images/european-bee-eater.jpg", credit: "Andy Morffew from Itchen Abbas, Hampshire, UK", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Bee-eater_(19270331108).jpg" },
     audio: null,
     extra: true
   },
@@ -10304,7 +10304,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Сүүлээ хажуу тийш найлгадаг.", "Модонд үүрлэдэг.", "Цээжиндээ хоёр зурвастай."],
-    image: { file: "images/forest-wagtail.jpg", credit: "Jason Thompson", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Forest_Wagtail_(cropped).jpg" },
+    image: { file: "images/forest-wagtail.jpg", credit: "Jason Thompson", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Forest_Wagtail_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -10348,7 +10348,7 @@ BIRDS.push(
     watching: "Буйр нуурын өтгөн шугуйг шалга.",
     bestTime: "8-р сар",
     facts: ["Маш нууцхан.", "Нуруундаа цагаан зураастай.", "Оросын голын нэрээр нэрлэгдсэн."],
-    image: { file: "images/pechora-pipit.jpg", credit: "Валерия Ковалева", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_gustavi_214075656.jpg" },
+    image: { file: "images/pechora-pipit.jpg", credit: "Валерия Ковалева", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_gustavi_214075656.jpg" },
     audio: null,
     extra: true
   },
@@ -10392,7 +10392,7 @@ BIRDS.push(
     watching: "6-р сард Алтайн ойн зах.",
     bestTime: "6–9-р сар",
     facts: ["Шүхэр мэт дуулах нислэгтэй.", "Африкт өвөлждөг.", "Модны оройгоос дуулдаг."],
-    image: { file: "images/tree-pipit.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Tree_Pipit_(Anthus_trivialis)_(39760400431)_(cropped).jpg" },
+    image: { file: "images/tree-pipit.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Tree_Pipit_(Anthus_trivialis)_(39760400431)_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -10436,7 +10436,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн ой.",
     bestTime: "5–9-р сар",
     facts: ["Нүдний ард толботой.", "Сүүлээ дохидог.", "Ойн шийхнүүхэй."],
-    image: { file: "images/olive-backed-pipit.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Olive-backed_pipit_(Anthus_hodgsoni_hodgsoni)_Phulchowki.jpg" },
+    image: { file: "images/olive-backed-pipit.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Olive-backed_pipit_(Anthus_hodgsoni_hodgsoni)_Phulchowki.jpg" },
     audio: null,
     extra: true
   },
@@ -10480,7 +10480,7 @@ BIRDS.push(
     watching: "9-р сард Буйр нуур.",
     bestTime: "5, 9-р сар",
     facts: ["Хавар хоолой улаан.", "Хойд туйлд үрждэг.", "Нарийн дуутай."],
-    image: { file: "images/red-throated-pipit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Red-throated_Pipit.jpg" },
+    image: { file: "images/red-throated-pipit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Red-throated_Pipit.jpg" },
     audio: null,
     extra: true
   },
@@ -10524,7 +10524,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Маш ховор.", "Сүүлээ дохидог.", "Сибирийн хэлбэр."],
-    image: { file: "images/american-pipit.jpg", credit: "Kathy &amp; Sam from Beaverton OR, USA", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_rubescens_-Harney_County,_Oregon,_USA-8.jpg" },
+    image: { file: "images/american-pipit.jpg", credit: "Kathy &amp; Sam from Beaverton OR, USA", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_rubescens_-Harney_County,_Oregon,_USA-8.jpg" },
     audio: null,
     extra: true
   },
@@ -10568,7 +10568,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "6–7-р сар",
     facts: ["Хавар цээж ягаан.", "Уулсад үрждэг.", "Усны ойролцоо өвөлждөг."],
-    image: { file: "images/water-pipit.jpg", credit: "Zeynel Cebeci", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_spinoletta_-_Water_Pipit,_Kahramanmara%C5%9F_2016-11-18_01-10.jpg" },
+    image: { file: "images/water-pipit.jpg", credit: "Zeynel Cebeci", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_spinoletta_-_Water_Pipit,_Kahramanmara%C5%9F_2016-11-18_01-10.jpg" },
     audio: null,
     extra: true
   },
@@ -10612,7 +10612,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "5–8-р сар",
     facts: ["Хойд хумс урт.", "Босоо зогсдог.", "Францын байгаль судлаачийн нэрээр нэрлэгдсэн."],
-    image: { file: "images/richards-pipit.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_richardi_-_Laem_Pak_Bia.jpg" },
+    image: { file: "images/richards-pipit.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Anthus_richardi_-_Laem_Pak_Bia.jpg" },
     audio: null,
     extra: true
   },
@@ -10656,7 +10656,7 @@ BIRDS.push(
     watching: "6-р сард Хустайн хээр.",
     bestTime: "5–8-р сар",
     facts: ["Голчлон Монголд үрждэг.", "Хээрийн шийхнүүхэйтэй маш төстэй.", "Энэтхэгт өвөлждөг."],
-    image: { file: "images/blyths-pipit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Blyth_s_Pipit_Anthus_godlewskii.jpg" },
+    image: { file: "images/blyths-pipit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Blyth_s_Pipit_Anthus_godlewskii.jpg" },
     audio: null,
     extra: true
   },
@@ -10700,7 +10700,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын орчмын хуурай хээр.",
     bestTime: "6–7-р сар",
     facts: ["Нуруу бараг судалгүй.", "Цэгцгий шиг.", "Баруун нутгийн хээрийн шувуу."],
-    image: { file: "images/tawny-pipit.jpg", credit: "Afsarnayakkan", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Tawny_pipit_47.jpg" },
+    image: { file: "images/tawny-pipit.jpg", credit: "Afsarnayakkan", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Tawny_pipit_47.jpg" },
     audio: null,
     extra: true
   },
@@ -10744,7 +10744,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын нуга.",
     bestTime: "6–8-р сар",
     facts: ["Малыг дагадаг.", "Олон өнгийн хэлбэртэй.", "Африкт өвөлждөг."],
-    image: { file: "images/yellow-wagtail.jpg", credit: "Frebeck", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Wiesenschafstelze.JPG" },
+    image: { file: "images/yellow-wagtail.jpg", credit: "Frebeck", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Wiesenschafstelze.JPG" },
     audio: null,
     extra: true
   },
@@ -10788,7 +10788,7 @@ BIRDS.push(
     watching: "Зундаа Тэрэлжийн горхи.",
     bestTime: "5–9-р сар",
     facts: ["Хамгийн урт сүүлтэй цэгцгий.", "Хурдан горхинд дуртай.", "Сааралаас илүү шар."],
-    image: { file: "images/grey-wagtail.jpg", credit: "Herwig Winter", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Gebirgsstelze_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg" },
+    image: { file: "images/grey-wagtail.jpg", credit: "Herwig Winter", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Gebirgsstelze_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg" },
     audio: null,
     extra: true
   },
@@ -10832,7 +10832,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "5–8-р сар",
     facts: ["Толгой шар.", "Монголд маш элбэг.", "Баруун тийш тархаж байна."],
-    image: { file: "images/citrine-wagtail.jpg", credit: "Ron Knight from Seaford, East Sussex, United Kingdom", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Citrine_Wagtail_(Motacilla_citreola)_(14343964296).jpg" },
+    image: { file: "images/citrine-wagtail.jpg", credit: "Ron Knight from Seaford, East Sussex, United Kingdom", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Citrine_Wagtail_(Motacilla_citreola)_(14343964296).jpg" },
     audio: null,
     extra: true
   },
@@ -10876,7 +10876,7 @@ BIRDS.push(
     watching: "Зундаа усны ойролцоо хаана ч.",
     bestTime: "4–9-р сар",
     facts: ["Гэрт үүрлэдэг.", "Монголд хэд хэдэн хэлбэртэй.", "Сүүлээ үргэлж хөдөлгөдөг."],
-    image: { file: "images/white-wagtail.jpg", credit: "Jac. Janssen from BAARLO LB, NL", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:20180415_015_Winterswijk_Witte_kwikstaart_(40785272624).jpg" },
+    image: { file: "images/white-wagtail.jpg", credit: "Jac. Janssen from BAARLO LB, NL", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:20180415_015_Winterswijk_Witte_kwikstaart_(40785272624).jpg" },
     audio: null,
     extra: true
   },
@@ -10920,7 +10920,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын ой.",
     bestTime: "6–8-р сар",
     facts: ["Нэг суудалдаа эргэж ирдэг.", "Орой судалтай.", "Африкт өвөлждөг."],
-    image: { file: "images/spotted-flycatcher.jpg", credit: "Бусел В.А.", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Muscicapa_striata_%D0%BC%D1%83%D1%85%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D1%96%D1%80%D0%B0.jpg" },
+    image: { file: "images/spotted-flycatcher.jpg", credit: "Бусел В.А.", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Muscicapa_striata_%D0%BC%D1%83%D1%85%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D1%96%D1%80%D0%B0.jpg" },
     audio: null,
     extra: true
   },
@@ -10964,7 +10964,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Далавч маш урт.", "Тод судалтай.", "Монголд ховор."],
-    image: { file: "images/grey-streaked-flycatcher.jpg", credit: "Alpsdake", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Muscicapa_griseisticta.JPG" },
+    image: { file: "images/grey-streaked-flycatcher.jpg", credit: "Alpsdake", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Muscicapa_griseisticta.JPG" },
     audio: null,
     extra: true
   },
@@ -11008,7 +11008,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн ой.",
     bestTime: "6–8-р сар",
     facts: ["Хажуу бүдэг толботой.", "Тайгын шувуу.", "Далавч урт."],
-    image: { file: "images/dark-sided-flycatcher.jpg", credit: "https://www.flickr.com/photos/79492850@N00/", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Muscicapa_sibirica.jpg" },
+    image: { file: "images/dark-sided-flycatcher.jpg", credit: "https://www.flickr.com/photos/79492850@N00/", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Muscicapa_sibirica.jpg" },
     audio: null,
     extra: true
   },
@@ -11052,7 +11052,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5–9-р сар",
     facts: ["Нүдний том цагирагтай.", "Энгийн өнгөтэй.", "Элбэг нүүдэлч."],
-    image: { file: "images/asian-brown-flycatcher.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Asian_brown_flycatcher_(Muscicapa_dauurica_siamensis)_Angkor_2.jpg" },
+    image: { file: "images/asian-brown-flycatcher.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Asian_brown_flycatcher_(Muscicapa_dauurica_siamensis)_Angkor_2.jpg" },
     audio: null,
     extra: true
   },
@@ -11096,7 +11096,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Цээж улбар шар.", "Их Британийн үндэсний шувуу.", "Монголд ховор."],
-    image: { file: "images/european-robin.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg" },
+    image: { file: "images/european-robin.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg" },
     audio: null,
     extra: true
   },
@@ -11140,7 +11140,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Сүүл хүрэн.", "Сүүлээ чичиргэдэг.", "Нууцхан."],
-    image: { file: "images/rufous-tailed-robin.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Luscinia_sibilans_-_Khao_Yai.jpg" },
+    image: { file: "images/rufous-tailed-robin.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Luscinia_sibilans_-_Khao_Yai.jpg" },
     audio: null,
     extra: true
   },
@@ -11184,7 +11184,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Хөх цагаан өнгөтэй.", "Нууцхан.", "Зүүн нутгийн ойд."],
-    image: { file: "images/siberian-blue-robin.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Luscinia_cyane_-_Khao_Yai.jpg" },
+    image: { file: "images/siberian-blue-robin.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Luscinia_cyane_-_Khao_Yai.jpg" },
     audio: null,
     extra: true
   },
@@ -11228,7 +11228,7 @@ BIRDS.push(
     watching: "Бүрий болоход голын эргийн шугуй.",
     bestTime: "6-р сар",
     facts: ["Шөнө дуулдаг.", "Сүүл хүрэн.", "Яруу найрагт алдартай."],
-    image: { file: "images/common-nightingale.jpg", credit: "Warrieboy", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Luscinia_megarhynchos_-_Common_nightingale_-_Nachtegaal_(cropped).jpg" },
+    image: { file: "images/common-nightingale.jpg", credit: "Warrieboy", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Luscinia_megarhynchos_-_Common_nightingale_-_Nachtegaal_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -11272,7 +11272,7 @@ BIRDS.push(
     watching: "5-р сард Тэрэлжийн ой.",
     bestTime: "5–9-р сар",
     facts: ["Сүүл хөх.", "Хажуу улбар шар.", "Баруун тийш тархаж байна."],
-    image: { file: "images/red-flanked-bluetail.jpg", credit: "M.Nishimura", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tarsiger_cyanurus.jpg" },
+    image: { file: "images/red-flanked-bluetail.jpg", credit: "M.Nishimura", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tarsiger_cyanurus.jpg" },
     audio: null,
     extra: true
   },
@@ -11316,7 +11316,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "5–9-р сар",
     facts: ["Сүүлээ өргөдөг.", "Хавар хоолой улбар шар.", "Маш элбэг."],
-    image: { file: "images/taiga-flycatcher.jpg", credit: "Arunshank", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Taiga_Flycatcher.jpg" },
+    image: { file: "images/taiga-flycatcher.jpg", credit: "Arunshank", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Taiga_Flycatcher.jpg" },
     audio: null,
     extra: true
   },
@@ -11360,7 +11360,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "5-р сар",
     facts: ["Цээж улбар шар.", "Япон нэртэй.", "Ховор."],
-    image: { file: "images/mugimaki-flycatcher.jpg", credit: "Wang.QG", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ficedula_mugimaki_243653507.jpg" },
+    image: { file: "images/mugimaki-flycatcher.jpg", credit: "Wang.QG", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Ficedula_mugimaki_243653507.jpg" },
     audio: null,
     extra: true
   },
@@ -11404,7 +11404,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хөмсөг шар.", "Хоолой улбар шар.", "Маш ховор."],
-    image: { file: "images/narcissus-flycatcher.jpg", credit: "Kuribo", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Narcissus_Flycatcher-cropped.jpg" },
+    image: { file: "images/narcissus-flycatcher.jpg", credit: "Kuribo", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Narcissus_Flycatcher-cropped.jpg" },
     audio: null,
     extra: true
   },
@@ -11448,7 +11448,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Ууц шар.", "Цагаан хөмсөгтэй.", "Зүүн нутгийн ойд."],
-    image: { file: "images/yellow-rumped-flycatcher.jpg", credit: "Khoitran1957", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%9Bp_ru%E1%BB%93i_v%C3%A0ng_(cropped).jpg" },
+    image: { file: "images/yellow-rumped-flycatcher.jpg", credit: "Khoitran1957", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%9Bp_ru%E1%BB%93i_v%C3%A0ng_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -11492,7 +11492,7 @@ BIRDS.push(
     watching: "6-р сард Алтайн хөндий.",
     bestTime: "5–8-р сар",
     facts: ["Нуруу зэвэрсэн өнгөтэй.", "Далавчиндаа цагаан толботой.", "Уулын галсүүлт."],
-    image: { file: "images/eversmanns-redstart.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Eversmann%27s_Redstart_-_Kazakistan_S4E3844_(19357362412).jpg" },
+    image: { file: "images/eversmanns-redstart.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Eversmann%27s_Redstart_-_Kazakistan_S4E3844_(19357362412).jpg" },
     audio: null,
     extra: true
   },
@@ -11536,7 +11536,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн ойн зах.",
     bestTime: "6-р сар",
     facts: ["Улаан сүүлээ чичиргэдэг.", "Дух цагаан.", "Африкт өвөлждөг."],
-    image: { file: "images/common-redstart.jpg", credit: "Jerzy Strzelecki", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Phoenicurus_phoenicurus_08(js),_Lodz_(Poland).jpg" },
+    image: { file: "images/common-redstart.jpg", credit: "Jerzy Strzelecki", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Phoenicurus_phoenicurus_08(js),_Lodz_(Poland).jpg" },
     audio: null,
     extra: true
   },
@@ -11580,7 +11580,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "5–8-р сар",
     facts: ["Хөө хар өнгөтэй.", "Хадтай газар амьдардаг.", "Сүүл хүрэн."],
-    image: { file: "images/black-redstart.jpg", credit: "El Golli Mohamed", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rougequeue_noir_ichkeul058_(cropped).jpg" },
+    image: { file: "images/black-redstart.jpg", credit: "El Golli Mohamed", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rougequeue_noir_ichkeul058_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -11624,7 +11624,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Хоолой цагаан.", "Ойн донгор.", "Өнгөлөг."],
-    image: { file: "images/white-throated-rock-thrush.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Monticola_gularis_male_non-breeding_-_Khao_Yai.jpg" },
+    image: { file: "images/white-throated-rock-thrush.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Monticola_gularis_male_non-breeding_-_Khao_Yai.jpg" },
     audio: null,
     extra: true
   },
@@ -11668,7 +11668,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн хад.",
     bestTime: "5–8-р сар",
     facts: ["Цээж улбар шар.", "Нуруундаа цагаан толботой.", "Африкт өвөлждөг."],
-    image: { file: "images/common-rock-thrush.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Monsax.jpg" },
+    image: { file: "images/common-rock-thrush.jpg", credit: "Pierre Dalous", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Monsax.jpg" },
     audio: null,
     extra: true
   },
@@ -11712,7 +11712,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Бие хөх.", "Мальтын үндэсний шувуу.", "Монголд маш ховор."],
-    image: { file: "images/blue-rock-thrush.jpg", credit: "jose maria carretero palacios from jerez de los caballeros, españa", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Monticola_solitarius,_Spain_1.jpg" },
+    image: { file: "images/blue-rock-thrush.jpg", credit: "jose maria carretero palacios from jerez de los caballeros, españa", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Monticola_solitarius,_Spain_1.jpg" },
     audio: null,
     extra: true
   },
@@ -11805,7 +11805,7 @@ BIRDS.push(
     watching: "5-р сард Тэрэлжийн хад.",
     bestTime: "5–8-р сар",
     facts: ["14,000 км нүүдэллэдэг.", "Сүүлэндээ хар «Т»-тэй.", "Монголд элбэг."],
-    image: { file: "images/northern-wheatear.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Steinschmaetzer_Northern_wheatear_male.jpg" },
+    image: { file: "images/northern-wheatear.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Steinschmaetzer_Northern_wheatear_male.jpg" },
     audio: null,
     extra: true
   },
@@ -11849,7 +11849,7 @@ BIRDS.push(
     watching: "5-р сард аль ч тал хээрт.",
     bestTime: "4–8-р сар",
     facts: ["Нүхэнд үүрлэдэг.", "Монголын хамгийн элбэг чогчиго.", "Маш сайн дууриагч."],
-    image: { file: "images/isabelline-wheatear.jpg", credit: "Lip Kee Yap", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Isabelline_wheatear_(Oenanthe_isabellina)_male,_non-breeding.jpg" },
+    image: { file: "images/isabelline-wheatear.jpg", credit: "Lip Kee Yap", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Isabelline_wheatear_(Oenanthe_isabellina)_male,_non-breeding.jpg" },
     audio: null,
     extra: true
   },
@@ -11893,7 +11893,7 @@ BIRDS.push(
     watching: "5-р сард говь.",
     bestTime: "5–8-р сар",
     facts: ["Сүүл хар.", "Цөлийн шувуу.", "Хоолой хар."],
-    image: { file: "images/desert-wheatear.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Desert_Wheatear_(Oenanthe_deserti)_Photograph_by_Shantanu_Kuveskar.jpg" },
+    image: { file: "images/desert-wheatear.jpg", credit: "Shantanu Kuveskar", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Desert_Wheatear_(Oenanthe_deserti)_Photograph_by_Shantanu_Kuveskar.jpg" },
     audio: null,
     extra: true
   },
@@ -11986,7 +11986,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын амны баянбүрд.",
     bestTime: "5-р сар",
     facts: ["Алтан өнгөтэй.", "Лимбэ мэт дуутай.", "Модны оройд нуугддаг."],
-    image: { file: "images/eurasian-golden-oriole.jpg", credit: "Apatura1955", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Rigogolo-(Oriolus_oriolus)_Lazio,_isola_di_Ventotene_(LT)_19.4.2024_(cropped).png" },
+    image: { file: "images/eurasian-golden-oriole.jpg", credit: "Apatura1955", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Rigogolo-(Oriolus_oriolus)_Lazio,_isola_di_Ventotene_(LT)_19.4.2024_(cropped).png" },
     audio: null,
     extra: true
   },
@@ -12030,7 +12030,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлж.",
     bestTime: "6-р сар",
     facts: ["Дагзандаа хар зурвастай.", "Тод шар.", "Өлгүүр үүртэй."],
-    image: { file: "images/black-naped-oriole.jpg", credit: "J.M.Garg", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Black-naped_Oriole_eyeing_on_Lannea_coromandelica_fruits_W_IMG_7449.jpg" },
+    image: { file: "images/black-naped-oriole.jpg", credit: "J.M.Garg", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Black-naped_Oriole_eyeing_on_Lannea_coromandelica_fruits_W_IMG_7449.jpg" },
     audio: null,
     extra: true
   },
@@ -12074,7 +12074,7 @@ BIRDS.push(
     watching: "5-р сард Хурхын хөндийн тал хээрт, холоос.",
     bestTime: "5-р сар",
     facts: ["Дэлхийн хамгийн хүнд нисдэг шувуу.", "Эр нь эмээсээ дөрөв дахин хүнд байж болно.", "Азид устах аюулд орсон."],
-    image: { file: "images/great-bustard.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Otis_tarda,_Hortobagy,_Hungary_1.jpg" },
+    image: { file: "images/great-bustard.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Otis_tarda,_Hortobagy,_Hungary_1.jpg" },
     audio: null,
     extra: true
   },
@@ -12118,7 +12118,7 @@ BIRDS.push(
     watching: "Хавар Өмнөд говьд; хол зайтай ажигла.",
     bestTime: "4–6-р сар",
     facts: ["Арабын шонхорчдын дуртай олз.", "Дэлхийд эмзэг зүйл.", "Эр нь хүзүүний өдөөрөө үзүүлбэр хийдэг."],
-    image: { file: "images/houbara-bustard.jpg", credit: "Mourad Harzallah", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Chlamydotis_undulata_250544786.jpg" },
+    image: { file: "images/houbara-bustard.jpg", credit: "Mourad Harzallah", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Chlamydotis_undulata_250544786.jpg" },
     audio: null,
     extra: true
   },
@@ -12162,7 +12162,7 @@ BIRDS.push(
     watching: "5, 9-р сард Өгий нуур.",
     bestTime: "5, 9-р сар",
     facts: ["Гадна хуруу нь хойш эргэдэг.", "Антарктидаас бусад бүх тивд тархсан.", "Агаарын эсэргүүцэл багасгахын тулд загасаа толгойгоор нь урагш барьдаг."],
-    image: { file: "images/osprey.jpg", credit: "Chuck Homler / Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Osprey_Perched_Snag_Heislerville.jpg" },
+    image: { file: "images/osprey.jpg", credit: "Chuck Homler / Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Osprey_Perched_Snag_Heislerville.jpg" },
     audio: null,
     extra: true
   },
@@ -12206,7 +12206,7 @@ BIRDS.push(
     watching: "Хар ус нуурын шагшуурга.",
     bestTime: "Жилийн турш",
     facts: ["Хар сахалтай.", "Тусдаа овогтой.", "Өвөл хоолоо сольдог."],
-    image: { file: "images/bearded-reedling.jpg", credit: "Hobbyfotowiki", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Bearded_reedling_(Panurus_biarmicus).jpg" },
+    image: { file: "images/bearded-reedling.jpg", credit: "Hobbyfotowiki", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Bearded_reedling_(Panurus_biarmicus).jpg" },
     audio: null,
     extra: true
   },
@@ -12250,7 +12250,7 @@ BIRDS.push(
     watching: "Богд хан уулын ой.",
     bestTime: "Жилийн турш",
     facts: ["Дагзандаа цагаан толботой.", "Хоол нөөцөлдөг.", "Монголын хамгийн жижиг хөхбух."],
-    image: { file: "images/coal-tit.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Coal_Tit_2026_03_23.jpg" },
+    image: { file: "images/coal-tit.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Coal_Tit_2026_03_23.jpg" },
     audio: null,
     extra: true
   },
@@ -12294,7 +12294,7 @@ BIRDS.push(
     watching: "Богд хан уул.",
     bestTime: "Жилийн турш",
     facts: ["Орой гялгар.", "«Пичу» дуутай.", "Намгаас зайлсхийдэг."],
-    image: { file: "images/marsh-tit.jpg", credit: "Stephan Sprinz", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Sumpfmeise_im_NSG_Hirschacker_und_Dossenwald_2.jpg" },
+    image: { file: "images/marsh-tit.jpg", credit: "Stephan Sprinz", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Sumpfmeise_im_NSG_Hirschacker_und_Dossenwald_2.jpg" },
     audio: null,
     extra: true
   },
@@ -12338,7 +12338,7 @@ BIRDS.push(
     watching: "Богд хан уул.",
     bestTime: "Жилийн турш",
     facts: ["Үүрний хөндийгөө өөрөө ухдаг.", "Орой хөө хар.", "Маш элбэг."],
-    image: { file: "images/willow-tit.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Poecile_montanus_kleinschmidti.jpg" },
+    image: { file: "images/willow-tit.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Poecile_montanus_kleinschmidti.jpg" },
     audio: null,
     extra: true
   },
@@ -12382,7 +12382,7 @@ BIRDS.push(
     watching: "Өвөл Тэрэлжийн ой.",
     bestTime: "Жилийн турш",
     facts: ["Орой бор.", "Хэт хүйтнийг даадаг.", "Тайгын шувуу."],
-    image: { file: "images/siberian-tit.jpg", credit: "Lucwrte", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Siberian_Tit_(Poecile_cinctus)_in_Sodankyl%C3%A4,_Finland.jpg" },
+    image: { file: "images/siberian-tit.jpg", credit: "Lucwrte", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Siberian_Tit_(Poecile_cinctus)_in_Sodankyl%C3%A4,_Finland.jpg" },
     audio: null,
     extra: true
   },
@@ -12426,7 +12426,7 @@ BIRDS.push(
     watching: "Өвөл Улаанбаатарын Туул гол.",
     bestTime: "Жилийн турш",
     facts: ["Цагаан хөх өнгөтэй.", "Сүүл урт.", "Улаанбаатарт элбэг."],
-    image: { file: "images/azure-tit.jpg", credit: "https://www.flickr.com/photos/jargals004", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Azure_Tit_-_Parus_cyanus.jpg" },
+    image: { file: "images/azure-tit.jpg", credit: "https://www.flickr.com/photos/jargals004", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Azure_Tit_-_Parus_cyanus.jpg" },
     audio: null,
     extra: true
   },
@@ -12470,7 +12470,7 @@ BIRDS.push(
     watching: "Улаанбаатарын аль ч цэцэрлэгт хүрээлэн.",
     bestTime: "Жилийн турш",
     facts: ["Хамгийн том хөхбух.", "Маш уян хатан.", "Улаанбаатарт элбэг."],
-    image: { file: "images/great-tit.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_du_Rouge-Cloitre,_For%C3%AAt_de_Soignes,_Brussels_(26194636951).jpg" },
+    image: { file: "images/great-tit.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_du_Rouge-Cloitre,_For%C3%AAt_de_Soignes,_Brussels_(26194636951).jpg" },
     audio: null,
     extra: true
   },
@@ -12514,7 +12514,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Шар өнгөгүй.", "Цөлийн хэлбэр.", "Заримдаа тусдаа зүйл гэж үздэг."],
-    image: { file: "images/turkestan-tit.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_du_Rouge-Cloitre,_For%C3%AAt_de_Soignes,_Brussels_(26194636951).jpg" },
+    image: { file: "images/turkestan-tit.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_du_Rouge-Cloitre,_For%C3%AAt_de_Soignes,_Brussels_(26194636951).jpg" },
     audio: null,
     extra: true
   },
@@ -12558,7 +12558,7 @@ BIRDS.push(
     watching: "6-р сард говийн баянбүрд.",
     bestTime: "5–6-р сар",
     facts: ["Цөлийн боршувуу.", "Заган төгөлд.", "Толгойд шанган тууз."],
-    image: { file: "images/saxaul-sparrow.jpg", credit: "Flickr user Alastair Rae at Flickr.", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Saxaul_Sparrow.jpg" },
+    image: { file: "images/saxaul-sparrow.jpg", credit: "Flickr user Alastair Rae at Flickr.", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Saxaul_Sparrow.jpg" },
     audio: null,
     extra: true
   },
@@ -12602,7 +12602,7 @@ BIRDS.push(
     watching: "Аль ч сумын төв.",
     bestTime: "Жилийн турш",
     facts: ["Хүнтэй хамт амьдардаг.", "Орой саарал.", "Хаа сайгүй."],
-    image: { file: "images/house-sparrow.jpg", credit: "Rhododendrites", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:House_sparrow_male_in_Prospect_Park_(53532).jpg" },
+    image: { file: "images/house-sparrow.jpg", credit: "Rhododendrites", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:House_sparrow_male_in_Prospect_Park_(53532).jpg" },
     audio: null,
     extra: true
   },
@@ -12646,7 +12646,7 @@ BIRDS.push(
     watching: "Улаанбаатарын хаана ч.",
     bestTime: "Жилийн турш",
     facts: ["Хацарт толботой.", "Орой хүрэн.", "Хамгийн элбэг боршувуу."],
-    image: { file: "images/eurasian-tree-sparrow.jpg", credit: "Laitche", via: "Wikimedia Commons Â· Public domain", source: "https://commons.wikimedia.org/wiki/File:Tree_Sparrow_August_2007_Osaka_Japan.jpg" },
+    image: { file: "images/eurasian-tree-sparrow.jpg", credit: "Laitche", via: "Wikimedia Commons · Public domain", source: "https://commons.wikimedia.org/wiki/File:Tree_Sparrow_August_2007_Osaka_Japan.jpg" },
     audio: null,
     extra: true
   },
@@ -12690,7 +12690,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуурын хад.",
     bestTime: "6-р сар",
     facts: ["Толгой судалтай.", "Хоолойд шар толботой.", "Маш элбэг."],
-    image: { file: "images/rock-sparrow.jpg", credit: "MPF", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2017-05-02_Petronia_petronia,_Monestir_d%27Avellanes,_Catalunya_07.jpg" },
+    image: { file: "images/rock-sparrow.jpg", credit: "MPF", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2017-05-02_Petronia_petronia,_Monestir_d%27Avellanes,_Catalunya_07.jpg" },
     audio: null,
     extra: true
   },
@@ -12734,7 +12734,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуурын орчмын тал.",
     bestTime: "6-р сар",
     facts: ["Мэрэгчийн нүхэнд үүрлэдэг.", "Нүүр хар.", "Тал хээрийн шувуу."],
-    image: { file: "images/p-re-davids-snowfinch.jpg", credit: "Vladimir Yu. Arkhipov, Arkhivov", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Pyrgilauda_davidiana.JPG" },
+    image: { file: "images/p-re-davids-snowfinch.jpg", credit: "Vladimir Yu. Arkhipov, Arkhivov", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Pyrgilauda_davidiana.JPG" },
     audio: null,
     extra: true
   },
@@ -12778,7 +12778,7 @@ BIRDS.push(
     watching: "Ховор — харсан бол байгаль хамгаалах байгууллагад мэдэгдээрэй.",
     bestTime: "5–9-р сар",
     facts: ["Хамгийн хүнд нисдэг шувуудын нэг.", "Хушууг нь хусуур болгодог байв.", "Монголын популяци бараг устсан."],
-    image: { file: "images/dalmatian-pelican.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Dalmatian_Pelican_Pelecanus_crispus_by_Dr._Raju_Kasambe_DSCN6899_(3).jpg" },
+    image: { file: "images/dalmatian-pelican.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Dalmatian_Pelican_Pelecanus_crispus_by_Dr._Raju_Kasambe_DSCN6899_(3).jpg" },
     audio: null,
     extra: true
   },
@@ -12822,7 +12822,7 @@ BIRDS.push(
     watching: "Зундаа Өгий нуурын колони.",
     bestTime: "5–9-р сар",
     facts: ["Далавчаа наранд хатаадаг.", "Хятадад загас барихад сургадаг.", "Усан дор хөлөөрөө сэлдэг."],
-    image: { file: "images/great-cormorant.jpg", credit: "MPF", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2021-05-05_Phalacrocorax_carbo_carbo,_Killingworth_Lake,_Northumberland_1-1.jpg" },
+    image: { file: "images/great-cormorant.jpg", credit: "MPF", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2021-05-05_Phalacrocorax_carbo_carbo,_Killingworth_Lake,_Northumberland_1-1.jpg" },
     audio: null,
     extra: true
   },
@@ -12866,7 +12866,7 @@ BIRDS.push(
     watching: "6-р сард нугад чагна.",
     bestTime: "6-р сар",
     facts: ["Харагдахаасаа илүү сонсогддог.", "Африк руу нүүдэллэдэг.", "Монголын хамгийн жижиг тахиат."],
-    image: { file: "images/common-quail.jpg", credit: "christoph_moning", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Coturnix_coturnix,_Fraunberg,_Bayern,_Deutschland_1,_Ausschnitt.jpg" },
+    image: { file: "images/common-quail.jpg", credit: "christoph_moning", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Coturnix_coturnix,_Fraunberg,_Bayern,_Deutschland_1,_Ausschnitt.jpg" },
     audio: null,
     extra: true
   },
@@ -12910,7 +12910,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндийн нуга.",
     bestTime: "6–8-р сар",
     facts: ["Гэрийн бөднийн өвөг.", "Ширүүн дуутай.", "Ховордож болзошгүй."],
-    image: { file: "images/japanese-quail.jpg", credit: "Ingrid Taylar", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Japanese_Quail.jpg" },
+    image: { file: "images/japanese-quail.jpg", credit: "Ingrid Taylar", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Japanese_Quail.jpg" },
     audio: null,
     extra: true
   },
@@ -12954,7 +12954,7 @@ BIRDS.push(
     watching: "Өглөө эрт Ёлын ам.",
     bestTime: "Жилийн турш",
     facts: ["Дуугаараа нэрлэгдсэн.", "Пакистаны үндэсний шувуу.", "Зугтахдаа өгсүүр гүйдэг."],
-    image: { file: "images/chukar-partridge.jpg", credit: "Olaf Oliviero Riemer", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Chukarhuhn_Weltvogelpark_Walsrode_2010.jpg" },
+    image: { file: "images/chukar-partridge.jpg", credit: "Olaf Oliviero Riemer", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Chukarhuhn_Weltvogelpark_Walsrode_2010.jpg" },
     audio: null,
     extra: true
   },
@@ -12998,7 +12998,7 @@ BIRDS.push(
     watching: "Хар ус нуурын шугуй.",
     bestTime: "Жилийн турш",
     facts: ["Эртний голын нэрээр нэрлэгдсэн.", "Дэлхий даяар нутагшуулсан.", "Эр нь урт сүүлтэй."],
-    image: { file: "images/common-pheasant.jpg", credit: "Estormiz", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20200524_02.jpg" },
+    image: { file: "images/common-pheasant.jpg", credit: "Estormiz", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus_Oulu_20200524_02.jpg" },
     audio: null,
     extra: true
   },
@@ -13042,7 +13042,7 @@ BIRDS.push(
     watching: "Хөвсгөлийн орчмын бургасан шугуй.",
     bestTime: "Жилийн турш",
     facts: ["Өвөл цагаан.", "Өдтэй хөл нь цана шиг.", "Цасан нүхэнд унтдаг."],
-    image: { file: "images/willow-grouse.jpg", credit: "Yathin S Krishnappa", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lagopus_lagopus_-_adult_(Denali,_2010).jpg" },
+    image: { file: "images/willow-grouse.jpg", credit: "Yathin S Krishnappa", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Lagopus_lagopus_-_adult_(Denali,_2010).jpg" },
     audio: null,
     extra: true
   },
@@ -13086,7 +13086,7 @@ BIRDS.push(
     watching: "6-р сард Хангайн өндөрлөг.",
     bestTime: "6–8-р сар",
     facts: ["Жилд гурван удаа өдөө гуужуулдаг.", "Ойн хилээс дээш амьдардаг.", "Маш номхон."],
-    image: { file: "images/rock-ptarmigan.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rock_ptarmigan_(Lagopus_muta_islandorum)_female_breeding_Botnsvatn.jpg" },
+    image: { file: "images/rock-ptarmigan.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rock_ptarmigan_(Lagopus_muta_islandorum)_female_breeding_Botnsvatn.jpg" },
     audio: null,
     extra: true
   },
@@ -13130,7 +13130,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Дэлхийн хамгийн том хур.", "Өвөл нарсны шилмүүс иддэг.", "Хуралдаж үзүүлбэр хийдэг."],
-    image: { file: "images/western-capercaillie.jpg", credit: "David Palmer", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:David_Palmer_Capercaillie.jpg" },
+    image: { file: "images/western-capercaillie.jpg", credit: "David Palmer", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:David_Palmer_Capercaillie.jpg" },
     audio: null,
     extra: true
   },
@@ -13174,7 +13174,7 @@ BIRDS.push(
     watching: "5-р сард үүрээр Богд хан уул, Тэрэлжийн ой.",
     bestTime: "4–5-р сар",
     facts: ["Шинэсэн ойд амьдардаг.", "Далавчиндаа цагаан толботой.", "Улаанбаатарын ойролцоо амьдардаг."],
-    image: { file: "images/black-billed-capercaillie.jpg", credit: "Игорь Шпиленок", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tetrao_urogalloides_(cropped).jpg" },
+    image: { file: "images/black-billed-capercaillie.jpg", credit: "Игорь Шпиленок", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tetrao_urogalloides_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -13218,7 +13218,7 @@ BIRDS.push(
     watching: "Өвөл Хустай, Богд хан уулын зах.",
     bestTime: "Жилийн турш",
     facts: ["Өвөл сахал ургадаг.", "Олон өндөг гаргадаг.", "Дагуурын нэрээр нэрлэгдсэн."],
-    image: { file: "images/daurian-partridge.jpg", credit: "Joseph Wolf", via: "Wikimedia Commons Â· Public domain", source: "https://commons.wikimedia.org/wiki/File:PerdixBarbataWolf.jpg" },
+    image: { file: "images/daurian-partridge.jpg", credit: "Joseph Wolf", via: "Wikimedia Commons · Public domain", source: "https://commons.wikimedia.org/wiki/File:PerdixBarbataWolf.jpg" },
     audio: null,
     extra: true
   },
@@ -13262,7 +13262,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Толгойгоо доош нь эргүүлж хооллодог.", "Хоолноосоо болж ягаан өнгөтэй.", "Дулаанаа хэмнэхийн тулд нэг хөл дээрээ зогсдог."],
-    image: { file: "images/greater-flamingo.jpg", credit: "Giles Laurent", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:010_Greater_flamingos_male_and_female_in_the_Camargue_during_mating_season_Photo_by_Giles_Laurent.jpg" },
+    image: { file: "images/greater-flamingo.jpg", credit: "Giles Laurent", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:010_Greater_flamingos_male_and_female_in_the_Camargue_during_mating_season_Photo_by_Giles_Laurent.jpg" },
     audio: null,
     extra: true
   },
@@ -13306,7 +13306,7 @@ BIRDS.push(
     watching: "9-р сард Хар ус нуурын төгөл.",
     bestTime: "8–9-р сар",
     facts: ["Шар хоолой, цагаан хэвлий.", "Чичирсэн дуутай.", "Ховор нүүдлийн шувуу."],
-    image: { file: "images/wood-warbler.jpg", credit: "Steve Garvie from Dunfermline, Fife, Scotland", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Flickr_-_Rainbirder_-_Wood_Warbler_(Phylloscopus_sibilatrix).jpg" },
+    image: { file: "images/wood-warbler.jpg", credit: "Steve Garvie from Dunfermline, Fife, Scotland", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Flickr_-_Rainbirder_-_Wood_Warbler_(Phylloscopus_sibilatrix).jpg" },
     audio: null,
     extra: true
   },
@@ -13350,7 +13350,7 @@ BIRDS.push(
     watching: "5-р сард Хурхын хөндий.",
     bestTime: "5–6-р сар",
     facts: ["Урт цайвар хөмсөгтэй.", "Хоёр далавчны зураастай.", "Европ руу төөрдөг."],
-    image: { file: "images/yellow-browed-warbler.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-browed_warbler_(Phylloscopus_inornatus),_Parc_du_Slot,_Woluw%C3%A9-St.-Lambert,_Brussels_(34053989676).jpg" },
+    image: { file: "images/yellow-browed-warbler.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-browed_warbler_(Phylloscopus_inornatus),_Parc_du_Slot,_Woluw%C3%A9-St.-Lambert,_Brussels_(34053989676).jpg" },
     audio: null,
     extra: true
   },
@@ -13443,7 +13443,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5–6-р сар",
     facts: ["Ууц шар.", "Өчүүхэн.", "Хооллохдоо хийсэн байдаг."],
-    image: { file: "images/pallass-leaf-warbler.jpg", credit: "fedotova_elena", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Pallas%27s_Leaf_Warbler,_Tunkinskiy_Rayon,_Buryat,_Russia_2.jpg" },
+    image: { file: "images/pallass-leaf-warbler.jpg", credit: "fedotova_elena", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Pallas%27s_Leaf_Warbler,_Tunkinskiy_Rayon,_Buryat,_Russia_2.jpg" },
     audio: null,
     extra: true
   },
@@ -13487,7 +13487,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын бургас.",
     bestTime: "6-р сар",
     facts: ["«Так» дуутай.", "Энгийн бор.", "Маш элбэг."],
-    image: { file: "images/dusky-warbler.jpg", credit: "Asmarifulanam", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%E0%A6%97%E0%A6%BE%E0%A6%A2%E0%A6%BC%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%AE%E0%A6%BF_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%AB%E0%A7%81%E0%A6%9F%E0%A6%95%E0%A6%BF_(Dusky_Warbler),_Phylloscopus_fuscatus_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A7%80%E0%A6%B0_%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE%E0%A6%BE_%E0%A6%A8%E0%A6%A6%E0%A7%80%E0%A6%B0_%E0%A6%9A%E0%A6%B0,_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A7%80,_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A5%A4.jpg" },
+    image: { file: "images/dusky-warbler.jpg", credit: "Asmarifulanam", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%E0%A6%97%E0%A6%BE%E0%A6%A2%E0%A6%BC%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%AE%E0%A6%BF_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%AB%E0%A7%81%E0%A6%9F%E0%A6%95%E0%A6%BF_(Dusky_Warbler),_Phylloscopus_fuscatus_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A7%80%E0%A6%B0_%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE%E0%A6%BE_%E0%A6%A8%E0%A6%A6%E0%A7%80%E0%A6%B0_%E0%A6%9A%E0%A6%B0,_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A7%80,_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A5%A4.jpg" },
     audio: null,
     extra: true
   },
@@ -13531,7 +13531,7 @@ BIRDS.push(
     watching: "9-р сард Хурх.",
     bestTime: "9-р сар",
     facts: ["Хөл цайвар.", "Уруудах дуутай.", "Маш урт нүүдэлтэй."],
-    image: { file: "images/willow-warbler.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg" },
+    image: { file: "images/willow-warbler.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg" },
     audio: null,
     extra: true
   },
@@ -13575,7 +13575,7 @@ BIRDS.push(
     watching: "9-р сард Хар ус нуур.",
     bestTime: "5–6-р сар",
     facts: ["Нэрээ дуулдаг.", "Хөл бараан.", "Сибирийн саарал хэлбэр."],
-    image: { file: "images/common-chiffchaff.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_Chiffchaff_2025_04_04_01.jpg" },
+    image: { file: "images/common-chiffchaff.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_Chiffchaff_2025_04_04_01.jpg" },
     audio: null,
     extra: true
   },
@@ -13619,7 +13619,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын амны хавцал.",
     bestTime: "6–7-р сар",
     facts: ["Хад авирдаг.", "Хөмсөг шар.", "Хадат хавцалд."],
-    image: { file: "images/sulphur-bellied-warbler.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Sulphur-bellied_Warbler_by_Tisha_Mukherjee_06.jpg" },
+    image: { file: "images/sulphur-bellied-warbler.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Sulphur-bellied_Warbler_by_Tisha_Mukherjee_06.jpg" },
     audio: null,
     extra: true
   },
@@ -13663,7 +13663,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Шар судалтай.", "Хятадын зүйл.", "Олон янзын дуутай."],
-    image: { file: "images/yellow-streaked-warbler.jpg", credit: "Gustav Mützel", via: "Wikimedia Commons Â· Public domain", source: "https://commons.wikimedia.org/wiki/File:Phylloscopus_armandii_1889.jpg" },
+    image: { file: "images/yellow-streaked-warbler.jpg", credit: "Gustav Mützel", via: "Wikimedia Commons · Public domain", source: "https://commons.wikimedia.org/wiki/File:Phylloscopus_armandii_1889.jpg" },
     audio: null,
     extra: true
   },
@@ -13756,7 +13756,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Доод тал шар.", "Кавказын зүйл.", "Нэг далавчны зураастай."],
-    image: { file: "images/green-leaf-warbler.jpg", credit: "Davidvraju", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Green_warbler.jpg" },
+    image: { file: "images/green-leaf-warbler.jpg", credit: "Davidvraju", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Green_warbler.jpg" },
     audio: null,
     extra: true
   },
@@ -13849,7 +13849,7 @@ BIRDS.push(
     watching: "6-р сард Богд хан уул.",
     bestTime: "6-р сар",
     facts: ["Хоёр далавчны зураастай.", "Ногоовороос тусгаарлагдсан.", "Хэнтийд элбэг."],
-    image: { file: "images/two-barred-leaf-warbler.jpg", credit: "Hans Norelius from Älvsjö, Sweden", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Sibirisk_lunds%C3%A5ngare,_%C3%96land,_Oktober_2017_(38076326752).jpg" },
+    image: { file: "images/two-barred-leaf-warbler.jpg", credit: "Hans Norelius from Älvsjö, Sweden", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Sibirisk_lunds%C3%A5ngare,_%C3%96land,_Oktober_2017_(38076326752).jpg" },
     audio: null,
     extra: true
   },
@@ -13893,7 +13893,7 @@ BIRDS.push(
     watching: "5-р сарын сүүлээр Хурх.",
     bestTime: "6-р сар",
     facts: ["Хушуу бүдүүн.", "Аляскад ч үрждэг.", "Урт нүүдэлтэй."],
-    image: { file: "images/arctic-warbler.jpg", credit: "Arctic_Warbler_4683.jpg: Alnus\nderivative work: Osado", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Arctic_Warbler_4683b.jpg" },
+    image: { file: "images/arctic-warbler.jpg", credit: "Arctic_Warbler_4683.jpg: Alnus\nderivative work: Osado", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Arctic_Warbler_4683b.jpg" },
     audio: null,
     extra: true
   },
@@ -13937,7 +13937,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хөл цайвар.", "Царцаа шиг дуутай.", "Зүүнд ховор."],
-    image: { file: "images/pale-legged-leaf-warbler.jpg", credit: "JJ Harrison", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pale-legged_Leaf_Warbler_0A2A8189_(cropped).jpg" },
+    image: { file: "images/pale-legged-leaf-warbler.jpg", credit: "JJ Harrison", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Pale-legged_Leaf_Warbler_0A2A8189_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -13981,7 +13981,7 @@ BIRDS.push(
     watching: "5-р сард Тэрэлж, Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "5–6-р сар",
     facts: ["Хүзүүгээ могой шиг мушгидаг.", "«Jinx» үгийн эх.", "Шоргоолж иддэг."],
-    image: { file: "images/northern-wryneck.jpg", credit: "Бусел В.А.", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_%D0%BA%D1%80%D1%83%D1%82%D0%B8%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.jpg" },
+    image: { file: "images/northern-wryneck.jpg", credit: "Бусел В.А.", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_%D0%BA%D1%80%D1%83%D1%82%D0%B8%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.jpg" },
     audio: null,
     extra: true
   },
@@ -14025,7 +14025,7 @@ BIRDS.push(
     watching: "Өвөл Богд хан уул, Тэрэлж.",
     bestTime: "Жилийн турш",
     facts: ["Шоргоолжоор хооллодог.", "Нуруу ногоон.", "Өвөл Улаанбаатарт ирдэг."],
-    image: { file: "images/grey-headed-woodpecker.jpg", credit: "Dion Art", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B5%D0%B4%D0%BE%D0%B9_%D0%B4%D1%8F%D1%82%D0%B5%D0%BB_%D1%83_%D0%B1%D0%BE%D0%BB%D0%BE%D1%82%D0%B0_%D1%80%D0%B5%D1%87%D0%BA%D0%B8_%D0%97%D0%B8%D0%BC%D1%91%D0%BD%D0%BA%D0%B8.jpg" },
+    image: { file: "images/grey-headed-woodpecker.jpg", credit: "Dion Art", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B5%D0%B4%D0%BE%D0%B9_%D0%B4%D1%8F%D1%82%D0%B5%D0%BB_%D1%83_%D0%B1%D0%BE%D0%BB%D0%BE%D1%82%D0%B0_%D1%80%D0%B5%D1%87%D0%BA%D0%B8_%D0%97%D0%B8%D0%BC%D1%91%D0%BD%D0%BA%D0%B8.jpg" },
     audio: null,
     extra: true
   },
@@ -14069,7 +14069,7 @@ BIRDS.push(
     watching: "Богд хан уулын хусан төгөл.",
     bestTime: "Жилийн турш",
     facts: ["Бор шувууны хэмжээтэй.", "Нуруу судалтай.", "Хөхбухын сүрэгт нэгддэг."],
-    image: { file: "images/lesser-spotted-woodpecker.jpg", credit: "Andrey Gulivanov", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Male_lesser_spotted_woodpecker_(Dryobates_minor).png" },
+    image: { file: "images/lesser-spotted-woodpecker.jpg", credit: "Andrey Gulivanov", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Male_lesser_spotted_woodpecker_(Dryobates_minor).png" },
     audio: null,
     extra: true
   },
@@ -14113,7 +14113,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Модны шүүс уудаг.", "Нүүдэллэдэг.", "Хэвлий хүрэн."],
-    image: { file: "images/rufous-bellied-woodpecker.jpg", credit: "Maya Lodhiyal", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Dendrocopos_hyperythrus_366832170.jpg" },
+    image: { file: "images/rufous-bellied-woodpecker.jpg", credit: "Maya Lodhiyal", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Dendrocopos_hyperythrus_366832170.jpg" },
     audio: null,
     extra: true
   },
@@ -14157,7 +14157,7 @@ BIRDS.push(
     watching: "Богд хан уулын ой.",
     bestTime: "Жилийн турш",
     facts: ["Гурван хуруутай.", "Орой шар.", "Холтосны цох иддэг."],
-    image: { file: "images/eurasian-three-toed-woodpecker.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Three-toed_Woodpecker_-_Finlandia_0005_(3).jpg" },
+    image: { file: "images/eurasian-three-toed-woodpecker.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Three-toed_Woodpecker_-_Finlandia_0005_(3).jpg" },
     audio: null,
     extra: true
   },
@@ -14201,7 +14201,7 @@ BIRDS.push(
     watching: "9-р сард Хар ус нуур.",
     bestTime: "9–10-р сар",
     facts: ["Хойд хумс урт.", "Дагз хүрэн.", "Арктикийн нүүдэлчин."],
-    image: { file: "images/lapland-longspur.jpg", credit: "Ansgar Walk", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Calcarius_lapponicus_(female)_1996-07-25.jpg" },
+    image: { file: "images/lapland-longspur.jpg", credit: "Ansgar Walk", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Calcarius_lapponicus_(female)_1996-07-25.jpg" },
     audio: null,
     extra: true
   },
@@ -14245,7 +14245,7 @@ BIRDS.push(
     watching: "12-р сард Улаанбаатарын ойролцоох цастай талбай.",
     bestTime: "11–12-р сар",
     facts: ["Цагаан.", "Цасан ширхэг мэт.", "Өвөл ховор ирнэ."],
-    image: { file: "images/snow-bunting.jpg", credit: "Drew Avery", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Snow_Bunting_(Plectrophenax_nivalis),_Thule,_Greenland_1.jpg" },
+    image: { file: "images/snow-bunting.jpg", credit: "Drew Avery", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Snow_Bunting_(Plectrophenax_nivalis),_Thule,_Greenland_1.jpg" },
     audio: null,
     extra: true
   },
@@ -14289,7 +14289,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам, Хурхын хөндийн жижиг цөөрөм.",
     bestTime: "5–8-р сар",
     facts: ["Монголын хамгийн жижиг шунгуур.", "Өндгөө замгаар бүрхдэг.", "Морь янцгаах мэт дуугардаг."],
-    image: { file: "images/little-grebe.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Little_grebe_Zwergtaucher.jpg" },
+    image: { file: "images/little-grebe.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Little_grebe_Zwergtaucher.jpg" },
     audio: null,
     extra: true
   },
@@ -14333,7 +14333,7 @@ BIRDS.push(
     watching: "6–7-р сард Буйр нуур.",
     bestTime: "6–7-р сар",
     facts: ["Хавар маш шуугиантай.", "Дэгдээхэйгээ нуруундаа үүрдэг.", "Голчлон зүүн Монголд."],
-    image: { file: "images/red-necked-grebe.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-necked_grebe_(Podiceps_grisegena_grisegena)_breeding_adult_Gronjordssoen.jpg" },
+    image: { file: "images/red-necked-grebe.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-necked_grebe_(Podiceps_grisegena_grisegena)_breeding_adult_Gronjordssoen.jpg" },
     audio: null,
     extra: true
   },
@@ -14377,7 +14377,7 @@ BIRDS.push(
     watching: "Хосолт оргилдоо хүрдэг 5–6-р сард Өгий нуур.",
     bestTime: "5–6-р сар",
     facts: ["Хосолтын үеэр «замгийн бүжиг» хийдэг.", "Ходоодоо хамгаалахын тулд өдөө залгидаг.", "Өдийг нь эрт үед моодонд ашигладаг байв."],
-    image: { file: "images/great-crested-grebe.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Podiceps_cristatus_2_-_Lake_Dulverton.jpg" },
+    image: { file: "images/great-crested-grebe.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Podiceps_cristatus_2_-_Lake_Dulverton.jpg" },
     audio: null,
     extra: true
   },
@@ -14421,7 +14421,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуур.",
     bestTime: "6–8-р сар",
     facts: ["Дэлхийд эмзэг зүйл.", "Үржлийн өдөндөө алтлаг «эвэр»-тэй.", "Дэгдээхэй нь эцэг эхийнхээ нуруун дээр явдаг."],
-    image: { file: "images/slavonian-grebe.jpg", credit: "Ekaterina Chernetsova (Papchinskaya) from Saint-Petersburg, Russia", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Podiceps_auritus_(13909539717).jpg" },
+    image: { file: "images/slavonian-grebe.jpg", credit: "Ekaterina Chernetsova (Papchinskaya) from Saint-Petersburg, Russia", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Podiceps_auritus_(13909539717).jpg" },
     audio: null,
     extra: true
   },
@@ -14465,7 +14465,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндийн нуурууд.",
     bestTime: "5–8-р сар",
     facts: ["Дэлхийн хамгийн олон тоотой шунгуур.", "Колони болж үүрлэдэг.", "Өд гуужуулахдаа хэдэн долоо хоног нисэж чаддаггүй."],
-    image: { file: "images/black-necked-grebe.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Black-necked_Grebe_Schwarzhalstaucher.jpg" },
+    image: { file: "images/black-necked-grebe.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Black-necked_Grebe_Schwarzhalstaucher.jpg" },
     audio: null,
     extra: true
   },
@@ -14509,7 +14509,7 @@ BIRDS.push(
     watching: "Ёлын амны хад.",
     bestTime: "Жилийн турш",
     facts: ["Хоолой толботой.", "Ойн хилээс дээш амьдардаг.", "Бүлгээрээ үрждэг."],
-    image: { file: "images/alpine-accentor.jpg", credit: "Paco Gómez from Castellón, Spain", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Alpine_accentor_saganta.jpg" },
+    image: { file: "images/alpine-accentor.jpg", credit: "Paco Gómez from Castellón, Spain", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Alpine_accentor_saganta.jpg" },
     audio: null,
     extra: true
   },
@@ -14553,7 +14553,7 @@ BIRDS.push(
     watching: "Зундаа Алтайн даваа.",
     bestTime: "6–8-р сар",
     facts: ["Хоолой цагаан.", "Уулын шувуу.", "Гималайд өвөлждөг."],
-    image: { file: "images/altai-accentor.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Altai_Accentor_(Prunella_himalayana)_(43460867670).jpg" },
+    image: { file: "images/altai-accentor.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Altai_Accentor_(Prunella_himalayana)_(43460867670).jpg" },
     audio: null,
     extra: true
   },
@@ -14597,7 +14597,7 @@ BIRDS.push(
     watching: "10-р сард Богд хан уулын зах.",
     bestTime: "10–11-р сар",
     facts: ["Хөмсөг шар хүрэн.", "Хар багтай.", "Өвлийн зочин."],
-    image: { file: "images/siberian-accentor.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Siberian_Accentor_(Prunella_montanella)_-_%D0%A1%D0%B8%D0%B1%D0%B8%D1%80%D0%B8%D0%B9%D0%BD_%D1%85%D0%B0%D0%B9%D1%80%D1%83%D1%83%D0%BB%D0%B4%D0%B0%D0%B9_(16435139700).jpg" },
+    image: { file: "images/siberian-accentor.jpg", credit: "Jargal Lamjav from Ulaanbaatar, Mongolia", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Siberian_Accentor_(Prunella_montanella)_-_%D0%A1%D0%B8%D0%B1%D0%B8%D1%80%D0%B8%D0%B9%D0%BD_%D1%85%D0%B0%D0%B9%D1%80%D1%83%D1%83%D0%BB%D0%B4%D0%B0%D0%B9_(16435139700).jpg" },
     audio: null,
     extra: true
   },
@@ -14641,7 +14641,7 @@ BIRDS.push(
     watching: "Аль ч улиралд Ёлын ам.",
     bestTime: "Жилийн турш",
     facts: ["Хөмсөг цагаан.", "Хуурай уулын шувуу.", "Ёлын амд элбэг."],
-    image: { file: "images/brown-accentor.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Brown_Accentor_(Prunella_fulvescens)_(15709212937).jpg" },
+    image: { file: "images/brown-accentor.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Brown_Accentor_(Prunella_fulvescens)_(15709212937).jpg" },
     audio: null,
     extra: true
   },
@@ -14685,7 +14685,7 @@ BIRDS.push(
     watching: "Хар ус нуурын орчмын арцан бут.",
     bestTime: "6-р сар",
     facts: ["Хоолой хар.", "Арцанд амьдардаг.", "Баруун нутгийн шувуу."],
-    image: { file: "images/black-throated-accentor.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Black-throated_Accentor_(Prunella_atrogularis)_(15275386173).jpg" },
+    image: { file: "images/black-throated-accentor.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Black-throated_Accentor_(Prunella_atrogularis)_(15275386173).jpg" },
     audio: null,
     extra: true
   },
@@ -14729,7 +14729,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "Жилийн турш",
     facts: ["Бараг зөвхөн Монголд.", "Козловын нэрээр нэрлэгдсэн.", "Энгийн өнгөтэй."],
-    image: { file: "images/mongolian-accentor.jpg", credit: "Jan Ebr &amp; Ivana Ebrová", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Prunella_koslowi_-_Jan_Ebr_and_Ivana_Ebrov%C3%A1_-_384465824.jpeg" },
+    image: { file: "images/mongolian-accentor.jpg", credit: "Jan Ebr &amp; Ivana Ebrová", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Prunella_koslowi_-_Jan_Ebr_and_Ivana_Ebrov%C3%A1_-_384465824.jpeg" },
     audio: null,
     extra: true
   },
@@ -14773,7 +14773,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Халуун орны зүйл.", "Хэвлий шаргал.", "Монголд онцгой ховор."],
-    image: { file: "images/flavescent-bulbul.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Pycnonotus_flavescens_-_Mae_Wong.jpg" },
+    image: { file: "images/flavescent-bulbul.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Pycnonotus_flavescens_-_Mae_Wong.jpg" },
     audio: null,
     extra: true
   },
@@ -14817,7 +14817,7 @@ BIRDS.push(
     watching: "Харах бараг боломжгүй.",
     bestTime: "—",
     facts: ["Азийн хамгийн бага судлагдсан шувуудын нэг.", "Бор шувуунаас жижиг.", "Шөнө дуугардаг."],
-    image: { file: "images/swinhoes-rail.jpg", credit: "John Gerrard Keulemans", via: "Wikimedia Commons Â· Public domain", source: "https://commons.wikimedia.org/wiki/File:PorzanaExquisitaKeulemans.jpg" },
+    image: { file: "images/swinhoes-rail.jpg", credit: "John Gerrard Keulemans", via: "Wikimedia Commons · Public domain", source: "https://commons.wikimedia.org/wiki/File:PorzanaExquisitaKeulemans.jpg" },
     audio: null,
     extra: true
   },
@@ -14861,7 +14861,7 @@ BIRDS.push(
     watching: "Бүрий болоход Хурхын хөндийн шагшуургад чагна.",
     bestTime: "5–8-р сар",
     facts: ["Гахайн торой шиг хашгирдаг.", "Шагшуурга дундуур биеэ хавтгайлж явдаг.", "2010 онд тусдаа зүйл болсон."],
-    image: { file: "images/eastern-water-rail.jpg", credit: "Edward Neale", via: "Wikimedia Commons Â· Public domain", source: "https://commons.wikimedia.org/wiki/File:RallusIndicusNeale.jpg" },
+    image: { file: "images/eastern-water-rail.jpg", credit: "Edward Neale", via: "Wikimedia Commons · Public domain", source: "https://commons.wikimedia.org/wiki/File:RallusIndicusNeale.jpg" },
     audio: null,
     extra: true
   },
@@ -14905,7 +14905,7 @@ BIRDS.push(
     watching: "6-р сарын шөнө нугад чагна.",
     bestTime: "6–7-р сар",
     facts: ["Латин нэр нь дуугаа дуурайсан.", "Шөнөжин дуугардаг.", "Африкт өвөлждөг."],
-    image: { file: "images/corncrake.jpg", credit: "Alpo Roikola", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Ruisr%C3%A4%C3%A4kk%C3%A4.JPG" },
+    image: { file: "images/corncrake.jpg", credit: "Alpo Roikola", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Ruisr%C3%A4%C3%A4kk%C3%A4.JPG" },
     audio: null,
     extra: true
   },
@@ -14949,7 +14949,7 @@ BIRDS.push(
     watching: "Шөнө улалжит намагт чагна.",
     bestTime: "6-р сар",
     facts: ["Цагаан «одоор» бүрхэгдсэн.", "Шөнө дуугардаг.", "Африкт өвөлждөг."],
-    image: { file: "images/spotted-crake.jpg", credit: "Noel Reynolds", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Spotted_crake_(Porzana_porzana)_(6830876880).jpg" },
+    image: { file: "images/spotted-crake.jpg", credit: "Noel Reynolds", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Spotted_crake_(Porzana_porzana)_(6830876880).jpg" },
     audio: null,
     extra: true
   },
@@ -14993,7 +14993,7 @@ BIRDS.push(
     watching: "Бүрий болоход Хурхын хөндийд чагна.",
     bestTime: "6-р сар",
     facts: ["Монголын хамгийн жижиг түнжгэр.", "Мэлхий шиг дуугардаг.", "Францын байгаль судлаачийн нэрээр нэрлэгдсэн."],
-    image: { file: "images/baillons-crake.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Porzana_pusilla_-_Mount_Annan_Botanical_Garden.jpg" },
+    image: { file: "images/baillons-crake.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Porzana_pusilla_-_Mount_Annan_Botanical_Garden.jpg" },
     audio: null,
     extra: true
   },
@@ -15037,7 +15037,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хойд зүг тархаж байна.", "Бүрий болоход маш шуугиантай.", "Дээд тал хар, доод тал цагаан."],
-    image: { file: "images/white-breasted-waterhen.jpg", credit: "JJ Harrison (https://tiny.jjharrison.com.au/t/zpppq3u5TIMicNgw)", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Amaurornis_phoenicurus_-_Singapore_Botanic_Gardens.jpg" },
+    image: { file: "images/white-breasted-waterhen.jpg", credit: "JJ Harrison (https://tiny.jjharrison.com.au/t/zpppq3u5TIMicNgw)", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Amaurornis_phoenicurus_-_Singapore_Botanic_Gardens.jpg" },
     audio: null,
     extra: true
   },
@@ -15081,7 +15081,7 @@ BIRDS.push(
     watching: "Зундаа Хар ус нуурын шагшуургын зах.",
     bestTime: "5–8-р сар",
     facts: ["Хөвөгч навч дээгүүр алхдаг.", "Сэлэхдээ толгойгоо дохидог.", "Эхний зулзага нь дараагийн зулзагаа тэжээлцдэг."],
-    image: { file: "images/common-moorhen.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_moorhen_(Gallinula_chloropus)_France.jpg" },
+    image: { file: "images/common-moorhen.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_moorhen_(Gallinula_chloropus)_France.jpg" },
     audio: null,
     extra: true
   },
@@ -15125,7 +15125,7 @@ BIRDS.push(
     watching: "Зундаа шагшуургат аль ч нуурт.",
     bestTime: "5–9-р сар",
     facts: ["Хуруу нь хальстай, сарвуу нийлмэл биш.", "Нутаг дэвсгэрээ хатуу хамгаална.", "Нүүдлийн өмнө мянгаараа цуглардаг."],
-    image: { file: "images/common-coot.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Coot_2023_11_25_03.jpg" },
+    image: { file: "images/common-coot.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Coot_2023_11_25_03.jpg" },
     audio: null,
     extra: true
   },
@@ -15169,7 +15169,7 @@ BIRDS.push(
     watching: "6-р сард Бөөн цагаан, Өгий нуур.",
     bestTime: "5–7-р сар",
     facts: ["Хушуу дээш махийсан.", "Усыг шүүрдэж хооллодог.", "RSPB-ийн бэлгэ тэмдэг."],
-    image: { file: "images/pied-avocet.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Pied_Avocet_Recurvirostra_avosetta.jpg" },
+    image: { file: "images/pied-avocet.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Pied_Avocet_Recurvirostra_avosetta.jpg" },
     audio: null,
     extra: true
   },
@@ -15213,7 +15213,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуур.",
     bestTime: "5–7-р сар",
     facts: ["Маш урт хөлтэй.", "Гүн усанд ордог.", "Маш шуугиантай."],
-    image: { file: "images/black-winged-stilt.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Black-winged_stilt_(Himantopus_himantopus)_Pearaing.jpg" },
+    image: { file: "images/black-winged-stilt.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Black-winged_stilt_(Himantopus_himantopus)_Pearaing.jpg" },
     audio: null,
     extra: true
   },
@@ -15257,7 +15257,7 @@ BIRDS.push(
     watching: "Богд хан уулын гацуур.",
     bestTime: "Жилийн турш",
     facts: ["Монголын хамгийн жижиг шувуу.", "Алтан оройтой.", "Өлгүүр үүртэй."],
-    image: { file: "images/goldcrest.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg" },
+    image: { file: "images/goldcrest.jpg", credit: "Francis C. Franklin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg" },
     audio: null,
     extra: true
   },
@@ -15301,7 +15301,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Өлгүүр үүртэй.", "Хар багтай.", "Маш ховор."],
-    image: { file: "images/penduline-tit.jpg", credit: "no rights reserved", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Chinese_Penduline-Tit_imported_from_iNaturalist_photo_385856056_on_19_June_2024.jpg" },
+    image: { file: "images/penduline-tit.jpg", credit: "no rights reserved", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Chinese_Penduline-Tit_imported_from_iNaturalist_photo_385856056_on_19_June_2024.jpg" },
     audio: null,
     extra: true
   },
@@ -15345,7 +15345,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Эм нь илүү өнгөлөг.", "Эр нь өндөг дардаг.", "Халуун орны зүйл."],
-    image: { file: "images/greater-painted-snipe.jpg", credit: "Bernard DUPONT from FRANCE", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Greater_Painted-snipe_(Rostratula_benghalensis)_male,_Kruger_NP_(53247730001).jpg" },
+    image: { file: "images/greater-painted-snipe.jpg", credit: "Bernard DUPONT from FRANCE", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Greater_Painted-snipe_(Rostratula_benghalensis)_male,_Kruger_NP_(53247730001).jpg" },
     audio: null,
     extra: true
   },
@@ -15389,7 +15389,7 @@ BIRDS.push(
     watching: "5-р сард Буйр нуур.",
     bestTime: "5-р сар",
     facts: ["Дуу нь долоон үетэй.", "Оройдоо судалтай.", "Халуун орны эрэгт өвөлждөг."],
-    image: { file: "images/whimbrel.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Whimbrel_Numenius_phaeopus.jpg" },
+    image: { file: "images/whimbrel.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Whimbrel_Numenius_phaeopus.jpg" },
     audio: null,
     extra: true
   },
@@ -15433,7 +15433,7 @@ BIRDS.push(
     watching: "8-р сард зүүн нутгийн тал хээр.",
     bestTime: "8-р сар",
     facts: ["Хамгийн жижиг тутгалжин.", "Хуурай бэлчээрт хооллодог.", "Австралид өвөлждөг."],
-    image: { file: "images/little-curlew.jpg", credit: "Wayne Cheng", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Numenius_minutus_1.jpg" },
+    image: { file: "images/little-curlew.jpg", credit: "Wayne Cheng", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Numenius_minutus_1.jpg" },
     audio: null,
     extra: true
   },
@@ -15477,7 +15477,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндийн нуга.",
     bestTime: "6–8-р сар",
     facts: ["Мадагаскар тутгалжингаас бусад эргийн шувуунаас урт хушуутай.", "Ховордож болзошгүй.", "Англи нэр нь дууг нь дуурайсан."],
-    image: { file: "images/eurasian-curlew.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Curlew.jpg" },
+    image: { file: "images/eurasian-curlew.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Curlew.jpg" },
     audio: null,
     extra: true
   },
@@ -15521,7 +15521,7 @@ BIRDS.push(
     watching: "7-р сард Дорнодын намаг, холоос.",
     bestTime: "7-р сар",
     facts: ["Дэлхийн хамгийн том тутгалжин.", "80 хувиар цөөрсөн.", "Австралид өвөлждөг."],
-    image: { file: "images/far-eastern-curlew.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Numenius_madagascariensis_1_-_Stockton_Sandspit.jpg" },
+    image: { file: "images/far-eastern-curlew.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Numenius_madagascariensis_1_-_Stockton_Sandspit.jpg" },
     audio: null,
     extra: true
   },
@@ -15565,7 +15565,7 @@ BIRDS.push(
     watching: "6-р сард Өгий нуур.",
     bestTime: "6-р сар",
     facts: ["11,000 км зогсолтгүй нисдэг.", "Хушуу бага зэрэг дээш махийсан.", "Ховордож болзошгүй."],
-    image: { file: "images/bar-tailed-godwit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Bar-tailed_Godwit.jpg" },
+    image: { file: "images/bar-tailed-godwit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Bar-tailed_Godwit.jpg" },
     audio: null,
     extra: true
   },
@@ -15609,7 +15609,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндийн нуга.",
     bestTime: "5–8-р сар",
     facts: ["Нидерландын үндэсний шувуу.", "Далавчинд тод цагаан зурвастай.", "Ховордож болзошгүй."],
-    image: { file: "images/black-tailed-godwit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Black-tailed_Godwit_Uferschnepfe.jpg" },
+    image: { file: "images/black-tailed-godwit.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Black-tailed_Godwit_Uferschnepfe.jpg" },
     audio: null,
     extra: true
   },
@@ -15653,7 +15653,7 @@ BIRDS.push(
     watching: "5, 8-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Чулуу эргүүлдэг.", "Хөл нь улбар шар.", "Бүх тивийн далайн эрэгт тархсан."],
-    image: { file: "images/ruddy-turnstone.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Ruddy_turnstone_(Arenaria_interpres)_Breeding_Plumage_Heislerville_WMA,_Cumberland_County,_New_Jersey,_USA.jpg" },
+    image: { file: "images/ruddy-turnstone.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Ruddy_turnstone_(Arenaria_interpres)_Breeding_Plumage_Heislerville_WMA,_Cumberland_County,_New_Jersey,_USA.jpg" },
     audio: null,
     extra: true
   },
@@ -15697,7 +15697,7 @@ BIRDS.push(
     watching: "8-р сард Өгий нуур.",
     bestTime: "8-р сар",
     facts: ["Зундаа тоосгон улаан.", "Холын нүүдэлч.", "Ховордож болзошгүй."],
-    image: { file: "images/red-knot.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rufa_red_knot_(Calidris_canutus_rufa)_in_Delaware_Bay,_New_Jersey.jpg" },
+    image: { file: "images/red-knot.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Rufa_red_knot_(Calidris_canutus_rufa)_in_Delaware_Bay,_New_Jersey.jpg" },
     audio: null,
     extra: true
   },
@@ -15741,7 +15741,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Эр нь өнгөлөг хүзүүвчтэй.", "Зарим эр нь эмийг дууриадаг.", "Үзүүлбэрийн талбайд бүжигладаг."],
-    image: { file: "images/ruff.jpg", credit: "Arjan Haverkamp", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Philomachus_pugnax_-Diergaarde_Blijdorp-8c.jpg" },
+    image: { file: "images/ruff.jpg", credit: "Arjan Haverkamp", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Philomachus_pugnax_-Diergaarde_Blijdorp-8c.jpg" },
     audio: null,
     extra: true
   },
@@ -15785,7 +15785,7 @@ BIRDS.push(
     watching: "8-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Салаа хөмсөгтэй.", "Хушууны үзүүр унжсан.", "Дэлхийд эмзэг зүйл."],
-    image: { file: "images/broad-billed-sandpiper.jpg", credit: "Sreedev Puthur", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Broad_billed_sandpiper_by_Sreedev_Puthur.jpg" },
+    image: { file: "images/broad-billed-sandpiper.jpg", credit: "Sreedev Puthur", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Broad_billed_sandpiper_by_Sreedev_Puthur.jpg" },
     audio: null,
     extra: true
   },
@@ -15829,7 +15829,7 @@ BIRDS.push(
     watching: "8-р сард Өгий нуур.",
     bestTime: "8-р сар",
     facts: ["Хүрэн оройтой.", "Австралид өвөлждөг.", "Дэлхийд эмзэг зүйл."],
-    image: { file: "images/sharp-tailed-sandpiper.jpg", credit: "Alpsdake", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Calidris_acuminata_(s4).JPG" },
+    image: { file: "images/sharp-tailed-sandpiper.jpg", credit: "Alpsdake", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Calidris_acuminata_(s4).JPG" },
     audio: null,
     extra: true
   },
@@ -15873,7 +15873,7 @@ BIRDS.push(
     watching: "7–8-р сард Өгий нуур.",
     bestTime: "7–8-р сар",
     facts: ["Жижиг тутгалжин шиг махийсан хушуутай.", "Зундаа тоосгон улаан.", "Дэлхийд эмзэг зүйл."],
-    image: { file: "images/curlew-sandpiper.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Curlew_Sandpiper_(Calidris_ferruginea)_(44855173205).jpg" },
+    image: { file: "images/curlew-sandpiper.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Curlew_Sandpiper_(Calidris_ferruginea)_(44855173205).jpg" },
     audio: null,
     extra: true
   },
@@ -15917,7 +15917,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Хөл нь шаргал.", "Сүүлний хажуу цагаан.", "Голландын байгаль судлаачийн нэрээр нэрлэгдсэн."],
-    image: { file: "images/temmincks-stint.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Temminck%27s_stint_(Calidris_temminckii)_Oppdal.jpg" },
+    image: { file: "images/temmincks-stint.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Temminck%27s_stint_(Calidris_temminckii)_Oppdal.jpg" },
     audio: null,
     extra: true
   },
@@ -15961,7 +15961,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуур.",
     bestTime: "5-р сар",
     facts: ["Хуруу нь урт.", "Босоо зогсдог.", "Австралид өвөлждөг."],
-    image: { file: "images/long-toed-stint.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Calidris_subminuta_-_Pak_Thale.jpg" },
+    image: { file: "images/long-toed-stint.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Calidris_subminuta_-_Pak_Thale.jpg" },
     audio: null,
     extra: true
   },
@@ -16005,7 +16005,7 @@ BIRDS.push(
     watching: "5, 8-р сард Буйр нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Зундаа хоолой нь тоосгон улаан.", "Австрали хүртэл нисдэг.", "Ховордож болзошгүй."],
-    image: { file: "images/red-necked-stint.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-necked_Stint_in_Bakkhali_April_2026_by_Tisha_Mukherjee_01.jpg" },
+    image: { file: "images/red-necked-stint.jpg", credit: "Tisha Mukherjee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Red-necked_Stint_in_Bakkhali_April_2026_by_Tisha_Mukherjee_01.jpg" },
     audio: null,
     extra: true
   },
@@ -16049,7 +16049,7 @@ BIRDS.push(
     watching: "5-р сард Буйр нуурын элсэн эрэг.",
     bestTime: "5, 8-р сар",
     facts: ["Хойд хуруугүй.", "Цагны механизм шиг гүйдэг.", "Өвөл маш цайвар."],
-    image: { file: "images/sanderling.jpg", credit: "Chuck Homler, Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_in_Breeding_Plumage_in_the_Delaware_Bay_-_Heislerville_WMA_-_Cumberland_County_-_New_Jersey_-_May_2026.jpg" },
+    image: { file: "images/sanderling.jpg", credit: "Chuck Homler, Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_in_Breeding_Plumage_in_the_Delaware_Bay_-_Heislerville_WMA_-_Cumberland_County_-_New_Jersey_-_May_2026.jpg" },
     audio: null,
     extra: true
   },
@@ -16093,7 +16093,7 @@ BIRDS.push(
     watching: "9-р сард Өгий нуур.",
     bestTime: "5, 9-р сар",
     facts: ["Зундаа хэвлий хар.", "Оёдлын машин шиг тэмтэрдэг.", "Дэлхийн хамгийн элбэг эргийн шувуудын нэг."],
-    image: { file: "images/dunlin.jpg", credit: "Charles Homler d/b/a FocusOnWildlife", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Dunlin_(Calidris_alpina)_in_the_Delaware_Bay_at_Heislerville_Wildlife_Management_Area,_New_Jersey,_USA.png" },
+    image: { file: "images/dunlin.jpg", credit: "Charles Homler d/b/a FocusOnWildlife", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Dunlin_(Calidris_alpina)_in_the_Delaware_Bay_at_Heislerville_Wildlife_Management_Area,_New_Jersey,_USA.png" },
     audio: null,
     extra: true
   },
@@ -16137,7 +16137,7 @@ BIRDS.push(
     watching: "5-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Маш жижиг.", "Хөл нь хар.", "Нуруундаа цайвар «V»-тэй."],
-    image: { file: "images/little-stint.jpg", credit: "El Golli Mohamed", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:B%C3%A9casseau_minute_Thyna007.jpg" },
+    image: { file: "images/little-stint.jpg", credit: "El Golli Mohamed", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:B%C3%A9casseau_minute_Thyna007.jpg" },
     audio: null,
     extra: true
   },
@@ -16181,7 +16181,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Цээжний хил тод.", "Өмнөд Америкт өвөлждөг.", "Монголд ховор."],
-    image: { file: "images/pectoral-sandpiper.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Pectoral_Sandpiper3.jpg" },
+    image: { file: "images/pectoral-sandpiper.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Pectoral_Sandpiper3.jpg" },
     audio: null,
     extra: true
   },
@@ -16225,7 +16225,7 @@ BIRDS.push(
     watching: "6-р сард Орог нуур.",
     bestTime: "5–6-р сар",
     facts: ["Монгол бол гол үржлийн нутаг.", "Оёдлын машин шиг тэмтэрдэг.", "Ховордож болзошгүй."],
-    image: { file: "images/asian-dowitcher.jpg", credit: "JJ Harrison", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Asian_Dowitcher,_Hunter_Wetlands,_Newcastle,_NSW,_Australia_0A2A8787.jpg" },
+    image: { file: "images/asian-dowitcher.jpg", credit: "JJ Harrison", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Asian_Dowitcher,_Hunter_Wetlands,_Newcastle,_NSW,_Australia_0A2A8787.jpg" },
     audio: null,
     extra: true
   },
@@ -16269,7 +16269,7 @@ BIRDS.push(
     watching: "Буйр нуурт цууцлыг шалга.",
     bestTime: "8-р сар",
     facts: ["Нуруугаар цагаан шаантагтай.", "Маш урт хушуутай.", "Америкт өвөлждөг."],
-    image: { file: "images/long-billed-dowitcher.jpg", credit: "Mike Baird from Morro Bay, USA", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Limnodromus_scolopaceus_Mike_Baird_crop.jpg" },
+    image: { file: "images/long-billed-dowitcher.jpg", credit: "Mike Baird from Morro Bay, USA", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Limnodromus_scolopaceus_Mike_Baird_crop.jpg" },
     audio: null,
     extra: true
   },
@@ -16313,7 +16313,7 @@ BIRDS.push(
     watching: "5-р сард бүрий болоход Тэрэлжийн ой.",
     bestTime: "5–6-р сар",
     facts: ["Бараг 360° хардаг.", "Хатсан навч шиг өнгөлөн далдалдаг.", "Бүрий болоход үзүүлбэр хийдэг."],
-    image: { file: "images/eurasian-woodcock.jpg", credit: "Stephan Sprinz", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Waldschnepfe_(scolopax_rusticola)_-_Spiekeroog,_Nationalpark_Nieders%C3%A4chsisches_Wattenmeer.jpg" },
+    image: { file: "images/eurasian-woodcock.jpg", credit: "Stephan Sprinz", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Waldschnepfe_(scolopax_rusticola)_-_Spiekeroog,_Nationalpark_Nieders%C3%A4chsisches_Wattenmeer.jpg" },
     audio: null,
     extra: true
   },
@@ -16357,7 +16357,7 @@ BIRDS.push(
     watching: "Өвөл хөлдөөгүй булаг.",
     bestTime: "10–3-р сар",
     facts: ["Монголд өвөлждөг.", "Ганцаараа амьдардаг.", "Хүйтэн уулын горхинд дуртай."],
-    image: { file: "images/solitary-snipe.jpg", credit: "(c) Kudaibergen Amirekul, some rights reserved (CC BY-SA)", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Solitary_Snipe_imported_from_iNaturalist_photo_252531185_on_13_June_2024.jpg" },
+    image: { file: "images/solitary-snipe.jpg", credit: "(c) Kudaibergen Amirekul, some rights reserved (CC BY-SA)", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Solitary_Snipe_imported_from_iNaturalist_photo_252531185_on_13_June_2024.jpg" },
     audio: null,
     extra: true
   },
@@ -16401,7 +16401,7 @@ BIRDS.push(
     watching: "8-р сард Хурхын хөндий.",
     bestTime: "8-р сар",
     facts: ["Зүү мэт сүүлний өдтэй.", "Ялгахад хэцүү.", "Өмнөд Азид өвөлждөг."],
-    image: { file: "images/pintail-snipe.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Gallinago_stenura_-_Laem_Pak_Bia.jpg" },
+    image: { file: "images/pintail-snipe.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Gallinago_stenura_-_Laem_Pak_Bia.jpg" },
     audio: null,
     extra: true
   },
@@ -16445,7 +16445,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Дүнгэнэж шумбадаг.", "Суинхогийн нэрээр нэрлэгдсэн.", "Ойн ойролцоо үүрлэдэг."],
-    image: { file: "images/swinhoes-snipe.jpg", credit: "DmitrySA", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Gallinago_megala.jpg" },
+    image: { file: "images/swinhoes-snipe.jpg", credit: "DmitrySA", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Gallinago_megala.jpg" },
     audio: null,
     extra: true
   },
@@ -16489,7 +16489,7 @@ BIRDS.push(
     watching: "5-р сард Хурхын хөндий.",
     bestTime: "5–8-р сар",
     facts: ["Сүүлээрээ бөмбөрддөг.", "Маш урт хушуутай.", "Зигзаг нисдэг."],
-    image: { file: "images/common-snipe.jpg", credit: "TRinaud", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_snipe_(Gallinago_gallinago)_2022.jpg" },
+    image: { file: "images/common-snipe.jpg", credit: "TRinaud", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_snipe_(Gallinago_gallinago)_2022.jpg" },
     audio: null,
     extra: true
   },
@@ -16533,7 +16533,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хооллохдоо биеэ хөдөлгөдөг.", "Хөдлөхгүй сууна.", "Монголд маш ховор."],
-    image: { file: "images/jack-snipe.jpg", credit: "Morhaf kamal aljanee", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jack_snipe.png" },
+    image: { file: "images/jack-snipe.jpg", credit: "Morhaf kamal aljanee", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Jack_snipe.png" },
     audio: null,
     extra: true
   },
@@ -16577,7 +16577,7 @@ BIRDS.push(
     watching: "8-р сард Өгий нуур.",
     bestTime: "8-р сар",
     facts: ["Хушуу дээш махийсан.", "Богино улбар шар хөлтэй.", "Кавказын голын нэрээр нэрлэгдсэн."],
-    image: { file: "images/terek-sandpiper.jpg", credit: "Birds of Gilgit-Baltistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Terek_Sandpiper_(Xenus_cinereus)_(53969645800).jpg" },
+    image: { file: "images/terek-sandpiper.jpg", credit: "Birds of Gilgit-Baltistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Terek_Sandpiper_(Xenus_cinereus)_(53969645800).jpg" },
     audio: null,
     extra: true
   },
@@ -16621,7 +16621,7 @@ BIRDS.push(
     watching: "Зундаа Улаанбаатарын Туул голын эрэг.",
     bestTime: "5–8-р сар",
     facts: ["Үргэлж дохиж байдаг.", "Сэрвэлзэн нисдэг.", "Голын дагуу элбэг."],
-    image: { file: "images/common-sandpiper.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Actitis_hypoleucos_-_Laem_Pak_Bia.jpg" },
+    image: { file: "images/common-sandpiper.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY 3.0", source: "https://commons.wikimedia.org/wiki/File:Actitis_hypoleucos_-_Laem_Pak_Bia.jpg" },
     audio: null,
     extra: true
   },
@@ -16665,7 +16665,7 @@ BIRDS.push(
     watching: "8-р сард Улаанбаатарын горхи.",
     bestTime: "7–8-р сар",
     facts: ["Модонд үүрлэдэг.", "Ууц нь тод цагаан.", "Далавчны доод тал бараан."],
-    image: { file: "images/green-sandpiper.jpg", credit: "Swardeepak", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Green-Sandpiper-Sandeep.jpg" },
+    image: { file: "images/green-sandpiper.jpg", credit: "Swardeepak", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Green-Sandpiper-Sandeep.jpg" },
     audio: null,
     extra: true
   },
@@ -16709,7 +16709,7 @@ BIRDS.push(
     watching: "5-р сард Буйр нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Энгийн саарал.", "Хөл шар.", "Австралид өвөлждөг."],
-    image: { file: "images/grey-tailed-tattler.jpg", credit: "honan4108 on Flickr", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Tringa_brevipes2.jpg" },
+    image: { file: "images/grey-tailed-tattler.jpg", credit: "honan4108 on Flickr", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Tringa_brevipes2.jpg" },
     audio: null,
     extra: true
   },
@@ -16753,7 +16753,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Номхон далайн арлуудад өвөлждөг.", "Бараан саарал.", "Монголд онцгой ховор."],
-    image: { file: "images/wandering-tattler.jpg", credit: "Polinova", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:WanderingTattler.jpg" },
+    image: { file: "images/wandering-tattler.jpg", credit: "Polinova", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:WanderingTattler.jpg" },
     audio: null,
     extra: true
   },
@@ -16797,7 +16797,7 @@ BIRDS.push(
     watching: "5, 8-р сард Өгий нуур.",
     bestTime: "5, 8-р сар",
     facts: ["Зундаа хар өнгөтэй.", "Гэдэс хүртэл усанд ордог.", "Эр нь өндөг дардаг."],
-    image: { file: "images/spotted-redshank.jpg", credit: "Hari K Patibanda", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Spottedredshankbreedingplumage2.jpg" },
+    image: { file: "images/spotted-redshank.jpg", credit: "Hari K Patibanda", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Spottedredshankbreedingplumage2.jpg" },
     audio: null,
     extra: true
   },
@@ -16841,7 +16841,7 @@ BIRDS.push(
     watching: "8-р сард аль ч нуурт.",
     bestTime: "5, 8-р сар",
     facts: ["Хөл нь ногоон.", "Хушуу бага зэрэг дээш махийсан.", "Гурван үет чанга дуутай."],
-    image: { file: "images/common-greenshank.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common-Greenshank.jpg" },
+    image: { file: "images/common-greenshank.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common-Greenshank.jpg" },
     audio: null,
     extra: true
   },
@@ -16885,7 +16885,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "5–7-р сар",
     facts: ["Бусад шувуудад аюулыг анхааруулдаг.", "Хөл нь улаан.", "Далавчны ирмэг цагаан."],
-    image: { file: "images/common-redshank.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_redshank_(Tringa_totanus)_breeding_Marken.jpg" },
+    image: { file: "images/common-redshank.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_redshank_(Tringa_totanus)_breeding_Marken.jpg" },
     audio: null,
     extra: true
   },
@@ -16929,7 +16929,7 @@ BIRDS.push(
     watching: "8-р сард аль ч намагт.",
     bestTime: "5, 8-р сар",
     facts: ["Нуруу нь толботой.", "Хөл шаргал.", "Маш элбэг нүүдэлч."],
-    image: { file: "images/wood-sandpiper.jpg", credit: "Abdul Momin", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Wood_Sandpiper_Safari_Park.jpg" },
+    image: { file: "images/wood-sandpiper.jpg", credit: "Abdul Momin", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Wood_Sandpiper_Safari_Park.jpg" },
     audio: null,
     extra: true
   },
@@ -16973,7 +16973,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "5–7-р сар",
     facts: ["Зүү мэт хушуутай.", "Хөл урт.", "Монголд үрждэг."],
-    image: { file: "images/marsh-sandpiper.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tringa_stagnatilis_2_-_Laem_Pak_Bia.jpg" },
+    image: { file: "images/marsh-sandpiper.jpg", credit: "JJ Harrison (https://www.jjharrison.com.au/)", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Tringa_stagnatilis_2_-_Laem_Pak_Bia.jpg" },
     audio: null,
     extra: true
   },
@@ -17017,7 +17017,7 @@ BIRDS.push(
     watching: "8-р сард Өгий нуур.",
     bestTime: "8-р сар",
     facts: ["Усан дээр эргэлддэг.", "Эм нь илүү өнгөлөг.", "Эр нь өндөг дардаг."],
-    image: { file: "images/red-necked-phalarope.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Red-necked_Phalarope.jpg" },
+    image: { file: "images/red-necked-phalarope.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Red-necked_Phalarope.jpg" },
     audio: null,
     extra: true
   },
@@ -17061,7 +17061,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Өвөл саарал, зун улаан.", "Далайд өвөлждөг.", "Эр нь өндөг дардаг."],
-    image: { file: "images/grey-phalarope.jpg", credit: "Mike Baird from Morro Bay, USA", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Phalaropus_fulicarius_10.jpg" },
+    image: { file: "images/grey-phalarope.jpg", credit: "Mike Baird from Morro Bay, USA", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Phalaropus_fulicarius_10.jpg" },
     audio: null,
     extra: true
   },
@@ -17105,7 +17105,7 @@ BIRDS.push(
     watching: "Богд хан уул, хотын цэцэрлэгт хүрээлэн.",
     bestTime: "Жилийн турш",
     facts: ["Толгойгоороо доош авирдаг.", "Үүрээ шавраар шавардаг.", "Улаанбаатарт элбэг."],
-    image: { file: "images/eurasian-nuthatch.jpg", credit: "Isiwal", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Kleiber_Sitta_europaea-0447.jpg" },
+    image: { file: "images/eurasian-nuthatch.jpg", credit: "Isiwal", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Kleiber_Sitta_europaea-0447.jpg" },
     audio: null,
     extra: true
   },
@@ -17149,7 +17149,7 @@ BIRDS.push(
     watching: "Ёлын амны хад.",
     bestTime: "Жилийн турш",
     facts: ["Далавч час улаан.", "Эрвээхэй шиг дэрвэдэг.", "Хадан цохиод амьдардаг."],
-    image: { file: "images/wallcreeper.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Wallcreeper_(Tichodroma_muraria)_(51181111456).jpg" },
+    image: { file: "images/wallcreeper.jpg", credit: "Imran Shah from Islamabad, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Wallcreeper_(Tichodroma_muraria)_(51181111456).jpg" },
     audio: null,
     extra: true
   },
@@ -17193,7 +17193,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Бусад шувуунаас хоол булаадаг.", "Цайвар, бараан хэлбэртэй.", "Өмнөд далайд нүүдэллэдэг."],
-    image: { file: "images/arctic-skua.jpg", credit: "Jinesh PS", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Arctic_Skua_1.jpg" },
+    image: { file: "images/arctic-skua.jpg", credit: "Jinesh PS", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Arctic_Skua_1.jpg" },
     audio: null,
     extra: true
   },
@@ -17237,7 +17237,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Халбага хэлбэрийн сүүлний өдтэй.", "Леммингээс хамааралтай.", "Халуун орны далайд өвөлждөг."],
-    image: { file: "images/pomarine-skua.jpg", credit: "Patrick Coin (Patrick Coin)", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Stercorarius_pomarinusPCCA20070623-3985B.jpg" },
+    image: { file: "images/pomarine-skua.jpg", credit: "Patrick Coin (Patrick Coin)", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Stercorarius_pomarinusPCCA20070623-3985B.jpg" },
     audio: null,
     extra: true
   },
@@ -17281,7 +17281,7 @@ BIRDS.push(
     watching: "Хөвсгөл нуурын орчмын шинэст тайга; хатсан модны оройг ажигла.",
     bestTime: "3–7-р сар",
     facts: ["Өдөр ан хийдэг.", "Харцага шиг харагддаг.", "Тоо нь оготны олон цөөнийг дагадаг."],
-    image: { file: "images/hawk-owl.jpg", credit: "Dan Frendin", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Surnia_ulula_-_Northern_Hawk-Owl,_H%C3%B6kuggla.jpg" },
+    image: { file: "images/hawk-owl.jpg", credit: "Dan Frendin", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Surnia_ulula_-_Northern_Hawk-Owl,_H%C3%B6kuggla.jpg" },
     audio: null,
     extra: true
   },
@@ -17325,7 +17325,7 @@ BIRDS.push(
     watching: "Хаврын эхээр бүрий болоход Богд хан уул, Тэрэлжийн ой.",
     bestTime: "2–4-р сар",
     facts: ["Бор шувуунаас том биш.", "Дагзандаа «хуурамч нүд»-тэй.", "Өвөлд хоол нөөцөлдөг."],
-    image: { file: "images/eurasian-pygmy-owl.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_pygmy_owl_(Glaucidium_passerinum)_Bia%C5%82owieza.jpg" },
+    image: { file: "images/eurasian-pygmy-owl.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_pygmy_owl_(Glaucidium_passerinum)_Bia%C5%82owieza.jpg" },
     audio: null,
     extra: true
   },
@@ -17369,7 +17369,7 @@ BIRDS.push(
     watching: "3–4-р сард салхигүй шөнө дууг нь чагна.",
     bestTime: "3–4-р сар",
     facts: ["Хар тогшуургын хөндийгөөс хамааралтай.", "Шведийн байгаль судлаачийн нэрээр нэрлэгдсэн.", "Чих нь тэгш хэмгүй тул маш нарийн сонсдог."],
-    image: { file: "images/tengmalms-owl.jpg", credit: "Stefan Berndtsson", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:P%C3%A4rluggla,_Varberg,_Hallands_L%C3%A4n,_Sverige.jpg" },
+    image: { file: "images/tengmalms-owl.jpg", credit: "Stefan Berndtsson", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:P%C3%A4rluggla,_Varberg,_Hallands_L%C3%A4n,_Sverige.jpg" },
     audio: null,
     extra: true
   },
@@ -17413,7 +17413,7 @@ BIRDS.push(
     watching: "6-р сард бүрий болоход Ховдын орчмын голын эргийн төгөлд чагна.",
     bestTime: "6–7-р сар",
     facts: ["Голчлон шавжаар хооллодог.", "Модны холтос шиг өнгөлөн далдалдаг.", "Африк руу нүүдэллэдэг."],
-    image: { file: "images/eurasian-scops-owl.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Scops_Owl_(Otus_scops),_Kalloni,_Lesvos,_Greece,_19.04.2015_(16773748434).jpg" },
+    image: { file: "images/eurasian-scops-owl.jpg", credit: "Frank Vassen from Brussels, Belgium", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Scops_Owl_(Otus_scops),_Kalloni,_Lesvos,_Greece,_19.04.2015_(16773748434).jpg" },
     audio: null,
     extra: true
   },
@@ -17457,7 +17457,7 @@ BIRDS.push(
     watching: "6-р сард Хэнтийн голын эргийн ойд чагна.",
     bestTime: "6-р сар",
     facts: ["Саарал, зээрд хэлбэртэй.", "Дуугаар нь хамгийн сайн ялгана.", "Зүүн өмнөд Ази руу нүүдэллэдэг."],
-    image: { file: "images/east-asian-scops-owl.jpg", credit: "JJ Harrison", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_Scops_Owl_0A2A9781.jpg" },
+    image: { file: "images/east-asian-scops-owl.jpg", credit: "JJ Harrison", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Oriental_Scops_Owl_0A2A9781.jpg" },
     audio: null,
     extra: true
   },
@@ -17501,7 +17501,7 @@ BIRDS.push(
     watching: "Нүүдлийн үеэр говийн баянбүрд (Ёлын ам); өтгөн модонд хонож буй шувууг хай.",
     bestTime: "4–5, 9-р сар",
     facts: ["«Чих» нь зүгээр л өд.", "Хэрээний хуучин үүрэнд үүрлэдэг.", "Өвөл бөөнөөрөө хонодог."],
-    image: { file: "images/long-eared-owl.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Long-eared_Owl_-_Kisjuszallas_-_Hungary_S4E0920_(15671750198).jpg" },
+    image: { file: "images/long-eared-owl.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Long-eared_Owl_-_Kisjuszallas_-_Hungary_S4E0920_(15671750198).jpg" },
     audio: null,
     extra: true
   },
@@ -17545,7 +17545,7 @@ BIRDS.push(
     watching: "6–9-р сард бүрий болоход Хурхын хөндийн нуга.",
     bestTime: "6–9-р сар",
     facts: ["Өдөр ан хийдэг.", "Газарт үүрлэдэг.", "Таван тивд тархсан."],
-    image: { file: "images/short-eared-owl.jpg", credit: "Sumeet Moghe", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Short_Eared_Owl_on_the_Ground.jpg" },
+    image: { file: "images/short-eared-owl.jpg", credit: "Sumeet Moghe", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Short_Eared_Owl_on_the_Ground.jpg" },
     audio: null,
     extra: true
   },
@@ -17589,7 +17589,7 @@ BIRDS.push(
     watching: "Богд хан уулын ой; хавар шөнө чагна.",
     bestTime: "3–6-р сар",
     facts: ["Үүрэндээ ойртсон хүнд дайрдаг.", "Хар нүдтэй.", "Хөгшин ойд амьдардаг."],
-    image: { file: "images/ural-owl.jpg", credit: "Jyrki Salmi from Finland", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Strix_uralensis,_Kotka,_Finland_1.jpg" },
+    image: { file: "images/ural-owl.jpg", credit: "Jyrki Salmi from Finland", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Strix_uralensis,_Kotka,_Finland_1.jpg" },
     audio: null,
     extra: true
   },
@@ -17633,7 +17633,7 @@ BIRDS.push(
     watching: "Ховор харагдана; Хөвсгөлийн орчмын тайгын цоорхой.",
     bestTime: "—",
     facts: ["Дэлхийн хамгийн өндөр шар шувуу.", "Зузаан цасан доорх оготныг сонсдог.", "Ихэнх нь өд — харагдахаасаа хөнгөн."],
-    image: { file: "images/great-grey-owl.jpg", credit: "Dion Art", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B0%D1%82%D0%B0%D1%8F_%D0%BD%D0%B5%D1%8F%D1%81%D1%8B%D1%82%D1%8C_(Strix_nebulosa,_m),_%D0%91%D0%BE%D1%82%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4.jpg" },
+    image: { file: "images/great-grey-owl.jpg", credit: "Dion Art", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B0%D1%82%D0%B0%D1%8F_%D0%BD%D0%B5%D1%8F%D1%81%D1%8B%D1%82%D1%8C_(Strix_nebulosa,_m),_%D0%91%D0%BE%D1%82%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4.jpg" },
     audio: null,
     extra: true
   },
@@ -17677,7 +17677,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Өдөр идэвхтэй.", "Дэлхийд эмзэг зүйл.", "Жилд 1500 гаруй лемминг идэж чадна."],
-    image: { file: "images/snowy-owl.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:SnowyOwlAmericanBlackDuck.jpg" },
+    image: { file: "images/snowy-owl.jpg", credit: "Chuck Homler d/b/a Focus On Wildlife", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:SnowyOwlAmericanBlackDuck.jpg" },
     audio: null,
     extra: true
   },
@@ -17721,7 +17721,7 @@ BIRDS.push(
     watching: "6-р сард Хар ус нуурын тосгонууд.",
     bestTime: "5–8-р сар",
     facts: ["Маш сайн дууриагч.", "Сүргээрээ эргэлддэг.", "Моцартын тэжээвэр шувуу."],
-    image: { file: "images/common-starling.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_starling_(Sturnus_vulgaris)_breeding_male_Marken.jpg" },
+    image: { file: "images/common-starling.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Common_starling_(Sturnus_vulgaris)_breeding_male_Marken.jpg" },
     audio: null,
     extra: true
   },
@@ -17765,7 +17765,7 @@ BIRDS.push(
     watching: "Царцаа ихтэй жил 6-р сард баруун нутгийн хээр.",
     bestTime: "6-р сар",
     facts: ["Ягаан хар өнгөтэй.", "Царцаа иддэг.", "Жигд бус ирдэг."],
-    image: { file: "images/rosy-starling.jpg", credit: "MPF", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2018-05-18_Pastor_roseus,_Ashington,_Northumberland_2.jpg" },
+    image: { file: "images/rosy-starling.jpg", credit: "MPF", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:2018-05-18_Pastor_roseus,_Ashington,_Northumberland_2.jpg" },
     audio: null,
     extra: true
   },
@@ -17809,7 +17809,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5–6-р сар",
     facts: ["Нуруу нил ягаан.", "Далавчиндаа цагаан зураастай.", "Жижиг тодол."],
-    image: { file: "images/purple-backed-starling.jpg", credit: "JJ Harrison (https://tiny.jjharrison.com.au/t/QglPolx8Ymh0999o)", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Agropsar_sturninus_-_Kent_Ridge_Park.jpg" },
+    image: { file: "images/purple-backed-starling.jpg", credit: "JJ Harrison (https://tiny.jjharrison.com.au/t/QglPolx8Ymh0999o)", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Agropsar_sturninus_-_Kent_Ridge_Park.jpg" },
     audio: null,
     extra: true
   },
@@ -17853,7 +17853,7 @@ BIRDS.push(
     watching: "5-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "5–8-р сар",
     facts: ["Нүүр цагаан.", "Хушуу улбар шар.", "Хотод элбэг."],
-    image: { file: "images/white-cheeked-starling.jpg", credit: "切干大根", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Spodiopsar_cineraceus_Higashi-hagoromo_station.jpg" },
+    image: { file: "images/white-cheeked-starling.jpg", credit: "切干大根", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Spodiopsar_cineraceus_Higashi-hagoromo_station.jpg" },
     audio: null,
     extra: true
   },
@@ -17897,7 +17897,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Духандаа отготой.", "Хүний үгийг дууриадаг.", "Өмнөд Хятадын зүйл."],
-    image: { file: "images/crested-myna.jpg", credit: "Laitche", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Crested_myna,_Osaka,_Japan.jpg" },
+    image: { file: "images/crested-myna.jpg", credit: "Laitche", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Crested_myna,_Osaka,_Japan.jpg" },
     audio: null,
     extra: true
   },
@@ -17941,7 +17941,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Хар оройтой.", "Лимбэ мэт дуутай.", "Монголд маш ховор."],
-    image: { file: "images/eurasian-blackcap.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_blackcap_(Sylvia_atricapilla)_male_Drenthe.jpg" },
+    image: { file: "images/eurasian-blackcap.jpg", credit: "Charles J. Sharp", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_blackcap_(Sylvia_atricapilla)_male_Drenthe.jpg" },
     audio: null,
     extra: true
   },
@@ -17985,7 +17985,7 @@ BIRDS.push(
     watching: "5-р сард Орог нуурын ойролцоох заг.",
     bestTime: "5–7-р сар",
     facts: ["Сүүл хүрэн.", "Газраар гүйдэг.", "Чогчиго дагадаг."],
-    image: { file: "images/asian-desert-warbler.jpg", credit: "Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Asian_Desert_Warbler_(Sylvia_nana)_(53678154976)_(cropped).jpg" },
+    image: { file: "images/asian-desert-warbler.jpg", credit: "Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Asian_Desert_Warbler_(Sylvia_nana)_(53678154976)_(cropped).jpg" },
     audio: null,
     extra: true
   },
@@ -18029,7 +18029,7 @@ BIRDS.push(
     watching: "6-р сард Ёлын ам.",
     bestTime: "6-р сар",
     facts: ["Доод тал судалтай.", "Нүд шар.", "Дунхайн ойролцоо үүрлэдэг."],
-    image: { file: "images/barred-warbler.jpg", credit: "Christoph Moning", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Curruca_nisoria_378155893.jpg" },
+    image: { file: "images/barred-warbler.jpg", credit: "Christoph Moning", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Curruca_nisoria_378155893.jpg" },
     audio: null,
     extra: true
   },
@@ -18073,7 +18073,7 @@ BIRDS.push(
     watching: "6-р сард Тэрэлжийн бут.",
     bestTime: "6–7-р сар",
     facts: ["Хоолой цагаан.", "Чихэнд бараан толботой.", "Элбэг."],
-    image: { file: "images/lesser-whitethroat.jpg", credit: "Ekytza", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BB%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B7%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%88%D0%BA%D0%B0_(Sylvia_curruca).jpg" },
+    image: { file: "images/lesser-whitethroat.jpg", credit: "Ekytza", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BB%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B7%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%88%D0%BA%D0%B0_(Sylvia_curruca).jpg" },
     audio: null,
     extra: true
   },
@@ -18117,7 +18117,7 @@ BIRDS.push(
     watching: "6-р сард Хурхын хөндий.",
     bestTime: "6-р сар",
     facts: ["Далавч зэвэрсэн өнгөтэй.", "Хоолой цагаан.", "Дуулах нислэгтэй."],
-    image: { file: "images/common-whitethroat.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common_Whitethroat.jpg" },
+    image: { file: "images/common-whitethroat.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common_Whitethroat.jpg" },
     audio: null,
     extra: true
   },
@@ -18161,7 +18161,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Сүүл урт.", "Хятадын зүйл.", "Газраар гүйдэг."],
-    image: { file: "images/chinese-hill-warbler.jpg", credit: "夏仲归", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Rhopophilus_pekinensis_-_%E5%A4%8F%E4%BB%B2%E5%BD%92_-_568550281.jpeg" },
+    image: { file: "images/chinese-hill-warbler.jpg", credit: "夏仲归", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Rhopophilus_pekinensis_-_%E5%A4%8F%E4%BB%B2%E5%BD%92_-_568550281.jpeg" },
     audio: null,
     extra: true
   },
@@ -18205,7 +18205,7 @@ BIRDS.push(
     watching: "Буйр нуурын зэгс.",
     bestTime: "Жилийн турш",
     facts: ["Тоть шиг хушуутай.", "Зэгс урж онгойлгодог.", "Ховордож болзошгүй."],
-    image: { file: "images/reed-parrotbill.jpg", credit: "Sun Jiao (Interaccoonale)", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Paradoxornis_heudei_2023-2.jpg" },
+    image: { file: "images/reed-parrotbill.jpg", credit: "Sun Jiao (Interaccoonale)", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Paradoxornis_heudei_2023-2.jpg" },
     audio: null,
     extra: true
   },
@@ -18249,7 +18249,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Бүдүүвтэр хушуутай.", "Сүрэглэдэг.", "Өчүүхэн."],
-    image: { file: "images/vinous-throated-parrotbill.jpg", credit: "Alnus", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Parrotbill_0780.jpg" },
+    image: { file: "images/vinous-throated-parrotbill.jpg", credit: "Alnus", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Parrotbill_0780.jpg" },
     audio: null,
     extra: true
   },
@@ -18293,7 +18293,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Толгой, хүзүү нь нүцгэн.", "Ариун билүүстэй төрөл.", "Азийн зүйл."],
-    image: { file: "images/black-headed-ibis.jpg", credit: "Hari Krishnan", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Black-headed_Ibis_(Threskiornis_melanocephalus).jpg" },
+    image: { file: "images/black-headed-ibis.jpg", credit: "Hari Krishnan", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Black-headed_Ibis_(Threskiornis_melanocephalus).jpg" },
     audio: null,
     extra: true
   },
@@ -18337,7 +18337,7 @@ BIRDS.push(
     watching: "5–8-р сард Өгий нуур, Бөөн цагаан.",
     bestTime: "5–8-р сар",
     facts: ["Хушуугаараа шүүрдэж хооллодог.", "Хушуу нь халбага хэлбэртэй.", "Монголын нууруудад элбэг."],
-    image: { file: "images/eurasian-spoonbill.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Spoonbill-2.jpg" },
+    image: { file: "images/eurasian-spoonbill.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Eurasian_Spoonbill-2.jpg" },
     audio: null,
     extra: true
   },
@@ -18381,7 +18381,7 @@ BIRDS.push(
     watching: "Хурхын хөндийн голын эргийн шугуй.",
     bestTime: "Жилийн турш",
     facts: ["Жижиг ч чанга дуутай.", "Сүүлээ өргөдөг.", "Эр нь хэд хэдэн үүр засдаг."],
-    image: { file: "images/eurasian-wren.jpg", credit: "Alexis Lours", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_wren_Franconville_02.jpg" },
+    image: { file: "images/eurasian-wren.jpg", credit: "Alexis Lours", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Eurasian_wren_Franconville_02.jpg" },
     audio: null,
     extra: true
   },
@@ -18425,7 +18425,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5–6-р сар",
     facts: ["Хайрс шиг хээтэй.", "Шөнө исгэрдэг.", "Далавчны доод тал судалтай."],
-    image: { file: "images/whites-thrush.jpg", credit: "Charles Lam from Hong Kong, China", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Zoothera_aurea,_Hong_Kong_1.jpg" },
+    image: { file: "images/whites-thrush.jpg", credit: "Charles Lam from Hong Kong, China", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Zoothera_aurea,_Hong_Kong_1.jpg" },
     audio: null,
     extra: true
   },
@@ -18469,7 +18469,7 @@ BIRDS.push(
     watching: "5-р сард говийн баянбүрд.",
     bestTime: "5-р сар",
     facts: ["Цагаан хөмсөгтэй.", "Нууцхан.", "Тайгын хөөндэй."],
-    image: { file: "images/siberian-thrush.jpg", credit: "JJ Harrison", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Siberian_Thrush_0A2A2890.jpg" },
+    image: { file: "images/siberian-thrush.jpg", credit: "JJ Harrison", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Siberian_Thrush_0A2A2890.jpg" },
     audio: null,
     extra: true
   },
@@ -18513,7 +18513,7 @@ BIRDS.push(
     watching: "Алтайн ойн зах.",
     bestTime: "5–7-р сар",
     facts: ["Шуурганд дуулдаг.", "Толбо нь бөөрөнхий.", "Жимсний модоо хамгаалдаг."],
-    image: { file: "images/mistle-thrush.jpg", credit: "Fernando Losada Rodríguez", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Turdus_viscivorus.001_-_Cardiff.jpg" },
+    image: { file: "images/mistle-thrush.jpg", credit: "Fernando Losada Rodríguez", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:Turdus_viscivorus.001_-_Cardiff.jpg" },
     audio: null,
     extra: true
   },
@@ -18557,7 +18557,7 @@ BIRDS.push(
     watching: "6-р сард баруун нутгийн ой.",
     bestTime: "6-р сар",
     facts: ["Дуугаа давтдаг.", "Эмгэн хумс хагалдаг.", "Шавран доторлогоотой үүртэй."],
-    image: { file: "images/song-thrush.jpg", credit: "Dion Art", via: "Wikimedia Commons Â· CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D0%B2%D1%87%D0%B8%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%D0%BD%D0%B0_%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B5_(Turdus_philomelos),_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg" },
+    image: { file: "images/song-thrush.jpg", credit: "Dion Art", via: "Wikimedia Commons · CC BY-SA 4.0", source: "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D0%B2%D1%87%D0%B8%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%D0%BD%D0%B0_%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B5_(Turdus_philomelos),_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg" },
     audio: null,
     extra: true
   },
@@ -18601,7 +18601,7 @@ BIRDS.push(
     watching: "Улаанбаатарын жимсний мод.",
     bestTime: "10-р сар",
     facts: ["Хажуу улаан.", "Цөцгий хөмсөгтэй.", "Шөнө нүүдэллэдэг."],
-    image: { file: "images/redwing.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Redwing_Turdus_iliacus.jpg" },
+    image: { file: "images/redwing.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Redwing_Turdus_iliacus.jpg" },
     audio: null,
     extra: true
   },
@@ -18645,7 +18645,7 @@ BIRDS.push(
     watching: "Хар ус нуурын ой.",
     bestTime: "Жилийн турш",
     facts: ["Хушуу улбар шар.", "Лимбэ мэт дуутай.", "Монголд цөөн."],
-    image: { file: "images/eurasian-blackbird.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons Â· CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common_Blackbird.jpg" },
+    image: { file: "images/eurasian-blackbird.jpg", credit: "Andreas Trepte", via: "Wikimedia Commons · CC BY-SA 2.5", source: "https://commons.wikimedia.org/wiki/File:Common_Blackbird.jpg" },
     audio: null,
     extra: true
   },
@@ -18689,7 +18689,7 @@ BIRDS.push(
     watching: "5-р сард Ёлын ам.",
     bestTime: "5, 9-р сар",
     facts: ["Цагаан хөмсөгтэй.", "Хажуу улбар шар.", "Элбэг нүүдэлч."],
-    image: { file: "images/eyebrowed-thrush.jpg", credit: "Robert tdc", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Eyebrowed_Thrush.jpg" },
+    image: { file: "images/eyebrowed-thrush.jpg", credit: "Robert tdc", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Eyebrowed_Thrush.jpg" },
     audio: null,
     extra: true
   },
@@ -18733,7 +18733,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Сүүлний булан цагаан.", "Энгийн бор.", "Зүүн Азийн зүйл."],
-    image: { file: "images/pale-thrush.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons Â· CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Pale_Thrush_-_Taiwan_S4E8071_(17027483687).jpg" },
+    image: { file: "images/pale-thrush.jpg", credit: "Francesco Veronesi from Italy", via: "Wikimedia Commons · CC BY-SA 2.0", source: "https://commons.wikimedia.org/wiki/File:Pale_Thrush_-_Taiwan_S4E8071_(17027483687).jpg" },
     audio: null,
     extra: true
   },
@@ -18777,7 +18777,7 @@ BIRDS.push(
     watching: "Өвөл Улаанбаатарын жимсний мод.",
     bestTime: "Өвөл",
     facts: ["Толгой саарал.", "Махчныг баасаараа бөмбөгддөг.", "Өвөл сүрэглэдэг."],
-    image: { file: "images/fieldfare.jpg", credit: "Bengt Nyman from Vaxholm, Sweden", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Turdus_pilaris_EM1B9020_(34450664312).jpg" },
+    image: { file: "images/fieldfare.jpg", credit: "Bengt Nyman from Vaxholm, Sweden", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Turdus_pilaris_EM1B9020_(34450664312).jpg" },
     audio: null,
     extra: true
   },
@@ -18821,7 +18821,7 @@ BIRDS.push(
     watching: "10-р сард Улаанбаатар.",
     bestTime: "4, 10-р сар",
     facts: ["Сүүл хүрэн.", "Хүрэн хөөндэйтэй эрлийзждэг.", "Науманы нэрээр нэрлэгдсэн."],
-    image: { file: "images/naumanns-thrush.jpg", credit: "no rights reserved", via: "Wikimedia Commons Â· CC0", source: "https://commons.wikimedia.org/wiki/File:Naumann%27s_Thrush_imported_from_iNaturalist_photo_181639461_on_21_June_2024.jpg" },
+    image: { file: "images/naumanns-thrush.jpg", credit: "no rights reserved", via: "Wikimedia Commons · CC0", source: "https://commons.wikimedia.org/wiki/File:Naumann%27s_Thrush_imported_from_iNaturalist_photo_181639461_on_21_June_2024.jpg" },
     audio: null,
     extra: true
   },
@@ -18865,7 +18865,7 @@ BIRDS.push(
     watching: "10-р сард Улаанбаатарын цэцэрлэгт хүрээлэн.",
     bestTime: "4, 10-р сар",
     facts: ["Далавч хүрэн.", "Цагаан хөмсөгтэй.", "Элбэг нүүдэлч."],
-    image: { file: "images/dusky-thrush.jpg", credit: "Forest Botial-Jarvis", via: "Wikimedia Commons Â· CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Turdus_eunomus_-_Forest_Botial-Jarvis_-_616099817_(cropped).jpeg" },
+    image: { file: "images/dusky-thrush.jpg", credit: "Forest Botial-Jarvis", via: "Wikimedia Commons · CC BY 4.0", source: "https://commons.wikimedia.org/wiki/File:Turdus_eunomus_-_Forest_Botial-Jarvis_-_616099817_(cropped).jpeg" },
     audio: null,
     extra: true
   },
@@ -18909,7 +18909,7 @@ BIRDS.push(
     watching: "6-р сард Алтайн ойн зах.",
     bestTime: "5–9-р сар",
     facts: ["Хоолой хар.", "Нуруу саарал.", "Баруун Монголд."],
-    image: { file: "images/black-throated-thrush.jpg", credit: "Hans Norelius from Älvsjö, Sweden", via: "Wikimedia Commons Â· CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Svarthalsad_trast,_V%C3%A4xj%C3%B6,_Februari_2017_(33349504344).jpg" },
+    image: { file: "images/black-throated-thrush.jpg", credit: "Hans Norelius from Älvsjö, Sweden", via: "Wikimedia Commons · CC BY 2.0", source: "https://commons.wikimedia.org/wiki/File:Svarthalsad_trast,_V%C3%A4xj%C3%B6,_Februari_2017_(33349504344).jpg" },
     audio: null,
     extra: true
   },
@@ -19002,7 +19002,7 @@ BIRDS.push(
     watching: "Тааралдах магадлал бага.",
     bestTime: "—",
     facts: ["Гурван хуруутай.", "Эргийн шувуудтай төрөл.", "Эр нь зулзагаа өсгөдөг."],
-    image: { file: "images/yellow-legged-buttonquail.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons Â· CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-legged_Button_Quails_Turnix_tanki_Amravati_(3)._Maharashtra,_India.jpg" },
+    image: { file: "images/yellow-legged-buttonquail.jpg", credit: "Dr. Raju Kasambe", via: "Wikimedia Commons · CC BY-SA 3.0", source: "https://commons.wikimedia.org/wiki/File:Yellow-legged_Button_Quails_Turnix_tanki_Amravati_(3)._Maharashtra,_India.jpg" },
     audio: null,
     extra: true
   }

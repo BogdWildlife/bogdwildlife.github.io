@@ -1,9 +1,9 @@
 /* Build js/birds2*.js + js/ranges2.js from harvested source data and the text batches in src/b2.
-   Run: cscript //nologo src\build.js <scratchpad-dir>
+   Run: cscript //nologo src\build.js [data-dir]   (default: src\data — harvested sources: species-master, iucn, gbif, families, wiki)
    Species are included only when MN, EN and FR texts all exist. */
 var fso = new ActiveXObject("Scripting.FileSystemObject");
 var ROOT = fso.GetParentFolderName(fso.GetParentFolderName(WScript.ScriptFullName));
-var SP = WScript.Arguments.length ? WScript.Arguments(0) : "";
+var SP = WScript.Arguments.length ? WScript.Arguments(0) : ROOT + "\\src\\data";
 
 function readU(p) { var s = new ActiveXObject("ADODB.Stream"); s.Type = 2; s.Charset = "utf-8"; s.Open(); s.LoadFromFile(p); var t = s.ReadText(); s.Close(); return t.replace(/^﻿/, ""); }
 function writeU(p, t) {
@@ -97,7 +97,7 @@ for (var i = 0; i < master.length; i++) {
   // image
   var img = null;
   if (w.img && !fso.FileExists(ROOT + "\\images\\" + id + ".jpg") && fso.FileExists(SP + "\\newimg\\" + id + ".jpg")) fso.CopyFile(SP + "\\newimg\\" + id + ".jpg", ROOT + "\\images\\" + id + ".jpg");
-  if (w.img && fso.FileExists(ROOT + "\\images\\" + id + ".jpg")) img = { file: "images/" + id + ".jpg", credit: trim(w.img.credit || "Wikimedia Commons").substr(0, 80) || "Wikimedia Commons", via: w.img.via, source: w.img.source };
+  if (w.img && fso.FileExists(ROOT + "\\images\\" + id + ".jpg")) img = { file: "images/" + id + ".jpg", credit: trim(w.img.credit || "Wikimedia Commons").substr(0, 80) || "Wikimedia Commons", via: String(w.img.via || "").replace(/Â·/g, "·"), source: w.img.source };
   else { noimg.push(id); img = { file: "images/nophoto.svg", credit: "", source: "", none: true }; }
   var sz = t.sz || ["—", "—", "—"], szMN = [], szFR = [];
   for (j = 0; j < 3; j++) {

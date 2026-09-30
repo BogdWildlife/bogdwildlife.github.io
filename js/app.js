@@ -1016,8 +1016,8 @@
     { name: T("Эхлэгч", "Beginner"), opts: 3, dist: "far", core: true },
     { name: T("Сонирхогч", "Enthusiast"), opts: 4, dist: "any" },
     { name: T("Ажиглагч", "Birder"), opts: 4, dist: "near", wide: true },
-    { name: T("Мэргэжилтэн", "Expert"), opts: 6, dist: "near", wide: true, zoom: true, time: 20 },
-    { name: T("Мастер", "Master"), opts: 6, dist: "near", wide: true, zoom: true, gray: true, time: 12 }
+    { name: T("Мэргэжилтэн", "Expert"), opts: 6, dist: "near", wide: true, gray: true, time: 20 },
+    { name: T("Мастер", "Master"), opts: 6, dist: "near", wide: true, gray: true, time: 12 }
   ];
   const ROUND = 5, PASS = 4;
   const CORE_IDS = BIRDS.slice(0, 20).map(b => b.id); // Жагсаалтын эхний 20 шувуу (тогоруу, өрөвтас, хун, галуу, махчин)
@@ -1032,7 +1032,7 @@
     else parts.push(kind === "photo" ? T("Бүх шувуу", "All birds") : T("Бүх бичлэг", "All recordings"));
     parts.push(`${lv.opts} ${T("сонголт", "choices")}`);
     if (lv.dist === "near") parts.push(T("төстэй шувуудаас ялгах", "tell apart similar birds"));
-    if (kind === "photo" && lv.zoom) parts.push(lv.gray ? T("томруулсан хар цагаан зураг", "zoomed black-and-white photo") : T("томруулсан хэсэг зураг", "zoomed-in detail"));
+    if (kind === "photo" && lv.gray) parts.push(T("хар цагаан зураг", "black-and-white photo", "photo en noir et blanc"));
     if (lv.time) parts.push(`⏱ ${lv.time} ${T("секунд", "seconds")}` + (kind === "sound" ? T(" (дуу тоглож эхлэхэд цаг эхэлнэ)", " (starts when the recording plays)") : ""));
     return parts.join(" · ");
   }
