@@ -15,7 +15,8 @@
     ugii: "Ugii Lake", terkh: "Terkhiin Tsagaan Lake", orkhon: "Orkhon Valley", kharus: "Khar Us Lake", uvs: "Uvs Lake",
     achit: "Achit Lake", ulgii: "Ulgii", tavanbogd: "Altai Tavan Bogd", yoliin: "Yolyn Am (Gobi Gurvan Saikhan)",
     ikhnart: "Ikh Nart Nature Reserve", boontsagaan: "Boon Tsagaan Lake", orog: "Orog Lake", taatsin: "Taatsiin Tsagaan Lake",
-    ganga: "Ganga Lake (Dariganga)", buir: "Lake Buir", daguur: "Mongol Daguur (Ulz River)", khurkh: "Khurkh-Khuiten Valley", onon: "Onon-Balj"
+    ganga: "Ganga Lake (Dariganga)", buir: "Lake Buir", daguur: "Mongol Daguur (Ulz River)", khurkh: "Khurkh-Khuiten Valley", onon: "Onon-Balj",
+    amarbayasgalant: "Amarbayasgalant, Iven River valley", murun: "Murun, Delger Murun River", bayanzag: "Bayanzag", khongor: "Khongoryn Els"
   };
   const GROUPS_EN = { raptor: "Raptors", owl: "Owls", crane: "Cranes", stork: "Storks", heron: "Herons & ibises", waterfowl: "Swans & geese", duck: "Ducks", waterbird: "Grebes, pelicans & other waterbirds", gull: "Gulls & terns", wader: "Waders", gamebird: "Gamebirds & sandgrouse", nearpass: "Pigeons, cuckoos & allies", woodpecker: "Woodpeckers", lark: "Larks, pipits & wagtails", crow: "Crows, swallows & shrikes", thrush: "Thrushes, chats & flycatchers", warbler: "Warblers & tits", finch: "Finches, buntings & sparrows", small: "Small birds" };
   const COLOR_EN = { black: "Black", white: "White", gray: "Grey", brown: "Brown", buff: "Buff", rufous: "Rufous / orange", yellow: "Yellow", red: "Red" };
@@ -109,6 +110,40 @@
       ],
       intro: "Kazakh eagle-hunting culture, the snow-capped Altai peaks and the rare Dalmatian Pelican of the Great Lakes. Unforgettable if timed with the autumn Golden Eagle Festival.",
       tips: ["Altai Tavan Bogd lies in the border zone, so a border permit is required.", "Nights in the high mountains drop to 0°C — bring warm clothes.", "Don’t approach pelican colonies by boat."]
+    },
+    "khuvsgul-taiga": {
+      name: "Lake Khuvsgul & the northern forests", days: "7–8 days", distance: "≈ 1,700 km", season: "Jun–Aug", level: "Moderate",
+      transport: "4×4; mostly paved, dirt roads to Amarbayasgalant and beyond Khatgal. You can shorten it by flying to Murun",
+      stops: [
+        { day: "Day 1", note: "Start. Head north into the Selenge forest-steppe." },
+        { day: "Days 1–2", note: "Iven River valley and the forest around the monastery: Black Stork, Black Grouse, Great Spotted Woodpecker, small forest birds." },
+        { day: "Day 3", note: "Delger Murun riverbanks: Ruddy Shelduck, Bar-headed Goose, birds of the riverside willows." },
+        { day: "Days 4–6", note: "Lake Khuvsgul and the taiga: Whooper Swan, Common Goldeneye, Common Merganser, Western Capercaillie, Siberian Jay, Black Woodpecker." }
+      ],
+      intro: "Meet the Siberian forest birds of Lake Khuvsgul, Mongolia’s “Blue Pearl”, and its surrounding taiga — passing Amarbayasgalant monastery and the Selenge forest-steppe on the way.",
+      tips: ["July is busy at Khatgal and on the lakeshore — book accommodation ahead.", "Mosquitoes and ticks are common in the taiga — bring repellent and long sleeves.", "There is an entrance fee for Khuvsgul National Park."]
+    },
+    "south-gobi-fly": {
+      name: "Short South Gobi trip (with flights)", days: "4–5 days", distance: "≈ 600 km by road + flights", season: "May–Jun, Sep", level: "Moderate",
+      transport: "Flight UB–Dalanzadgad (≈ 1.5 h), 4×4 overland, mostly dirt roads",
+      stops: [
+        { day: "Days 1–2", note: "Yolyn Am: Lammergeier, Golden Eagle, Cinereous Vulture and Altai Snowcock on the gorge cliffs; Wallcreeper on the rock faces." },
+        { day: "Day 3", note: "Khongoryn Els: saxaul and willows at the foot of the dunes — Saxaul Sparrow, Desert Wheatear, Pallas’s Sandgrouse." },
+        { day: "Day 4", note: "Bayanzag: saxaul forest and the Flaming Cliffs — Mongolian Ground Jay, Saxaul Sparrow, Mongolian Finch." }
+      ],
+      intro: "For travellers short on time who still want the Gobi’s highlights and its special birds. Flying in cuts out the long drive and covers Yolyn Am, Khongoryn Els and Bayanzag.",
+      tips: ["Flights have strict baggage limits — carry your telescope and binoculars as hand luggage.", "The Gobi is hot by day and cold at night — bring layers.", "Search for the Mongolian Ground Jay in the saxaul early in the morning, listening for its call."]
+    },
+    "winter-ub": {
+      name: "Winter birding around Ulaanbaatar", days: "1–3 days", distance: "≈ 320 km", season: "Nov–Mar", level: "Easy",
+      transport: "Car; paved roads. A 4×4 is better after snow",
+      stops: [
+        { day: "Day 1", note: "Unfrozen stretches of the Tuul River and the foot of Bogd Khan mountain: Common Goldeneye, Common Merganser, Bohemian Waxwing, Pine Grosbeak, Great Spotted Woodpecker." },
+        { day: "Day 2", note: "Terelj forest and valley: Black Grouse, Eurasian Bullfinch, Pallas’s Rosefinch, Willow Tit, flocks of Common Redpoll." },
+        { day: "Day 3", note: "Hustai steppe: Rough-legged Buzzard, Cinereous Vulture, Saker Falcon, flocks of Snow Bunting." }
+      ],
+      intro: "Birding works in the cold season too! See winter visitors from the north — Bohemian Waxwing, Pine Grosbeak, Common Redpoll, Snow Bunting — and resident birds close to Ulaanbaatar.",
+      tips: ["It can drop to −30°C — warm boots, gloves and a hat are essential. Batteries drain fast.", "Days are short — plan birding between 10:00 and 16:00.", "Don’t walk on the ice near open water on the Tuul River."]
     }
   };
 
@@ -198,6 +233,42 @@
         am: "Past Khyargas Lake.", pm: "Khar Us reedbeds: Dalmatian Pelican, Whooper Swan.", ev: "Bird song from the reeds." },
       { title: "Khar Us Lake → Khovd → Ulaanbaatar", drive: "90 km + flight", stay: "—",
         am: "Last birding at Khar Us Lake.", pm: "Flight from Khovd.", ev: "Arrive in Ulaanbaatar." }
+    ],
+    "khuvsgul-taiga": [
+      { title: "Ulaanbaatar → Amarbayasgalant", drive: "360 km · 6–7 h", stay: "Ger camp near the monastery",
+        am: "Paved road towards Darkhan; Upland Buzzard and Saker Falcon along the way.", pm: "The last 35 km on dirt road into the Iven River valley.", ev: "Black Grouse and Great Spotted Woodpecker at the forest edge." },
+      { title: "Amarbayasgalant → Erdenet → Bulgan", drive: "250 km · 5 h", stay: "Bulgan town",
+        am: "Visit the monastery; dawn birding on the Iven River: Black Stork.", pm: "Via Erdenet to Bulgan.", ev: "Birds of Bulgan’s forest edge." },
+      { title: "Bulgan → Murun", drive: "350 km · 6 h", stay: "Murun town",
+        am: "Optional stop at Uran Togoo volcano.", pm: "Delger Murun riverbanks: Ruddy Shelduck, Bar-headed Goose.", ev: "Overnight in Murun." },
+      { title: "Murun → Khatgal, Lake Khuvsgul", drive: "100 km · 2 h", stay: "Ger camp on the west shore of Lake Khuvsgul",
+        am: "Paved road to Khatgal.", pm: "South shore and the Egiin River outflow: Whooper Swan, Common Goldeneye, Common Merganser.", ev: "Eurasian Eagle-Owl calling at the taiga edge." },
+      { title: "Lake Khuvsgul — full day", drive: "On foot / horseback", stay: "Lake Khuvsgul",
+        am: "06:00 taiga walk: Western Capercaillie, Hazel Grouse, Siberian Jay, Black Woodpecker.", pm: "Along the shore: White-throated Dipper on fast streams.", ev: "Sunset on the lakeshore." },
+      { title: "Lake Khuvsgul → Murun", drive: "100 km · 2 h", stay: "Murun town",
+        am: "Last morning birding at the lake.", pm: "Back to Murun (or fly from Murun to UB).", ev: "Rest." },
+      { title: "Murun → Ulaanbaatar", drive: "670 km · 11 h", stay: "—",
+        am: "Early start.", pm: "Via Bulgan and Erdenet.", ev: "Arrive in Ulaanbaatar in the evening." }
+    ],
+    "south-gobi-fly": [
+      { title: "Ulaanbaatar → Dalanzadgad → Yolyn Am", drive: "1.5 h flight + 60 km", stay: "Ger camp near Yolyn Am",
+        am: "Morning flight.", pm: "Mouth of the Yolyn Am gorge: Lammergeier and Cinereous Vulture over the ridges.", ev: "Eurasian Eagle-Owl on the rocks." },
+      { title: "Yolyn Am — full day", drive: "8–10 km walk", stay: "Yolyn Am",
+        am: "06:00 walk up the gorge: Wallcreeper, Red-billed Chough.", pm: "Search the higher slopes for Altai Snowcock (listen for it).", ev: "Golden Eagle over the gorge." },
+      { title: "Yolyn Am → Khongoryn Els", drive: "180 km · 4 h", stay: "Khongoryn Els ger camp / camel-herder family",
+        am: "Gobi plains: Horned Lark, Pallas’s Sandgrouse.", pm: "Saxaul and willows below the dunes: Saxaul Sparrow, Desert Wheatear.", ev: "Sunset from the dunes." },
+      { title: "Khongoryn Els → Bayanzag", drive: "200 km · 4–5 h", stay: "Bayanzag ger camp",
+        am: "Early start.", pm: "Saxaul forest: Mongolian Ground Jay, Mongolian Finch.", ev: "Sunset light on the Flaming Cliffs." },
+      { title: "Bayanzag → Dalanzadgad → Ulaanbaatar", drive: "100 km + flight", stay: "—",
+        am: "Last morning birding in the saxaul.", pm: "Flight from Dalanzadgad.", ev: "Arrive in Ulaanbaatar." }
+    ],
+    "winter-ub": [
+      { title: "Ulaanbaatar — Tuul River and Bogd Khan mountain", drive: "In town · 40 km", stay: "Ulaanbaatar",
+        am: "10:00 open water on the Tuul River: Common Goldeneye, Common Merganser.", pm: "Forest at the foot of Bogd Khan (Zaisan, Jargalant): Pine Grosbeak, Bohemian Waxwing, Great Spotted Woodpecker.", ev: "It gets dark early — head back by 17:00." },
+      { title: "Ulaanbaatar → Gorkhi-Terelj", drive: "70 km · 1.5 h", stay: "Heated lodge / hotel in Terelj",
+        am: "Terelj forest edge: Black Grouse, Eurasian Bullfinch, Pallas’s Rosefinch.", pm: "River valley: flocks of Common Redpoll, Willow Tit.", ev: "Eurasian Eagle-Owl calling at dusk." },
+      { title: "Terelj → Hustai → Ulaanbaatar", drive: "230 km · 4 h", stay: "—",
+        am: "Hustai steppe: Rough-legged Buzzard, flocks of Snow Bunting.", pm: "Cinereous Vulture, Saker Falcon, Przewalski’s horses.", ev: "Back to Ulaanbaatar." }
     ]
   };
 
@@ -207,7 +278,8 @@
     "Улаанбаатар": "Ulaanbaatar", "Төв": "Tuv", "Өвөрхангай": "Uvurkhangai", "Архангай": "Arkhangai", "Хөвсгөл": "Khuvsgul",
     "Өмнөговь": "Umnugovi", "Дундговь": "Dundgovi", "Дорноговь": "Dornogovi", "Хэнтий": "Khentii", "Дорнод": "Dornod",
     "Сүхбаатар": "Sukhbaatar", "Баян-Өлгий": "Bayan-Ulgii", "Увс": "Uvs", "Ховд": "Khovd", "Баянхонгор": "Bayankhongor",
-    "Сэлэнгэ": "Selenge", "Завхан": "Zavkhan", "Булган / Өвөрхангай": "Bulgan / Uvurkhangai"
+    "Сэлэнгэ": "Selenge", "Завхан": "Zavkhan", "Булган / Өвөрхангай": "Bulgan / Uvurkhangai",
+    "Орхон": "Orkhon", "Булган": "Bulgan", "Дархан-Уул": "Darkhan-Uul", "Говь-Алтай": "Govi-Altai"
   };
   const PLACES_EN = {
     "l-ub": ["Ulaanbaatar", "Everything from international hotel chains to budget hostels and guesthouses. The main base before and after a trip."],
@@ -259,7 +331,27 @@
     "n-tsagaansuvarga": ["Tsagaan Suvarga", "Steep white, red and pink walls of ancient seabed sediments — spectacular at sunset."],
     "n-ikhgazar": ["Ikh Gazriin Chuluu", "A cluster of granite rock hills in the Gobi steppe, with rock art, argali, Eagle-Owls and rock birds."],
     "n-shiliinbogd": ["Shiliin Bogd mountain", "A 1,778 m extinct volcano and sacred mountain in Dariganga, famous for sunrise from its summit."],
-    "n-khuiten": ["Khuiten Peak", "Mongolia’s highest point (4,374 m) in the Tavan Bogd range, above the Potanin Glacier."]
+    "n-khuiten": ["Khuiten Peak", "Mongolia’s highest point (4,374 m) in the Tavan Bogd range, above the Potanin Glacier."],
+    "l-murun": ["Murun", "Capital of Khuvsgul province, with an airport. The largest town before Lake Khuvsgul."],
+    "l-erdenet": ["Erdenet", "Mongolia’s third-largest city. Good for an overnight stop and supplies on northern trips."],
+    "l-bulgan": ["Bulgan", "Capital of Bulgan province in the forest-steppe; a stopover on the way to Uran Togoo and Khuvsgul."],
+    "l-amarbayasgalant": ["Amarbayasgalant camps", "Ger camps and nomad-family homestays in the Iven River valley near the monastery. Good for forest birds."],
+    "l-darkhan": ["Darkhan", "Mongolia’s second-largest city, on the Ulaanbaatar–Selenge road. A stopover heading north."],
+    "l-arvaikheer": ["Arvaikheer", "Capital of Uvurkhangai; an overnight stop when returning from the Gobi and the Valley of the Lakes."],
+    "l-altai": ["Altai town", "Capital of Govi-Altai; base for the Gobi Altai, Sharga and Biger Gobi."],
+    "l-uliastai": ["Uliastai", "Capital of Zavkhan, with an airport. The main base for Otgontenger mountain."],
+    "c-choijin": ["Choijin Lama Temple Museum", "A temple complex built in 1904–1908, with Tsam dance masks, deities and treasures of Buddhist art."],
+    "c-zanabazar": ["Zanabazar Museum of Fine Arts", "Bronze deities cast by Zanabazar and classic works of Mongolian painting."],
+    "c-tuvkhun": ["Tuvkhun Monastery", "Hilltop hermitage founded by Zanabazar in the mid-17th century, where he meditated and created his works. Part of the Orkhon Valley World Heritage site (UNESCO); a forest trail leads up."],
+    "c-kharbalgas": ["Khar Balgas", "Ruins of Ordu-Baliq, capital of the Uyghur Khaganate (8th–9th century), in the Orkhon valley."],
+    "c-ongi": ["Ongi Monastery ruins", "Ruins of a large monastery on both banks of the Ongi River (destroyed in the 1930s), with a small museum. A good stop on the Gobi road."],
+    "c-baldan": ["Baldan Bereeven Monastery", "An old monastery that was once among Mongolia’s largest, surrounded by the forested Khentii hills, with rock carvings."],
+    "n-yolyn": ["Yolyn Am", "A deep, narrow gorge in the Gobi Gurvan Saikhan range where ice lingers into early summer; Lammergeier, argali and ibex."],
+    "n-hustai": ["Hustai Nuruu", "Home of the reintroduced Przewalski’s horse, a mix of forest-steppe and steppe. Marmots, red deer and raptors are common."],
+    "n-urantogoo": ["Uran Togoo volcano", "An extinct volcanic crater and natural monument. A short climb to the rim; forest-steppe birds."],
+    "n-khyargas": ["Khyargas Lake", "A large salt lake in the Great Lakes Depression and a national park. Waterbird colonies on its rocky shores; many ducks and gulls on migration."],
+    "n-tsambagarav": ["Tsambagarav mountain", "A snow-capped Mongolian Altai peak (over 4,000 m) and national park. Snow leopard, argali and high-mountain birds."],
+    "n-khermentsav": ["Khermen Tsav", "A maze of red-orange canyons famous for dinosaur finds. Remote — go with an experienced driver."]
   };
 
   // ---- apply ----

@@ -15,7 +15,8 @@
     ugii: "Lac Ögii", terkh: "Lac Terkhiin Tsagaan", orkhon: "Vallée de l’Orkhon", kharus: "Lac Khar Us", uvs: "Lac Uvs",
     achit: "Lac Achit", ulgii: "Ölgii", tavanbogd: "Altaï Tavan Bogd", yoliin: "Yolyn Am (Gobi Gurvan Saikhan)",
     ikhnart: "Réserve naturelle d’Ikh Nart", boontsagaan: "Lac Böön Tsagaan", orog: "Lac Orog", taatsin: "Lac Taatsiin Tsagaan",
-    ganga: "Lac Ganga (Dariganga)", buir: "Lac Buir", daguur: "Mongol Daguur (rivière Ulz)", khurkh: "Vallée de Khurkh-Khüiten", onon: "Onon-Balj"
+    ganga: "Lac Ganga (Dariganga)", buir: "Lac Buir", daguur: "Mongol Daguur (rivière Ulz)", khurkh: "Vallée de Khurkh-Khüiten", onon: "Onon-Balj",
+    amarbayasgalant: "Amarbayasgalant, vallée de l’Iven", murun: "Mörön, rivière Delger Mörön", bayanzag: "Bayanzag", khongor: "Khongoryn Els"
   };
   const GROUPS_FR = { raptor: "Rapaces", owl: "Rapaces nocturnes", crane: "Grues", stork: "Cigognes", heron: "Hérons et ibis", waterfowl: "Cygnes et oies", duck: "Canards", waterbird: "Grèbes, pélicans et autres oiseaux d’eau", gull: "Mouettes, goélands et sternes", wader: "Limicoles", gamebird: "Gallinacés et gangas", nearpass: "Pigeons, coucous et apparentés", woodpecker: "Pics", lark: "Alouettes, pipits et bergeronnettes", crow: "Corvidés, hirondelles et pies-grièches", thrush: "Grives, traquets et gobemouches", warbler: "Fauvettes, pouillots et mésanges", finch: "Fringilles, bruants et moineaux", small: "Petits oiseaux" };
   const COLOR_FR = { black: "Noir", white: "Blanc", gray: "Gris", brown: "Brun", buff: "Chamois", rufous: "Roux / orangé", yellow: "Jaune", red: "Rouge" };
@@ -109,6 +110,40 @@
       ],
       intro: "Culture kazakhe de la chasse à l’aigle, sommets enneigés de l’Altaï et rare Pélican frisé des Grands Lacs. Inoubliable s’il coïncide avec le festival de l’Aigle royal en automne.",
       tips: ["L’Altaï Tavan Bogd se trouve en zone frontalière : un permis est obligatoire.", "En haute montagne, les nuits descendent à 0 °C — prévoyez des vêtements chauds.", "N’approchez pas les colonies de pélicans en bateau."]
+    },
+    "khuvsgul-taiga": {
+      name: "Le lac Khövsgöl et les forêts du Nord", days: "7–8 jours", distance: "≈ 1 700 km", season: "juin–août", level: "Moyen",
+      transport: "4×4 ; routes surtout goudronnées, pistes vers Amarbayasgalant et au-delà de Khatgal. On peut raccourcir en prenant l’avion jusqu’à Mörön",
+      stops: [
+        { day: "Jour 1", note: "Départ. Cap au nord vers la steppe boisée de la Selenge." },
+        { day: "Jours 1–2", note: "Vallée de l’Iven et forêt autour du monastère : Cigogne noire, Tétras lyre, Pic épeiche, petits oiseaux forestiers." },
+        { day: "Jour 3", note: "Rives de la Delger Mörön : Tadorne casarca, Oie à tête barrée, oiseaux des saulaies." },
+        { day: "Jours 4–6", note: "Lac Khövsgöl et taïga : Cygne chanteur, Garrot à œil d’or, Harle bièvre, Grand Tétras, Mésangeai imitateur, Pic noir." }
+      ],
+      intro: "À la découverte des oiseaux forestiers sibériens autour du lac Khövsgöl, la « Perle bleue » de la Mongolie, et de sa taïga — en passant par le monastère d’Amarbayasgalant et la steppe boisée de la Selenge.",
+      tips: ["En juillet, Khatgal et les rives du lac sont très fréquentés — réservez l’hébergement.", "Moustiques et tiques abondent dans la taïga — prévoyez un répulsif et des manches longues.", "L’entrée du parc national du Khövsgöl est payante."]
+    },
+    "south-gobi-fly": {
+      name: "Court séjour dans le Gobi du Sud (avec vols)", days: "4–5 jours", distance: "≈ 600 km par la route + vols", season: "mai–juin, septembre", level: "Moyen",
+      transport: "Vol Oulan-Bator–Dalanzadgad (≈ 1 h 30), 4×4 sur place, surtout des pistes",
+      stops: [
+        { day: "Jours 1–2", note: "Yolyn Am : Gypaète barbu, Aigle royal, Vautour moine et Tétraogalle de l’Altaï sur les falaises ; Tichodrome échelette sur les parois." },
+        { day: "Jour 3", note: "Khongoryn Els : saxaouls et saules au pied des dunes — Moineau des saxaouls, Traquet du désert, Syrrhapte paradoxal." },
+        { day: "Jour 4", note: "Bayanzag : forêt de saxaouls et falaises rouges — Podoce de Henderson, Moineau des saxaouls, Roselin de Mongolie." }
+      ],
+      intro: "Pour qui dispose de peu de temps mais veut voir l’essentiel du Gobi et ses oiseaux emblématiques. L’avion évite la longue route et permet de couvrir Yolyn Am, Khongoryn Els et Bayanzag.",
+      tips: ["Les bagages sont limités en avion — gardez télescope et jumelles en cabine.", "Le Gobi est chaud le jour et froid la nuit — prévoyez plusieurs couches.", "Cherchez le Podoce de Henderson tôt le matin dans les saxaouls, à l’écoute de son cri."]
+    },
+    "winter-ub": {
+      name: "Oiseaux d’hiver autour d’Oulan-Bator", days: "1–3 jours", distance: "≈ 320 km", season: "novembre–mars", level: "Facile",
+      transport: "Voiture ; routes goudronnées. Un 4×4 est préférable après la neige",
+      stops: [
+        { day: "Jour 1", note: "Portions non gelées de la Tuul et pied du mont Bogd Khan : Garrot à œil d’or, Harle bièvre, Jaseur boréal, Durbec des sapins, Pic épeiche." },
+        { day: "Jour 2", note: "Forêt et vallée de Terelj : Tétras lyre, Bouvreuil pivoine, Roselin rose, Mésange boréale, bandes de Sizerins flammés." },
+        { day: "Jour 3", note: "Steppe de Hustai : Buse pattue, Vautour moine, Faucon sacre, bandes de Bruants des neiges." }
+      ],
+      intro: "L’observation des oiseaux se pratique aussi par grand froid ! Hivernants venus du nord — Jaseur boréal, Durbec des sapins, Sizerin flammé, Bruant des neiges — et espèces sédentaires, tout près d’Oulan-Bator.",
+      tips: ["Jusqu’à −30 °C — bottes chaudes, gants et bonnet indispensables. Les batteries se vident vite.", "Les jours sont courts — observez entre 10 h et 16 h.", "Ne marchez pas sur la glace près des eaux libres de la Tuul."]
     }
   };
 
@@ -198,6 +233,42 @@
         am: "En longeant le lac Khyargas.", pm: "Roselières du Khar Us : Pélican frisé, Cygne chanteur.", ev: "Chants d’oiseaux dans les roseaux." },
       { title: "Lac Khar Us → Khovd → Oulan-Bator", drive: "90 km + vol", stay: "—",
         am: "Dernière observation au lac Khar Us.", pm: "Vol depuis Khovd.", ev: "Arrivée à Oulan-Bator." }
+    ],
+    "khuvsgul-taiga": [
+      { title: "Oulan-Bator → Amarbayasgalant", drive: "360 km · 6–7 h", stay: "Camp de yourtes près du monastère",
+        am: "Route goudronnée vers Darkhan ; Buse de Chine et Faucon sacre en chemin.", pm: "Les 35 derniers km en piste jusqu’à la vallée de l’Iven.", ev: "Tétras lyre et Pic épeiche en lisière." },
+      { title: "Amarbayasgalant → Erdenet → Bulgan", drive: "250 km · 5 h", stay: "Ville de Bulgan",
+        am: "Visite du monastère ; observation matinale sur l’Iven : Cigogne noire.", pm: "Par Erdenet jusqu’à Bulgan.", ev: "Oiseaux des lisières de Bulgan." },
+      { title: "Bulgan → Mörön", drive: "350 km · 6 h", stay: "Ville de Mörön",
+        am: "Arrêt possible au volcan Uran Togoo.", pm: "Rives de la Delger Mörön : Tadorne casarca, Oie à tête barrée.", ev: "Nuit à Mörön." },
+      { title: "Mörön → Khatgal, lac Khövsgöl", drive: "100 km · 2 h", stay: "Camp de yourtes sur la rive ouest du Khövsgöl",
+        am: "Route goudronnée jusqu’à Khatgal.", pm: "Rive sud et source de l’Egiin : Cygne chanteur, Garrot à œil d’or, Harle bièvre.", ev: "Hibou grand-duc en lisière de taïga." },
+      { title: "Lac Khövsgöl — journée complète", drive: "À pied / à cheval", stay: "Lac Khövsgöl",
+        am: "6 h, marche en taïga : Grand Tétras, Gélinotte des bois, Mésangeai imitateur, Pic noir.", pm: "Le long de la rive : Cincle plongeur sur les torrents.", ev: "Coucher de soleil sur le lac." },
+      { title: "Lac Khövsgöl → Mörön", drive: "100 km · 2 h", stay: "Ville de Mörön",
+        am: "Dernière observation matinale au lac.", pm: "Retour à Mörön (ou vol Mörön–Oulan-Bator).", ev: "Repos." },
+      { title: "Mörön → Oulan-Bator", drive: "670 km · 11 h", stay: "—",
+        am: "Départ matinal.", pm: "Par Bulgan et Erdenet.", ev: "Arrivée à Oulan-Bator le soir." }
+    ],
+    "south-gobi-fly": [
+      { title: "Oulan-Bator → Dalanzadgad → Yolyn Am", drive: "Vol 1 h 30 + 60 km", stay: "Camp de yourtes près de Yolyn Am",
+        am: "Vol du matin.", pm: "Entrée du canyon de Yolyn Am : Gypaète barbu et Vautour moine au-dessus des crêtes.", ev: "Hibou grand-duc sur les rochers." },
+      { title: "Yolyn Am — journée complète", drive: "Marche de 8–10 km", stay: "Yolyn Am",
+        am: "6 h, montée dans le canyon : Tichodrome échelette, Crave à bec rouge.", pm: "Recherche du Tétraogalle de l’Altaï sur les pentes (à l’oreille).", ev: "Aigle royal au-dessus du canyon." },
+      { title: "Yolyn Am → Khongoryn Els", drive: "180 km · 4 h", stay: "Camp de Khongoryn Els / famille de chameliers",
+        am: "Plaines du Gobi : Alouette hausse-col, Syrrhapte paradoxal.", pm: "Saxaouls et saules au pied des dunes : Moineau des saxaouls, Traquet du désert.", ev: "Coucher de soleil depuis les dunes." },
+      { title: "Khongoryn Els → Bayanzag", drive: "200 km · 4–5 h", stay: "Camp de yourtes de Bayanzag",
+        am: "Départ matinal.", pm: "Forêt de saxaouls : Podoce de Henderson, Roselin de Mongolie.", ev: "Lumière du couchant sur les falaises rouges." },
+      { title: "Bayanzag → Dalanzadgad → Oulan-Bator", drive: "100 km + vol", stay: "—",
+        am: "Dernière observation matinale dans les saxaouls.", pm: "Vol depuis Dalanzadgad.", ev: "Arrivée à Oulan-Bator." }
+    ],
+    "winter-ub": [
+      { title: "Oulan-Bator — la Tuul et le mont Bogd Khan", drive: "En ville · 40 km", stay: "Oulan-Bator",
+        am: "10 h, eaux libres de la Tuul : Garrot à œil d’or, Harle bièvre.", pm: "Forêt au pied du Bogd Khan (Zaisan, Jargalant) : Durbec des sapins, Jaseur boréal, Pic épeiche.", ev: "La nuit tombe tôt — retour vers 17 h." },
+      { title: "Oulan-Bator → Gorkhi-Terelj", drive: "70 km · 1 h 30", stay: "Hébergement chauffé / hôtel à Terelj",
+        am: "Lisière de Terelj : Tétras lyre, Bouvreuil pivoine, Roselin rose.", pm: "Vallée : bandes de Sizerins flammés, Mésange boréale.", ev: "Hibou grand-duc au crépuscule." },
+      { title: "Terelj → Hustai → Oulan-Bator", drive: "230 km · 4 h", stay: "—",
+        am: "Steppe de Hustai : Buse pattue, bandes de Bruants des neiges.", pm: "Vautour moine, Faucon sacre, chevaux de Przewalski.", ev: "Retour à Oulan-Bator." }
     ]
   };
 
@@ -207,7 +278,8 @@
     "Улаанбаатар": "Oulan-Bator", "Төв": "Töv", "Өвөрхангай": "Övörkhangai", "Архангай": "Arkhangai", "Хөвсгөл": "Khövsgöl",
     "Өмнөговь": "Ömnögovi", "Дундговь": "Dundgovi", "Дорноговь": "Dornogovi", "Хэнтий": "Khentii", "Дорнод": "Dornod",
     "Сүхбаатар": "Sükhbaatar", "Баян-Өлгий": "Bayan-Ölgii", "Увс": "Uvs", "Ховд": "Khovd", "Баянхонгор": "Bayankhongor",
-    "Сэлэнгэ": "Selenge", "Завхан": "Zavkhan", "Булган / Өвөрхангай": "Bulgan / Övörkhangai"
+    "Сэлэнгэ": "Selenge", "Завхан": "Zavkhan", "Булган / Өвөрхангай": "Bulgan / Övörkhangai",
+    "Орхон": "Orkhon", "Булган": "Bulgan", "Дархан-Уул": "Darkhan-Uul", "Говь-Алтай": "Govi-Altaï"
   };
   const PLACES_FR = {
     "l-ub": ["Oulan-Bator", "De tout, des chaînes hôtelières internationales aux auberges et maisons d’hôtes bon marché. La base principale avant et après un voyage."],
@@ -259,7 +331,27 @@
     "n-tsagaansuvarga": ["Tsagaan Suvarga", "Parois abruptes blanches, rouges et roses d’anciens sédiments marins — spectaculaires au coucher du soleil."],
     "n-ikhgazar": ["Ikh Gazriin Chuluu", "Ensemble de collines granitiques dans la steppe du Gobi, avec art rupestre, argalis, Hiboux grands-ducs et oiseaux rupestres."],
     "n-shiliinbogd": ["Mont Shiliin Bogd", "Volcan éteint de 1 778 m et montagne sacrée de Dariganga, célèbre pour le lever du soleil depuis son sommet."],
-    "n-khuiten": ["Pic Khüiten", "Point culminant de la Mongolie (4 374 m), dans le massif du Tavan Bogd, au-dessus du glacier Potanine."]
+    "n-khuiten": ["Pic Khüiten", "Point culminant de la Mongolie (4 374 m), dans le massif du Tavan Bogd, au-dessus du glacier Potanine."],
+    "l-murun": ["Mörön", "Chef-lieu de la province de Khövsgöl, avec aéroport. La plus grande ville avant le lac Khövsgöl."],
+    "l-erdenet": ["Erdenet", "Troisième ville de Mongolie. Pratique pour une nuit et le ravitaillement lors des voyages vers le nord."],
+    "l-bulgan": ["Bulgan", "Chef-lieu de la province de Bulgan, en steppe boisée ; étape vers Uran Togoo et le Khövsgöl."],
+    "l-amarbayasgalant": ["Camps d’Amarbayasgalant", "Camps de yourtes et séjours chez des familles nomades dans la vallée de l’Iven, près du monastère. Idéal pour les oiseaux forestiers."],
+    "l-darkhan": ["Darkhan", "Deuxième ville de Mongolie, sur la route Oulan-Bator–Selenge. Étape vers le nord."],
+    "l-arvaikheer": ["Arvaikheer", "Chef-lieu de l’Övörkhangai ; étape au retour du Gobi et de la vallée des Lacs."],
+    "l-altai": ["Altaï (ville)", "Chef-lieu du Govi-Altaï ; base pour l’Altaï du Gobi, Sharga et le Gobi de Biger."],
+    "l-uliastai": ["Uliastai", "Chef-lieu du Zavkhan, avec aéroport. Principale base pour le mont Otgontenger."],
+    "c-choijin": ["Temple-musée de Choijin Lama", "Ensemble de temples construit en 1904–1908 : masques de danse Tsam, divinités et trésors de l’art bouddhique."],
+    "c-zanabazar": ["Musée des beaux-arts Zanabazar", "Divinités en bronze fondues par Zanabazar et chefs-d’œuvre de la peinture mongole."],
+    "c-tuvkhun": ["Monastère de Tövkhön", "Ermitage perché fondé par Zanabazar au milieu du XVIIe siècle, où il méditait et créait ses œuvres. Fait partie du site de la vallée de l’Orkhon (UNESCO) ; accès par un sentier forestier."],
+    "c-kharbalgas": ["Khar Balgas", "Ruines d’Ordu-Baliq, capitale du khaganat ouïghour (VIIIe–IXe siècle), dans la vallée de l’Orkhon."],
+    "c-ongi": ["Ruines du monastère d’Ongi", "Ruines d’un grand monastère sur les deux rives de l’Ongi (détruit dans les années 1930), petit musée. Bonne étape sur la route du Gobi."],
+    "c-baldan": ["Monastère de Baldan Bereeven", "Ancien monastère, jadis parmi les plus grands de Mongolie, entouré des collines boisées du Khentii, avec des sculptures rupestres."],
+    "n-yolyn": ["Yolyn Am", "Gorge profonde et étroite du massif Gobi Gurvan Saikhan où la glace persiste jusqu’au début de l’été ; gypaète, argali et bouquetin."],
+    "n-hustai": ["Hustai Nuruu", "Berceau du cheval de Przewalski réintroduit, mosaïque de steppe boisée et de steppe. Marmottes, cerfs et rapaces abondent."],
+    "n-urantogoo": ["Volcan Uran Togoo", "Cratère volcanique éteint, monument naturel. Courte montée jusqu’au bord ; oiseaux de la steppe boisée."],
+    "n-khyargas": ["Lac Khyargas", "Grand lac salé de la dépression des Grands Lacs, parc national. Colonies d’oiseaux d’eau sur les rives rocheuses ; nombreux canards et mouettes en migration."],
+    "n-tsambagarav": ["Mont Tsambagarav", "Sommet enneigé de l’Altaï mongol (plus de 4 000 m), parc national. Panthère des neiges, argali et oiseaux de haute montagne."],
+    "n-khermentsav": ["Khermen Tsav", "Dédale de canyons rouge orangé, célèbre pour ses fossiles de dinosaures. Isolé — partez avec un chauffeur expérimenté."]
   };
 
   // ---- application ----

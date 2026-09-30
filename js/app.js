@@ -403,7 +403,10 @@
     const habTxt = mapHab ? ` · ${HAB_ORDER.find(h => h[0] === mapHab)[1]} ${HABITAT_NAMES[mapHab]}` : "";
     if (selHotspot) {
       const h = HOTSPOTS[selHotspot];
-      list = list.filter(b => b.hotspots.includes(selHotspot));
+      // Цэгт холбогдсон шувуу + цэгийн орчмын (±1 нүд) GBIF-д 5+ бүртгэлтэй шувуу
+      const nearN = b => rangeCells(b).reduce((s, [lon, lat, n]) => s + (Math.abs(h.lon - (lon + .25)) <= .75 && Math.abs(h.lat - (lat + .25)) <= .75 ? n : 0), 0);
+      list = list.map(b => ({ b, hs: b.hotspots.includes(selHotspot), n: nearN(b) })).filter(x => x.hs || x.n >= 5)
+        .sort((x, y) => (y.hs - x.hs) || (y.n - x.n)).map(x => x.b);
       head = `<h3>📍 ${esc(h.name)}</h3><p class="muted">${T(`Энэ газар ажиглахад тохиромжтой ${list.length} шувуу.`, `${list.length} birds to look for here.`, `${list.length} oiseaux à chercher ici.`)}</p>`;
     } else if (selAimag) {
       const recs = b => birdAimags(b)[selAimag];
@@ -1196,10 +1199,12 @@
     if (routeBirdCache[r.id]) return routeBirdCache[r.id];
     const stops = r.stops.map(s => s.hs).filter(h => r.stops.length <= 3 || h !== "ulaanbaatar");   // УБ зөвхөн эхлэл/төгсгөл бол тооцохгүй
     const near = b => rangeCells(b).reduce((s, [lon, lat, n]) => s + (stops.some(h => Math.abs(HOTSPOTS[h].lon - (lon + .25)) <= .75 && Math.abs(HOTSPOTS[h].lat - (lat + .25)) <= .75) ? n : 0), 0);
-    const scored = BIRDS.filter(b => !(b.season.length === 1 && b.season[0] === "winter"))
-      .map(b => ({ id: b.id, hi: r.birds.includes(b.id), st: b.hotspots.filter(h => stops.includes(h)).length }))
-      .filter(x => x.hi || x.st)
-      .map(x => ({ ...x, g: near(byId[x.id]) }));
+    // Өвлийн маршрут: өвлийн болон суурин шувуу; бусад: зөвхөн өвөл ирдэг шувуугүй
+    const inSeason = r.winter ? b => b.season.includes("winter") || b.season.includes("resident") : b => !(b.season.length === 1 && b.season[0] === "winter");
+    // Зогсоолд холбогдсон, эсвэл зогсоолын орчимд GBIF-д 5+ бүртгэлтэй шувуу
+    const scored = BIRDS.filter(inSeason)
+      .map(b => ({ id: b.id, hi: r.birds.includes(b.id), st: b.hotspots.filter(h => stops.includes(h)).length, g: near(b) }))
+      .filter(x => x.hi || x.st || x.g >= 5);
     scored.sort((a, b) => (b.hi - a.hi) || (b.st - a.st) || (b.g - a.g));
     return (routeBirdCache[r.id] = scored.map(x => x.id));
   }
@@ -1241,7 +1246,7 @@
           <div><dt>${T("Хугацаа", "Duration")}</dt><dd>${esc(r.days)}</dd></div>
           <div><dt>${T("Зай", "Distance")}</dt><dd>${esc(r.distance)}</dd></div>
           <div><dt>${T("Тохиромжтой үе", "Best season")}</dt><dd>${esc(r.season)}</dd></div>
-          <div><dt>${T("Хүндрэл", "Difficulty")}</dt><dd><span class="lvl lvl-${["Хөнгөн", "Easy"].includes(r.level) ? 1 : ["Дунд", "Moderate"].includes(r.level) ? 2 : 3}">${esc(r.level)}</span></dd></div>
+          <div><dt>${T("Хүндрэл", "Difficulty")}</dt><dd><span class="lvl lvl-${["Хөнгөн", "Easy", "Facile"].includes(r.level) ? 1 : ["Дунд", "Moderate", "Moyen"].includes(r.level) ? 2 : 3}">${esc(r.level)}</span></dd></div>
           <div class="wide"><dt>${T("Тээвэр", "Transport")}</dt><dd>${esc(r.transport)}</dd></div>
         </dl>
       </div>
