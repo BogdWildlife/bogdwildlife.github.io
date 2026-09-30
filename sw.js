@@ -1,9 +1,9 @@
 /* МонголШувуу — service worker (PWA, интернетгүй ажиллагаа)
-   shell: сайтын код — кэшээс шууд өгч, ард нь шинэчилнэ (дараагийн нээлтэд шинэ хувилбар)
+   shell: сайтын код — эхлээд сүлжээнээс шинэ хувилбар, интернетгүй/удаан бол кэш
    media: шувууны зураг, дуу — эхлээд кэш; "Интернетгүй ашиглах" товч бүгдийг нь урьдчилан татна
    ext:   фонт, TensorFlow/MobileNet загвар — эхлээд кэш
    tiles: хиймэл дагуулын зураг — үзсэн хэсэг л кэшлэгдэнэ (дээд тал нь 1500) */
-const V = "v1";
+const V = "v2";
 const SHELL = "shell-" + V, MEDIA = "media-v1", EXT = "ext-v1", TILES = "tiles-v1";
 const CORE = [
   "./", "index.html", "manifest.webmanifest", "css/style.css", "vendor/leaflet.css", "vendor/leaflet.js",
@@ -33,10 +33,16 @@ async function cacheFirst(req, name) {
   if (res.ok || res.type === "opaque") c.put(req, res.clone()).then(() => name === TILES && trimTiles()).catch(() => {});
   return res;
 }
-async function staleWhileRevalidate(req, name) {
-  const c = await caches.open(name), hit = await c.match(req, { ignoreSearch: true });
-  const net = fetch(req).then(res => { if (res.ok) c.put(req, res.clone()).catch(() => {}); return res; }).catch(() => null);
-  return hit || (await net) || (req.mode === "navigate" ? c.match("index.html") : Response.error());
+// Сайтын код: эхлээд сүлжээ (HTTP кэшийг алгасаж шинэ хувилбарыг шалгана), 4 секундэд хариу ирэхгүй эсвэл интернетгүй бол кэш
+async function networkFirst(req, name) {
+  const c = await caches.open(name);
+  const net = fetch(req, { cache: "no-cache" }).then(res => { if (res.ok) c.put(req, res.clone()).catch(() => {}); return res; });
+  const slow = new Promise(r => setTimeout(r, 4000)).then(() => c.match(req, { ignoreSearch: true }));
+  try {
+    const res = await Promise.race([net, slow.then(hit => hit || net)]);
+    if (res) return res;
+  } catch (e) {}
+  return (await c.match(req, { ignoreSearch: true })) || (req.mode === "navigate" ? c.match("index.html") : Response.error());
 }
 
 self.addEventListener("fetch", e => {
@@ -45,8 +51,8 @@ self.addEventListener("fetch", e => {
   const url = new URL(req.url);
   if (url.origin === location.origin) {
     if (/\/(images|audio)\//.test(url.pathname)) return e.respondWith(cacheFirst(req, MEDIA));
-    if (req.mode === "navigate") return e.respondWith(staleWhileRevalidate(new Request("index.html"), SHELL));
-    return e.respondWith(staleWhileRevalidate(req, SHELL));
+    if (req.mode === "navigate") return e.respondWith(networkFirst(new Request("index.html"), SHELL));
+    return e.respondWith(networkFirst(req, SHELL));
   }
   if (TILE_HOSTS.includes(url.hostname)) return e.respondWith(cacheFirst(req, TILES));
   if (EXT_HOSTS.includes(url.hostname)) return e.respondWith(cacheFirst(req, EXT));

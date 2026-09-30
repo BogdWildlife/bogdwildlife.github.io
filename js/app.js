@@ -1570,7 +1570,11 @@ ${knowledge(texts)}`;
 
   /* ---------------- PWA: апп суулгах, интернетгүй ашиглах ---------------- */
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+    // Шинэ service worker идэвхжвэл хуудсыг нэг удаа дахин ачаалж шинэ хувилбарыг шууд харуулна
+    const hadSW = !!navigator.serviceWorker.controller;
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadSW && !reloaded) { reloaded = true; location.reload(); } });
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(r => r.update()).catch(() => {});
     const box = $("#pwa-box"), hint = $("#pwa-install-hint"), inst = $("#pwa-install"), off = $("#pwa-offline"), status = $("#pwa-status");
     box.hidden = false;
     const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
