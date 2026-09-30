@@ -23,6 +23,30 @@
 
   const setHash = h => { try { history.replaceState(null, "", h); } catch (e) {} };
 
+  // Урт жагсаалт: эхний STEP-ийг харуулж, "Цааш үзэх / Бүгдийг / Хураах" товч нэмнэ (жагсаалт дахин зурагдахад шинэчлэгдэнэ)
+  function pageList(box, sel, step = 24) {
+    const items = $$(sel, box);
+    if (items.length <= step) return;
+    let shown = step;
+    const bar = document.createElement("div");
+    bar.className = "more-bar";
+    const upd = () => {
+      items.forEach((el, i) => { el.hidden = i >= shown; });
+      bar.innerHTML = `<span class="muted small">${T(`${items.length}-аас ${Math.min(shown, items.length)}`, `${Math.min(shown, items.length)} of ${items.length}`, `${Math.min(shown, items.length)} sur ${items.length}`)}</span>` +
+        (shown < items.length ? `<button type="button" class="btn small primary" data-more>${T(`Цааш үзэх (+${Math.min(step, items.length - shown)})`, `See more (+${Math.min(step, items.length - shown)})`, `Voir plus (+${Math.min(step, items.length - shown)})`)}</button><button type="button" class="btn small" data-all>${T("Бүгдийг харах", "See all", "Tout voir")}</button>` : "") +
+        (shown > step ? `<button type="button" class="btn small" data-less>${T("Хураах", "See less", "Voir moins")}</button>` : "");
+    };
+    bar.addEventListener("click", e => {
+      const b = e.target.closest("button"); if (!b) return;
+      if (b.hasAttribute("data-more")) shown += step;
+      else if (b.hasAttribute("data-all")) shown = items.length;
+      else if (b.hasAttribute("data-less")) { shown = step; box.scrollIntoView({ block: "start", behavior: "smooth" }); }
+      upd();
+    });
+    upd();
+    box.appendChild(bar);
+  }
+
   /* ---------------- Tabs ---------------- */
   function showTab(name, push = true) {
     if (!document.getElementById("tab-" + name)) name = "home";
@@ -82,6 +106,7 @@
     const list = BIRDS.filter(b => inHab(b) && (!groupFilter || b.group === groupFilter) &&
       (!q || [b.name, b.altNames, b.latin, b.en, b.nameEn || ""].join(" ").toLowerCase().includes(q)));
     $("#gallery").innerHTML = list.length ? list.map(card).join("") : `<p class="muted">${T("Илэрц олдсонгүй.", "No matches.")}</p>`;
+    pageList($("#gallery"), ".card");
   }
   $("#search").addEventListener("input", renderGallery);
 
@@ -398,6 +423,7 @@
     $("#map-info").innerHTML = head;
     const mapCard = b => selAimag && mainMap && HAS_RANGES && RANGES[b.id] ? card(b).replace('data-bird="', 'data-maprange="') : card(b);
     $("#map-results").innerHTML = list.map(mapCard).join("") || `<p class="muted">${T("Тохирох шувуу алга.", "No matching birds.")}</p>`;
+    pageList($("#map-results"), ".card");
   }
   function initMap() {
     const seasons = { all: T("Бүх улирал", "All seasons"), summer: T("Зун", "Summer"), passage: T("Нүүдлийн үе", "Migration"), winter: T("Өвөл", "Winter") };
@@ -1157,6 +1183,7 @@
         <p>${esc(b.voice)}</p>
         ${b.audio ? `<audio controls preload="none" src="${b.audio.file}"></audio>` : `<a class="xc-link" href="${xcUrl(b)}" target="_blank" rel="noopener">${T("🎧 xeno-canto дээр бичлэг сонсох ↗", "🎧 Listen on xeno-canto ↗")}</a>`}
         </div></div>`).join("");
+    pageList($("#sound-results"), ".sound-row", 12);
   }
   // нэг бичлэг тоглоход бусдыг зогсоох
   document.addEventListener("play", e => { $$("audio").forEach(a => { if (a !== e.target) a.pause(); }); }, true);
