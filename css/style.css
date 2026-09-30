@@ -578,11 +578,15 @@ a.btn { text-decoration: none; display: inline-block; }
 .fc-progress { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
 .fc-bar { flex: 1; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
 .fc-bar i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
-.fc-card { display: block; width: 100%; height: clamp(340px, 62vh, 560px); border: 0; padding: 0; background: none; cursor: pointer; perspective: 1200px; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
-.fc-inner { position: relative; width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; }
-.fc-card.flipped .fc-inner { transform: rotateY(180deg); }
-.fc-side { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
-.fc-back { transform: rotateY(180deg); }
+.fc-card { display: block; width: 100%; height: clamp(340px, 62vh, 560px); border: 0; padding: 0; background: none; cursor: pointer; font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+.fc-inner { position: relative; width: 100%; height: 100%; }
+/* 3D эргүүлэлт (backface-visibility) зарим утсанд ажилладаггүй тул нэг талыг л харуулж, 2D хөдөлгөөнөөр солино */
+.fc-card .fc-back, .fc-card.flipped .fc-front { display: none; }
+.fc-card.flipped .fc-back { display: grid; animation: fc-flip .32s ease-out; }
+@keyframes fc-flip { from { transform: scaleX(0); opacity: .4; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .fc-card.flipped .fc-back { animation: none; } }
+.fc-side { position: absolute; inset: 0; background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+
 .fc-img { position: relative; min-height: 0; overflow: hidden; background: var(--surface-2); }
 .fc-img img, .fc-img.photo-fit > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
 .fc-back .fc-names { border-top: 1px solid var(--line); }
