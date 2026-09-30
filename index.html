@@ -17,6 +17,13 @@
 <meta property="og:image" content="https://bogdwildlife.github.io/images/demoiselle-crane.jpg">
 <meta property="og:locale" content="mn_MN">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%231f6f8b' stroke-linecap='round'%3E%3Ccircle cx='32' cy='32' r='21' stroke-width='5'/%3E%3Cpath stroke-width='4' d='M32 3.5v5.5M32 55v5.5M3.5 32h5.5M55 32h5.5M11.8 11.8l3.9 3.9M48.3 48.3l3.9 3.9M52.2 11.8l-3.9 3.9M15.7 48.3l-3.9 3.9'/%3E%3C/g%3E%3Cpath fill='%23b5651d' d='M16 31.5c5.2-3.6 10.4-3.9 16 1.6 5.6-5.5 10.8-5.2 16-1.6-4.6-.3-9.3 1.7-13.4 6.4L32 40.6l-2.6-2.7C25.3 33.2 20.6 31.2 16 31.5z'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1f6f8b">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="МонголШувуу">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -247,6 +254,15 @@
 
 <footer class="site-footer">
   <div class="wrap">
+    <div id="pwa-box" class="pwa-box" hidden>
+      <h3 data-en="📱 Use it as an app">📱 Апп болгон ашиглах</h3>
+      <p class="muted" id="pwa-install-hint"></p>
+      <div class="pwa-actions">
+        <button type="button" class="btn primary small" id="pwa-install" hidden data-en="Install the app">Апп суулгах</button>
+        <button type="button" class="btn small" id="pwa-offline" data-en="📥 Download for offline use (~100 MB)">📥 Интернетгүй ашиглахаар татах (~100 MB)</button>
+      </div>
+      <p class="muted small" id="pwa-status" aria-live="polite"></p>
+    </div>
     <p data-en="<b>MongolShuvuu</b> — an educational bird identification guide."><b>МонголШувуу</b> — боловсролын зорилготой шувуу таних хөтөч.</p>
     <p class="muted" data-en="Photos and sound recordings: <a href='https://commons.wikimedia.org' target='_blank' rel='noopener'>Wikimedia Commons</a>, <a href='https://www.inaturalist.org' target='_blank' rel='noopener'>iNaturalist</a>, <a href='https://xeno-canto.org' target='_blank' rel='noopener'>xeno-canto</a> (Creative Commons licences; each author is credited on the bird’s page). Conservation status: IUCN Red List. Observation grids: GBIF.org. Photo ID is trained on 1,248 expert-verified iNaturalist reference photos (only numeric features are stored). Borders on the maps are approximate.">Зураг, дууны бичлэг: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a>, <a href="https://xeno-canto.org" target="_blank" rel="noopener">xeno-canto</a> (Creative Commons лиценз; зохиогч бүрийг шувууны хуудсанд заасан). Хамгааллын статус: IUCN Улаан данс. Ажиглалтын тор: GBIF.org. Зургаар таних загварыг iNaturalist-ийн шинжээчдийн баталгаажуулсан 1,248 лавлах зургаар сургасан (зөвхөн тоон утгыг хадгална). Газрын зураг нь схем бөгөөд хил хязгаарыг ойролцоогоор үзүүлэв.</p>
     <p class="muted" data-en="When birdwatching, keep away from nests and colonies, and don’t play recordings to lure birds.">Шувууг ажиглахдаа үүр, колони руу бүү ойрт, дуу бичлэг тоглуулж шувууг бүү үймүүл.</p>

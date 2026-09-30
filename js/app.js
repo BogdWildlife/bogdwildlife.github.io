@@ -1535,4 +1535,42 @@ ${knowledge(texts)}`;
   else if (h.startsWith("route-")) { showTab("routes", false); selectRoute(h.slice(6)); }
   else if (h.startsWith("iucn-")) { showTab("iucn", false); const c = document.getElementById(h); if (c) setTimeout(() => c.scrollIntoView({ block: "start" }), 60); }
   else if (h) showTab(h, false);
+
+  /* ---------------- PWA: апп суулгах, интернетгүй ашиглах ---------------- */
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+    const box = $("#pwa-box"), hint = $("#pwa-install-hint"), inst = $("#pwa-install"), off = $("#pwa-offline"), status = $("#pwa-status");
+    box.hidden = false;
+    const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    hint.textContent = standalone ? T("✓ Апп болгон суулгасан байна.", "✓ Installed as an app.", "✓ Installée comme application.")
+      : ios ? T("iPhone/iPad: Safari-ийн «Хуваалцах» (⬆) товч → «Нүүр дэлгэцэд нэмэх».", "iPhone/iPad: tap Safari’s Share (⬆) button → “Add to Home Screen”.", "iPhone/iPad : touchez Partager (⬆) dans Safari → « Sur l’écran d’accueil ».")
+      : T("Утас, компьютер дээрээ суулгаж, нүүр дэлгэцээс шууд нээгээрэй.", "Install it on your phone or computer and open it straight from the home screen.", "Installez-la sur votre téléphone ou ordinateur et ouvrez-la depuis l’écran d’accueil.");
+    let deferred = null;
+    addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; inst.hidden = false; });
+    inst.addEventListener("click", async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice.catch(() => {}); deferred = null; inst.hidden = true; });
+    addEventListener("appinstalled", () => { inst.hidden = true; hint.textContent = T("✓ Апп суулгагдлаа.", "✓ App installed.", "✓ Application installée."); });
+
+    const mediaUrls = () => [...new Set(BIRDS.flatMap(b => [b.image && b.image.file, b.audio && b.audio.file]).filter(Boolean))];
+    let tried = false; try { tried = localStorage.getItem("mbird-offline") === "1"; } catch (e) {}
+    if (tried) status.textContent = T("✓ Интернетгүй ашиглахаар татсан. Шинэ шувуу нэмэгдвэл дахин дарж шинэчилнэ.", "✓ Downloaded for offline use. Tap again after updates to fetch new birds.", "✓ Téléchargé pour une utilisation hors ligne. Touchez à nouveau après une mise à jour.");
+    off.addEventListener("click", async () => {
+      if (!navigator.serviceWorker.controller) { status.textContent = T("Түр хүлээгээд (эсвэл хуудсаа дахин ачаалаад) дахин дарна уу.", "Please wait a moment (or reload the page) and tap again.", "Patientez un instant (ou rechargez la page) puis réessayez."); return; }
+      off.disabled = true;
+      try { if (navigator.storage && navigator.storage.persist) await navigator.storage.persist(); } catch (e) {}
+      const urls = mediaUrls(), cache = await caches.open("media-v1");
+      let done = 0, fail = 0;
+      const todo = [];
+      for (const u of urls) { if (await cache.match(u)) done++; else todo.push(u); }
+      const show = () => { status.textContent = T(`Татаж байна… ${done} / ${urls.length}`, `Downloading… ${done} / ${urls.length}`, `Téléchargement… ${done} / ${urls.length}`); };
+      show();
+      const worker = async () => { while (todo.length) { const u = todo.shift(); try { const r = await fetch(u); if (!r.ok) fail++; } catch (e) { fail++; } done++; if (done % 5 === 0) show(); } };
+      await Promise.all(Array.from({ length: 6 }, worker));
+      await preloadModel().catch(() => { fail++; });   // зургаар таних загвар
+      off.disabled = false;
+      if (!fail) { try { localStorage.setItem("mbird-offline", "1"); } catch (e) {} }
+      status.textContent = fail ? T(`${fail} файл татагдсангүй — интернетээ шалгаад дахин дарна уу.`, `${fail} files failed — check your connection and tap again.`, `${fail} fichiers ont échoué — vérifiez la connexion et réessayez.`)
+        : T("✓ Бэлэн! Одоо интернетгүй үед ч шувууны мэдээлэл, зураг, дуу, зургаар таних ажиллана. Хиймэл дагуулын зургаас зөвхөн үзсэн хэсэг нь хадгалагдана.", "✓ Done! Bird profiles, photos, sounds and photo ID now work offline. Only the parts of the satellite map you have viewed are saved.", "✓ Terminé ! Fiches, photos, sons et identification par photo fonctionnent hors ligne. Seules les zones de la carte déjà vues sont enregistrées.");
+    });
+  }
 })();

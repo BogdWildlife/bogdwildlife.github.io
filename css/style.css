@@ -545,6 +545,11 @@ a.btn { text-decoration: none; display: inline-block; }
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding-block: 24px; font-size: .9rem; }
 .site-footer p { margin: 0 0 6px; }
+.pwa-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin: 0 0 18px; }
+.pwa-box h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.pwa-box p { margin: 0 0 8px; }
+.pwa-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+.pwa-box .btn[hidden] { display: none; }
 
 @media (max-width: 860px) {
   .photo-layout, .traits-layout, .m-body { grid-template-columns: minmax(0, 1fr); }
