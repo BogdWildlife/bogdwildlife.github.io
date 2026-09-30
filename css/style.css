@@ -568,3 +568,35 @@ a.btn { text-decoration: none; display: inline-block; }
   .quiz-levels button.on span { display: inline; }
   .m-head, .m-stats, .m-body { padding-inline: 16px; }
 }
+
+/* Цээжлэх карт */
+.fc-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; margin: 8px 0 6px; }
+.fc-controls label { display: grid; gap: 4px; font-size: .85rem; font-weight: 600; color: var(--muted); }
+.fc-controls select { font: inherit; font-size: .95rem; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); max-width: 100%; }
+.fc-stage { max-width: 460px; margin: 14px auto 0; }
+.fc-progress { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
+.fc-bar { flex: 1; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.fc-bar i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
+.fc-card { display: block; width: 100%; aspect-ratio: 4 / 5; max-height: 70vh; border: 0; padding: 0; background: none; cursor: pointer; perspective: 1200px; font: inherit; color: inherit; }
+.fc-inner { position: relative; width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; }
+.fc-card.flipped .fc-inner { transform: rotateY(180deg); }
+.fc-side { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+.fc-back { transform: rotateY(180deg); }
+.fc-img { flex: 1; min-height: 0; background: var(--surface-2); }
+.fc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fc-img.small { flex: 0 0 52%; }
+.fc-q { margin: 0; padding: 12px 16px; text-align: center; color: var(--muted); font-size: .9rem; }
+.fc-word { flex: 1; display: grid; place-content: center; gap: 8px; text-align: center; padding: 20px; background: linear-gradient(180deg, var(--accent-soft), var(--surface)); }
+.fc-word small { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
+.fc-word b { font-family: var(--serif); font-size: clamp(1.6rem, 6vw, 2.2rem); line-height: 1.2; }
+.fc-names { flex: 1; display: grid; align-content: center; gap: 4px; text-align: center; padding: 14px 16px; }
+.fc-mn { font-family: var(--serif); font-size: 1.5rem; line-height: 1.2; }
+.fc-en { font-size: 1.1rem; font-weight: 600; color: var(--accent); }
+.fc-lat { color: var(--muted); font-size: .9rem; }
+.fc-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
+.fc-again { border-color: #d98c5f; }
+.fc-keys { text-align: center; margin-top: 10px; }
+.fc-done { text-align: center; background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); padding: 22px 18px; }
+.fc-done .tagrow { justify-content: center; margin: 12px 0 4px; }
+.fc-done .tag { cursor: pointer; border: 0; font: inherit; }
+@media (max-width: 560px) { .fc-controls label { flex: 1 1 100%; } .fc-controls select { width: 100%; } .fc-keys { display: none; } }

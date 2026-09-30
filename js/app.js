@@ -1191,6 +1191,117 @@
   // нэг бичлэг тоглоход бусдыг зогсоох
   document.addEventListener("play", e => { $$("audio").forEach(a => { if (a !== e.target) a.pause(); }); }, true);
 
+  /* ---------------- Цээжлэх карт (flashcard) ----------------
+     Горим: зураг → нэр, монгол нэр → англи нэр/зураг, англи нэр → монгол нэр/зураг.
+     Шувуу бүрийн "хайрцаг" (0–5, Leitner) localStorage-д: мэдсэн → +1, мэдээгүй → 0; багцад бага хайрцагтай нь түрүүлж орно. */
+  const nmMN = b => LANG === "mn" ? b.name : b.en;
+  const nmEN = b => LANG === "mn" ? b.en : LANG === "en" ? b.name : (b.nameEn || b.en);
+  const FC_KEY = "mbird-fc";
+  let fcBox = {}; try { fcBox = JSON.parse(localStorage.getItem(FC_KEY) || "{}") || {}; } catch (e) {}
+  const fcSave = () => { try { localStorage.setItem(FC_KEY, JSON.stringify(fcBox)); } catch (e) {} };
+  let fc = null;   // { mode, queue, i, known, again, total, flipped }
+  function fcDecks() {
+    const d = [["rare", "⭐ " + T("Ховор ба эндемик", "Rare & endemic", "Rares et endémiques"), isSpecial],
+      ["feat", "🌟 " + T("Онцлох 48 шувуу", "48 featured birds", "48 oiseaux vedettes"), b => !b.extra],
+      ["all", "🐦 " + T("Бүх шувуу", "All birds", "Tous les oiseaux"), () => true]];
+    HAB_ORDER.forEach(([k, ic]) => d.push(["h:" + k, ic + " " + HABITAT_NAMES[k], b => b.habitats.includes(k)]));
+    Object.entries(GROUPS).forEach(([k, v]) => { if (BIRDS.some(b => b.group === k)) d.push(["g:" + k, v, b => b.group === k]); });
+    return d;
+  }
+  function fcPool() {
+    const deck = fcDecks().find(d => d[0] === $("#fc-deck").value) || fcDecks()[0];
+    return BIRDS.filter(deck[2]).filter(b => $("#fc-mode").value !== "photo" || !b.image.none);
+  }
+  function fcInfo() {
+    const pool = fcPool(), learned = pool.filter(b => (fcBox[b.id] || 0) >= 3).length;
+    $("#fc-info").textContent = T(`Энэ багцад ${pool.length} шувуу · цээжилсэн ${learned} (3+ удаа дараалан мэдсэн)`, `${pool.length} birds in this deck · ${learned} learned (known 3+ times in a row)`, `${pool.length} oiseaux dans ce paquet · ${learned} appris (reconnus 3 fois de suite ou plus)`);
+  }
+  function fcStart(ids) {
+    const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+    let queue;
+    if (ids) queue = shuffle(ids.slice());
+    else {
+      const size = +$("#fc-size").value || Infinity;
+      // Бага хайрцагтайг түрүүлж, адил хайрцаг дотроо санамсаргүй
+      queue = shuffle(fcPool().map(b => b.id)).sort((a, b) => (fcBox[a] || 0) - (fcBox[b] || 0)).slice(0, size);
+      queue = shuffle(queue);
+    }
+    if (!queue.length) { $("#fc-stage").innerHTML = `<p class="muted">${T("Энэ багцад карт алга.", "No cards in this deck.", "Aucune carte dans ce paquet.")}</p>`; return; }
+    fc = { mode: $("#fc-mode").value, queue, i: 0, known: 0, again: 0, missed: new Set(), total: queue.length, flipped: false };
+    fcRender();
+    $("#fc-stage").scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+  function fcFace(b, side) {
+    const img = `<img src="${b.image.file}" alt="" draggable="false">`;
+    const names = `<div class="fc-names"><b class="fc-mn">${esc(nmMN(b))}</b><span class="fc-en">${esc(nmEN(b))}</span>${LANG === "fr" ? `<span class="fc-en">${esc(b.name)}</span>` : ""}<i class="fc-lat">${esc(latinClean(b))}</i></div>`;
+    if (side === "front") {
+      if (fc.mode === "photo") return `<div class="fc-img">${img}</div><p class="fc-q">${T("Энэ ямар шувуу вэ?", "Which bird is this?", "Quel est cet oiseau ?")}</p>`;
+      const nm = fc.mode === "mn" ? nmMN(b) : nmEN(b);
+      return `<div class="fc-word"><small>${fc.mode === "mn" ? T("Монгол нэр", "Mongolian name", "Nom mongol") : T("Англи нэр", "English name", "Nom anglais")}</small><b>${esc(nm)}</b></div><p class="fc-q">${T("Англи/монгол нэр, төрхийг нь санаарай", "Recall its other name and what it looks like", "Rappelez-vous son autre nom et son apparence")}</p>`;
+    }
+    return `<div class="fc-img small">${img}</div>${names}`;
+  }
+  function fcRender() {
+    const st = $("#fc-stage");
+    if (fc.i >= fc.queue.length) {
+      const missed = [...fc.missed];
+      st.innerHTML = `<div class="fc-done"><h3>🎉 ${T("Багц дууслаа!", "Deck finished!", "Paquet terminé !")}</h3>
+        <p>${T(`${fc.total} картаас эхний удаад ${fc.total - missed.length}-г мэдсэн.`, `You knew ${fc.total - missed.length} of ${fc.total} cards on the first try.`, `Vous en connaissiez ${fc.total - missed.length} sur ${fc.total} du premier coup.`)}</p>
+        ${missed.length ? `<div class="tagrow">${missed.map(id => `<button class="tag" data-bird="${id}">${esc(nmMN(byId[id]))} · ${esc(nmEN(byId[id]))}</button>`).join("")}</div>` : ""}
+        <div class="fc-actions">${missed.length ? `<button type="button" class="btn primary" data-fc="missed">↻ ${T("Мэдээгүйгээ дахин давтах", "Review the ones I missed", "Revoir celles manquées")} (${missed.length})</button>` : ""}<button type="button" class="btn" data-fc="new">${T("Шинэ багц", "New deck", "Nouveau paquet")}</button></div></div>`;
+      fcInfo();
+      return;
+    }
+    const b = byId[fc.queue[fc.i]];
+    const done = fc.i, pct = Math.round(done / fc.queue.length * 100);
+    st.innerHTML = `<div class="fc-progress"><div class="fc-bar"><i style="width:${pct}%"></i></div>
+        <span>${done + 1} / ${fc.queue.length} · ✓ ${fc.known} · ↻ ${fc.again}</span></div>
+      <button type="button" class="fc-card${fc.flipped ? " flipped" : ""}" aria-label="${T("Картыг эргүүлэх", "Flip the card", "Retourner la carte")}">
+        <div class="fc-inner"><div class="fc-side fc-front">${fcFace(b, "front")}</div><div class="fc-side fc-back">${fcFace(b, "back")}</div></div>
+      </button>
+      <div class="fc-actions">${fc.flipped
+        ? `<button type="button" class="btn fc-again" data-fc="again">↻ ${T("Мэдээгүй", "Didn’t know", "Pas su")}</button><button type="button" class="btn primary" data-fc="known">✓ ${T("Мэдэж байсан", "Knew it", "Je savais")}</button><button type="button" class="btn small" data-bird="${b.id}">${T("Дэлгэрэнгүй", "Details", "Détails")}</button>`
+        : `<button type="button" class="btn primary" data-fc="flip">${T("Эргүүлж харах", "Show answer", "Voir la réponse")}</button>`}</div>
+      <p class="muted small fc-keys">${T("Товчлуур: Space — эргүүлэх, ← мэдээгүй, → мэдсэн", "Keys: Space — flip, ← didn’t know, → knew it", "Touches : Espace — retourner, ← pas su, → je savais")}</p>`;
+  }
+  function fcAct(a) {
+    if (!fc) return;
+    if (a === "new") { fc = null; $("#fc-stage").innerHTML = ""; fcStart(); return; }
+    if (a === "missed") { fcStart([...fc.missed]); return; }
+    if (fc.i >= fc.queue.length) return;
+    const id = fc.queue[fc.i];
+    if (a === "flip") { fc.flipped = !fc.flipped; fcRender(); return; }
+    if (!fc.flipped) return;
+    if (a === "known") { fc.known++; fcBox[id] = Math.min(5, (fcBox[id] || 0) + 1); fc.i++; }
+    else if (a === "again") {
+      fc.again++; fc.missed.add(id); fcBox[id] = 0;
+      // 3–5 картын дараа дахин гаргана
+      const pos = Math.min(fc.queue.length, fc.i + 3 + Math.floor(Math.random() * 3));
+      fc.queue.splice(pos, 0, id); fc.i++;
+    }
+    fcSave(); fc.flipped = false; fcRender();
+  }
+  function initCards() {
+    const modes = { photo: "📷 " + T("Зураг → нэр", "Photo → names", "Photo → noms"), mn: "🇲🇳 " + T("Монгол нэр → англи нэр, төрх", "Mongolian name → English name, look", "Nom mongol → nom anglais, apparence"), en: "🇬🇧 " + T("Англи нэр → монгол нэр, төрх", "English name → Mongolian name, look", "Nom anglais → nom mongol, apparence") };
+    $("#fc-mode").innerHTML = Object.entries(modes).map(([k, v]) => `<option value="${k}">${v}</option>`).join("");
+    $("#fc-deck").innerHTML = fcDecks().map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
+    $("#fc-size").innerHTML = [10, 20, 50].map(n => `<option value="${n}"${n === 20 ? " selected" : ""}>${n}</option>`).join("") + `<option value="0">${T("Бүгд", "All", "Toutes")}</option>`;
+    ["#fc-mode", "#fc-deck"].forEach(s => $(s).addEventListener("change", fcInfo));
+    $("#fc-start").addEventListener("click", () => fcStart());
+    $("#fc-stage").addEventListener("click", e => {
+      if (e.target.closest("[data-bird]")) return;
+      const b = e.target.closest("[data-fc]"); if (b) return fcAct(b.dataset.fc);
+      if (e.target.closest(".fc-card")) fcAct("flip");
+    });
+    document.addEventListener("keydown", e => {
+      if (!fc || !$("#tab-cards").classList.contains("active") || !$("#modal").hidden || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
+      if (e.key === " ") { e.preventDefault(); fcAct("flip"); }
+      else if (e.key === "ArrowRight") fcAct("known");
+      else if (e.key === "ArrowLeft") fcAct("again");
+    });
+    fcInfo();
+  }
+
   /* ---------------- Routes ---------------- */
   // Маршрутын шувууд: гараар сонгосон онцлох шувууд + зогсоолуудад бүртгэгдсэн бүх шувуу (зөвхөн өвлийн шувуугүй).
   // Эрэмбэ: онцлох → хэдэн зогсоолд тааралддаг → зогсоолын орчмын (±1 нүд) GBIF бүртгэл
@@ -1561,7 +1672,7 @@ ${knowledge(texts)}`;
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on));
     b.addEventListener("click", () => { if (b.dataset.lang !== LANG) setLang(b.dataset.lang); });
   });
-  renderChips(); renderGallery(); initMap(); initTraits(); initPhoto(); initSound(); initRoutes(); initPlaces(); initAI();
+  renderChips(); renderGallery(); initMap(); initTraits(); initPhoto(); initSound(); initCards(); initRoutes(); initPlaces(); initAI();
   const h = location.hash.slice(1);
   if (h.startsWith("bird-")) openBird(h.slice(5), false);
   else if (h.startsWith("route-")) { showTab("routes", false); selectRoute(h.slice(6)); }
