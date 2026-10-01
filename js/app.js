@@ -8,6 +8,8 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const latinClean = b => b.latin.replace(/\s*\(.*\)/, "");
+  // Мэдэгдлийн серверийн хаяг (Cloudflare Worker, server/worker.js). Хоосон бол сануулгын хэсэг нуугдана.
+  const PUSH_API = "";
   const absUrl = f => new URL(f, document.baseURI).href;   // CSS хувьсагч доторх url() нь css/ хавтаснаас хамаарч тооцогддог тул бүтэн хаяг
   const xcUrl = b => "https://xeno-canto.org/explore?query=" + encodeURIComponent(latinClean(b));
 
@@ -1800,6 +1802,54 @@ ${knowledge(texts)}`;
     addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; inst.hidden = false; });
     inst.addEventListener("click", async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice.catch(() => {}); deferred = null; inst.hidden = true; });
     addEventListener("appinstalled", () => { inst.hidden = true; hint.textContent = T("✓ Апп суулгагдлаа.", "✓ App installed.", "✓ Application installée."); });
+
+    /* Өдөр бүрийн сануулга (Web Push) — server/worker.js (Cloudflare Workers) руу бүртгүүлнэ.
+       PUSH_API хоосон бол (сервер тохируулаагүй) энэ хэсэг харагдахгүй. */
+    try { caches.open("cfg-v1").then(c => c.put("lang", new Response(LANG))).catch(() => {}); } catch (e) {}
+    const rem = $("#fc-remind");
+    if (PUSH_API && rem && "PushManager" in window && "Notification" in window) {
+      const RKEY = "mbird-remind";
+      const getTime = () => { try { return localStorage.getItem(RKEY) || ""; } catch (e) { return ""; } };
+      const setTime = t => { try { t ? localStorage.setItem(RKEY, t) : localStorage.removeItem(RKEY); } catch (e) {} };
+      const api = (path, body) => fetch(PUSH_API + path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : undefined).then(r => r.json());
+      const keyBytes = k => Uint8Array.from(atob(k.replace(/-/g, "+").replace(/_/g, "/")), c => c.charCodeAt(0));
+      const draw = msg => {
+        const t = getTime();
+        rem.hidden = false;
+        rem.innerHTML = `<span>🔔 ${t ? T(`Өдөр бүр <b>${t}</b> цагт сануулна`, `Daily reminder at <b>${t}</b>`, `Rappel quotidien à <b>${t}</b>`) : T("Өдөр бүр сануулах:", "Remind me every day at:", "Me le rappeler chaque jour à :")}</span>
+          <input type="time" id="rem-time" value="${t || "20:00"}" step="1800" aria-label="${T("Сануулах цаг", "Reminder time", "Heure du rappel")}">
+          <button type="button" class="btn small primary" id="rem-on">${t ? T("Цаг солих", "Change time", "Changer l’heure") : T("Асаах", "Turn on", "Activer")}</button>
+          ${t ? `<button type="button" class="btn small" id="rem-test">${T("Туршиж үзэх", "Send a test", "Tester")}</button><button type="button" class="btn small" id="rem-off">${T("Унтраах", "Turn off", "Désactiver")}</button>` : ""}
+          ${msg ? `<span class="muted small rem-msg">${msg}</span>` : (ios && !standalone ? `<span class="muted small rem-msg">${T("iPhone дээр эхлээд сайтыг нүүр дэлгэцэд нэмж апп болгосны дараа ажиллана.", "On iPhone, add the site to your Home Screen first.", "Sur iPhone, ajoutez d’abord le site à l’écran d’accueil.")}</span>` : "")}`;
+      };
+      const subscribe = async () => {
+        if ((await Notification.requestPermission()) !== "granted") throw new Error(T("Мэдэгдлийн зөвшөөрөл өгөөгүй байна. Хөтчийн тохиргооноос зөвшөөрнө үү.", "Notifications are blocked. Allow them in your browser settings.", "Les notifications sont bloquées. Autorisez-les dans les réglages du navigateur."));
+        const reg = await navigator.serviceWorker.ready;
+        let sub = await reg.pushManager.getSubscription();
+        if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: keyBytes((await api("/vapid")).key) });
+        return sub;
+      };
+      rem.addEventListener("click", async e => {
+        const b = e.target.closest("button"); if (!b) return;
+        b.disabled = true;
+        try {
+          if (b.id === "rem-on") {
+            const time = $("#rem-time").value || "20:00", sub = await subscribe();
+            const r = await api("/subscribe", { endpoint: sub.endpoint, time, tz: new Date().getTimezoneOffset() });
+            if (!r.ok) throw new Error(r.error || "error");
+            setTime(time); draw(T("✓ Сануулга асаалттай. Мэдэгдэл 30 минутын нарийвчлалтай ирнэ.", "✓ Reminder on. It arrives within 30 minutes of the chosen time.", "✓ Rappel activé. Il arrive à 30 minutes près."));
+          } else if (b.id === "rem-off") {
+            const reg = await navigator.serviceWorker.ready, sub = await reg.pushManager.getSubscription();
+            if (sub) { await api("/unsubscribe", { endpoint: sub.endpoint }).catch(() => {}); await sub.unsubscribe().catch(() => {}); }
+            setTime(""); draw(T("Сануулга унтарлаа.", "Reminder turned off.", "Rappel désactivé."));
+          } else if (b.id === "rem-test") {
+            const r = await api("/test", { endpoint: (await subscribe()).endpoint });
+            draw(r.ok && r.status < 300 ? T("Туршилтын мэдэгдэл илгээлээ — хэдэн секундэд ирнэ.", "Test notification sent — it should arrive in a few seconds.", "Notification de test envoyée — elle arrive dans quelques secondes.") : T("Илгээж чадсангүй. Унтраагаад дахин асааж үзнэ үү.", "Could not send. Try turning it off and on again.", "Échec de l’envoi. Essayez de désactiver puis réactiver."));
+          }
+        } catch (err) { draw("⚠️ " + esc(err.message || String(err))); }
+      });
+      draw();
+    }
 
     const mediaUrls = () => [...new Set(BIRDS.flatMap(b => [b.image && b.image.file, b.audio && b.audio.file]).filter(Boolean))];
     let tried = false; try { tried = localStorage.getItem("mbird-offline") === "1"; } catch (e) {}

@@ -3,7 +3,7 @@
    media: шувууны зураг, дуу — эхлээд кэш; "Интернетгүй ашиглах" товч бүгдийг нь урьдчилан татна
    ext:   фонт, TensorFlow/MobileNet загвар — эхлээд кэш
    tiles: хиймэл дагуулын зураг — үзсэн хэсэг л кэшлэгдэнэ (дээд тал нь 1500) */
-const V = "v3";
+const V = "v4";
 const SHELL = "shell-" + V, MEDIA = "media-v1", EXT = "ext-v1", TILES = "tiles-v1";
 const CORE = [
   "./", "index.html", "manifest.webmanifest", "css/style.css", "vendor/leaflet.css", "vendor/leaflet.js",
@@ -18,7 +18,7 @@ self.addEventListener("install", e => {
   e.waitUntil(caches.open(SHELL).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {
-  const keep = [SHELL, MEDIA, EXT, TILES];
+  const keep = [SHELL, MEDIA, EXT, TILES, "cfg-v1"];
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => !keep.includes(k)).map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
 
@@ -56,4 +56,28 @@ self.addEventListener("fetch", e => {
   }
   if (TILE_HOSTS.includes(url.hostname)) return e.respondWith(cacheFirst(req, TILES));
   if (EXT_HOSTS.includes(url.hostname)) return e.respondWith(cacheFirst(req, EXT));
+});
+
+/* Өдөр бүрийн сануулга (Web Push). Сервер агуулгагүй мэдэгдэл илгээдэг тул текстийг эндээс, сайтын сонгосон хэлээр харуулна. */
+const PUSH_TEXT = {
+  mn: ["Карт цээжлэх цаг боллоо! 🃏", "Өнөөдрийн шувуудаа давтаарай — хэдхэн минут л хангалттай."],
+  en: ["Time for your bird flashcards! 🃏", "Review today’s birds — a few minutes is enough."],
+  fr: ["C’est l’heure de vos cartes ! 🃏", "Révisez les oiseaux du jour — quelques minutes suffisent."]
+};
+self.addEventListener("push", e => {
+  e.waitUntil((async () => {
+    let lang = "mn";
+    try { const r = await (await caches.open("cfg-v1")).match("lang"); if (r) lang = await r.text(); } catch (err) {}
+    const [title, body] = PUSH_TEXT[lang] || PUSH_TEXT.mn;
+    await self.registration.showNotification(title, { body, icon: "icons/icon-192.png", badge: "icons/icon-192.png", tag: "mbird-daily", renotify: true, data: { url: "./#cards" } });
+  })());
+});
+self.addEventListener("notificationclick", e => {
+  e.notification.close();
+  const url = new URL((e.notification.data && e.notification.data.url) || "./#cards", self.registration.scope).href;
+  e.waitUntil((async () => {
+    const all = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    for (const c of all) { if (c.url.startsWith(self.registration.scope)) { await c.focus(); if ("navigate" in c) await c.navigate(url).catch(() => {}); return; } }
+    await self.clients.openWindow(url);
+  })());
 });
