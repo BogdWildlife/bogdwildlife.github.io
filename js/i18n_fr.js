@@ -314,6 +314,8 @@ const FR_UI = {
   "Deck": "Paquet",
   "Cards": "Cartes",
   "Start": "Commencer",
+  "Answer": "Réponse",
+  "Learn each bird’s look and its Mongolian and English names. Recall the answer before you flip (or pick from 4 choices), then rate how well you knew it. Spaced repetition brings each bird back just before you would forget it — a few minutes every day works best.": "Apprenez l’apparence de chaque oiseau et ses noms mongol et anglais. Retrouvez la réponse avant de retourner la carte (ou choisissez parmi 4), puis notez votre réponse. La répétition espacée ramène chaque oiseau juste avant que vous ne l’oubliiez — quelques minutes par jour suffisent.",
   "📱 Use it as an app": "📱 L’utiliser comme application",
   "Install the app": "Installer l’application",
   "📥 Download for offline use (~100 MB)": "📥 Télécharger pour un usage hors ligne (~100 Mo)",

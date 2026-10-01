@@ -1193,19 +1193,38 @@
   document.addEventListener("play", e => { $$("audio").forEach(a => { if (a !== e.target) a.pause(); }); }, true);
 
   /* ---------------- Цээжлэх карт (flashcard) ----------------
-     Горим: зураг → нэр, монгол нэр → англи нэр/зураг, англи нэр → монгол нэр/зураг.
-     Шувуу бүрийн "хайрцаг" (0–5, Leitner) localStorage-д: мэдсэн → +1, мэдээгүй → 0; багцад бага хайрцагтай нь түрүүлж орно. */
+     Цээжлэх үр дүнтэй аргууд дээр үндэслэв:
+     • Идэвхтэй сэргээн санах (active recall): хариугаа эхлээд өөрөө санаад дараа нь шалгана; эсвэл 4 сонголтоос сонгоно.
+     • Зайтай давталт (spaced repetition, Leitner/SM-2 маягийн): үнэлгээнээс хамааран дараагийн давталтын огноо 1, 3, 7, 14, 30, 60, 120 өдөр.
+     • Өөрийгөө үнэлэх 4 түвшин: Дахин / Хэцүү / Сайн / Амархан.
+     • Холимог (interleaving): багц доторх шувууд санамсаргүй холилдоно; сонголтын буруу хариулт нь ижил бүлгийн төстэй шувуу.
+     • Давхар кодлох (dual coding): ар талд гол таних шинж, дуу хоолой.
+     • Өдөр бүрийн дадал: өнөөдрийн давталт, дараалсан өдрийн тоо (streak).
+     Ахиц нь зөвхөн хөтөч дээр (localStorage) хадгалагдана. */
   const nmMN = b => LANG === "mn" ? b.name : b.en;
   const nmEN = b => LANG === "mn" ? b.en : LANG === "en" ? b.name : (b.nameEn || b.en);
-  const FC_KEY = "mbird-fc";
-  let fcBox = {}; try { fcBox = JSON.parse(localStorage.getItem(FC_KEY) || "{}") || {}; } catch (e) {}
-  const fcSave = () => { try { localStorage.setItem(FC_KEY, JSON.stringify(fcBox)); } catch (e) {} };
-  let fc = null;   // { mode, queue, i, known, again, total, flipped }
-  const fcLearned = b => (fcBox[b.id] || 0) >= 3;
-  const fcLearning = b => b.id in fcBox && (fcBox[b.id] || 0) < 3;   // үзсэн ч цээжлээгүй
+  const FC_KEY = "mbird-fc", FC_STATS = "mbird-fc-stats", DAY = 864e5;
+  const FC_IVL = [0, 1, 3, 7, 14, 30, 60, 120];   // хайрцаг бүрийн давталтын зай (өдөр)
+  let fcData = {};   // { id: { b: хайрцаг 0–7, due: ms, n: давтсан тоо, l: мартсан тоо } }
+  try {
+    const raw = JSON.parse(localStorage.getItem(FC_KEY) || "{}") || {};
+    for (const [id, v] of Object.entries(raw)) fcData[id] = typeof v === "number" ? { b: v, due: Date.now(), n: v, l: 0 } : v;   // хуучин хэлбэрээс шилжүүлэх
+  } catch (e) {}
+  let fcStats = { days: {} }; try { fcStats = JSON.parse(localStorage.getItem(FC_STATS) || "null") || fcStats; } catch (e) {}
+  const fcSave = () => { try { localStorage.setItem(FC_KEY, JSON.stringify(fcData)); localStorage.setItem(FC_STATS, JSON.stringify(fcStats)); } catch (e) {} };
+  const dayKey = (t = Date.now()) => { const d = new Date(t); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
+  const fcStreak = () => { let n = 0, t = Date.now(); if (!fcStats.days[dayKey(t)]) t -= DAY; while (fcStats.days[dayKey(t)]) { n++; t -= DAY; } return n; };
+  let fc = null;
+  const fcBoxOf = b => (fcData[b.id] || {}).b || 0;
+  const fcSeen = b => b.id in fcData;
+  const fcLearned = b => fcBoxOf(b) >= 3;                       // 7+ өдрийн зайтай болсон
+  const fcLearning = b => fcSeen(b) && !fcLearned(b);
+  const fcDue = b => fcSeen(b) && fcData[b.id].due <= Date.now();
   function fcDecks() {
-    const d = [["learned", "✅ " + T("Цээжилсэн шувуудаа давтах", "Review learned birds", "Revoir les oiseaux appris"), fcLearned],
+    const d = [["due", "📅 " + T("Өнөөдөр давтах", "Due for review today", "À revoir aujourd’hui"), fcDue],
       ["learning", "🔁 " + T("Цээжилж байгаа шувууд", "Birds I’m still learning", "Oiseaux en cours d’apprentissage"), fcLearning],
+      ["learned", "✅ " + T("Цээжилсэн шувуудаа давтах", "Review learned birds", "Revoir les oiseaux appris"), fcLearned],
+      ["new", "🆕 " + T("Шинэ (үзээгүй) шувууд", "New birds (not seen yet)", "Nouveaux oiseaux (jamais vus)"), b => !fcSeen(b)],
       ["rare", "⭐ " + T("Ховор ба эндемик", "Rare & endemic", "Rares et endémiques"), isSpecial],
       ["feat", "🌟 " + T("Онцлох 48 шувуу", "48 featured birds", "48 oiseaux vedettes"), b => !b.extra],
       ["all", "🐦 " + T("Бүх шувуу", "All birds", "Tous les oiseaux"), () => true]];
@@ -1218,112 +1237,170 @@
     const deck = fcDecks().find(d => d[0] === $("#fc-deck").value) || fcDecks()[0];
     return BIRDS.filter(deck[2]).filter(fcModeOk);
   }
-  // Багцын нэрэнд шувууны тоог харуулна (ахиц өөрчлөгдөх бүрт шинэчилнэ, сонголтыг хадгална)
-  function fcFillDecks() {
+  function fcFillDecks(pickDue) {
     const sel = $("#fc-deck"), cur = sel.value || "rare";
-    sel.innerHTML = fcDecks().map(([k, v, f]) => `<option value="${k}">${esc(v)} (${BIRDS.filter(f).filter(fcModeOk).length})</option>`).join("");
-    sel.value = cur;
+    const decks = fcDecks().map(([k, v, f]) => [k, v, BIRDS.filter(f).filter(fcModeOk).length]);
+    sel.innerHTML = decks.map(([k, v, n]) => `<option value="${k}">${esc(v)} (${n})</option>`).join("");
+    sel.value = pickDue && decks[0][2] ? "due" : cur;
   }
   function fcInfo() {
-    const pool = fcPool(), learned = pool.filter(fcLearned).length;
-    const total = BIRDS.filter(fcModeOk), allLearned = total.filter(fcLearned).length;
-    $("#fc-info").innerHTML = esc(T(`Энэ багцад ${pool.length} шувуу · цээжилсэн ${learned} (3+ удаа дараалан мэдсэн). Нийт цээжилсэн: ${allLearned} / ${total.length}.`, `${pool.length} birds in this deck · ${learned} learned (known 3+ times in a row). Learned overall: ${allLearned} / ${total.length}.`, `${pool.length} oiseaux dans ce paquet · ${learned} appris (reconnus 3 fois de suite ou plus). Appris au total : ${allLearned} / ${total.length}.`)) +
-      (Object.keys(fcBox).length ? ` <button type="button" class="linkish" id="fc-reset">${T("Ахицаа шинээр эхлүүлэх", "Reset progress", "Réinitialiser la progression")}</button>` : "");
+    const pool = fcPool(), all = BIRDS.filter(fcModeOk);
+    const learned = all.filter(fcLearned).length, due = all.filter(fcDue).length, today = fcStats.days[dayKey()] || 0, streak = fcStreak();
+    $("#fc-info").innerHTML = `<span class="fc-stats">` +
+      `<span title="${T("Өдөр дараалан давтсан", "Days in a row", "Jours d’affilée")}">🔥 ${streak} ${T("өдөр", streak === 1 ? "day" : "days", streak > 1 ? "jours" : "jour")}</span>` +
+      `<span>📅 ${T("Өнөөдөр давтах", "Due today", "À revoir")}: <b>${due}</b></span>` +
+      `<span>✍️ ${T("Өнөөдөр давтсан", "Reviewed today", "Revues aujourd’hui")}: <b>${today}</b></span>` +
+      `<span>✅ ${T("Цээжилсэн", "Learned", "Appris")}: <b>${learned}</b> / ${all.length}</span></span>` +
+      `<span class="fc-deckline">${esc(T(`Энэ багцад ${pool.length} шувуу.`, `${pool.length} birds in this deck.`, `${pool.length} oiseaux dans ce paquet.`))}` +
+      (Object.keys(fcData).length ? ` <button type="button" class="linkish" id="fc-reset">${T("Ахицаа шинээр эхлүүлэх", "Reset progress", "Réinitialiser la progression")}</button>` : "") + `</span>`;
   }
   function fcStart(ids) {
-    const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
     let queue;
     if (ids) queue = shuffle(ids.slice());
     else {
-      const size = +$("#fc-size").value || Infinity;
-      // Бага хайрцагтайг түрүүлж, адил хайрцаг дотроо санамсаргүй
-      queue = shuffle(fcPool().map(b => b.id)).sort((a, b) => (fcBox[a] || 0) - (fcBox[b] || 0)).slice(0, size);
-      queue = shuffle(queue);
+      const size = +$("#fc-size").value || Infinity, pool = fcPool();
+      // Эхлээд хугацаа нь болсон карт (хамгийн хоцорсон нь түрүүнд), дараа нь шинэ, дараа нь бусад (бага хайрцагтай нь түрүүнд)
+      const due = pool.filter(fcDue).sort((a, b) => fcData[a.id].due - fcData[b.id].due);
+      const fresh = shuffle(pool.filter(b => !fcSeen(b)));
+      const rest = shuffle(pool.filter(b => fcSeen(b) && !fcDue(b))).sort((a, b) => fcBoxOf(a) - fcBoxOf(b));
+      queue = shuffle(due.concat(fresh, rest).slice(0, size).map(b => b.id));   // холимог дарааллаар
     }
     if (!queue.length) {
       const d = $("#fc-deck").value;
-      $("#fc-stage").innerHTML = `<p class="muted">${d === "learned" ? T("Одоогоор цээжилсэн шувуу алга. Нэг шувууг 3 удаа дараалан мэдвэл энд орно.", "No learned birds yet. A bird lands here once you know it 3 times in a row.", "Aucun oiseau appris pour l’instant. Un oiseau arrive ici après 3 bonnes réponses d’affilée.")
+      $("#fc-stage").innerHTML = `<p class="muted fc-empty">${d === "due" ? T("🎉 Өнөөдөр давтах карт алга! Шинэ шувуу цээжлэх эсвэл маргааш эргэж ирээрэй.", "🎉 Nothing due today! Learn some new birds or come back tomorrow.", "🎉 Rien à revoir aujourd’hui ! Apprenez de nouveaux oiseaux ou revenez demain.")
+        : d === "learned" ? T("Одоогоор цээжилсэн шувуу алга. «Сайн» эсвэл «Амархан» гэж хэд хэдэн удаа үнэлсэн шувуу энд орно.", "No learned birds yet. Birds you rate “Good” or “Easy” a few times end up here.", "Aucun oiseau appris pour l’instant. Les oiseaux notés « Bien » ou « Facile » plusieurs fois arrivent ici.")
         : d === "learning" ? T("Цээжилж байгаа шувуу алга — өөр багцаар эхлээрэй.", "No birds in progress — start with another deck.", "Aucun oiseau en cours — commencez par un autre paquet.")
         : T("Энэ багцад карт алга.", "No cards in this deck.", "Aucune carte dans ce paquet.")}</p>`;
       return;
     }
-    fc = { mode: $("#fc-mode").value, queue, i: 0, known: 0, again: 0, missed: new Set(), total: queue.length, flipped: false };
+    fc = { mode: $("#fc-mode").value, style: $("#fc-style").value, queue, i: 0, total: queue.length, flipped: false, pick: null, opts: null,
+      tally: { 1: 0, 2: 0, 3: 0, 4: 0 }, missed: new Set(), first: new Set() };
     fcRender();
     $("#fc-stage").scrollIntoView({ block: "nearest", behavior: "smooth" });
   }
+  // 4 сонголт: зөв хариулт + ижил бүлгийн (төстэй) шувууд, хүрэлцэхгүй бол бусад
+  function fcOptions(b) {
+    const ok = x => x.id !== b.id && fcModeOk(x);
+    const same = shuffle(BIRDS.filter(x => ok(x) && x.group === b.group)), other = shuffle(BIRDS.filter(x => ok(x) && x.group !== b.group));
+    return shuffle([b, ...same.concat(other).slice(0, 3)]);
+  }
+  const fcAnswerName = b => fc.mode === "mn" ? nmEN(b) : fc.mode === "en" ? nmMN(b) : `${nmMN(b)} · ${nmEN(b)}`;
   function fcFace(b, side) {
     const img = `<img src="${b.image.file}" alt="" draggable="false">`, bg = `style="--bg:url('${absUrl(b.image.file)}')"`;
-    const names = `<div class="fc-names"><b class="fc-mn">${esc(nmMN(b))}</b><span class="fc-en">${esc(nmEN(b))}</span>${LANG === "fr" ? `<span class="fc-en">${esc(b.name)}</span>` : ""}<i class="fc-lat">${esc(latinClean(b))}</i></div>`;
     if (side === "front") {
-      if (fc.mode === "photo") return `<div class="fc-img photo-fit" ${bg}>${img}</div><p class="fc-q">${T("Энэ ямар шувуу вэ?", "Which bird is this?", "Quel est cet oiseau ?")}</p>`;
+      if (fc.mode === "photo") return `<div class="fc-img photo-fit" ${bg}>${img}</div><p class="fc-q">${T("Энэ ямар шувуу вэ? Эхлээд нэрийг нь санаарай.", "Which bird is this? Try to recall its name first.", "Quel est cet oiseau ? Essayez d’abord de retrouver son nom.")}</p>`;
       const nm = fc.mode === "mn" ? nmMN(b) : nmEN(b);
-      return `<div class="fc-word"><small>${fc.mode === "mn" ? T("Монгол нэр", "Mongolian name", "Nom mongol") : T("Англи нэр", "English name", "Nom anglais")}</small><b>${esc(nm)}</b></div><p class="fc-q">${T("Англи/монгол нэр, төрхийг нь санаарай", "Recall its other name and what it looks like", "Rappelez-vous son autre nom et son apparence")}</p>`;
+      return `<div class="fc-word"><small>${fc.mode === "mn" ? T("Монгол нэр", "Mongolian name", "Nom mongol") : T("Англи нэр", "English name", "Nom anglais")}</small><b>${esc(nm)}</b></div><p class="fc-q">${fc.mode === "mn" ? T("Англи нэр, төрхийг нь санаарай", "Recall its English name and what it looks like", "Rappelez-vous son nom anglais et son apparence") : T("Монгол нэр, төрхийг нь санаарай", "Recall its Mongolian name and what it looks like", "Rappelez-vous son nom mongol et son apparence")}</p>`;
     }
-    return `<div class="fc-img small photo-fit" ${bg}>${img}</div>${names}`;
+    const tips = (b.features || []).slice(0, 2);
+    return `<div class="fc-img small photo-fit" ${bg}>${img}</div><div class="fc-names"><b class="fc-mn">${esc(nmMN(b))}</b><span class="fc-en">${esc(nmEN(b))}</span>${LANG === "fr" ? `<span class="fc-en">${esc(b.name)}</span>` : ""}<i class="fc-lat">${esc(latinClean(b))}</i>` +
+      (tips.length ? `<ul class="fc-tips">${tips.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "") + `</div>`;
+  }
+  const RATE = () => [[1, "↻ " + T("Дахин", "Again", "À revoir"), T("< 1 мин", "< 1 min", "< 1 min"), "fc-r1"], [2, T("Хэцүү", "Hard", "Difficile"), "", "fc-r2"], [3, T("Сайн", "Good", "Bien"), "", "fc-r3"], [4, T("Амархан", "Easy", "Facile"), "", "fc-r4"]];
+  function fcNextIvl(b, r) {   // үнэлгээ тус бүрийн дараагийн давталтын зайг товчлуур дээр харуулна
+    const box = fcBoxOf(b), nb = r === 2 ? Math.max(1, box) : r === 3 ? Math.min(7, box + 1) : Math.min(7, box + 2);
+    const d = r === 2 ? Math.max(1, Math.round(FC_IVL[Math.max(1, box)] / 2)) : FC_IVL[nb];
+    return d >= 30 ? T(`${Math.round(d / 30)} сар`, `${Math.round(d / 30)} mo`, `${Math.round(d / 30)} mois`) : T(`${d} өдөр`, `${d} d`, `${d} j`);
   }
   function fcRender() {
     const st = $("#fc-stage");
     if (fc.i >= fc.queue.length) {
-      const missed = [...fc.missed];
+      const missed = [...fc.missed], firstOk = fc.total - missed.length;
+      const tomorrow = BIRDS.filter(b => fcSeen(b) && fcData[b.id].due <= Date.now() + DAY && fcModeOk(b)).length;
       st.innerHTML = `<div class="fc-done"><h3>🎉 ${T("Багц дууслаа!", "Deck finished!", "Paquet terminé !")}</h3>
-        <p>${T(`${fc.total} картаас эхний удаад ${fc.total - missed.length}-г мэдсэн.`, `You knew ${fc.total - missed.length} of ${fc.total} cards on the first try.`, `Vous en connaissiez ${fc.total - missed.length} sur ${fc.total} du premier coup.`)}</p>
+        <p>${T(`${fc.total} картаас эхний удаад ${firstOk}-г мэдсэн.`, `You knew ${firstOk} of ${fc.total} cards on the first try.`, `Vous en connaissiez ${firstOk} sur ${fc.total} du premier coup.`)}</p>
+        <p class="fc-tally"><span class="fc-r1">↻ ${fc.tally[1]}</span><span class="fc-r2">${T("Хэцүү", "Hard", "Difficile")} ${fc.tally[2]}</span><span class="fc-r3">${T("Сайн", "Good", "Bien")} ${fc.tally[3]}</span><span class="fc-r4">${T("Амархан", "Easy", "Facile")} ${fc.tally[4]}</span></p>
+        <p class="muted small">${T(`🔥 ${fcStreak()} өдөр дараалан · маргааш давтах: ${tomorrow} карт. Өдөр бүр бага багаар давтах нь нэг дор их давтахаас илүү үр дүнтэй.`, `🔥 ${fcStreak()}-day streak · due by tomorrow: ${tomorrow} cards. A little every day beats a lot at once.`, `🔥 ${fcStreak()} jour(s) d’affilée · à revoir d’ici demain : ${tomorrow} cartes. Un peu chaque jour vaut mieux que beaucoup d’un coup.`)}</p>
         ${missed.length ? `<div class="tagrow">${missed.map(id => `<button class="tag" data-bird="${id}">${esc(nmMN(byId[id]))} · ${esc(nmEN(byId[id]))}</button>`).join("")}</div>` : ""}
-        <div class="fc-actions">${missed.length ? `<button type="button" class="btn primary" data-fc="missed">↻ ${T("Мэдээгүйгээ дахин давтах", "Review the ones I missed", "Revoir celles manquées")} (${missed.length})</button>` : ""}<button type="button" class="btn" data-fc="new">${T("Шинэ багц", "New deck", "Nouveau paquet")}</button></div></div>`;
+        <div class="fc-actions">${missed.length ? `<button type="button" class="btn primary" data-fc="missed">↻ ${T("Алдсанаа дахин давтах", "Review the ones I missed", "Revoir celles manquées")} (${missed.length})</button>` : ""}<button type="button" class="btn" data-fc="new">${T("Шинэ багц", "New deck", "Nouveau paquet")}</button></div></div>`;
       fcFillDecks(); fcInfo();
       return;
     }
     const b = byId[fc.queue[fc.i]];
-    const done = fc.i, pct = Math.round(done / fc.queue.length * 100);
+    const pct = Math.round(fc.i / fc.queue.length * 100);
+    if (fc.style === "choice" && !fc.opts) fc.opts = fcOptions(b);
+    let actions;
+    if (!fc.flipped && fc.style === "choice") {
+      actions = `<div class="fc-choices">${fc.opts.map((o, k) => `<button type="button" class="btn fc-choice" data-fc="pick" data-id="${o.id}"><kbd>${k + 1}</kbd> ${esc(fcAnswerName(o))}</button>`).join("")}</div>`;
+    } else if (!fc.flipped) {
+      actions = `<button type="button" class="btn primary" data-fc="flip">${T("Хариуг харах", "Show answer", "Voir la réponse")}</button>`;
+    } else if (fc.style === "choice") {
+      const ok = fc.pick === b.id;
+      actions = `<p class="fc-verdict ${ok ? "ok" : "bad"}">${ok ? "✓ " + T("Зөв!", "Correct!", "Correct !") : "✗ " + T(`Буруу — та «${fcAnswerName(byId[fc.pick])}» гэж сонгосон`, `Wrong — you picked “${fcAnswerName(byId[fc.pick])}”`, `Faux — vous avez choisi « ${fcAnswerName(byId[fc.pick])} »`)}</p>` +
+        (ok ? RATE().slice(1).map(([r, l, , c]) => `<button type="button" class="btn ${c}" data-fc="rate" data-r="${r}">${l}<small>${fcNextIvl(b, r)}</small></button>`).join("")
+          : `<button type="button" class="btn primary" data-fc="rate" data-r="1">${T("Дараагийнх →", "Next →", "Suivant →")}</button>`);
+    } else {
+      actions = RATE().map(([r, l, sub, c]) => `<button type="button" class="btn ${c}" data-fc="rate" data-r="${r}">${l}<small>${sub || fcNextIvl(b, r)}</small></button>`).join("");
+    }
+    const extra = fc.flipped ? `<div class="fc-actions fc-more">${b.audio ? `<button type="button" class="btn small" data-fc="audio">🔊 ${T("Дууг сонсох", "Hear its call", "Écouter")}</button>` : ""}<button type="button" class="btn small" data-bird="${b.id}">${T("Дэлгэрэнгүй", "Details", "Détails")}</button></div>` : "";
     st.innerHTML = `<div class="fc-progress"><div class="fc-bar"><i style="width:${pct}%"></i></div>
-        <span>${done + 1} / ${fc.queue.length} · ✓ ${fc.known} · ↻ ${fc.again}</span></div>
-      <button type="button" class="fc-card${fc.flipped ? " flipped" : ""}" aria-label="${T("Картыг эргүүлэх", "Flip the card", "Retourner la carte")}">
+        <span>${fc.i + 1} / ${fc.queue.length}</span></div>
+      <button type="button" class="fc-card${fc.flipped ? " flipped" : ""}" aria-label="${T("Картыг эргүүлэх", "Flip the card", "Retourner la carte")}"${fc.style === "choice" && !fc.flipped ? " disabled" : ""}>
         <div class="fc-inner"><div class="fc-side fc-front">${fcFace(b, "front")}</div><div class="fc-side fc-back">${fcFace(b, "back")}</div></div>
       </button>
-      <div class="fc-actions">${fc.flipped
-        ? `<button type="button" class="btn fc-again" data-fc="again">↻ ${T("Мэдээгүй", "Didn’t know", "Pas su")}</button><button type="button" class="btn primary" data-fc="known">✓ ${T("Мэдэж байсан", "Knew it", "Je savais")}</button><button type="button" class="btn small" data-bird="${b.id}">${T("Дэлгэрэнгүй", "Details", "Détails")}</button>`
-        : `<button type="button" class="btn primary" data-fc="flip">${T("Эргүүлж харах", "Show answer", "Voir la réponse")}</button>`}</div>
-      <p class="muted small fc-keys">${T("Товчлуур: Space — эргүүлэх, ← мэдээгүй, → мэдсэн", "Keys: Space — flip, ← didn’t know, → knew it", "Touches : Espace — retourner, ← pas su, → je savais")}</p>`;
+      <div class="fc-actions fc-rate">${actions}</div>${extra}
+      <p class="muted small fc-keys">${fc.style === "choice" ? T("Товчлуур: 1–4 — сонгох; дараа нь 2–4 — үнэлэх", "Keys: 1–4 — choose; then 2–4 — rate", "Touches : 1–4 — choisir ; puis 2–4 — noter") : T("Товчлуур: Space — эргүүлэх; 1 Дахин · 2 Хэцүү · 3 Сайн · 4 Амархан", "Keys: Space — flip; 1 Again · 2 Hard · 3 Good · 4 Easy", "Touches : Espace — retourner ; 1 À revoir · 2 Difficile · 3 Bien · 4 Facile")}</p>`;
   }
-  function fcAct(a) {
+  function fcRate(id, r) {
+    const now = Date.now(), d = fcData[id] || { b: 0, due: now, n: 0, l: 0 };
+    d.n++;
+    if (r === 1) { d.b = 0; d.l++; d.due = now; }
+    else if (r === 2) { d.b = Math.max(1, d.b); d.due = now + Math.max(1, Math.round(FC_IVL[d.b] / 2)) * DAY; }
+    else { d.b = Math.min(7, d.b + (r === 4 ? 2 : 1)); d.due = now + FC_IVL[d.b] * DAY; }
+    fcData[id] = d;
+    fcStats.days[dayKey()] = (fcStats.days[dayKey()] || 0) + 1;
+    fcSave();
+  }
+  let fcAudio = null;
+  function fcAct(a, el) {
     if (!fc) return;
     if (a === "new") { fc = null; $("#fc-stage").innerHTML = ""; fcStart(); return; }
     if (a === "missed") { fcStart([...fc.missed]); return; }
     if (fc.i >= fc.queue.length) return;
     const id = fc.queue[fc.i];
-    if (a === "flip") { fc.flipped = !fc.flipped; fcRender(); return; }
-    if (!fc.flipped) return;
-    if (a === "known") { fc.known++; fcBox[id] = Math.min(5, (fcBox[id] || 0) + 1); fc.i++; }
-    else if (a === "again") {
-      fc.again++; fc.missed.add(id); fcBox[id] = 0;
-      // 3–5 картын дараа дахин гаргана
+    if (a === "audio") { if (fcAudio) fcAudio.pause(); fcAudio = new Audio(byId[id].audio.file); fcAudio.play().catch(() => {}); return; }
+    if (a === "flip") { if (fc.style === "choice" && !fc.flipped) return; fc.flipped = !fc.flipped; fcRender(); return; }
+    if (a === "pick") { if (fc.flipped) return; fc.pick = el.dataset.id; fc.flipped = true; fcRender(); return; }
+    if (a !== "rate" || !fc.flipped) return;
+    const r = +el.dataset.r;
+    if (fc.style === "choice" && fc.pick !== id && r !== 1) return;
+    fc.tally[r]++;
+    if (!fc.first.has(id) && r === 1) fc.missed.add(id);
+    fc.first.add(id);
+    fcRate(id, r);
+    if (r === 1) {   // "Дахин" — энэ сешн дотор 3–5 картын дараа дахин гарна
       const pos = Math.min(fc.queue.length, fc.i + 3 + Math.floor(Math.random() * 3));
-      fc.queue.splice(pos, 0, id); fc.i++;
+      fc.queue.splice(pos, 0, id);
     }
-    fcSave(); fc.flipped = false; fcRender();
+    fc.i++; fc.flipped = false; fc.pick = null; fc.opts = null;
+    if (fcAudio) { fcAudio.pause(); fcAudio = null; }
+    fcRender(); fcInfo();
   }
   function initCards() {
     const modes = { photo: "📷 " + T("Зураг → нэр", "Photo → names", "Photo → noms"), mn: "🇲🇳 " + T("Монгол нэр → англи нэр, төрх", "Mongolian name → English name, look", "Nom mongol → nom anglais, apparence"), en: "🇬🇧 " + T("Англи нэр → монгол нэр, төрх", "English name → Mongolian name, look", "Nom anglais → nom mongol, apparence") };
     $("#fc-mode").innerHTML = Object.entries(modes).map(([k, v]) => `<option value="${k}">${v}</option>`).join("");
-    $("#fc-deck").innerHTML = `<option value="rare"></option>`; fcFillDecks();
+    $("#fc-style").innerHTML = `<option value="flip">🃏 ${T("Санаад өөрийгөө үнэлэх", "Recall, then rate yourself", "Se rappeler, puis s’auto-évaluer")}</option><option value="choice">🔘 ${T("4 сонголтоос сонгох", "Pick from 4 choices", "Choisir parmi 4")}</option>`;
+    $("#fc-deck").innerHTML = `<option value="rare"></option>`; fcFillDecks(true);
     $("#fc-size").innerHTML = [5, 10, 15, 20, 30, 40, 50, 75, 100].map(n => `<option value="${n}"${n === 20 ? " selected" : ""}>${n}</option>`).join("") + `<option value="0">${T("Бүгд", "All", "Toutes")}</option>`;
     $("#fc-mode").addEventListener("change", () => { fcFillDecks(); fcInfo(); });
     $("#fc-deck").addEventListener("change", fcInfo);
     $("#fc-info").addEventListener("click", e => {
       if (!e.target.closest("#fc-reset")) return;
       if (!confirm(T("Бүх картын ахицыг устгаж, шинээр эхлэх үү?", "Delete all flashcard progress and start over?", "Effacer toute la progression et recommencer ?"))) return;
-      fcBox = {}; fcSave(); fcFillDecks(); fcInfo();
+      fcData = {}; fcStats = { days: {} }; fcSave(); fcFillDecks(); fcInfo();
     });
     $("#fc-start").addEventListener("click", () => fcStart());
     $("#fc-stage").addEventListener("click", e => {
       if (e.target.closest("[data-bird]")) return;
-      const b = e.target.closest("[data-fc]"); if (b) return fcAct(b.dataset.fc);
+      const b = e.target.closest("[data-fc]"); if (b) return fcAct(b.dataset.fc, b);
       if (e.target.closest(".fc-card")) fcAct("flip");
     });
     document.addEventListener("keydown", e => {
       if (!fc || !$("#tab-cards").classList.contains("active") || !$("#modal").hidden || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
-      if (e.key === " ") { e.preventDefault(); fcAct("flip"); }
-      else if (e.key === "ArrowRight") fcAct("known");
-      else if (e.key === "ArrowLeft") fcAct("again");
+      if (e.key === " ") { e.preventDefault(); fcAct("flip"); return; }
+      const n = +e.key; if (!(n >= 1 && n <= 4)) return;
+      if (fc.style === "choice" && !fc.flipped) { const o = $$(".fc-choice")[n - 1]; if (o) fcAct("pick", o); return; }
+      const btn = $(`.fc-rate [data-r="${n}"]`); if (btn) fcAct("rate", btn);
     });
     fcInfo();
   }
