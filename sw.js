@@ -3,13 +3,13 @@
    media: шувууны зураг, дуу — эхлээд кэш; "Интернетгүй ашиглах" товч бүгдийг нь урьдчилан татна
    ext:   фонт, TensorFlow/MobileNet загвар — эхлээд кэш
    tiles: хиймэл дагуулын зураг — үзсэн хэсэг л кэшлэгдэнэ (дээд тал нь 1500) */
-const V = "v2";
+const V = "v3";
 const SHELL = "shell-" + V, MEDIA = "media-v1", EXT = "ext-v1", TILES = "tiles-v1";
 const CORE = [
   "./", "index.html", "manifest.webmanifest", "css/style.css", "vendor/leaflet.css", "vendor/leaflet.js",
   "js/i18n.js", "js/i18n_fr.js", "js/data.js", "js/aimags.js", "js/birds.js", "js/birds2.js", "js/birds_en.js", "js/birds_fr.js",
   "js/birds2_en.js", "js/birds2_fr.js", "js/ranges.js", "js/ranges2.js", "js/data_en.js", "js/data_fr.js", "js/app.js",
-  "icons/icon-192.png", "icons/icon-512.png"
+  "icons/icon-192.png", "icons/icon-512.png", "icons/logo.svg"
 ];
 const EXT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com", "cdn.jsdelivr.net", "tfhub.dev", "www.kaggle.com", "storage.googleapis.com"];
 const TILE_HOSTS = ["server.arcgisonline.com"];
