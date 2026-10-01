@@ -1201,21 +1201,34 @@
   let fcBox = {}; try { fcBox = JSON.parse(localStorage.getItem(FC_KEY) || "{}") || {}; } catch (e) {}
   const fcSave = () => { try { localStorage.setItem(FC_KEY, JSON.stringify(fcBox)); } catch (e) {} };
   let fc = null;   // { mode, queue, i, known, again, total, flipped }
+  const fcLearned = b => (fcBox[b.id] || 0) >= 3;
+  const fcLearning = b => b.id in fcBox && (fcBox[b.id] || 0) < 3;   // үзсэн ч цээжлээгүй
   function fcDecks() {
-    const d = [["rare", "⭐ " + T("Ховор ба эндемик", "Rare & endemic", "Rares et endémiques"), isSpecial],
+    const d = [["learned", "✅ " + T("Цээжилсэн шувуудаа давтах", "Review learned birds", "Revoir les oiseaux appris"), fcLearned],
+      ["learning", "🔁 " + T("Цээжилж байгаа шувууд", "Birds I’m still learning", "Oiseaux en cours d’apprentissage"), fcLearning],
+      ["rare", "⭐ " + T("Ховор ба эндемик", "Rare & endemic", "Rares et endémiques"), isSpecial],
       ["feat", "🌟 " + T("Онцлох 48 шувуу", "48 featured birds", "48 oiseaux vedettes"), b => !b.extra],
       ["all", "🐦 " + T("Бүх шувуу", "All birds", "Tous les oiseaux"), () => true]];
     HAB_ORDER.forEach(([k, ic]) => d.push(["h:" + k, ic + " " + HABITAT_NAMES[k], b => b.habitats.includes(k)]));
     Object.entries(GROUPS).forEach(([k, v]) => { if (BIRDS.some(b => b.group === k)) d.push(["g:" + k, v, b => b.group === k]); });
     return d;
   }
+  const fcModeOk = b => $("#fc-mode").value !== "photo" || !b.image.none;
   function fcPool() {
     const deck = fcDecks().find(d => d[0] === $("#fc-deck").value) || fcDecks()[0];
-    return BIRDS.filter(deck[2]).filter(b => $("#fc-mode").value !== "photo" || !b.image.none);
+    return BIRDS.filter(deck[2]).filter(fcModeOk);
+  }
+  // Багцын нэрэнд шувууны тоог харуулна (ахиц өөрчлөгдөх бүрт шинэчилнэ, сонголтыг хадгална)
+  function fcFillDecks() {
+    const sel = $("#fc-deck"), cur = sel.value || "rare";
+    sel.innerHTML = fcDecks().map(([k, v, f]) => `<option value="${k}">${esc(v)} (${BIRDS.filter(f).filter(fcModeOk).length})</option>`).join("");
+    sel.value = cur;
   }
   function fcInfo() {
-    const pool = fcPool(), learned = pool.filter(b => (fcBox[b.id] || 0) >= 3).length;
-    $("#fc-info").textContent = T(`Энэ багцад ${pool.length} шувуу · цээжилсэн ${learned} (3+ удаа дараалан мэдсэн)`, `${pool.length} birds in this deck · ${learned} learned (known 3+ times in a row)`, `${pool.length} oiseaux dans ce paquet · ${learned} appris (reconnus 3 fois de suite ou plus)`);
+    const pool = fcPool(), learned = pool.filter(fcLearned).length;
+    const total = BIRDS.filter(fcModeOk), allLearned = total.filter(fcLearned).length;
+    $("#fc-info").innerHTML = esc(T(`Энэ багцад ${pool.length} шувуу · цээжилсэн ${learned} (3+ удаа дараалан мэдсэн). Нийт цээжилсэн: ${allLearned} / ${total.length}.`, `${pool.length} birds in this deck · ${learned} learned (known 3+ times in a row). Learned overall: ${allLearned} / ${total.length}.`, `${pool.length} oiseaux dans ce paquet · ${learned} appris (reconnus 3 fois de suite ou plus). Appris au total : ${allLearned} / ${total.length}.`)) +
+      (Object.keys(fcBox).length ? ` <button type="button" class="linkish" id="fc-reset">${T("Ахицаа шинээр эхлүүлэх", "Reset progress", "Réinitialiser la progression")}</button>` : "");
   }
   function fcStart(ids) {
     const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -1227,7 +1240,13 @@
       queue = shuffle(fcPool().map(b => b.id)).sort((a, b) => (fcBox[a] || 0) - (fcBox[b] || 0)).slice(0, size);
       queue = shuffle(queue);
     }
-    if (!queue.length) { $("#fc-stage").innerHTML = `<p class="muted">${T("Энэ багцад карт алга.", "No cards in this deck.", "Aucune carte dans ce paquet.")}</p>`; return; }
+    if (!queue.length) {
+      const d = $("#fc-deck").value;
+      $("#fc-stage").innerHTML = `<p class="muted">${d === "learned" ? T("Одоогоор цээжилсэн шувуу алга. Нэг шувууг 3 удаа дараалан мэдвэл энд орно.", "No learned birds yet. A bird lands here once you know it 3 times in a row.", "Aucun oiseau appris pour l’instant. Un oiseau arrive ici après 3 bonnes réponses d’affilée.")
+        : d === "learning" ? T("Цээжилж байгаа шувуу алга — өөр багцаар эхлээрэй.", "No birds in progress — start with another deck.", "Aucun oiseau en cours — commencez par un autre paquet.")
+        : T("Энэ багцад карт алга.", "No cards in this deck.", "Aucune carte dans ce paquet.")}</p>`;
+      return;
+    }
     fc = { mode: $("#fc-mode").value, queue, i: 0, known: 0, again: 0, missed: new Set(), total: queue.length, flipped: false };
     fcRender();
     $("#fc-stage").scrollIntoView({ block: "nearest", behavior: "smooth" });
@@ -1250,7 +1269,7 @@
         <p>${T(`${fc.total} картаас эхний удаад ${fc.total - missed.length}-г мэдсэн.`, `You knew ${fc.total - missed.length} of ${fc.total} cards on the first try.`, `Vous en connaissiez ${fc.total - missed.length} sur ${fc.total} du premier coup.`)}</p>
         ${missed.length ? `<div class="tagrow">${missed.map(id => `<button class="tag" data-bird="${id}">${esc(nmMN(byId[id]))} · ${esc(nmEN(byId[id]))}</button>`).join("")}</div>` : ""}
         <div class="fc-actions">${missed.length ? `<button type="button" class="btn primary" data-fc="missed">↻ ${T("Мэдээгүйгээ дахин давтах", "Review the ones I missed", "Revoir celles manquées")} (${missed.length})</button>` : ""}<button type="button" class="btn" data-fc="new">${T("Шинэ багц", "New deck", "Nouveau paquet")}</button></div></div>`;
-      fcInfo();
+      fcFillDecks(); fcInfo();
       return;
     }
     const b = byId[fc.queue[fc.i]];
@@ -1285,9 +1304,15 @@
   function initCards() {
     const modes = { photo: "📷 " + T("Зураг → нэр", "Photo → names", "Photo → noms"), mn: "🇲🇳 " + T("Монгол нэр → англи нэр, төрх", "Mongolian name → English name, look", "Nom mongol → nom anglais, apparence"), en: "🇬🇧 " + T("Англи нэр → монгол нэр, төрх", "English name → Mongolian name, look", "Nom anglais → nom mongol, apparence") };
     $("#fc-mode").innerHTML = Object.entries(modes).map(([k, v]) => `<option value="${k}">${v}</option>`).join("");
-    $("#fc-deck").innerHTML = fcDecks().map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join("");
-    $("#fc-size").innerHTML = [10, 20, 50].map(n => `<option value="${n}"${n === 20 ? " selected" : ""}>${n}</option>`).join("") + `<option value="0">${T("Бүгд", "All", "Toutes")}</option>`;
-    ["#fc-mode", "#fc-deck"].forEach(s => $(s).addEventListener("change", fcInfo));
+    $("#fc-deck").innerHTML = `<option value="rare"></option>`; fcFillDecks();
+    $("#fc-size").innerHTML = [5, 10, 15, 20, 30, 40, 50, 75, 100].map(n => `<option value="${n}"${n === 20 ? " selected" : ""}>${n}</option>`).join("") + `<option value="0">${T("Бүгд", "All", "Toutes")}</option>`;
+    $("#fc-mode").addEventListener("change", () => { fcFillDecks(); fcInfo(); });
+    $("#fc-deck").addEventListener("change", fcInfo);
+    $("#fc-info").addEventListener("click", e => {
+      if (!e.target.closest("#fc-reset")) return;
+      if (!confirm(T("Бүх картын ахицыг устгаж, шинээр эхлэх үү?", "Delete all flashcard progress and start over?", "Effacer toute la progression et recommencer ?"))) return;
+      fcBox = {}; fcSave(); fcFillDecks(); fcInfo();
+    });
     $("#fc-start").addEventListener("click", () => fcStart());
     $("#fc-stage").addEventListener("click", e => {
       if (e.target.closest("[data-bird]")) return;
