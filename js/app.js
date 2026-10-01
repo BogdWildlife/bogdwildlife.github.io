@@ -9,7 +9,7 @@
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const latinClean = b => b.latin.replace(/\s*\(.*\)/, "");
   // Мэдэгдлийн серверийн хаяг (Cloudflare Worker, server/worker.js). Хоосон бол сануулгын хэсэг нуугдана.
-  const PUSH_API = "";
+  const PUSH_API = "https://sparkling-art-198cmbird.nyamjantsan589.workers.dev";
   const absUrl = f => new URL(f, document.baseURI).href;   // CSS хувьсагч доторх url() нь css/ хавтаснаас хамаарч тооцогддог тул бүтэн хаяг
   const xcUrl = b => "https://xeno-canto.org/explore?query=" + encodeURIComponent(latinClean(b));
 
